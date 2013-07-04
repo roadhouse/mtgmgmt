@@ -1,0 +1,21 @@
+<div class="fluid-row">
+  <% @cards.each do |c| %>
+    <div class="card mini well">
+      <span class="header name lead"><%= c.name %></span>
+      <em class="header manacost"><%= c.manacost %></em>
+      <div class="text"><%= c.text %></div>
+      
+      <%= render partial: c.body, object: c %>
+    </div>
+
+    <%= simple_form_for c.card_deck, wrapper: :small, html: {class: "form-inline"} do |f| %>
+      <%= f.input :card_id, as: :hidden %>
+      <%= f.input :copies, collection: 1..4, input_html: {class: "input-mini"} %>
+      copies on: 
+      <%= f.input :deck, collection: c.avaiable_decks, input_html: {class: "input-medium"}, default: false %>
+
+      <%= f.submit %>
+    <% end %>
+  <% end %>
+</div>
+

@@ -1,0 +1,5 @@
+<%= simple_form_for @inventory do |f| %>
+  <%= f.input :quantity, collection: 1..4, include_blank: false %>
+  <%= f.association :card %>
+  <%= f.association :user, label_method: :login, include_blank: false  %>
+<% end %>
