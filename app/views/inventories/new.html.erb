@@ -3,3 +3,6 @@
   <%= f.association :card %>
   <%= f.association :user, label_method: :login, include_blank: false  %>
 <% end %>
+<script>
+  $(document).ready(function() { $("#inventory_card_id").select2({width: "element"}); });
+</script>
