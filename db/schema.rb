@@ -52,8 +52,10 @@ ActiveRecord::Schema.define(:version => 20130527022141) do
     t.integer  "quantity"
     t.integer  "card_id"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "language_id"
+    t.boolean  "foil"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|
