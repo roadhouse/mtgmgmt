@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "jquery-rails"
 gem "kaminari"
-# gem "nokogiri"
+gem "nokogiri"
 gem "pg"
 gem "pry"
 gem "pry-rails"

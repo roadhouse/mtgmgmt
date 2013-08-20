@@ -57,9 +57,12 @@ GEM
     metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.22)
+    mini_portile (0.5.1)
     mocha (0.13.3)
       metaclass (~> 0.0.1)
     multi_json (1.7.2)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12)
@@ -134,6 +137,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mocha
+  nokogiri
   pg
   pry
   pry-rails
