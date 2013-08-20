@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20130527022141) do
     t.integer  "user_id"
     t.integer  "language_id"
     t.boolean  "foil"
+    t.string   "price"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
