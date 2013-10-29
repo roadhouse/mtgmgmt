@@ -13,7 +13,6 @@ class DecksController < ApplicationController
 
   # deck: {
     # name: "naya blitz",
-    # description: "bla",
     # card_list: "4 tragtusk\n10 forest"
   # }
 
@@ -28,7 +27,7 @@ class DecksController < ApplicationController
   end
 
   def create
-    @deck = Deck.new(params[:deck])
+    @deck = DeckFactory.new(params[:deck]).deck
 
     respond_with(@deck)
   end
