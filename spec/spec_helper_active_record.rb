@@ -5,7 +5,7 @@ require "active_record"
 
 require "rspec/matchers"
 require "factory_girl"
-require "shoulda-matchers"
+# require "shoulda-matchers"
 require "mocha"
 
 

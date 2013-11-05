@@ -133,7 +133,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  factory_girl_rails (~> 4.0)
+  factory_girl_rails
   jquery-rails
   kaminari
   mocha
@@ -143,6 +143,6 @@ DEPENDENCIES
   pry-rails
   pry_debug
   rails (= 3.2.8)
-  rspec-rails (~> 2.11.0)
+  rspec-rails
   simple_form
   virtus
