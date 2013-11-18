@@ -1,13 +1,13 @@
 # {
 #   main_deck: [
-#     {quantity: 4, card_name: "young pyromancer"}
+#     {quantity: 4, name: "young pyromancer"}
 #   ]
 #   sideboard: [
-#     {quantity: 3, card_name: "wild ricochet"}
+#     {quantity: 3, name: "wild ricochet"}
 #   ]
 # }
 class DeckFactory
-  attr_reader :deck, :main_deck, :sideboard
+  attr_reader :deck, :main, :sideboard
 
   def initialize(params)
     @params = params
@@ -16,22 +16,14 @@ class DeckFactory
 
   def build_deck
     @deck.tap do |deck|
-      @main_deck = build_main_deck
-      @sideboard = build_sideboard
+      add_cards_from(:main)
+      add_cards_from(:sideboard)
 
-      @deck.save if @deck.valid?
+      deck.save if deck.valid?
     end
   end
 
-  def build_main_deck
-    add_cards_to_deck(:main_deck)
-  end
-  
-  def build_sideboard
-    add_cards_to_deck(:sideboard)
-  end
-
-  def add_cards_to_deck(collection_name)
-    @params.fetch(collection_name).map { |attrs| @deck.add_card_to_deck(attrs) }
+  def add_cards_from(group_name)
+    @params.fetch(group_name).map { |attrs| @deck.add_card(attrs) }
   end
 end

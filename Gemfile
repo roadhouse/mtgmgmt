@@ -13,6 +13,6 @@ group :test, :development do
   gem "mocha"
   gem "pry"
   gem "pry-rails"
-  gem "pry_debug"
+  gem "pry-debugger"
   gem "rspec-rails"
 end
