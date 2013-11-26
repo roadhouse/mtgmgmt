@@ -4,7 +4,7 @@ class Deck < ActiveRecord::Base
   has_many :card_decks
   has_many :cards, through: :card_decks
 
-  def add_card(params)
+  def add_card_by_name(params)
     name = params.fetch(:name)
 
     new_params = { card: Card.find_by_name(name) }.merge(params)

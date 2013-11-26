@@ -5,8 +5,7 @@ require "active_record"
 
 require "rspec/matchers"
 require "factory_girl"
-# require "shoulda-matchers"
-require "mocha"
+# require "mocha/setu"
 
 
 connection_info = YAML.load_file("config/database.yml")["test"]
