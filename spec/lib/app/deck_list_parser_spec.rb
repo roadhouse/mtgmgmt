@@ -15,9 +15,9 @@ describe DeckListParser do
     context "with part name :main" do
       subject { DeckListParser.new(params).parse_part(:main) }
 
-      let(:output) {
+      let(:output) do
         [{quantity:4, name:"magmajet"}, {quantity: 24, name:"mountain"}]
-      }
+      end
 
       it { should eql output }
     end

@@ -18,7 +18,7 @@ class DeckListParser
   end
 
   def parse
-    @format.parts.inject({}) do |output_hash,part|
+    @format.parts.inject({}) do |output_hash, part|
       output_hash.tap { |h| h[part] = parse_part(part) }
     end
   end
