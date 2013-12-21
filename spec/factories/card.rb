@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :card do
-    name      "Goblin Chieftain"
-    set       "M12"
-    card_type "Creature - Goblin"
+    name      "Magmajet"
+    set       "Theros"
+    card_type "Instant"
   end
 end

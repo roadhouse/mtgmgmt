@@ -1,10 +1,12 @@
-require "bundler"
-Bundler.setup(:default, :test)
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
 
-require "active_record"
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
-require "rspec/matchers"
-require "factory_girl"
-
-connection_info = YAML.load_file("config/database.yml")["test"]
-ActiveRecord::Base.establish_connection(connection_info)
+RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
+  config.infer_base_class_for_anonymous_controllers = false
+  config.order = "random"
+  config.use_transactional_fixtures = false
+end

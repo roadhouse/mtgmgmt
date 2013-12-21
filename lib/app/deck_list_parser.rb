@@ -27,12 +27,12 @@ class DeckListParser
     index = @format.parts.rindex(part_name)
 
     #empty line ended in new line character
-    part_to_parse = @params.split(/^$\n/)[index]
+    part_to_parse = @params.split(/\r\n\r\n/)[index]
     
-    part_to_parse.split(/\n/).map do |line| 
+    part_to_parse.split(/\r\n/).map do |line| 
       quantity, name = line.split(" ")
 
-      {quantity: quantity.strip.to_i, name: name.strip} 
+      {copies: quantity.strip.to_i, name: name.strip} 
     end
   end
 end

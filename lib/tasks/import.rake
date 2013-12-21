@@ -21,7 +21,7 @@ namespace :import do
       } 
     end
 
-    c.each { |card_attributes| Card.create!(card_attributes, :without_protection => true); p "#{card_attributes[:name]}\n" }
+    c.each { |card_attributes| Card.create!(card_attributes); p "#{card_attributes[:name]}\n" }
   end
 end
 

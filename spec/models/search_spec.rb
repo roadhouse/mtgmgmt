@@ -13,7 +13,7 @@ describe Search do
 
     context "with data" do
       let!(:card) { create(:card) }  
-      let(:params) { {name: "Goblin"} }
+      let(:params) { {name: "Magmajet"} }
       
       it { should eq [card] }
     end

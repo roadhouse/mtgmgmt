@@ -2,7 +2,7 @@ require 'ostruct'
 require './lib/app/deck_list_parser'
 
 describe DeckListParser do
-  let(:params) { "4 magmajet\n24 mountain\n\n3 shock" }
+  let(:params) { "4 magmajet\r\n24 mountain\r\n\r\n3 shock\r\n" }
 
   context ".parse" do
     subject { DeckListParser.new(params).parse }
@@ -15,9 +15,7 @@ describe DeckListParser do
     context "with part name :main" do
       subject { DeckListParser.new(params).parse_part(:main) }
 
-      let(:output) do
-        [{quantity:4, name:"magmajet"}, {quantity: 24, name:"mountain"}]
-      end
+      let(:output) { [{copies:4, name:"magmajet"}, {copies: 24, name:"mountain"}] }
 
       it { should eql output }
     end
@@ -25,7 +23,7 @@ describe DeckListParser do
     context "with part name :sideboard" do
       subject { DeckListParser.new(params).parse_part(:sideboard) }
 
-      let(:output) { [{quantity: 3, name: "shock"}] }
+      let(:output) { [{copies: 3, name: "shock"}] }
 
       it { should eql output }
     end

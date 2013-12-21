@@ -11,15 +11,8 @@ class DecksController < ApplicationController
     respond_with(@deck)
   end
 
-  # deck: {
-    # name: "naya blitz",
-    # card_list: "4 tragtusk\n10 forest"
-  # }
-
   def new
-    @deck = Deck.new
-
-    respond_with(@deck)
+    @deck = DeckForm.new(Deck.new)
   end
 
   def edit
@@ -27,7 +20,7 @@ class DecksController < ApplicationController
   end
 
   def create
-    @deck = DeckFactory.new(params[:deck]).deck
+    @deck = DeckBuilder.new(deck_params).build
 
     respond_with(@deck)
   end
@@ -42,5 +35,11 @@ class DecksController < ApplicationController
     @deck = Deck.find(params[:id])
 
     respond_with(@deck.destroy)
+  end
+
+  private
+  
+  def deck_params
+    params.require(:deck).permit(:name, :description, :card_list)
   end
 end

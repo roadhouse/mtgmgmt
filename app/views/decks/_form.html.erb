@@ -1,8 +1,9 @@
-<%= minimal_form_for(@deck) do |f| %>
+<%= simple_form_for(@deck) do |f| %>
   <%= f.error_notification %>
 
   <%= f.input :name %>
   <%= f.input :description %>
+  <%= f.input :card_list, as: :text %>
 
   <%= f.button :submit %>
 <% end %>

@@ -1,18 +1,17 @@
 require "ostruct"
 
 require "./lib/app/deck_builder"
+require "./lib/app/deck_list_parser"
 
 
 describe DeckBuilder do
-  # mocking Deck AR model and expliciting the interfaces 
-  Deck = Struct.new(:valid?, :save!) do
-    def add_card_by_name(params); end;
-  end
+  before { Deck.as_null_object }
 
   let(:params) do
-    {
-      main: [ {quantity: 4, name: "young pyromancer"} ],
-      sideboard: [ {quantity: 3, name: "wild ricochet"} ]
+    { 
+      name: "big red", 
+      description: "desc", 
+      card_list: "2 magmajet\r\n24 moutain\r\n\r\n3 shock\r\n"
     }
   end
 
