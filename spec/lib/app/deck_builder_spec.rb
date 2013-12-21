@@ -6,6 +6,7 @@ require "./lib/app/deck_list_parser"
 
 describe DeckBuilder do
   before { Deck.as_null_object }
+  before { ["magmajet","moutain","shock"].each { |c| create(:card, name: c) } }
 
   let(:params) do
     { 
