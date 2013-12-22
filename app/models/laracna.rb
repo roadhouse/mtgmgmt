@@ -23,48 +23,58 @@ end
 class Crawler
   # http://www.mtgdecks.net/decks/viewByFormat/27/page:9
   SOURCE = "http://www.mtgdecks.net"
-  DECK_LIST_URL = "#{SOURCE}/decks/viewByFormat/27"
+  DECK_LIST_URL = "#{SOURCE}/decks/viewByFormat/27/"
 
-  def list_deck
-    doc = Nokogiri::HTML(open(DECK_LIST_URL))
-    doc.search("tr strong a").map {|node| node.attribute("href").value};
+  def initialize(url)
+    @url = url
+    @doc = Nokogiri::HTML(open(SOURCE + @url))
+    p "DECK URL: #{@url}"
   end
 
-  def deck(url)
-    doc = Nokogiri::HTML(open(SOURCE + url))
-    main = doc.search(".type li").text.strip.split("\t\n").map {|i| fix_typos i}
-    sb = doc.search(".sb .cardItem").map {|i| fix_typos i.text}
-    
-    main.append("").append(sb).flatten.join("\r\n")
+  def self.list_deck(list_url)
+    doc = Nokogiri::HTML(open(list_url))
+    doc.search("tr strong a").map {|node| node.attribute("href").value};
   end
 
   def fix_typos(string)
     string
-    .gsub(/\t/," ")
-    .gsub(/''/,"'") 
-    .strip
+      .gsub(/\t/," ")
+      .gsub(/''/,"'") 
+      .strip
   end
 
-  def name(url)
-    doc = Nokogiri::HTML(open(SOURCE + url))
-
-    doc.search(".deckHeader .breadcrumb strong").text
+  def deck
+    main = @doc.search(".type li").text.strip.split("\t\n").map {|i| fix_typos i}
+    sb = @doc.search(".sb .cardItem").map {|i| fix_typos i.text}
+    
+    main.append("").append(sb).flatten.join("\r\n")
   end
 
-  def description(url)
-    doc = Nokogiri::HTML(open(SOURCE + url))
-
-    doc.search(".deckHeader div strong").text
+  def name
+    @doc.search(".deckHeader .breadcrumb strong").text
   end
-  
 
-  def extract
-    list_deck.each do |i|
-      print "URL:#{i}\n"
+  def description
+    @doc.search(".deckHeader div strong").text
+  end
 
-      params = {card_list: deck(i), name: name(i), description: description(i)}
+  def date
+    @doc.search(".rightBlock ul li")[4].text
+  end
 
-      DeckBuilder.new(params).build
+  def self.extract
+    (1..200).each do|page|
+      url = DECK_LIST_URL + "page:#{page}"
+
+      list_deck(url).each do |i|
+        print "URL:#{url}\n"
+
+        spider = Crawler.new(i)
+
+        params = {card_list: spider.deck, name: spider.name, description: spider.description, url: SOURCE + i, date: spider.date}
+
+        DeckBuilder.new(params).build
+      end
     end
   end
 end
