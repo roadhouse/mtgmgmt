@@ -8298,7 +8298,7 @@ When Volatile Rig dies, flip a coin. If you lose the flip, it deals 4 damage to 
             <text>When Tenacious Dead dies, you may pay {1}{B}. If you do, return it to the battlefield tapped under its owner's control.</text>
         </card>
         <card>
-            <name>AEtherling</name>
+            <name>Aetherling</name>
             <set picURL="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=368961&amp;type=card" picURLHq="" picURLSt="">DGM</set>
             <color>U</color>
             <manacost>4UU</manacost>

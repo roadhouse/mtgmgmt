@@ -30,7 +30,8 @@ class DeckListParser
     part_to_parse = @params.split(/\r\n\r\n/)[index]
     
     part_to_parse.split(/\r\n/).map do |line| 
-      quantity, name = line.split(" ")
+      quantity = line.split(" ")[0]
+      name = line.split(" ").drop(1).join(" ")
 
       {copies: quantity.strip.to_i, name: name.strip} 
     end

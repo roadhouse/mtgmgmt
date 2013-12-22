@@ -3,7 +3,6 @@ class DeckBuilder
 
   def initialize(format = Standard, params)
     @card_list = DeckListParser.new(params.delete(:card_list)).parse
-    # @deck = Deck.new(name: params.fetch(:name), description: params.fetch(:description))
     @deck = Deck.new(params)
     @format = format
   end
