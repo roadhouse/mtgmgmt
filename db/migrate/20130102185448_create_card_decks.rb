@@ -4,6 +4,7 @@ class CreateCardDecks < ActiveRecord::Migration
       t.integer :deck_id
       t.integer :card_id
       t.integer :copies, default: 1
+      t.string :part
 
       t.timestamps
     end
