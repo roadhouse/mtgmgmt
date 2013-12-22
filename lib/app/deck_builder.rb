@@ -25,8 +25,8 @@ class DeckBuilder
     @card_list.fetch(part).each do |attrs| 
       name = attrs.fetch(:name)
       copies = attrs.fetch(:copies)
-
-      @deck.add_card_by_name(name, copies)
+      
+      @deck.add_card_by_name(name, copies, part)
     end
   end
 end

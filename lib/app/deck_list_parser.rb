@@ -27,7 +27,7 @@ class DeckListParser
     index = @format.parts.rindex(part_name)
 
     #empty line ended in new line character
-    part_to_parse = @params.split(/\r\n\r\n/)[index]
+    part_to_parse = (@params.split(/\r\n\r\n/)[index] or [].to_s)
     
     part_to_parse.split(/\r\n/).map do |line| 
       quantity = line.split(" ")[0]

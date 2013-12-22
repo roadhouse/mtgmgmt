@@ -4,7 +4,7 @@ describe Deck do
   let!(:card) { create(:card) }
 
   context ".add_card_by_name" do
-    subject { deck.add_card_by_name("Magmajet", 2) }
+    subject { deck.add_card_by_name("Magmajet", 2, "main") }
 
     let(:deck) { Deck.new }
 
