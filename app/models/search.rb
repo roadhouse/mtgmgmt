@@ -4,7 +4,7 @@ class Search
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  include Virtus
+  include Virtus.model
 
   attribute :name, String, :default =>  ""
 

@@ -10,7 +10,7 @@ gem "virtus"
 
 group :test, :development do
   gem "factory_girl_rails"
-  gem "mocha"
+  gem "mocha", require: false
   gem "pry"
   gem "pry-rails"
   gem "pry-debugger"

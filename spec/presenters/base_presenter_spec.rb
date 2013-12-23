@@ -1,7 +1,7 @@
 require "./app/presenters/base_presenter.rb"
 
 describe BasePresenter do
-  let(:model) { mock("Model") }
+  let(:model) { double("Model") }
 
   context ".new" do
     subject { described_class.new(model) }
