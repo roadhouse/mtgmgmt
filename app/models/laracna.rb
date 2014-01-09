@@ -78,3 +78,66 @@ class Crawler
     end
   end
 end
+
+class Crawler2
+  # http://www.decklists.net/index.php?option=com_ohmydeckdb&controller=results&orderdir=desc&view=results&sformat[]=29&Itemid=&page=4&ordering=submitdate
+  SOURCE = "http://www.decklists.net"
+  DECK_LIST_URL = "#{SOURCE}/index.php?option=com_ohmydeckdb&controller=results&orderdir=desc&view=results&sformat[]=29&Itemid=&ordering=submitdate"
+
+  def initialize(url)
+    @url = url
+    @doc = Nokogiri::HTML(open(SOURCE + @url))
+    p "DECK URL: #{@url}"
+  end
+
+  def self.list_deck(list_url)
+    doc = Nokogiri::HTML(open(list_url))
+    doc.search("table tr td a")
+      .map {|node| node.attribute("href").text}
+      .find_all {|node| node =~ /controller=deck/}
+  end
+
+  def deck
+    @doc.search(".imagetd").remove
+    @doc.search(".title").remove
+    @doc.search(".cardCount").remove
+
+    main = @doc.search(".OhMyDecklistTableView tr").last.search("td").first.search("li").map(&:text).map {|i| fix_typos i}
+    sb = @doc.search(".OhMyDecklistTableView tr").last.search("td").last.search("li").map(&:text).map {|i| fix_typos i}
+    
+    main.append("").append(sb).flatten.join("\r\n")
+  end
+
+  def fix_typos(text)
+    text.gsub(/^(\d*)x/,"\1")
+      .gsub("Æ","Ae")
+  end
+
+  def name
+    @doc.search("h1").first.text
+  end
+
+  def description
+    @doc.search(".eventInfo").text
+  end
+
+  def date
+    @doc.search(".OhMyDecklistDate").text.gsub("on ", "")
+  end
+
+  def self.extract
+    (35..200).each do|page|
+      url = DECK_LIST_URL + "&page=#{page}"
+
+      list_deck(url).each do |i|
+        print "URL:#{url}\n"
+
+        spider = Crawler2.new(i)
+
+        params = {card_list: spider.deck, name: spider.name, description: spider.description, url: SOURCE + i, date: spider.date}
+
+        DeckBuilder.new(params).build
+      end
+    end
+  end
+end
