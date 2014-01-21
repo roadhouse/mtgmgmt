@@ -2,9 +2,9 @@ require 'nokogiri'
 require 'open-uri'
 
 module Laracna
-  module DeckLists
+  module Mtgdecks
     class DeckPage
-      attr_reader :url
+      attr_reader :url, :document
 
       def initialize(id)
         @url = PageUrl.deck_url(id)
@@ -15,30 +15,25 @@ module Laracna
       end
 
       def description
-        @document.search(".eventInfo").text
+        @document.search(".deckHeader div strong").text
       end
 
       def name
-        @document.search("h1").first.text
+        @document.search(".deckHeader .breadcrumb strong").text
       end
 
       def date
-        Date.parse @document.search(".OhMyDecklistDate").text
-          .gsub("on ", "")
+        Date.parse @document.search(".rightBlock ul li")[4].text
       end
 
       def main
-        main = @document.search(".OhMyDecklistTableView tr").last
-          .search("td").first
-          .search("li")
+        main = @document.search(".md .cardItem")
 
         extract_card_list main
       end
 
       def sideboard
-        sb = @document.search(".OhMyDecklistTableView tr").last
-          .search("td").last
-          .search("li")
+        sb = @document.search(".sb .cardItem")
 
         extract_card_list sb
       end
@@ -60,18 +55,19 @@ module Laracna
       private
 
       def remove_unused_elements
-        @document.search(".imagetd").remove
-        @document.search(".title").remove
-        @document.search(".cardCount").remove
+        @document.search("h3").remove
+        @document.search(".name").remove
       end
 
       def extract_card_list(nodes)
         nodes.map(&:text).map { |i| fix_typos i }
       end
 
-      def fix_typos(text)
-        text.gsub(/^(\d*)x/,"\\1")
-        .gsub("Æ","Ae")
+      def fix_typos(string)
+        string
+          .strip
+          .gsub(/\t/," ")
+          .gsub(/''/,"'") 
       end
     end
   end

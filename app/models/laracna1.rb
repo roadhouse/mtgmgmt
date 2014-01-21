@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
-class Laracna
+class Laracna1
   SOURCE = "http://letscollect.com.br/ecom.aspx/Produto/"
 
   def initialize(name, set)
@@ -20,7 +20,7 @@ class Laracna
   end
 end
 
-class Crawler
+class Crawler1
   # http://www.mtgdecks.net/decks/viewByFormat/27/page:9
   SOURCE = "http://www.mtgdecks.net"
   DECK_LIST_URL = "#{SOURCE}/decks/viewByFormat/27/"
