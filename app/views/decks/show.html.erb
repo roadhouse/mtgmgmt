@@ -1,10 +1,25 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @deck.name %></h1>
+<h2><%= @deck.description %></h2>
 
-<p>
-  <b>Name:</b>
-  <%= @deck.name %>
-</p>
+<div class="deck-box">
+  <h3>Main</h3>
+  <ul class="maindeck">
+    <% @deck.main.each do |entry| %>
+      <li>
+        <%= entry[:copies] %>
+        <%= entry[:card].name %>
+      </li>
+    <% end %>
+  </ul>
+  <h3>Sideboard</h3>
+  <ul class="sideboard">
+    <% @deck.sideboard.each do |entry| %>
+      <li>
+        <%= entry[:copies] %>
+        <%= entry[:card].name %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
-
-<%= link_to 'Edit', edit_deck_path(@deck) %> |
 <%= link_to 'Back', decks_path %>

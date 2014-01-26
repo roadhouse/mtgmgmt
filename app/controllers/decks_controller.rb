@@ -1,6 +1,6 @@
 class DecksController < ApplicationController
   def index
-    @decks = Deck.all
+    @decks = Deck.all.page params[:page]
 
     respond_with(@decks)
   end
