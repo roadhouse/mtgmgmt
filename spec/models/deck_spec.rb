@@ -11,6 +11,15 @@ describe Deck do
     before { deck.save! }
 
     its(:copies) { should be_eql 2 }
+    
+    context "with a inexistent card" do
+      subject { deck.add_card(2, name, :main) }
+
+      let(:name) { "inexistent card" } 
+      let(:deck) { Deck.new }
+
+      specify { expect { subject }.to raise_error(name) }
+    end
   end
 
   context ".main" do

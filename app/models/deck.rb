@@ -5,7 +5,11 @@ class Deck < ActiveRecord::Base
   validates_uniqueness_of :url
 
   def add_card(copies, name, part)
-    card_decks.build(card: Card.per_name(name).first, copies: copies, part: part)
+    begin
+      card_decks.build(card: Card.find_by_name!(name), copies: copies, part: part)
+    rescue ActiveRecord::RecordNotFound
+      raise name
+    end
   end
 
   def main
