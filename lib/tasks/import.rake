@@ -17,11 +17,17 @@ namespace :import do
         :text      => card.search("text").text,
         :loyalty   => card.search("loyalty").text,
         :power     => card.search("pt").text.split("/").first,
-        :toughness => card.search("pt").text.split("/").first
+        :toughness => card.search("pt").text.split("/").last
       } 
     end
 
-    c.each { |card_attributes| Card.create!(card_attributes); p "#{card_attributes[:name]}\n" }
+    c.each do |card_attributes| 
+      name = card_attributes[:name]
+
+      unless Card.find_by_name(name)
+        Card.create!(card_attributes); p "#{name}\n"
+      end
+    end
   end
 end
 
