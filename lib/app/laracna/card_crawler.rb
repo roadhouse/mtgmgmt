@@ -10,29 +10,35 @@ class CardCrawler
   end
 
   def card_collection(card_nodes)
-    card_nodes.map { |card_node| CardData.new(card_node) }
+    card_nodes.map { |card_node| CardData.new raw_attributes(card_node) }
   end
 
   def run
-    @card_attributes.each do |card_attribute|
-      Card.create!(card_attribute)
+    @cards_attributes.each do |card_attribute|
+      p card_attribute.attributes
+    end
+  end
+
+  private
+
+  def raw_attributes(node)
+    unless node.search("a").empty?
+      card_url = node.search("a").attribute("href").text
+
+      node.text.split("/n")
+        .delete_if(&:empty?).map(&:strip)
+        .push(card_url)
     end
   end
 end
 
 class CardData
-  def initialize(page)
-    document = Nokogiri::HTML(page)
-
-    @card_nodes = document.search("table")[3].search("td")
-    @card_data = card_data(@card_nodes)
-  end
-
-  def card_collection
-    @card_nodes.map { |card_node| CardData.new(card_node) }
+  def initialize(raw_attributes)
+    @card_data = raw_attributes
   end
 
   def name
+    p @card_data[0]
     @card_data[0]
   end
 
@@ -69,24 +75,9 @@ class CardData
   end
   
   def attributes
-    {
-      name: name,
-      set: set,
-      rarity: rarity,
-      card_type: card_type,
-      manacost: manacost,
-      converted_manacost: converted_manacost,
-      oracle_text: oracle_text,
-      illustrator: illustrator,
-      card_url: card_url,
-    }
-  end
+    filtered_methods = CardData.instance_methods(false).map { |method| [method, self.send(method)] }
+      .reject { |method, _| method == :attributes }
 
-  private
-
-  def card_data(node)
-    card_url = node.search("a").attribute("href").text
-
-    node.text.split("/n").delete_if(&:empty?).map(&:strip).push(card_url)
+    Hash[filtered_methods]
   end
 end
