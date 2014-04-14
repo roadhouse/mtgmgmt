@@ -8,3 +8,4 @@ Card.create(name: "Druids' Repository", set:"Avacyn Restored", card_type: "Encha
 Card.create(name: "Scavenging Ghoul", set: "nenhum", card_type: "nenhum")
 Card.create(name: "Mark Of Mutiny", set: "nenhum", card_type: "nenhum")
 Card.create(name: "Arbor Elf", set: "nenhum", card_type: "nenhum")
+Card.create(name: "Witch Hunter", set: "nenhum", card_type: "nenhum")
