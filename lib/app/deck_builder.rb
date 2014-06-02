@@ -2,9 +2,9 @@ class DeckBuilder
   Standard = OpenStruct.new(parts: %i(main sideboard))
 
   def initialize(format = Standard, params)
-    @card_list = DeckListParser.new(params.delete(:card_list)).parse
-    @deck = Deck.new(params)
-    @format = format
+    @card_list = params.delete(:card_list)
+    @deck      = Deck.new(params)
+    @format    = format
   end
 
   def build
@@ -23,7 +23,7 @@ class DeckBuilder
 
   def add_cards_from(part)
     @card_list.fetch(part).each do |attrs| 
-      name = attrs.fetch(:name)
+      name   = attrs.fetch(:name)
       copies = attrs.fetch(:copies)
       
       @deck.add_card(copies, name, part)

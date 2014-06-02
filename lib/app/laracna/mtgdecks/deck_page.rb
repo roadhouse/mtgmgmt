@@ -39,7 +39,7 @@ module Laracna
       end
 
       def deck
-        (main + [""] + sideboard).join("\r\n")
+        { main: main, sideboard: sideboard }
       end
 
       def attributes
@@ -61,6 +61,13 @@ module Laracna
 
       def extract_card_list(nodes)
         nodes.map(&:text).map { |i| fix_typos i }
+          .map { |raw_part_entry| part_entry_data(raw_part_entry) }
+      end
+
+      def part_entry_data(raw_part_entry)
+        match_data = /(\d+)(.*)/.match(raw_part_entry)
+
+        {copies: match_data[1].strip, name: match_data[2].strip }
       end
 
       def fix_typos(string)
