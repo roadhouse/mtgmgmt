@@ -20,7 +20,7 @@ class DecksController < ApplicationController
   end
 
   def create
-    @deck = DeckBuilder.new(deck_params).build
+    @deck = Deck.new
 
     respond_with(@deck)
   end
