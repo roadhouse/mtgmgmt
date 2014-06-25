@@ -24,7 +24,9 @@ describe CardCrawler, :vcr do
          "You have hexproof. (You can't be the target of spells or abilities your opponents control.)",
          "Athreos cares little for the other gods' conflict with mortals. He is concerned only with safe passage for the dead.",
          "Illus. Yefim Kligerman",
-         "/jou/en/1.html"]
+         "/jou/en/1.html",
+         "/scans/en/jou/1.jpg",
+         "1" ]
       end
 
 
@@ -39,9 +41,12 @@ describe CardCrawler, :vcr do
       its(:oracle_text) { should  == "You have hexproof. (You can't be the target of spells or abilities your opponents control.)" }
       its(:quote) { should  == "Athreos cares little for the other gods' conflict with mortals. He is concerned only with safe passage for the dead." }
       its(:illustrator) { should  == "Illus. Yefim Kligerman" }
+      its(:card_url) { should == "/jou/en/1.html" }
+      its(:image_url) { should == "/scans/en/jou/1.jpg" }
+      its(:number) { should == "1" }
     end
 
-    context "parsing Land data" do
+    context "parsing Land data without quote" do
       let(:data) do
         ["Temple of Malady",
          "Journey into Nyx",
@@ -49,7 +54,10 @@ describe CardCrawler, :vcr do
          "Land,",
          "Temple of Malady enters the battlefield tapped.When Temple of Malady enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.){T}: Add {B} or {G} to your mana pool.",
          "Illus. James Paick",
-         "/jou/en/165.html"]
+         "/jou/en/165.html",
+         "/jou/en/1.html",
+         "/scans/en/jou/1.jpg",
+         "1" ]
       end
 
       its(:name) { should == "Temple of Malady" }
@@ -63,9 +71,11 @@ describe CardCrawler, :vcr do
       its(:oracle_text) { should  == "Temple of Malady enters the battlefield tapped.When Temple of Malady enters the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.){T}: Add {B} or {G} to your mana pool." }
       its(:quote) { should  == "" }
       its(:illustrator) { should  == "Illus. James Paick" }
+      its(:image_url) { should == "/scans/en/jou/1.jpg" }
+      its(:number) { should == "1" }
     end
 
-    context "parsing Land data" do
+    context "parsing Land data with quote" do
       let(:data) do
         ["Mana Confluence",
          "Journey into Nyx",
@@ -74,7 +84,9 @@ describe CardCrawler, :vcr do
          "{T}, Pay 1 life: Add one mana of any color to your mana pool.",
          "Five rivers encircle Theros, flowing with waters more ancient than the world itself.",
          "Illus. Richard Wright",
-         "/jou/en/163.html"]
+         "/jou/en/163.html",
+         "/scans/en/jou/1.jpg",
+         "1"]
       end
 
       its(:name) { should == "Mana Confluence" }
@@ -88,6 +100,8 @@ describe CardCrawler, :vcr do
       its(:oracle_text) { should  == "{T}, Pay 1 life: Add one mana of any color to your mana pool." }
       its(:quote) { should  == "Five rivers encircle Theros, flowing with waters more ancient than the world itself." }
       its(:illustrator) { should  == "Illus. Richard Wright" }
+      its(:image_url) { should == "/scans/en/jou/1.jpg" }
+      its(:number) { should == "1" }
     end
 
     context "parsing Planeswalker data" do
@@ -99,7 +113,9 @@ describe CardCrawler, :vcr do
          "3WG (5)",
          "+1: Distribute three +1/+1 counters among one, two, or three target creatures you control.+1: Look at the top four cards of your library. You may reveal an Aura, creature, or planeswalker card from among them and put it into your hand. Put the rest on the bottom of your library in any order.-8: You gain 100 life.",
          "Illus. Aaron Miller",
-         "/jou/en/145.html"]
+         "/jou/en/145.html",
+         "/scans/en/jou/1.jpg",
+         "1"]
       end
 
       its(:name) { should == "Ajani, Mentor of Heroes" }
@@ -114,6 +130,8 @@ describe CardCrawler, :vcr do
       its(:oracle_text) { should  == "+1: Distribute three +1/+1 counters among one, two, or three target creatures you control.+1: Look at the top four cards of your library. You may reveal an Aura, creature, or planeswalker card from among them and put it into your hand. Put the rest on the bottom of your library in any order.-8: You gain 100 life." }
       its(:quote) { should  == "" }
       its(:illustrator) { should  == "Illus. Aaron Miller" }
+      its(:image_url) { should == "/scans/en/jou/1.jpg" }
+      its(:number) { should == "1" }
     end
   end
 end
