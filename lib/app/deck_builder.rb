@@ -22,8 +22,9 @@ class DeckBuilder
   end
 
   def add_cards_from(part)
+    # binding.pry
     @card_list.fetch(part).each do |attrs| 
-      name   = attrs.fetch(:name)
+      name   = attrs.fetch(:card)
       copies = attrs.fetch(:copies)
       
       @deck.add_card(copies, name, part)
