@@ -6,7 +6,6 @@ Magic::Application.configure do
   config.active_support.deprecation = :log
   config.cache_classes = false
   config.consider_all_requests_local = true
-  config.eager_load_paths += ["#{Rails.root}/lib/app}"]
   config.eager_load = true
   config.whiny_nils = true
 end
