@@ -23,17 +23,16 @@ describe Deck do
   end
 
   context ".main" do
-    subject { deck.main.first }
-
     let(:deck) { Deck.new }
+
+    subject { deck.main }
 
     before do
       deck.add_card(1, card.name, :main)
       deck.save!
     end
 
-    its([:copies]) { should be_eql 1 }
-    its([:card]) { should be_eql card }
+    it { should be_a Array }
   end
 
   context ".sideboard" do
