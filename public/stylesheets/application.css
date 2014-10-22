@@ -1,3 +1,14 @@
+body {
+  font-family: 'Open Sans', serif;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .deck-box > div {
   display: inline-block; 
   vertical-align: top

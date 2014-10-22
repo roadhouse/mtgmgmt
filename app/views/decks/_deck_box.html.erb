@@ -1,26 +1,12 @@
 <div class="deck-box">
   <div class="deck-main">
     <h4>Main</h4>
-    <ul>
-      <% deck.main.each do |entry| %>
-        <li>
-          <strong><%= entry[:copies] %></strong>
-          <%= link_to entry[:card].name, "#", class: "card-image", data: { card_image: entry[:card].image }%>
-        </li>
-      <% end %>
-    </ul>
+    <%= render 'card_entry', cards: deck.main %>
   </div>
 
   <div class="deck-sideboard">
     <h4>Sideboard</h4>
-    <ul>
-      <% deck.sideboard.each do |entry| %>
-        <li>
-          <strong><%= entry[:copies] %></strong>
-          <%= link_to entry[:card].name, "#", class: "card-image", data: { card_image: entry[:card].image }%>
-        </li>
-      <% end %>
-    </ul>
+    <%= render 'card_entry', cards: deck.sideboard %>
   </div>
 
   <div class="deck-card-preview">
