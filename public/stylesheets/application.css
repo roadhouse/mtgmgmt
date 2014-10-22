@@ -2,3 +2,8 @@
   display: inline-block; 
   vertical-align: top
 }
+
+.deck-box > div > ul {
+  list-style: none;
+  padding-left: 0;
+}

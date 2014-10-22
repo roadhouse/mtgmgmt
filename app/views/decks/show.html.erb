@@ -1,34 +1,6 @@
 <h1><%= @deck.name %></h1>
 <h2><%= @deck.description %></h2>
 
-<div class="deck-box">
-  <div class="deck-main">
-    <h4>Main</h4>
-    <ul class="maindeck">
-      <% @deck.main.each do |entry| %>
-        <li>
-        <span class="quantity"><%= entry[:copies] %></span>
-        <%= link_to entry[:card].name, "#", class: "card-image", data: { card_image: entry[:card].image }%>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="deck-sideboard">
-    <h4>Sideboard</h4>
-    <ul class="sideboard">
-      <% @deck.sideboard.each do |entry| %>
-        <li>
-        <span class="quantity"><%= entry[:copies] %></span>
-        <%= link_to entry[:card].name, "#", class: "card-image", data: { card_image: entry[:card].image }%>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-
-  <div class="deck-card-preview">
-    <img src="#">
-  </div>
-</div>
+<%= render 'deck_box', deck: @deck %>
 
 <%= link_to 'Back', decks_path %>
