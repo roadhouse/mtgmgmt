@@ -1,6 +1,7 @@
 class DecksController < ApplicationController
   def index
     @decks = Deck.all.page params[:page]
+    @orthanc = Orthanc.new(CardDeck.main)
 
     respond_with(@decks)
   end
