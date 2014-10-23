@@ -1,91 +1,73 @@
-require './lib/mana_cost'
+require 'spec_helper'
 
 describe ManaCost do
   context "from colorless costs" do
-    context ".value" do
-      subject { ManaCost.new("{3}").value }
+    subject { ManaCost.new("{3}") }
 
-      it { is_expected.to eql 3 }
-    end
-
-    context ".colorless?" do
-      subject { ManaCost.new("{3}").colorless? }
-
-      it { is_expected.to be_truthy }
-    end
-
-    context ".colored?" do
-      subject { ManaCost.new("{3}").colored? }
-
-      it { is_expected.to be_falsey }
-    end
+    its(:value) { expect(subject.value).to eql 3 }
+    its(:colorless?) { is_expected.to be_truthy }
+    its(:colored?) { is_expected.not_to be_truthy }
   end
 
   context "colored costs" do
-    context "RED" do
+    context "1 red mana - {R}" do
       subject(:colored_manacost) { ManaCost.new("{R}") }
 
-      context ".value" do
-        subject { colored_manacost.value }
-
-        it { is_expected.to eql 1 }
-      end
-
-      context ".colored?" do
-        subject { colored_manacost.colored? }
-
-        it { is_expected.to be_truthy }
-      end
-
-      context ".red?" do
-        subject { colored_manacost.red? }
-
-        it { is_expected.to be_truthy }
-      end
-
-      context "all others must be false" do
-        methods = %i(black? blue? white? green?)
-        methods.each do |method| 
-          context method.to_s do
-            subject { colored_manacost.send(method) }
-
-            it { is_expected.to be_falsey }
-          end
-        end
-      end
+      its(:value) { is_expected.to eql 1 }
+      its(:colored?) { is_expected.to be_truthy }
+      its(:red?) { is_expected.to be_truthy }
+      its(:black?) { is_expected.not_to be_truthy }
+      its(:blue?) { is_expected.not_to be_truthy }
+      its(:green?) { is_expected.not_to be_truthy }
+      its(:white?) { is_expected.not_to be_truthy }
     end
     
-    context "BLACK" do
+    context "1 black mana - {B}" do
       subject(:colored_manacost) { ManaCost.new("{B}") }
 
-      context ".value" do
-        subject { colored_manacost.value }
+      its(:value) { is_expected.to eql 1 }
+      its(:colored?) { is_expected.to be_truthy }
+      its(:black?) { is_expected.to be_truthy }
+      its(:red?) { is_expected.not_to be_truthy }
+      its(:blue?) { is_expected.not_to be_truthy }
+      its(:green?) { is_expected.not_to be_truthy }
+      its(:white?) { is_expected.not_to be_truthy }
+    end
 
-        it { is_expected.to eql 1 }
-      end
+    context "1 blue mana - {U}" do
+      subject(:colored_manacost) { ManaCost.new("{U}") }
 
-      context ".colored?" do
-        subject { colored_manacost.colored? }
+      its(:value) { is_expected.to eql 1 }
+      its(:colored?) { is_expected.to be_truthy }
+      its(:blue?) { is_expected.to be_truthy }
+      its(:black?) { is_expected.not_to be_truthy }
+      its(:red?) { is_expected.not_to be_truthy }
+      its(:green?) { is_expected.not_to be_truthy }
+      its(:white?) { is_expected.not_to be_truthy }
+    end
 
-        it { is_expected.to be_truthy }
-      end
+    context "1 green mana - {G}" do
+      subject(:colored_manacost) { ManaCost.new("{G}") }
 
-      context ".red?" do
-        subject { colored_manacost.red? }
+      its(:value) { is_expected.to eql 1 }
+      its(:colored?) { is_expected.to be_truthy }
+      its(:green?) { is_expected.to be_truthy }
+      its(:black?) { is_expected.not_to be_truthy }
+      its(:blue?) { is_expected.not_to be_truthy }
+      its(:red?) { is_expected.not_to be_truthy }
+      its(:white?) { is_expected.not_to be_truthy }
+    end
 
-        it { is_expected.to be_falsey }
-      end
+    context "1 white mana - {W}" do
+      subject(:colored_manacost) { ManaCost.new("{W}") }
 
-      context "all others must be false" do
-        methods = %i(red? blue? white? green?)
-        methods.each do |method| 
-          context method.to_s do
-            subject { colored_manacost.send(method) }
-
-            it { is_expected.to be_falsey }
-          end
-        end
-      end
+      its(:value) { is_expected.to eql 1 }
+      its(:colored?) { is_expected.to be_truthy }
+      its(:white?) { is_expected.to be_truthy }
+      its(:black?) { is_expected.not_to be_truthy }
+      its(:blue?) { is_expected.not_to be_truthy }
+      its(:green?) { is_expected.not_to be_truthy }
+      its(:red?) { is_expected.not_to be_truthy }
     end
   end
 end

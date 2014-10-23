@@ -22,13 +22,13 @@ class ManaCost
     mana_color == "R"
   end
   def blue?
-    false
+    mana_color == "U"
   end
   def green?
-    false
+    mana_color == "G"
   end
   def white?
-    false
+    mana_color == "W"
   end
   private
 
