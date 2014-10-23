@@ -2,10 +2,10 @@ body {
   font-family: 'Open Sans', serif;
 }
 
-html, button, input, select, textarea,
-  .pure-g [class *= "pure-u"] {
-    font-family: 'Open Sans', serif;
-}
+/* html, button, input, select, textarea, */
+  /* .pure-g [class *= "pure-u"] { */
+    /* font-family: 'Open Sans', serif; */
+/* } */
 
 a:link {
   text-decoration: none;

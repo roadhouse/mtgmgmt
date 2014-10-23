@@ -20,7 +20,6 @@ class Deck < ActiveRecord::Base
     group_by_card_type(:sideboard)
   end
 
-  private
 
   def card_list_from(part)
     card_decks.where(part: part).map do |entry| 
@@ -28,9 +27,13 @@ class Deck < ActiveRecord::Base
     end
   end
 
+  private
+
   def group_by_card_type(part)
-    card_list_from(part).group_by do |deck_entry| 
+    data = card_list_from(part).group_by do |deck_entry| 
       deck_entry[:card].card_type.match(/Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/).to_s
     end
+    
+    Hash[data.sort]
   end
 end
