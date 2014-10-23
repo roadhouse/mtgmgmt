@@ -24,7 +24,7 @@ class ManaCost
     false
   end
   def red?
-    false
+    !!@mana_cost.match(/{(\D)}/)
   end
   def blue?
     false
