@@ -13,5 +13,10 @@ describe ManaCost do
       it { is_expected.to be_truthy }
     end
 
+    context ".colored?" do
+      subject { ManaCost.new("{3}").colored? }
+
+      it { is_expected.to be_falsey }
+    end
   end
 end

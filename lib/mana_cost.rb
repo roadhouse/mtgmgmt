@@ -7,6 +7,10 @@ class ManaCost
     @mana_cost.match(/{(\d)}/).captures.first.to_i
   end
 
+  def colored?
+    [black?, red?, blue?, green?, white?].any? {|color| color == true}
+  end
+
   def colorless?
     [black?, red?, blue?, green?, white?].all? {|color| color == false}
   end
