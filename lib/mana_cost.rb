@@ -21,10 +21,10 @@ class ManaCost
   end
 
   def black?
-    !!@mana_cost.match(/{(\D)}/)
+    mana_color == "B"
   end
   def red?
-    !!@mana_cost.match(/{(\D)}/)
+    mana_color == "R"
   end
   def blue?
     false
@@ -34,5 +34,10 @@ class ManaCost
   end
   def white?
     false
+  end
+  private
+
+  def mana_color
+    @mana_cost.match(/{(\D|\d)}/).captures.first
   end
 end
