@@ -22,24 +22,70 @@ describe ManaCost do
   end
 
   context "colored costs" do
-    subject(:colored_manacost) { ManaCost.new("{R}") }
+    context "RED" do
+      subject(:colored_manacost) { ManaCost.new("{R}") }
 
-    context ".value" do
-      subject { colored_manacost.value }
+      context ".value" do
+        subject { colored_manacost.value }
 
-      it { is_expected.to eql 1 }
+        it { is_expected.to eql 1 }
+      end
+
+      context ".colored?" do
+        subject { colored_manacost.colored? }
+
+        it { is_expected.to be_truthy }
+      end
+
+      context ".red?" do
+        subject { colored_manacost.red? }
+
+        it { is_expected.to be_truthy }
+      end
+
+      context "all others must be false" do
+        methods = %i(black? blue? white? green?)
+        methods.each do |method| 
+          context method.to_s do
+            subject { colored_manacost.send(method) }
+
+            it { is_expected.to be_falsey }
+          end
+        end
+      end
     end
     
-    context ".colored?" do
-      subject { colored_manacost.colored? }
+    context "BLACK" do
+      subject(:colored_manacost) { ManaCost.new("{B}") }
 
-      it { is_expected.to be_truthy }
-    end
+      context ".value" do
+        subject { colored_manacost.value }
 
-    context ".red?" do
-      subject { colored_manacost.red? }
-      
-      it { is_expected.to be_truthy }
+        it { is_expected.to eql 1 }
+      end
+
+      context ".colored?" do
+        subject { colored_manacost.colored? }
+
+        it { is_expected.to be_truthy }
+      end
+
+      context ".red?" do
+        subject { colored_manacost.red? }
+
+        it { is_expected.to be_falsey }
+      end
+
+      context "all others must be false" do
+        methods = %i(red? blue? white? green?)
+        methods.each do |method| 
+          context method.to_s do
+            subject { colored_manacost.send(method) }
+
+            it { is_expected.to be_falsey }
+          end
+        end
+      end
     end
   end
 end
