@@ -1,0 +1,3 @@
+class ManaCost
+
+end
