@@ -4,7 +4,12 @@ class ManaCost
   end
 
   def value
-    @mana_cost.match(/{(\d)}/).captures.first.to_i
+    colored_manacost = @mana_cost.match(/{(\D)}/)
+    colorless_manacost = @mana_cost.match(/{(\d)}/)
+
+    value = (colored_manacost or colorless_manacost).captures.first.to_i
+
+    value.zero? ? 1 : value
   end
 
   def colored?

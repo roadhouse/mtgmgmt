@@ -19,4 +19,14 @@ describe ManaCost do
       it { is_expected.to be_falsey }
     end
   end
+
+  context "colored costs" do
+    subject(:colored_manacost) { ManaCost.new("{R}") }
+
+    context ".value" do
+      subject { colored_manacost.value }
+
+      it { is_expected.to eql 1 }
+    end
+  end
 end
