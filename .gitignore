@@ -15,6 +15,6 @@
 /tmp
 /.dropbox
 config/database.yml
-bin_stubs/*
+binstubs/*
 vendor/gems/*
 spec/helpers/*
