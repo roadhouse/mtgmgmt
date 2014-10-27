@@ -70,4 +70,13 @@ describe ManaCost do
       its(:red?) { is_expected.not_to be_truthy }
     end
   end
+
+  context "compond costs" do
+    subject { Mana.new("{2}{R}") }
+
+    its(:converted_manacost) { is_expected.to eql 3 }
+    its(:manas) { is_expected.to eql Hash }
+    
+
+  end
 end
