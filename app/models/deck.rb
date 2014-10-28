@@ -33,6 +33,14 @@ class Deck < ActiveRecord::Base
     end.flatten
   end
 
+  def main_ids
+    Card.where(id: card_decks.where(part: :main).pluck(:card_id)).pluck(:id)
+  end
+
+  def sideboard_ids
+    Card.where(id: card_decks.where(part: :sideboard).pluck(:card_id)).pluck(:id)
+  end
+
   private
 
   def group_by_card_type(part)

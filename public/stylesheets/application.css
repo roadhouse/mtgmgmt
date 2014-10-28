@@ -1,11 +1,11 @@
-body {
-  font-family: 'Open Sans', serif;
-}
-
-/* html, button, input, select, textarea, */
-  /* .pure-g [class *= "pure-u"] { */
-    /* font-family: 'Open Sans', serif; */
+/* body { */
+  /* font-family: 'Open Sans', serif; */
 /* } */
+
+html, button, input, select, textarea,
+  .pure-g [class *= "pure-u"] {
+    font-family: 'Open Sans', serif;
+}
 
 a:link {
   text-decoration: none;
@@ -23,4 +23,17 @@ a:hover {
 .deck-box > div > ul {
   list-style: none;
   padding-left: 0;
+}
+
+.box {
+  background: rgb(240,240,240);
+  border-radius: 10px;
+}
+
+.box table {
+  width: 100%;
+}
+
+.box h2 {
+  text-align: center;
 }
