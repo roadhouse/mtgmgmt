@@ -15,4 +15,14 @@ class Orthanc
       .having('card_id not in (?)', lands_ids)
       .limit(limit)
   end
+
+  def most_playable_decks(cards = all_decks)
+    grouped_decks = all_decks.pluck(:name).group_by {|i| i}
+    sorted_decks = Hash[grouped_decks]
+      .inject({}) {|m,v| m[v.first]=v.last.size;m}
+      .sort_by {|i| i.last}
+      .reverse
+
+    Hash[sorted_decks]
+  end
 end
