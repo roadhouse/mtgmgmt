@@ -27,6 +27,12 @@ class Deck < ActiveRecord::Base
     end
   end
 
+  def for_game(part)
+    card_list_from(part).map do |card|
+      Array.new(card[:copies]) { |_| card[:card] }
+    end.flatten
+  end
+
   private
 
   def group_by_card_type(part)
