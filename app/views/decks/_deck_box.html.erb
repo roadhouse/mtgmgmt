@@ -13,3 +13,27 @@
     <img src="#">
   </div>
 </div>
+
+<canvas id="manacost_chart"></canvas>
+<canvas id="type_chart"></canvas>
+
+<script>
+  var data = {
+    labels: <%= DeckStats.new(deck.for_game(:main)).by_manacost.keys.sort %>,  
+    datasets: [
+    { data: <%= DeckStats.new(deck.for_game(:main)).total_by_manacost.values %> }
+    ]
+  };
+  var ctx = document.getElementById("manacost_chart").getContext("2d");
+  var myNewChart = new Chart(ctx).Bar(data);
+
+  var data2 = {
+    labels: <%= raw DeckStats.new(deck.for_game(:main)).total_by_type.keys %>,  
+    datasets: [
+    { data: <%= DeckStats.new(deck.for_game(:main)).total_by_type.values %> }
+    ]
+  };
+  var ctx2 = document.getElementById("type_chart").getContext("2d");
+  var myNewChart2 = new Chart(ctx2).Bar(data2);
+</script>
+

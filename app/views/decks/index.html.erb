@@ -24,3 +24,12 @@
     <% end %>
   </ol>
 </div>
+
+<div class="box">
+  <h2>Top decks</h2>
+  <ol>
+    <% @orthanc.most_playable_decks.each do |deck| %>
+      <li><%=  deck.name %> (<%= ((deck.quantity.to_f/ Deck.all.count.to_f ) * 100).truncate %>%)</li>
+    <% end %>
+  </ol>
+</div>

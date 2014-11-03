@@ -16,13 +16,13 @@ class Orthanc
       .limit(limit)
   end
 
-  def most_playable_decks(cards = all_decks)
-    grouped_decks = all_decks.pluck(:name).group_by {|i| i}
-    sorted_decks = Hash[grouped_decks]
-      .inject({}) {|m,v| m[v.first]=v.last.size;m}
-      .sort_by {|i| i.last}
-      .reverse
-
-    Hash[sorted_decks]
+  def most_playable_decks(limit = 15)
+    more_playable_to_less = "quantity desc"
+    quantity              = "count(name) as quantity"
+    Deck.all
+      .select(:name, quantity)
+      .group(:name)
+      .order(more_playable_to_less)
+      .limit(limit)
   end
 end

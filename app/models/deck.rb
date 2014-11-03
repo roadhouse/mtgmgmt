@@ -1,3 +1,4 @@
+require './lib/game/mana_cost'
 class Deck < ActiveRecord::Base
   has_many :card_decks
   has_many :cards, through: :card_decks
@@ -49,5 +50,59 @@ class Deck < ActiveRecord::Base
     end
     
     Hash[data.sort]
+  end
+end
+
+class DeckStats
+  TYPES =  {land: /Land/, instant: /Instant/, sorcery: /Sorcery/, enchantment: /Enchantment/, planeswalker: /Planeswalker/, creature: /Creature/, artifact: /Artifact/}
+
+  # [Card, Card]
+  def initialize(deck)
+    @deck = deck
+  end
+
+  def lands
+    grouped_by(:land)
+  end
+
+  def non_lands
+    [
+      grouped_by(:instant) + 
+      grouped_by(:sorcery) +
+      grouped_by(:enchantment) +
+      grouped_by(:planeswalker) +
+      grouped_by(:creature) +
+      grouped_by(:artifact)
+    ].compact.flatten
+  end
+
+  def grouped_by(type)
+    type_string = TYPES[type]
+    @deck.find_all { |card| card.card_type.match(type_string) }
+  end
+
+  def by_manacost
+    x=non_lands.group_by {|i| Mana.new(i.manacost).converted_manacost }.sort
+    Hash[x]
+  end
+  
+  def total_by_manacost
+    by_manacost.inject({}) {|m,v| m[v.first]=v.last.size;m}
+  end
+
+  def total_by_type
+    group_by_card_type.inject({}) {|m,v| m[v.first]=v.last.size;m}
+  end
+  
+  def group_by_card_type
+    data = non_lands.group_by do |card| 
+      card.card_type.match(/Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/).to_s
+    end.sort
+    
+    Hash[data]
+  end
+
+  def quantity_by_type
+
   end
 end
