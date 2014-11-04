@@ -46,11 +46,11 @@ class Roudi
 
   def self.all(set)
     page_max = 15
-    (1..page_max).map { |page| p "PAGE: #{page}"; Roudi.new(set, page).persist! }.find_all {|i| !i.empty?}.flatten
+    (1..page_max).map { |page| p "PAGE: #{page}"; Roudi.new(set, page).persist! }
   end
 
   def persist!
-    cards.map(&:save!)
+    cards.flatten.map(&:save!)
   end
 
   def cards

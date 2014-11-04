@@ -10,7 +10,7 @@ class CardCrawler
 
   def ar_objects
     # binding.pry
-    @cards_attributes.to_a.map { |attributes| build_card(attributes) }
+    @cards_attributes.to_a.flatten.map { |attributes| build_card(attributes) }
   end
 
   def build_card(data, factory = Card)
@@ -25,6 +25,7 @@ class CardCrawler
       name: data['name'], 
       original_text: data['originalText'],
       original_type: data["originalType"],
+      portuguese_name: data["foreignNames"].find {|i| i["language"] == "Portuguese (Brazil)"}.to_h.fetch("name"){data["name"]},
       rarity: data['rarity'],
       set: data['set'],
       supertypes: data["supertypes"],
@@ -42,6 +43,10 @@ class CardCrawler
       names: data["names"],
       printings: data["printings"],
       subtypes: data["subtypes"],
+
+      # foreign_names: data["foreignNames"],
+      # legalities: data["legalities"],
+      # rulings: data["rulings"]
     })
   end
 end

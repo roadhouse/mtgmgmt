@@ -55,7 +55,7 @@ class Deck < ActiveRecord::Base
 
   def group_by_card_type(part)
     data = card_list_from(part).group_by do |deck_entry| 
-      deck_entry[:card].card_type.match(/Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/).to_s
+      deck_entry[:card].ctype.match(/Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/).to_s
     end
     
     Hash[data.sort]
@@ -87,11 +87,11 @@ class DeckStats
 
   def grouped_by(type)
     type_string = TYPES[type]
-    @deck.find_all { |card| card.card_type.match(type_string) }
+    @deck.find_all { |card| card.ctype.match(type_string) }
   end
 
   def by_manacost
-    x=non_lands.group_by {|i| Mana.new(i.manacost).converted_manacost }.sort
+    x=non_lands.group_by {|i| Mana.new(i.mana_cost).converted_manacost }.sort
     Hash[x]
   end
   
@@ -105,13 +105,9 @@ class DeckStats
   
   def group_by_card_type
     data = non_lands.group_by do |card| 
-      card.card_type.match(/Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/).to_s
+      card.ctype.match(/Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/).to_s
     end.sort
     
     Hash[data]
-  end
-
-  def quantity_by_type
-
   end
 end

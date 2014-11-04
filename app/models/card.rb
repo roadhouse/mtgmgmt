@@ -1,6 +1,6 @@
 class Card < ActiveRecord::Base
   scope :per_name, ->(name) { where(["name ilike ?", "%#{name}%"]) }
-  scope :per_type, ->(type) { where(["card_type ilike ?", "%#{type}%"]) }
+  scope :per_type, ->(type) { where(["ctype ilike ?", "%#{type}%"]) }
   validates_presence_of :set, :name
 
   has_many :card_decks
