@@ -29,20 +29,30 @@ ActiveRecord::Schema.define(version: 20130527022141) do
     t.string   "name"
     t.string   "image"
     t.string   "set"
-    t.string   "color"
-    t.string   "manacost"
-    t.string   "card_type"
+    t.string   "mana_cost"
+    t.string   "ctype"
     t.string   "power"
-    t.string   "toughness"
+    t.integer  "toughness"
     t.string   "rarity"
     t.string   "artist"
-    t.string   "number"
+    t.integer  "number"
     t.string   "number_ex"
-    t.integer  "edition_id"
+    t.string   "original_type"
+    t.string   "layout"
+    t.string   "border"
+    t.text     "original_text"
+    t.text     "flavor"
     t.integer  "loyalty"
-    t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "multiverse_id"
+    t.integer  "cmc"
+    t.string   "ctypes",        default: [], array: true
+    t.string   "subtypes",      default: [], array: true
+    t.string   "printings",     default: [], array: true
+    t.string   "names",         default: [], array: true
+    t.string   "colors",        default: [], array: true
+    t.string   "supertypes",    default: [], array: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "decks", force: true do |t|
@@ -61,14 +71,14 @@ ActiveRecord::Schema.define(version: 20130527022141) do
     t.integer  "language_id"
     t.boolean  "foil"
     t.string   "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
     t.string   "login"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -36,8 +36,9 @@ class Crawler
   end
 end
 
+require 'open-uri'
 class Roudi
-  def initialize(set, page = 1)
+  def initialize(set, page)
     @set = set
     @page = page
     @url = "http://api.mtgapi.com/v2/cards?page=#{@page}&set=#{@set}"
@@ -45,36 +46,15 @@ class Roudi
 
   def self.all(set)
     page_max = 15
-    (1..page_max).map { |page| CardCrawler.new(set, page).cards }.find_all {|i| !i.empty?}.flatten
+    (1..page_max).map { |page| p "PAGE: #{page}"; Roudi.new(set, page).persist! }.find_all {|i| !i.empty?}.flatten
+  end
+
+  def persist!
+    cards.map(&:save!)
   end
 
   def cards
-    file_name = "#{@set}_#{@page}.json"
-    api_response = open(@url).read
-    json_data = JSON.parse api_response
-    File.open(file_name, "w") { |f| f.write json_data }
-    p "file: #{file_name} criado"
-    json_data["cards"].to_a.map do |card_data|
-      attr = {
-        name: card_data["name"],
-        image: card_data["images"]["gatherer"],
-        set: card_data["set"],
-        color: nil,
-        manacost: card_data["manaCost"],
-        card_type: card_data["type"],
-        power: card_data["power"],
-        toughness: card_data["toughness"],
-        rarity: card_data["rarity"],
-        artist: card_data["artist"],
-        number: card_data["number"],
-        number_ex: nil,
-        edition_id: nil,
-        loyalty: card_data["loyalty"],
-        text: card_data["originalText"]
-      }
-
-      Card.new attr
-    end
+    CardCrawler.new(@url).ar_objects
   end
 end
 
