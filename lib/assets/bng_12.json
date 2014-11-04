@@ -1,1 +1,0 @@
-{"query"=>[{"command"=>"where", "key"=>"set", "conditional"=>"=", "value"=>"bng"}], "cards"=>nil, "total"=>165, "perPage"=>20, "links"=>{"first"=>"http://api.mtgapi.com/v2/cards?set=bng", "previous"=>"http://api.mtgapi.com/v2/cards?page=8&set=bng", "current"=>"http://api.mtgapi.com/v2/cards?page=9&set=bng", "next"=>nil, "last"=>"http://api.mtgapi.com/v2/cards?page=9&set=bng"}}

@@ -1,1 +1,0 @@
-{"query"=>[{"command"=>"where", "key"=>"set", "conditional"=>"=", "value"=>"jou"}], "cards"=>nil, "total"=>165, "perPage"=>20, "links"=>{"first"=>"http://api.mtgapi.com/v2/cards?set=jou", "previous"=>"http://api.mtgapi.com/v2/cards?page=8&set=jou", "current"=>"http://api.mtgapi.com/v2/cards?page=9&set=jou", "next"=>nil, "last"=>"http://api.mtgapi.com/v2/cards?page=9&set=jou"}}

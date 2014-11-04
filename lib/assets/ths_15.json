@@ -1,1 +1,0 @@
-{"query"=>[{"command"=>"where", "key"=>"set", "conditional"=>"=", "value"=>"ths"}], "cards"=>nil, "total"=>249, "perPage"=>20, "links"=>{"first"=>"http://api.mtgapi.com/v2/cards?set=ths", "previous"=>"http://api.mtgapi.com/v2/cards?page=12&set=ths", "current"=>"http://api.mtgapi.com/v2/cards?page=13&set=ths", "next"=>nil, "last"=>"http://api.mtgapi.com/v2/cards?page=13&set=ths"}}
