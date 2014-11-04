@@ -9,6 +9,34 @@ class Mana
     end
   end
 
+  def colors
+    manas.map(&:color)
+  end
+
+  def black
+    manas.all {|mana| mana.black?}
+  end
+  
+  def red
+    manas.all {|mana| mana.red?}
+  end
+
+  def blue
+    manas.all {|mana| mana.blue?}
+  end
+
+  def green
+    manas.all {|mana| mana.green?}
+  end
+
+  def white
+    manas.all {|mana| mana.white?}
+  end
+
+  def colorless
+    manas.all {|mana| mana.colorless?}
+  end
+
   def converted_manacost
     manas.map(&:value).sum
   end
@@ -58,6 +86,10 @@ class ManaCost
   end
   def white?
     mana_color == "W"
+  end
+
+  def colorless?
+    mana_color == "X" or !mana_color.to_i.zero? 
   end
   private
 

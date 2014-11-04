@@ -5,6 +5,15 @@ class Deck < ActiveRecord::Base
 
   validates_uniqueness_of :url
 
+
+  def table
+    Deck.arel_table
+  end
+
+  def archeptype_deck(deck_name)
+    Deck.where(table[:name].matches("%#{deck_name}%")).last
+  end
+
   def add_card(copies, name, part)
     begin
       card_decks.build(card: Card.find_by_name!(name), copies: copies, part: part)
