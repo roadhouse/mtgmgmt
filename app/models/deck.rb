@@ -75,14 +75,7 @@ class DeckStats
   end
 
   def non_lands
-    [
-      grouped_by(:instant) + 
-      grouped_by(:sorcery) +
-      grouped_by(:enchantment) +
-      grouped_by(:planeswalker) +
-      grouped_by(:creature) +
-      grouped_by(:artifact)
-    ].compact.flatten
+    @deck.find_all {|i| !i.ctype.match(TYPES[:land])}
   end
 
   def grouped_by(type)
@@ -93,6 +86,17 @@ class DeckStats
   def by_manacost
     x=non_lands.group_by {|i| Mana.new(i.mana_cost).converted_manacost }.sort
     Hash[x]
+  end
+
+  def by_color
+    x=non_lands
+        .map {|i| Mana.new(i.mana_cost).colors}
+        .flatten
+        .group_by {|i| i}
+  end
+
+  def total_by_color
+    by_color.inject({}) {|m,v| m[v.first]=v.last.size;m}
   end
   
   def total_by_manacost

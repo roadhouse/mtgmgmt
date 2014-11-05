@@ -22,9 +22,9 @@ class InventoriesController < ApplicationController
   end
 
   def create
-    @inventory = Inventory.new(params[:inventory])
+    @inventory = Inventory.create!(inventory_params)
 
-    respond_with(@inventory)
+    redirect_to :root
   end
 
   def update
@@ -38,4 +38,10 @@ class InventoriesController < ApplicationController
 
     respond_with(@inventory.destroy)
   end
+
+    private
+
+    def inventory_params
+      params.require(:inventory).permit(:user_id, :quantity, :card_id)
+    end
 end

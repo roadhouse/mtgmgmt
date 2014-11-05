@@ -1,6 +1,7 @@
-/* body { */
-  /* font-family: 'Open Sans', serif; */
-/* } */
+body {
+  font-family: 'Open Sans', serif;
+  padding: 1em;
+}
 
 html, button, input, select, textarea,
   .pure-g [class *= "pure-u"] {
@@ -15,19 +16,40 @@ a:hover {
     text-decoration: underline;
 }
 
+.deck-box {
+  padding: 1em;
+  background: rgb(240,240,240);
+}
+
+.deck-sideboard {
+  color: grey;
+}
+.deck-list > h4 {
+  margin-top: 0;
+}
+.deck-list > h5 {
+  margin:0;
+}
 .deck-box > div {
-  display: inline-block; 
-  vertical-align: top
+  /* display: inline-block;  */
+  /* vertical-align: top */
 }
 
 .deck-box > div > ul {
   list-style: none;
   padding-left: 0;
+  margin-top: 0;
 }
 
+.pure-g > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .box {
   background: rgb(240,240,240);
   border-radius: 10px;
+  padding: 1em;
 }
 
 .box table {
@@ -36,4 +58,8 @@ a:hover {
 
 .box h2 {
   text-align: center;
+}
+
+.deck-card-preview {
+  width: 23em;
 }

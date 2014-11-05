@@ -1,0 +1,6 @@
+<%= form_for(Inventory.find_or_initialize_by(user: User.first, card: card), html: {class: "pure-form"}) do |f| %>
+  <%= f.hidden_field :card_id %>
+  <%= f.hidden_field :user_id %>
+  <%= f.text_field :quantity, class: "pure-input-1-4" %>
+  <%= f.submit "add", class: "pure-input-1-4 pure-button" %>
+<% end %>

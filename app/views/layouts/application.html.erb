@@ -19,8 +19,14 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="/stylesheets/application.css" rel="stylesheet">
   <body>
-    <div>
-      <%= yield %>
+    <div class="pure-g">
+      <div class="pure-u-1-24 pure-u-md-1-24">
+      </div>
+      <div class="pure-u-11-12 pure-u-md-11-12">
+        <%= yield %>
+      </div>
+      <div class="pure-u-1-24 pure-u-md-1-24">
+      </div>
     </div>
   </body>
 </html>
