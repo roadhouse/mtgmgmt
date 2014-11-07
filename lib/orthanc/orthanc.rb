@@ -1,17 +1,24 @@
 class Orthanc
-  def initialize(cards)
-    @cards = cards
+  def initialize(options)
+    @options = options
+    @w = params(options)
+  end
+
+  def cards
+    Card.joins(:card_decks).where(@w)
   end
 
   # .test(color: :w, type: :c)
-  def teste(p={})
+  def top_cards(p={})
     Card.joins(:card_decks)
-      .select(:id, :name, count_name)
-      .where(params(p))
+      .select(:id, :name, count_name.as("quantity"))
       .group(card[:name], card[:id])
-      .order("quantity desc")
+      .where(params(p))
+      .order(count_name.desc)
       .limit(p.fetch(:limit) { 10 })
   end
+
+  private
 
   def params(hash)
     c = {w: "White", u: "Blue", b: "Black", r: "Red", g: "Green"}
@@ -47,7 +54,7 @@ class Orthanc
   end
 
   def count_name
-    card[:name].count.as("quantity")
+    card[:name].count
   end
 
   def card
@@ -56,13 +63,5 @@ class Orthanc
 
   def deck
     CardDeck.arel_table
-  end
-
-  def top_creatures
-    teste()
-  end
-
-  def top_instants
-    teste(type: "Instant")
   end
 end
