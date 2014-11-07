@@ -4,25 +4,58 @@ class Orthanc
   end
 
   # .test(color: :w, type: :c)
-  def teste(p={limit: 10})
+  def teste(p={})
     Card.joins(:card_decks)
-      .select(:name, Card.arel_table[:name].count.as("quantity"))
+      .select(:id, :name, count_name)
       .where(params(p))
-      .group("cards.name")
+      .group(card[:name], card[:id])
       .order("quantity desc")
-      .limit(p.fetch(:limit) { 10})
+      .limit(p.fetch(:limit) { 10 })
   end
 
-  def params(p)
-    Hash.new.tap do |where|
-      color = p.fetch(:color) {nil}
-      part = p.fetch(:part) { :main }
-      type = p.fetch(:type) { "Creature"}
+  def params(hash)
+    c = {w: "White", u: "Blue", b: "Black", r: "Red", g: "Green"}
+    t = {c: "Creature", l: "Land", i: "Instant", s: "Sorcery", e: "Enchantment", p: "Planeswalker", a: "Artifact", nl: :nonland}
+    p = {m: :main, s: :sideboard}
 
-      where[:card_decks] = {part: part} if part
-      where[:ctypes] = ["{#{type}}"] if type
-      where[:colors] = ["{#{color}}"] if color
-    end
+    color = c[hash[:color]]
+    type = t[hash[:type]]
+    part = p[hash.fetch(:part) { :m }]
+
+    where = deck_part_is(part)
+
+    where = type ? where.send(:and, card_type_is(type)) : where.send(:and, not_lands)
+    where = where.send(:and, card_color_is(color)) if color
+
+    where
+  end
+
+  def not_lands
+    card[:ctypes].not_in("{Land}")
+  end
+
+  def deck_part_is(part)
+    deck[:part].eq(part)
+  end
+
+  def card_type_is(type)
+      card[:ctypes].in("{#{type}}")
+  end
+
+  def card_color_is(color)
+    card[:colors].in("{#{color}}")
+  end
+
+  def count_name
+    card[:name].count.as("quantity")
+  end
+
+  def card
+    Card.arel_table
+  end
+
+  def deck
+    CardDeck.arel_table
   end
 
   def top_creatures
@@ -32,29 +65,4 @@ class Orthanc
   def top_instants
     teste(type: "Instant")
   end
-  
-  def most_playable_cards(limit = 10)
-      query = <<QUERY 
-SELECT cards.id, cards.name, count(cards.name) as quantity 
-FROM card_decks, cards  
-WHERE card_decks.part = 'main' 
-AND cards.id = card_decks.card_id
-AND 'Land' <> ANY(cards.ctypes)
-GROUP BY cards.name, cards.id
-ORDER BY quantity desc
-limit #{limit}
-QUERY
-
-    Card.find_by_sql(query)
-  end
-
-  def most_playable_decks(limit = 10)
-    Deck.all
-      .select(:name,Deck.arel_table[:name].count.as("quantity"))
-      .group(:name)
-      .order("quantity desc")
-      .limit(limit)
-  end
-
-  
 end
