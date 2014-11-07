@@ -1,33 +1,112 @@
 class Orthanc
-  def initialize(options)
+  #.new(color: :w, type: :c, part: :m)
+  def initialize(options={})
     @options = options
-    @w = params(options)
+
+    @options[:limit] = 10
+    @c = CardParam.new(@options)
+    @cd = CardDeckParam.new(@options)
   end
 
   def cards
-    Card.joins(:card_decks).where(@w)
+    Card.where(@c.params)
   end
 
-  # .test(color: :w, type: :c)
-  def top_cards(p={})
+  def top_cards
     Card.joins(:card_decks)
-      .select(:id, :name, count_name.as("quantity"))
-      .group(card[:name], card[:id])
-      .where(params(p))
-      .order(count_name.desc)
-      .limit(p.fetch(:limit) { 10 })
+      .select(:id, :name, @c.count_name.as("quantity"))
+      .where(@c.params.and(@cd.params))
+      .group(@c.name, @c.id)
+      .order(@c.count_name.desc)
+      .limit(@options[:limit])
+  end
+end
+
+class CardDeckParam
+  def initialize(options={})
+    @options = options
   end
 
-  private
+  def params
+    p = {m: :main, s: :sideboard}
 
-  def params(hash)
+    part = p[@options.fetch(:part) { :m }]
+
+    where = deck_part_is(part)
+
+    where
+  end
+
+  def table
+    CardDeck.arel_table
+  end
+
+  def deck_part_is(part)
+    table[:part].eq(part)
+  end
+end
+
+class CardParam
+  def initialize(options)
+    @options = options 
+  end
+
+  def params
+    c = {w: "White", u: "Blue", b: "Black", r: "Red", g: "Green"}
+    t = {c: "Creature", l: "Land", i: "Instant", s: "Sorcery", e: "Enchantment", p: "Planeswalker", a: "Artifact", nl: :nonland}
+
+    color = c[@options[:color]]
+    type = t[@options[:type]]
+
+    where = not_lands
+    where = where.send(:and, card_type_is(type)) if type
+    where = where.send(:and, card_color_is(color)) if color
+
+    where
+  end
+
+  def not_lands
+    card[:ctypes].not_in("{Land}")
+  end
+
+  def card_type_is(type)
+    card[:ctypes].in("{#{type}}")
+  end
+
+  def card_color_is(color)
+    card[:colors].in("{#{color}}")
+  end
+
+  def count_name
+    card[:name].count
+  end
+
+  def card
+    Card.arel_table
+  end
+
+  def id
+    card[:id]
+  end
+
+  def name
+    card[:name]
+  end
+end
+
+class QueryParam
+  def initialize(options)
+    @options = options 
+  end
+
+  def params
     c = {w: "White", u: "Blue", b: "Black", r: "Red", g: "Green"}
     t = {c: "Creature", l: "Land", i: "Instant", s: "Sorcery", e: "Enchantment", p: "Planeswalker", a: "Artifact", nl: :nonland}
     p = {m: :main, s: :sideboard}
 
-    color = c[hash[:color]]
-    type = t[hash[:type]]
-    part = p[hash.fetch(:part) { :m }]
+    color = c[@options[:color]]
+    type = t[@options[:type]]
+    part = p[@options.fetch(:part) { :m }]
 
     where = deck_part_is(part)
 
@@ -46,7 +125,7 @@ class Orthanc
   end
 
   def card_type_is(type)
-      card[:ctypes].in("{#{type}}")
+    card[:ctypes].in("{#{type}}")
   end
 
   def card_color_is(color)
@@ -63,5 +142,13 @@ class Orthanc
 
   def deck
     CardDeck.arel_table
+  end
+
+  def id
+    card[:id]
+  end
+
+  def name
+    card[:name]
   end
 end
