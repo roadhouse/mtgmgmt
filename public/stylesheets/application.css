@@ -28,23 +28,38 @@ a:hover {
   padding: 1em;
   /* background: rgb(240,240,240); */
   /* font-size: 85%; */
+  margin:1em 0;
 }
 
 .deck-sideboard {
   color: grey;
 }
 .deck-list > h4 {
-  margin-top: 0;
-}
-.deck-list > h5 {
   margin:0;
+}
+
+li { margin-bottom: 0.5em; }
+
+hr { margin-top: 0.5em;}
+h2 { margin-bottom: 0;}
+ol {
+
+  list-style: none;
+  padding-left: 0em;
+}
+.deck-list {
+  padding: 0 0.5em;
+}
+
+.deck-list > h5 {
+  margin-bottom:0;
 }
 .deck-box > div {
   /* display: inline-block;  */
   /* vertical-align: top */
 }
 
-.deck-box > div > ul {
+.card_entry_box {
   list-style: none;
   padding-left: 0;
   margin-top: 0;

@@ -1,13 +1,12 @@
 <% cards.each_pair do |card_type, cards| %>
   <h5><%= card_type %></h5>
-  <ul>
+  <ul class="card_entry_box">
     <% cards.each do |card| %>
-      <li>
-      <strong><%= card[:copies] %></strong>
-      <%= link_to card[:card].name, "#", class: "card-image", data: { card_image: card[:card].image }%>
+        <li>
+        <strong><%= card[:copies] %></strong>
+        <%= link_to card[:card].name, "#", class: "card-image", data: { card_image: card[:card].image }%>
 
-      </li>
+        </li>
     <% end %>
   </ul>
-
 <% end %>

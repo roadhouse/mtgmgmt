@@ -1,15 +1,19 @@
 <div class="deck-box pure-g">
-  <div class="deck-list deck-main pure-u-1-2">
+  <div class="deck-list deck-main pure-u-1 pure-u-lg-1-3">
     <h4>Main</h4>
+    <hr/>
     <%= render 'card_entry', cards: deck.main %>
   </div>
 
-  <div class="deck-list deck-sideboard pure-u-1-2">
+  <div class="deck-list deck-sideboard pure-u-1 pure-u-lg-1-3">
     <h4>Sideboard</h4>
+    <hr/>
     <%= render 'card_entry', cards: deck.sideboard %>
   </div>
 
-  <div class="deck-card-preview pure-u-1">
+  <div class="deck-list deck-card-preview pure-u-1 pure-u-lg-1-3">
+    <h4>Card</h4>
+    <hr/>
     <img class="pure-img" src="#">
   </div>
 </div>
