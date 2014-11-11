@@ -8,6 +8,6 @@ class Card < ActiveRecord::Base
   has_many :users, through: :inventories
   
   def self.find_by_name!(name)
-    per_name(name).first or Card.create!(name: name, ctype: :fake)
+    per_name(name).first or Card.create!(name: name, set: :fake)
   end
 end
