@@ -40,17 +40,18 @@ ActiveRecord::Schema.define(version: 20130527022141) do
     t.string   "original_type"
     t.string   "layout"
     t.string   "border"
+    t.string   "portuguese_name"
     t.text     "original_text"
     t.text     "flavor"
     t.integer  "loyalty"
     t.integer  "multiverse_id"
     t.integer  "cmc"
-    t.string   "ctypes",        default: [], array: true
-    t.string   "subtypes",      default: [], array: true
-    t.string   "printings",     default: [], array: true
-    t.string   "names",         default: [], array: true
-    t.string   "colors",        default: [], array: true
-    t.string   "supertypes",    default: [], array: true
+    t.string   "ctypes",          default: [], array: true
+    t.string   "subtypes",        default: [], array: true
+    t.string   "printings",       default: [], array: true
+    t.string   "names",           default: [], array: true
+    t.string   "colors",          default: [], array: true
+    t.string   "supertypes",      default: [], array: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end

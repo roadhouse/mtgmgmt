@@ -3,8 +3,6 @@ development:
   encoding: unicode
   database: magic_development
   pool: 5
-  username: 
-  password:
 
 test:
   adapter: postgresql
