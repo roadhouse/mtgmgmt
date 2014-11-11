@@ -7,6 +7,8 @@ gem "rails"
 gem "virtus"
 gem "heroku"
 
+gem 'rails_12factor', group: :production
+
 group :test, :development do
   gem "factory_girl_rails"
   gem "mocha", require: false
