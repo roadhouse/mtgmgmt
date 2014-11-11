@@ -13,4 +13,10 @@ namespace :bootstrap do
       MtgApi.all!(set)
     end
   end
+
+  desc "load decs from mtgdecks"
+  task mtgdecks: :environment do
+    require './lib/laracna/crawler.rb'
+    Crawler.run!(:mtgdecks)
+  end
 end
