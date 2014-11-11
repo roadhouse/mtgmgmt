@@ -1,6 +1,6 @@
 body {
   font-family: 'Lato', serif;
-color: white;
+  color: white;
   padding: 0.25em;
   background:
   radial-gradient(black 15%, transparent 16%) 0 0,
@@ -26,7 +26,8 @@ a:hover {
 
 .deck-box {
   padding: 1em;
-  background: rgb(240,240,240);
+  /* background: rgb(240,240,240); */
+  /* font-size: 85%; */
 }
 
 .deck-sideboard {
