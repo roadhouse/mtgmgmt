@@ -1,5 +1,6 @@
+#centralize queries (using arel) and extract reports
+# PARAMS: {color: [:w|:r|:c|:b|:a|:g], type: [:a|:l|:i|:s|:c|:p], part: [:m|:s]}
 class Orthanc
-  #.new(color: :w, type: :c, part: :m)
   def initialize(options={})
     @options = {limit: 10}.merge(options)
     
@@ -8,12 +9,15 @@ class Orthanc
     @d = DeckParam.new
   end
 
+  #basic card search using CardParam params as filter
   def cards
-    Card.where(@c.params)
+    @c.model.where(@c.params)
   end
 
+  #top cards played in standard
+  #DEFAULT: looking in main deck and ignore land cards
   def top_cards
-    Card.joins(:card_decks)
+    @c.model.joins(:card_decks)
       .select(@c.id, @c.name, @c.count_name.as("quantity"))
       .where(@c.params.and(@cd.params))
       .group(@c.name, @c.id)
@@ -22,23 +26,35 @@ class Orthanc
   end
 
   def top_decks
-    Deck.select(@d.name, @d.name.count.as("quantity"))
-      .group(@d.name)
+    @d.model.select(@d.id, @d.name, @d.name.count.as("quantity"))
+      .group(@d.name, @d.id)
       .order(@d.name.count.desc)
       .limit(@options[:limit])
   end
 end
 
+# decks table wrapper
 class DeckParam
   def table
     Deck.arel_table
   end
 
+  def id
+    table[:id]
+  end
+
   def name
     table[:name]
   end
+
+  def model
+    Deck
+  end
 end
 
+# card_decks table wrapper
+# FIXME change table name do deck_entry
+# PARAMS: {color: [:w|:r|:c|:b|:a|:g], type: [:a|:l|:i|:s|:c|:p]}
 class CardDeckParam
   def initialize(options={})
     @options = options
@@ -49,9 +65,7 @@ class CardDeckParam
 
     part = p[@options.fetch(:part) { :m }]
 
-    where = deck_part_is(part)
-
-    where
+    deck_part_is(part)
   end
 
   def table
@@ -63,6 +77,8 @@ class CardDeckParam
   end
 end
 
+# cards table wrapper
+# PARAMS: {type: [:a|:l|:i|:s|:c|:p], part: [:m|:s]}
 class CardParam
   def initialize(options)
     @options = options 
@@ -76,8 +92,8 @@ class CardParam
     type = t[@options[:type]]
 
     where = not_lands
-    where = where.send(:and, card_type_is(type)) if type
-    where = where.send(:and, card_color_is(color)) if color
+    where = where.and(card_type_is(type)) if type
+    where = where.and(card_color_is(color)) if color
 
     where
   end
@@ -108,5 +124,9 @@ class CardParam
 
   def name
     card[:name]
+  end
+
+  def model
+    Card
   end
 end

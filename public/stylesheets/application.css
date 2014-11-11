@@ -1,11 +1,19 @@
 body {
-  font-family: 'Open Sans', serif;
-  padding: 1em;
+  font-family: 'Lato', serif;
+color: white;
+  padding: 0.25em;
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(252,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
 }
 
 html, button, input, select, textarea,
   .pure-g [class *= "pure-u"] {
-    font-family: 'Open Sans', serif;
+    font-family: 'Lato', serif;
 }
 
 a:link {
@@ -47,8 +55,6 @@ a:hover {
   box-sizing: border-box;
 }
 .box {
-  background: rgb(240,240,240);
-  border-radius: 10px;
   padding: 1em;
 }
 
@@ -57,9 +63,43 @@ a:hover {
 }
 
 .box h2 {
-  text-align: center;
+  /* text-align: center; */
 }
 
-.deck-card-preview {
-  width: 23em;
+.box ol {
+  padding-right: 2em;
 }
+
+.box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.box .pure-button {
+  margin-bottom: 1em;
+  /* margin-top: 1em; */
+}
+
+.blue { color: rgb(42,143,189); }
+.green { color: rgb(144,171,118); }
+.white { color: rgb(252,251,227); }
+.black { color: rgb(48,48,48); }
+.red { color: rgb(164,8,2); }
+
+.deck-card-preview {
+}
+
+.top_decks {
+ list-style: none;
+ padding-left: 0;
+}
+
+.top_decks span {
+  /* margin-bottom: 1em; */
+}
+
+.top_decks .pure-button {
+  width: 100%;
+}
+
+

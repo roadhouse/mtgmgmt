@@ -1,0 +1,9 @@
+<span>
+  <i class="icon-addshape"></i> <%= User.first.percent_from(deck.archeptype_deck(deck.name).main_ids).truncate %>%
+  <i class="icon-subtractshape"></i> <%= User.first.percent_from(deck.archeptype_deck(deck.name).sideboard_ids).truncate %>%
+</span>
+
+<%= link_to deck.archeptype_deck(deck.name), class: "pure-button" do %> 
+  <%= deck.colors_list.join(" ").html_safe %>
+  <%= deck.name %>
+<% end %>

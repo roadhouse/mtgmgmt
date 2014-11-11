@@ -1,36 +1,32 @@
 <div class="pure-g">
-  <div class="box pure-u-md-6-24">
+  <div class="box pure-u-lg-1-5 pure-u-1">
     <h2>Top decks</h2>
-    <ol>
+    <hr/>
+    <ol class="top_decks">
       <% @orthanc.top_decks.each do |deck| %>
         <li>
-        <%= link_to deck.name, deck.archeptype_deck(deck.name) %> 
-        (<%= ((deck.quantity.to_f/ Deck.all.count.to_f ) * 100).truncate %>%) 
-        (<%= User.first.percent_from(deck.archeptype_deck(deck.name).main_ids).truncate %>)
+          <span> <i class="icon-codeigniter"></i> <%= deck.presence_on_field %>% </span>
+          <%= render 'deck_list_link', deck: deck %>
         </li>
       <% end %>
     </ol>
   </div>
 
-  <div class="pure-u-md-2-24">
-  </div>
-
-  <div class="box pure-u-md-7-24">
+  <div class="box pure-u-lg-1-5 pure-u-1">
     <h2>Top cards</h2>
+    <hr/>
     <ol>
       <% @orthanc.top_cards.each do |deck_entry| %>
         <li>
-        <%= deck_entry.name %>
+        <%= deck_entry.name %> <i class=""></i>
         </li>
       <% end %>
     </ol>
   </div>
-  
-  <div class="pure-u-md-2-24">
-  </div>
 
-  <div class="box pure-u-md-7-24">
-    <h2>Top creatures</h2>
+  <div class="box pure-u-lg-1-5 pure-u-1">
+    <h2>Top Creatures</h2>
+    <hr/>
     <ol>
       <% Orthanc.new(type: :c).top_cards.each do |deck_entry| %>
         <li>
@@ -39,29 +35,45 @@
       <% end %>
     </ol>
   </div>
-</div>
 
-<div class="pure-u-md-1">
+  <div class="box pure-u-lg-1-5 pure-u-1">
+    <h2>Top Instants</h2>
+    <hr/>
+    <ol>
+      <% Orthanc.new(type: :i).top_cards.each do |deck_entry| %>
+        <li>
+        <%= deck_entry.name %>
+        </li>
+      <% end %>
+    </ol>
+  </div>
+
+  <div class="box pure-u-lg-1-5 pure-u-1">
+    <h2>Top Sorceries</h2>
+    <hr/>
+    <ol>
+      <% Orthanc.new(type: :s).top_cards.each do |deck_entry| %>
+        <li>
+        <%= deck_entry.name %>
+        </li>
+      <% end %>
+    </ol>
+  </div>
 </div>
 
 <div class="pure-g">
-  <div class="box pure-u-md-1">
+  <div class="box pure-u-lg-1-5 pure-u-1">
     <h2>Decks</h2>
-
-    <table class="pure-table pure-table-horizontal">
-      <tr>
-        <th>Name</th>
-      </tr>
-
+    <hr/>
+    <ol class="top_decks">
       <% @decks.each do |deck| %>
-        <tr>
-          <td><%= link_to deck.name, deck %> (<%= User.first.percent_from(deck.main_ids).truncate %>% / <%= User.first.percent_from(deck.sideboard_ids).truncate %>%)</td>
-        </tr>
+        <%= render 'deck_list_link', deck: deck %>
       <% end %>
-    </table>
-
-    <div class="pure-u-md-1"></div>
+    </ol>
+  </div>
+  <div class="pure-u-lg-1 pure-u-1">
     <%= paginate @decks %>
+    </div>
   </div>
 </div>
 

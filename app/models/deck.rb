@@ -10,6 +10,25 @@ class Deck < ActiveRecord::Base
     Deck.arel_table
   end
 
+  #used only in view
+  #FIXME move to presenter
+  def presence_on_field
+    ((quantity.to_f/ Deck.all.count.to_f ) * 100).truncate 
+  end
+
+  def colors_list
+    cards.map(&:colors).flatten.compact.uniq.map(&:downcase).sort.map do |color|
+      # "<i class=\"icon-stop #{color}\"></i>"
+      {
+          "red" => "<i class=\"icon-fire red\"></i>",
+          "blue" =>"<i class=\"icon-tint blue\"></i>",
+          "black" =>"<i class=\"icon-skull black\"></i>",
+          "green" =>"<i class=\"icon-leaf green\"></i>",
+          "white" =>"<i class=\"icon-sun-day white\"></i>"
+      }.fetch(color)
+    end
+  end
+
   def archeptype_deck(deck_name)
     Deck.where(table[:name].matches("%#{deck_name}%")).last
   end
