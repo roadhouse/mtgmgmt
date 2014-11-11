@@ -1,13 +1,15 @@
 source "https://rubygems.org"
 
+gem "foreman"
+gem "heroku"
 gem "kaminari"
 gem "nokogiri"
 gem "pg"
 gem "rails"
 gem "virtus"
-gem "heroku"
+gem "unicorn"
 
-gem 'rails_12factor', group: :production
+gem "rails_12factor", group: :production
 
 group :test, :development do
   gem "factory_girl_rails"
