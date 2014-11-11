@@ -1,5 +1,17 @@
 <div class="pure-g">
-  <div class="box pure-u-lg-1-5 pure-u-1">
+  <div class="box pure-u-lg-1-6 pure-u-1">
+    <h2>Latest Decks</h2>
+    <hr/>
+    <ol class="top_decks">
+      <% @decks.each do |deck| %>
+        <li>
+          <%= render 'deck_list_link', deck: deck %>
+        </li>
+      <% end %>
+    </ol>
+  </div>
+
+  <div class="box pure-u-lg-1-6 pure-u-1">
     <h2>Top decks</h2>
     <hr/>
     <ol class="top_decks">
@@ -12,7 +24,7 @@
     </ol>
   </div>
 
-  <div class="box pure-u-lg-1-5 pure-u-1">
+  <div class="box pure-u-lg-1-6 pure-u-1">
     <h2>Top cards</h2>
     <hr/>
     <ol>
@@ -24,7 +36,7 @@
     </ol>
   </div>
 
-  <div class="box pure-u-lg-1-5 pure-u-1">
+  <div class="box pure-u-lg-1-6 pure-u-1">
     <h2>Top Creatures</h2>
     <hr/>
     <ol>
@@ -36,7 +48,7 @@
     </ol>
   </div>
 
-  <div class="box pure-u-lg-1-5 pure-u-1">
+  <div class="box pure-u-lg-1-6 pure-u-1">
     <h2>Top Instants</h2>
     <hr/>
     <ol>
@@ -48,7 +60,7 @@
     </ol>
   </div>
 
-  <div class="box pure-u-lg-1-5 pure-u-1">
+  <div class="box pure-u-lg-1-6 pure-u-1">
     <h2>Top Sorceries</h2>
     <hr/>
     <ol>
@@ -58,22 +70,6 @@
         </li>
       <% end %>
     </ol>
-  </div>
-</div>
-
-<div class="pure-g">
-  <div class="box pure-u-lg-1-5 pure-u-1">
-    <h2>Decks</h2>
-    <hr/>
-    <ol class="top_decks">
-      <% @decks.each do |deck| %>
-        <%= render 'deck_list_link', deck: deck %>
-      <% end %>
-    </ol>
-  </div>
-  <div class="pure-u-lg-1 pure-u-1">
-    <%= paginate @decks %>
-    </div>
   </div>
 </div>
 

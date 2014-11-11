@@ -3,6 +3,14 @@ namespace :bootstrap do
   task :run => [
     "db:create:all",
     "db:migrate",
-    "db:seed"
+    "db:seed",
   ]
+
+  desc "load card data ftom mtgapi.com"
+  task load_cards: :environment do
+    %w(THS BNG JOU M15 KTK).each do |set|
+      require './lib/laracna/crawler.rb'
+      MtgApi.all!(set)
+    end
+  end
 end
