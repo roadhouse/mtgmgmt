@@ -19,4 +19,10 @@ namespace :bootstrap do
     require './lib/laracna/crawler.rb'
     Crawler.run!(:mtgdecks)
   end
+
+  desc "load decs from deck_lists"
+  task deck_lists: :environment do
+    require './lib/laracna/crawler.rb'
+    Crawler.run!(:deck_lists)
+  end
 end
