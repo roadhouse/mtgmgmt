@@ -1,4 +1,6 @@
+require 'spec_helper_active_record'
 require 'open-uri'
+
 
 class CardCrawler
   attr_reader :cards_attributes

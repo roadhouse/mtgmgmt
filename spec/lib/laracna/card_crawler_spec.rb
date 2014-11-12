@@ -1,14 +1,16 @@
 require "./spec/support/vcr"
+require 'spec_helper_active_record'
 require 'json'
 require 'ostruct'
+require './app/models/card'
 
 require "./lib/laracna/card_crawler.rb"
 
 describe CardCrawler do
-  let(:crawler) { VCR.use_cassette("cards") { described_class.new("KTK") } }
+  let(:crawler) { VCR.use_cassette("cards") { described_class.new("http://api.mtgapi.com/v2/cards?set=KTK&page=1") } }
+  # let(:crawler) { described_class.new("http://api.mtgapi.com/v2/cards?set=KTK&page=1") }
   subject { crawler }
     
-  # its(:cards_attributes) { should_not be_nil }
 
   context ".build_card" do
     let(:data) { crawler.cards_attributes.first }

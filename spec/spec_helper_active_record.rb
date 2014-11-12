@@ -1,4 +1,5 @@
 require "bundler"
+require "yaml"
 Bundler.setup(:default, :test)
 
 require "active_record"
