@@ -11,15 +11,6 @@ describe Deck do
     before { deck.save! }
 
     its(:copies) { should be_eql 2 }
-    
-    context "with a inexistent card" do
-      subject { deck.add_card(2, name, :main) }
-
-      let(:name) { "inexistent card" } 
-      let(:deck) { Deck.new }
-
-      specify { expect { subject }.to raise_error(name) }
-    end
   end
 
   context ".main" do
@@ -32,7 +23,7 @@ describe Deck do
       deck.save!
     end
 
-    it { should be_a Array }
+    it { should be_a Hash }
   end
 
   context ".sideboard" do
@@ -45,7 +36,7 @@ describe Deck do
       deck.save!
     end
 
-    its([:copies]) { should be_eql 1 }
-    its([:card]) { should be_eql card }
+    it { should be_a Array }
+    its(:first) { is_expected.to be_eql "Instant" }
   end
 end

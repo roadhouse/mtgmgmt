@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.mtgapi.com/v2/cards?set=KTK
+    uri: http://api.mtgapi.com/v2/cards?page=1&set=KTK
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 26 Sep 2014 18:46:19 GMT
+      - Wed, 12 Nov 2014 20:40:49 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -27,10 +27,10 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d05e7b33d24b271ec041c6e28de3aa6261411757179641; expires=Mon, 23-Dec-2019
-        23:50:00 GMT; path=/; domain=.mtgapi.com; HttpOnly
-      - laravel_session=eyJpdiI6ImlXZFZZR0hGN1NcL29QSmpZU2RyNnpnPT0iLCJ2YWx1ZSI6InFiemNzUTdJUDU2em5QUVc4MDZzZmhZYnBpZVQyNnk3QnhpanBsaUEwXC9JcytPV3V5R0Y1UkVDNlY5NjQ3Myt0U1R6NXJZZ24xMDVQbndkc1NBWGZLdz09IiwibWFjIjoiZWRlYzBkMjEyZTNkMDY3MDUzNzFlOWExNzJmMjNkYTE4YzY0ODZhYmYzOTUyMmRmZWFmNzhiZjU0NzRjZGNmMyJ9;
-        expires=Fri, 26-Sep-2014 20:46:19 GMT; Max-Age=7200; path=/; httponly
+      - __cfduid=d7e8d2e8057e1a154e84fc96b9eb8fc8e1415824848; expires=Thu, 12-Nov-15
+        20:40:48 GMT; path=/; domain=.mtgapi.com; HttpOnly
+      - laravel_session=eyJpdiI6InRsamhUOEtmN1VIcUFxMlBuS1RIYUE9PSIsInZhbHVlIjoiU0xsZ1ZDZU4ra1ppY3cyOGNheDY1TzBKQTZYKzVvaFh4OXlWUHdjblhJTU1mM3Q2YlR4N3FOMmtGSW51SStkMWRCNEFrWU9ReWNXbDVycFk1UUhzRUE9PSIsIm1hYyI6IjE3ZWIyMGNkNjI2ZGM1YzBjNTNlMjNhMTMwOTAyNWJjOTVlM2JmODJhZjA0OTU5ZjNmYmEzNDVmYWZhNjUxMGUifQ%3D%3D;
+        expires=Wed, 12-Nov-2014 22:40:48 GMT; Max-Age=7200; path=/; httponly
       X-Powered-By:
       - PHP/5.5.13-2+deb.sury.org~trusty+1
       Cache-Control:
@@ -38,7 +38,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 17019fa4c0bb077f-EWR
+      - 18858bf88d7601ef-EWR
     body:
       encoding: UTF-8
       string: '{"query":[{"command":"where","key":"set","conditional":"=","value":"KTK"}],"cards":[{"artist":"Erica
@@ -51,16 +51,47 @@ http_interactions:
         de Gudul"},{"language":"Russian","name":"\u0413\u0443\u0434\u0443\u043b\u044c\u0441\u043a\u0430\u044f
         \u041c\u0435\u0440\u0437\u043e\u0441\u0442\u044c"},{"language":"Spanish","name":"Abominaci\u00f3n
         de Gudul"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386463","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abomination
-        of gudul.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{B}{G}{U}","multiverseid":386463,"name":"Abomination
+        of gudul.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{B}{G}{U}","multiverseid":386463,"name":"Abomination
         of Gudul","names":null,"number":"159","originalText":"Flying\nWhenever Abomination
         of Gudul deals combat damage to a player, you may draw a card. If you do,
         discard a card.\nMorph {2}{B}{G}{U} (You may cast this card face down as a
         2\/2 creature for {3}. Turn it face up any time for its morph cost.)","originalType":"Creature
-        \u2014 Horror","power":"3","printings":["Khans of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Horror"],"supertypes":null,"text":"Flying\nWhenever
+        \u2014 Horror","power":"3","printings":["Khans of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
+        lets you cast a card face down by paying {3}, and lets you turn the face-down
+        permanent face up any time you have priority by paying its morph cost."},{"date":"2014-09-20","text":"The
+        face-down spell has no mana cost and has a converted mana cost of 0. When
+        you cast a face-down spell, put it on the stack face down so no other player
+        knows what it is, and pay {3}. This is an alternative cost."},{"date":"2014-09-20","text":"When
+        the spell resolves, it enters the battlefield as a 2\/2 creature with no name,
+        mana cost, creature types, or abilities. It\u2019s colorless and has a converted
+        mana cost of 0. Other effects that apply to the creature can still grant it
+        any of these characteristics."},{"date":"2014-09-20","text":"Any time you
+        have priority, you may turn the face-down creature face up by revealing what
+        its morph cost is and paying that cost. This is a special action. It doesn\u2019t
+        use the stack and can\u2019t be responded to. Only a face-down permanent can
+        be turned face up this way; a face-down spell cannot."},{"date":"2014-09-20","text":"Because
+        the permanent is on the battlefield both before and after it\u2019s turned
+        face up, turning a permanent face up doesn\u2019t cause any enters-the-battlefield
+        abilities to trigger."},{"date":"2014-09-20","text":"A permanent that turns
+        face up or face down changes characteristics but is otherwise the same permanent.
+        Spells and abilities that were targeting that permanent, as well as Auras
+        and Equipment that were attached to the permanent, aren\u2019t affected."},{"date":"2014-09-20","text":"At
+        any time, you can look at a face-down spell or permanent you control. You
+        can\u2019t look at face-down spells or permanents you don\u2019t control unless
+        an effect instructs you to do so."},{"date":"2014-09-20","text":"You must
+        ensure that your face-down spells and permanents can easily be differentiated
+        from each other. You\u2019re not allowed to mix up the cards that represent
+        them on the battlefield in order to confuse other players. The order they
+        entered the battlefield should remain clear. Common methods for doing this
+        include using markers or dice, or simply placing them in order on the battlefield."},{"date":"2014-09-20","text":"If
+        a face-down permanent leaves the battlefield, you must reveal it. You must
+        also reveal all face-down spells and permanents you control if you leave the
+        game or if the game ends."}],"set":"KTK","subtypes":["Horror"],"supertypes":null,"text":"Flying\nWhenever
         Abomination of Gudul deals combat damage to a player, you may draw a card.
         If you do, discard a card.\nMorph {2}{B}{G}{U} (You may cast this card face
         down as a 2\/2 creature for {3}. Turn it face up any time for its morph cost.)","toughness":"4","type":"Creature
-        \u2014 Horror","types":["Creature"],"variations":null,"watermark":null},{"artist":"Mark
+        \u2014 Horror","types":["Creature"],"variations":null,"watermark":"Sultai"},{"artist":"Mark
         Winters","border":"black","cmc":3,"colors":["White","Black","Green"],"flavor":null,"foreignNames":[{"language":"Chinese
         Traditional","name":"\u963f\u5e03\u8d0a\u9738\u6b0a"},{"language":"Chinese
         Simplified","name":"\u963f\u5e03\u8d5e\u9738\u6743"},{"language":"French","name":"Ascendance
@@ -70,7 +101,8 @@ http_interactions:
         Abzan"},{"language":"Russian","name":"\u0412\u043e\u0437\u0432\u044b\u0448\u0435\u043d\u0438\u0435
         \u0410\u0431\u0437\u0430\u043d\u0430"},{"language":"Spanish","name":"Supremac\u00eda
         abzana"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386464","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        ascendancy.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386464,"name":"Abzan
+        ascendancy.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386464,"name":"Abzan
         Ascendancy","names":null,"number":"160","originalText":"When Abzan Ascendancy
         enters the battlefield, put a +1\/+1 counter on each creature you control.\nWhenever
         a nontoken creature you control dies, put a 1\/1 white Spirit creature token
@@ -78,7 +110,7 @@ http_interactions:
         of Tarkir"],"rarity":"Rare","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"When
         Abzan Ascendancy enters the battlefield, put a +1\/+1 counter on each creature
         you control.\nWhenever a nontoken creature you control dies, put a 1\/1 white
-        Spirit creature token with flying onto the battlefield.","toughness":null,"type":"Enchantment","types":["Enchantment"],"variations":null,"watermark":null},{"artist":"Daniel
+        Spirit creature token with flying onto the battlefield.","toughness":null,"type":"Enchantment","types":["Enchantment"],"variations":null,"watermark":"Abzan"},{"artist":"Daniel
         Ljunggren","border":"black","cmc":3,"colors":null,"flavor":"Stone to endure,
         roots to remember.","foreignNames":[{"language":"Chinese Traditional","name":"\u963f\u5e03\u8d0a\u6230\u65d7"},{"language":"Chinese
         Simplified","name":"\u963f\u5e03\u8d5e\u6218\u65d7"},{"language":"French","name":"\u00c9tendard
@@ -87,12 +119,13 @@ http_interactions:
         \uae43\ubc1c"},{"language":"Portuguese (Brazil)","name":"Estandarte Abzan"},{"language":"Russian","name":"\u0417\u043d\u0430\u043c\u044f
         \u0410\u0431\u0437\u0430\u043d\u0430"},{"language":"Spanish","name":"Estandarte
         abzano"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386465","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        banner.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}","multiverseid":386465,"name":"Abzan
+        banner.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}","multiverseid":386465,"name":"Abzan
         Banner","names":null,"number":"215","originalText":"{T}: Add {W}, {B}, or
         {G} to your mana pool.\n{W}{B}{G}, {T}, Sacrifice Abzan Banner: Draw a card.","originalType":"Artifact","power":null,"printings":["Khans
         of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"{T}:
         Add {W}, {B}, or {G} to your mana pool.\n{W}{B}{G}, {T}, Sacrifice Abzan Banner:
-        Draw a card.","toughness":null,"type":"Artifact","types":["Artifact"],"variations":null,"watermark":null},{"artist":"Chris
+        Draw a card.","toughness":null,"type":"Artifact","types":["Artifact"],"variations":null,"watermark":"Abzan"},{"artist":"Chris
         Rahn","border":"black","cmc":4,"colors":["White"],"flavor":"\"Wherever I walk,
         the ancestors walk too.\"","foreignNames":[{"language":"Chinese Traditional","name":"\u963f\u5e03\u8d0a\u6230\u9b25\u50e7\u4fb6"},{"language":"Chinese
         Simplified","name":"\u963f\u5e03\u8d5e\u6218\u6597\u50e7\u4fa3"},{"language":"French","name":"Pr\u00eatre
@@ -102,14 +135,22 @@ http_interactions:
         de Batalha Abzan"},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0438\u0439
         \u0411\u043e\u0435\u0432\u043e\u0439 \u0416\u0440\u0435\u0446"},{"language":"Spanish","name":"Sacerdote
         guerrero abzano"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386466","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        battle priest.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}","multiverseid":386466,"name":"Abzan
+        battle priest.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}","multiverseid":386466,"name":"Abzan
         Battle Priest","names":null,"number":"1","originalText":"Outlast {W} ({W},
         {T}: Put a +1\/+1 counter on this creature. Outlast only as a sorcery.)\nEach
         creature you control with a +1\/+1 counter on it has lifelink.","originalType":"Creature
-        \u2014 Human Cleric","power":"3","printings":["Khans of Tarkir"],"rarity":"Uncommon","rulings":null,"set":"KTK","subtypes":["Human","Cleric"],"supertypes":null,"text":"Outlast
+        \u2014 Human Cleric","power":"3","printings":["Khans of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
+        cost to activate a creature\u2019s outlast ability includes the tap symbol
+        ({T}). A creature\u2019s outlast ability can\u2019t be activated unless that
+        creature has been under your control continuously since the beginning of your
+        turn."},{"date":"2014-09-20","text":"Several creatures with outlast also grant
+        an ability to creatures you control with +1\/+1 counters on them, including
+        themselves. These counters could come from an outlast ability, but any +1\/+1
+        counter on the creature will count."}],"set":"KTK","subtypes":["Human","Cleric"],"supertypes":null,"text":"Outlast
         {W} ({W}, {T}: Put a +1\/+1 counter on this creature. Outlast only as a sorcery.)\nEach
         creature you control with a +1\/+1 counter on it has lifelink.","toughness":"2","type":"Creature
-        \u2014 Human Cleric","types":["Creature"],"variations":null,"watermark":null},{"artist":"Mathias
+        \u2014 Human Cleric","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Mathias
         Kollros","border":"black","cmc":3,"colors":["White","Black","Green"],"flavor":null,"foreignNames":[{"language":"Chinese
         Traditional","name":"\u963f\u5e03\u8d0a\u8b77\u7b26"},{"language":"Chinese
         Simplified","name":"\u963f\u5e03\u8d5e\u62a4\u7b26"},{"language":"French","name":"Charme
@@ -118,15 +159,21 @@ http_interactions:
         \ubd80\uc801"},{"language":"Portuguese (Brazil)","name":"Amuleto Abzan"},{"language":"Russian","name":"\u0422\u0430\u043b\u0438\u0441\u043c\u0430\u043d
         \u0410\u0431\u0437\u0430\u043d\u0430"},{"language":"Spanish","name":"Sortilegio
         abzano"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386467","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        charm.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386467,"name":"Abzan
+        charm.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386467,"name":"Abzan
         Charm","names":null,"number":"161","originalText":"Choose one \u2014\n\u2022
         Exile target creature with power 3 or greater.\n\u2022 You draw two cards
         and you lose 2 life.\n\u2022 Distribute two +1\/+1 counters among one or two
         target creatures.","originalType":"Instant","power":null,"printings":["Khans
-        of Tarkir"],"rarity":"Uncommon","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"Choose
+        of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"If
+        you choose the third mode, you choose how the counters will be distributed
+        as you cast the spell. Notably, if you choose to put one +1\/+1 counter on
+        each of two target creatures, and one of those creatures becomes an illegal
+        target in response, the +1\/+1 counter that would have been put on that creature
+        is lost. It can\u2019t be put on the remaining legal target."}],"set":"KTK","subtypes":null,"supertypes":null,"text":"Choose
         one \u2014\n\u2022 Exile target creature with power 3 or greater.\n\u2022
         You draw two cards and you lose 2 life.\n\u2022 Distribute two +1\/+1 counters
-        among one or two target creatures.","toughness":null,"type":"Instant","types":["Instant"],"variations":null,"watermark":null},{"artist":"Steven
+        among one or two target creatures.","toughness":null,"type":"Instant","types":["Instant"],"variations":null,"watermark":"Abzan"},{"artist":"Steven
         Belledin","border":"black","cmc":3,"colors":["White"],"flavor":"The fastest
         way across the dunes is above.","foreignNames":[{"language":"Chinese Traditional","name":"\u963f\u5e03\u8d0a\u8a13\u96bc\u5175"},{"language":"Chinese
         Simplified","name":"\u963f\u5e03\u8d5e\u8bad\u96bc\u5175"},{"language":"French","name":"Fauconnier
@@ -136,14 +183,22 @@ http_interactions:
         Abzan"},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0438\u0439
         \u0421\u043e\u043a\u043e\u043b\u044c\u043d\u0438\u0447\u0438\u0439"},{"language":"Spanish","name":"Halconero
         abzano"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386468","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        falconer.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{W}","multiverseid":386468,"name":"Abzan
+        falconer.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{W}","multiverseid":386468,"name":"Abzan
         Falconer","names":null,"number":"2","originalText":"Outlast {W} ({W}, {T}:
         Put a +1\/+1 counter on this creature. Outlast only as a sorcery.)\nEach creature
         you control with a +1\/+1 counter on it has flying.","originalType":"Creature
-        \u2014 Human Soldier","power":"2","printings":["Khans of Tarkir"],"rarity":"Uncommon","rulings":null,"set":"KTK","subtypes":["Human","Soldier"],"supertypes":null,"text":"Outlast
+        \u2014 Human Soldier","power":"2","printings":["Khans of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
+        cost to activate a creature\u2019s outlast ability includes the tap symbol
+        ({T}). A creature\u2019s outlast ability can\u2019t be activated unless that
+        creature has been under your control continuously since the beginning of your
+        turn."},{"date":"2014-09-20","text":"Several creatures with outlast also grant
+        an ability to creatures you control with +1\/+1 counters on them, including
+        themselves. These counters could come from an outlast ability, but any +1\/+1
+        counter on the creature will count."}],"set":"KTK","subtypes":["Human","Soldier"],"supertypes":null,"text":"Outlast
         {W} ({W}, {T}: Put a +1\/+1 counter on this creature. Outlast only as a sorcery.)\nEach
         creature you control with a +1\/+1 counter on it has flying.","toughness":"3","type":"Creature
-        \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":null},{"artist":"Steve
+        \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Steve
         Prescott","border":"black","cmc":6,"colors":["White","Black","Green"],"flavor":"\"These
         roads are desolate and changeable. Follow me, or die in the wastes.\"","foreignNames":[{"language":"Chinese
         Traditional","name":"\u963f\u5e03\u8d0a\u56ae\u5c0e"},{"language":"Chinese
@@ -153,16 +208,47 @@ http_interactions:
         \uae38\uc7a1\uc774"},{"language":"Portuguese (Brazil)","name":"Guia Azban"},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0430\u044f
         \u041f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u0446\u0430"},{"language":"Spanish","name":"Gu\u00eda
         abzana"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386469","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        guide.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}{B}{G}","multiverseid":386469,"name":"Abzan
+        guide.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}{B}{G}","multiverseid":386469,"name":"Abzan
         Guide","names":null,"number":"162","originalText":"Lifelink (Damage dealt
         by this creature also causes you to gain that much life.)\nMorph {2}{W}{B}{G}
         (You may cast this card face down as a 2\/2 creature for {3}. Turn it face
         up any time for its morph cost.)","originalType":"Creature \u2014 Human Warrior","power":"4","printings":["Khans
-        of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Human","Warrior"],"supertypes":null,"text":"Lifelink
+        of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
+        lets you cast a card face down by paying {3}, and lets you turn the face-down
+        permanent face up any time you have priority by paying its morph cost."},{"date":"2014-09-20","text":"The
+        face-down spell has no mana cost and has a converted mana cost of 0. When
+        you cast a face-down spell, put it on the stack face down so no other player
+        knows what it is, and pay {3}. This is an alternative cost."},{"date":"2014-09-20","text":"When
+        the spell resolves, it enters the battlefield as a 2\/2 creature with no name,
+        mana cost, creature types, or abilities. It\u2019s colorless and has a converted
+        mana cost of 0. Other effects that apply to the creature can still grant it
+        any of these characteristics."},{"date":"2014-09-20","text":"Any time you
+        have priority, you may turn the face-down creature face up by revealing what
+        its morph cost is and paying that cost. This is a special action. It doesn\u2019t
+        use the stack and can\u2019t be responded to. Only a face-down permanent can
+        be turned face up this way; a face-down spell cannot."},{"date":"2014-09-20","text":"Because
+        the permanent is on the battlefield both before and after it\u2019s turned
+        face up, turning a permanent face up doesn\u2019t cause any enters-the-battlefield
+        abilities to trigger."},{"date":"2014-09-20","text":"A permanent that turns
+        face up or face down changes characteristics but is otherwise the same permanent.
+        Spells and abilities that were targeting that permanent, as well as Auras
+        and Equipment that were attached to the permanent, aren\u2019t affected."},{"date":"2014-09-20","text":"At
+        any time, you can look at a face-down spell or permanent you control. You
+        can\u2019t look at face-down spells or permanents you don\u2019t control unless
+        an effect instructs you to do so."},{"date":"2014-09-20","text":"You must
+        ensure that your face-down spells and permanents can easily be differentiated
+        from each other. You\u2019re not allowed to mix up the cards that represent
+        them on the battlefield in order to confuse other players. The order they
+        entered the battlefield should remain clear. Common methods for doing this
+        include using markers or dice, or simply placing them in order on the battlefield."},{"date":"2014-09-20","text":"If
+        a face-down permanent leaves the battlefield, you must reveal it. You must
+        also reveal all face-down spells and permanents you control if you leave the
+        game or if the game ends."}],"set":"KTK","subtypes":["Human","Warrior"],"supertypes":null,"text":"Lifelink
         (Damage dealt by this creature also causes you to gain that much life.)\nMorph
         {2}{W}{B}{G} (You may cast this card face down as a 2\/2 creature for {3}.
         Turn it face up any time for its morph cost.)","toughness":"4","type":"Creature
-        \u2014 Human Warrior","types":["Creature"],"variations":null,"watermark":null},{"artist":"Min
+        \u2014 Human Warrior","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Min
         Yum","border":"black","cmc":3,"colors":["Red"],"flavor":"\"The Sultai take
         our dead, so we shall take their living!\"\n\u2014Taklai, Mardu ragesinger","foreignNames":[{"language":"Chinese
         Simplified","name":"\u53db\u884c"},{"language":"Chinese Traditional","name":"\u53db\u884c"},{"language":"French","name":"Acte
@@ -195,14 +281,22 @@ http_interactions:
         Fratello d''Onore"},{"language":"Japanese","name":"\u30a2\u30a4\u30ce\u30af\u306e\u76df\u65cf"},{"language":"Korean","name":"\uc544\uc774\ub179
         \uc758\ud615\uc81c"},{"language":"Portuguese (Brazil)","name":"Ainok La\u00e7o-de-honra"},{"language":"Russian","name":"\u0410\u0438\u043d\u043e\u043a-\u041f\u043e\u0431\u0440\u0430\u0442\u0438\u043c"},{"language":"Spanish","name":"Ainok
         unido por la fe"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386471","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ainok
-        bond-kin.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}{W}","multiverseid":386471,"name":"Ainok
+        bond-kin.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}{W}","multiverseid":386471,"name":"Ainok
         Bond-Kin","names":null,"number":"3","originalText":"Outlast {1}{W} ({1}{W},
         {T}: Put a +1\/+1 counter on this creature. Outlast only as a sorcery.)\nEach
         creature you control with a +1\/+1 counter on it has first strike.","originalType":"Creature
-        \u2014 Hound Soldier","power":"2","printings":["Khans of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Hound","Soldier"],"supertypes":null,"text":"Outlast
+        \u2014 Hound Soldier","power":"2","printings":["Khans of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"The
+        cost to activate a creature\u2019s outlast ability includes the tap symbol
+        ({T}). A creature\u2019s outlast ability can\u2019t be activated unless that
+        creature has been under your control continuously since the beginning of your
+        turn."},{"date":"2014-09-20","text":"Several creatures with outlast also grant
+        an ability to creatures you control with +1\/+1 counters on them, including
+        themselves. These counters could come from an outlast ability, but any +1\/+1
+        counter on the creature will count."}],"set":"KTK","subtypes":["Hound","Soldier"],"supertypes":null,"text":"Outlast
         {1}{W} ({1}{W}, {T}: Put a +1\/+1 counter on this creature. Outlast only as
         a sorcery.)\nEach creature you control with a +1\/+1 counter on it has first
-        strike.","toughness":"1","type":"Creature \u2014 Hound Soldier","types":["Creature"],"variations":null,"watermark":null},{"artist":"Evan
+        strike.","toughness":"1","type":"Creature \u2014 Hound Soldier","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Evan
         Shipard","border":"black","cmc":6,"colors":["Red"],"flavor":"Some ainok of
         the mountains are accepted among the Temur as trusted hunt-mates.","foreignNames":[{"language":"Chinese
         Traditional","name":"\u5075\u7375\u72ac\u4eba"},{"language":"Chinese Simplified","name":"\u4fa6\u730e\u72ac\u4eba"},{"language":"French","name":"Traqueur
@@ -211,14 +305,45 @@ http_interactions:
         \ucd94\uc801\uafbc"},{"language":"Portuguese (Brazil)","name":"Rastreador
         Ainok"},{"language":"Russian","name":"\u0410\u0438\u043d\u043e\u043a-\u0421\u043b\u0435\u0434\u043e\u043f\u044b\u0442"},{"language":"Spanish","name":"Rastreador
         ainok"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386472","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ainok
-        tracker.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{5}{R}","multiverseid":386472,"name":"Ainok
+        tracker.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{5}{R}","multiverseid":386472,"name":"Ainok
         Tracker","names":null,"number":"96","originalText":"First strike\nMorph {4}{R}
         (You may cast this card face down as a 2\/2 creature for {3}. Turn it face
         up any time for its morph cost.)","originalType":"Creature \u2014 Hound Scout","power":"3","printings":["Khans
-        of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Hound","Scout"],"supertypes":null,"text":"First
+        of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
+        lets you cast a card face down by paying {3}, and lets you turn the face-down
+        permanent face up any time you have priority by paying its morph cost."},{"date":"2014-09-20","text":"The
+        face-down spell has no mana cost and has a converted mana cost of 0. When
+        you cast a face-down spell, put it on the stack face down so no other player
+        knows what it is, and pay {3}. This is an alternative cost."},{"date":"2014-09-20","text":"When
+        the spell resolves, it enters the battlefield as a 2\/2 creature with no name,
+        mana cost, creature types, or abilities. It\u2019s colorless and has a converted
+        mana cost of 0. Other effects that apply to the creature can still grant it
+        any of these characteristics."},{"date":"2014-09-20","text":"Any time you
+        have priority, you may turn the face-down creature face up by revealing what
+        its morph cost is and paying that cost. This is a special action. It doesn\u2019t
+        use the stack and can\u2019t be responded to. Only a face-down permanent can
+        be turned face up this way; a face-down spell cannot."},{"date":"2014-09-20","text":"Because
+        the permanent is on the battlefield both before and after it\u2019s turned
+        face up, turning a permanent face up doesn\u2019t cause any enters-the-battlefield
+        abilities to trigger."},{"date":"2014-09-20","text":"A permanent that turns
+        face up or face down changes characteristics but is otherwise the same permanent.
+        Spells and abilities that were targeting that permanent, as well as Auras
+        and Equipment that were attached to the permanent, aren\u2019t affected."},{"date":"2014-09-20","text":"At
+        any time, you can look at a face-down spell or permanent you control. You
+        can\u2019t look at face-down spells or permanents you don\u2019t control unless
+        an effect instructs you to do so."},{"date":"2014-09-20","text":"You must
+        ensure that your face-down spells and permanents can easily be differentiated
+        from each other. You\u2019re not allowed to mix up the cards that represent
+        them on the battlefield in order to confuse other players. The order they
+        entered the battlefield should remain clear. Common methods for doing this
+        include using markers or dice, or simply placing them in order on the battlefield."},{"date":"2014-09-20","text":"If
+        a face-down permanent leaves the battlefield, you must reveal it. You must
+        also reveal all face-down spells and permanents you control if you leave the
+        game or if the game ends."}],"set":"KTK","subtypes":["Hound","Scout"],"supertypes":null,"text":"First
         strike\nMorph {4}{R} (You may cast this card face down as a 2\/2 creature
         for {3}. Turn it face up any time for its morph cost.)","toughness":"3","type":"Creature
-        \u2014 Hound Scout","types":["Creature"],"variations":null,"watermark":null},{"artist":"Igor
+        \u2014 Hound Scout","types":["Creature"],"variations":null,"watermark":"Temur"},{"artist":"Igor
         Kieryluk","border":"black","cmc":4,"colors":["White"],"flavor":"The appearance
         of a kirin signifies the passing or arrival of an important figure. As word
         of sightings spread, all the khans took it to mean themselves. Only the shaman
@@ -228,7 +353,8 @@ http_interactions:
         di Alabastro"},{"language":"Japanese","name":"\u96ea\u82b1\u77f3\u306e\u9e92\u9e9f"},{"language":"Korean","name":"\uc21c\ubc31\uc758
         \uae30\ub9b0"},{"language":"Portuguese (Brazil)","name":"Kirin de Alabastro"},{"language":"Russian","name":"\u0410\u043b\u0435\u0431\u0430\u0441\u0442\u0440\u043e\u0432\u044b\u0439
         \u041a\u0438\u0440\u0438\u043d"},{"language":"Spanish","name":"Kirin de alabastro"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386473","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/alabaster
-        kirin.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}","multiverseid":386473,"name":"Alabaster
+        kirin.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}","multiverseid":386473,"name":"Alabaster
         Kirin","names":null,"number":"4","originalText":"Flying, vigilance","originalType":"Creature
         \u2014 Kirin","power":"2","printings":["Khans of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Kirin"],"supertypes":null,"text":"Flying,
         vigilance","toughness":"3","type":"Creature \u2014 Kirin","types":["Creature"],"variations":null,"watermark":null},{"artist":"John
@@ -242,7 +368,8 @@ http_interactions:
         Alpino"},{"language":"Russian","name":"\u0413\u043e\u0440\u043d\u044b\u0439
         \u0413\u0440\u0438\u0437\u043b\u0438"},{"language":"Spanish","name":"Parda
         alpina"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386474","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/alpine
-        grizzly.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{G}","multiverseid":386474,"name":"Alpine
+        grizzly.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{G}","multiverseid":386474,"name":"Alpine
         Grizzly","names":null,"number":"127","originalText":null,"originalType":"Creature
         \u2014 Bear","power":"4","printings":["Khans of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Bear"],"supertypes":null,"text":null,"toughness":"2","type":"Creature
         \u2014 Bear","types":["Creature"],"variations":null,"watermark":null},{"artist":"Erica
@@ -255,11 +382,14 @@ http_interactions:
         \uc81c\ub2e8"},{"language":"Portuguese (Brazil)","name":"Altar da Linhagem"},{"language":"Russian","name":"\u0410\u043b\u0442\u0430\u0440\u044c
         \u0412\u044b\u0432\u043e\u0434\u043a\u0430"},{"language":"Spanish","name":"Altar
         de la progenie"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386475","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/altar
-        of the brood.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}","multiverseid":386475,"name":"Altar
+        of the brood.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}","multiverseid":386475,"name":"Altar
         of the Brood","names":null,"number":"216","originalText":"Whenever another
         permanent enters the battlefield under your control, each opponent puts the
         top card of his or her library into his or her graveyard.","originalType":"Artifact","power":null,"printings":["Khans
-        of Tarkir"],"rarity":"Rare","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"Whenever
+        of Tarkir"],"rarity":"Rare","rulings":[{"date":"2014-09-20","text":"If Altar
+        of the Brood enters the battlefield under your control at the same time as
+        other permanents, its ability will trigger for each of those permanents."}],"set":"KTK","subtypes":null,"supertypes":null,"text":"Whenever
         another permanent enters the battlefield under your control, each opponent
         puts the top card of his or her library into his or her graveyard.","toughness":null,"type":"Artifact","types":["Artifact"],"variations":null,"watermark":null},{"artist":"James
         Ryman","border":"black","cmc":3,"colors":["White","Black","Green"],"flavor":"Rarely
@@ -272,30 +402,48 @@ http_interactions:
         a Principal"},{"language":"Russian","name":"\u0410\u043d\u0430\u0444\u0435\u043d\u0437\u0430,
         \u041f\u0435\u0440\u0432\u0435\u0439\u0448\u0430\u044f"},{"language":"Spanish","name":"Anafenza,
         la l\u00edder"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386476","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/anafenza,
-        the foremost.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386476,"name":"Anafenza,
+        the foremost.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386476,"name":"Anafenza,
         the Foremost","names":null,"number":"163","originalText":"Whenever Anafenza,
         the Foremost attacks, put a +1\/+1 counter on another target tapped creature
         you control.\nIf a creature card would be put into an opponent''s graveyard
         from anywhere, exile it instead.","originalType":"Legendary Creature \u2014
         Human Soldier","power":"4","printings":["Khans of Tarkir"],"rarity":"Mythic
-        Rare","rulings":null,"set":"KTK","subtypes":["Human","Soldier"],"supertypes":["Legendary"],"text":"Whenever
+        Rare","rulings":[{"date":"2014-09-20","text":"Anafenza\u2019s first ability
+        can target any tapped creature you control. That creature doesn\u2019t necessarily
+        have to be attacking."},{"date":"2014-09-20","text":"While Anafenza is on
+        the battlefield, abilities that trigger whenever a nontoken creature your
+        opponent owns dies won\u2019t trigger, as that card will never reach that
+        player\u2019s graveyard. (Token creatures will still go to the graveyard briefly
+        before ceasing to exist.)"},{"date":"2014-09-20","text":"If your opponent
+        discards a creature card while Anafenza is on the battlefield, abilities that
+        function when a card is discarded (such as madness) still work, even though
+        that card never reaches a graveyard. In addition, spells or abilities that
+        check the characteristics of a discarded card (such as Chandra Ablaze\u2019s
+        first ability) can find that card in exile."},{"date":"2014-09-20","text":"Anafenza\u2019s
+        last ability cares only what the card would be in the zone it\u2019s moving
+        from, not what it would be in the graveyard. For example, if a land card you
+        control becomes a creature due to an effect and then dies, the land card will
+        be exiled. But if a creature card with bestow is an Aura when it would be
+        put into the graveyard, it ends up in the graveyard."}],"set":"KTK","subtypes":["Human","Soldier"],"supertypes":["Legendary"],"text":"Whenever
         Anafenza, the Foremost attacks, put a +1\/+1 counter on another target tapped
         creature you control.\nIf a creature card would be put into an opponent''s
         graveyard from anywhere, exile it instead.","toughness":"4","type":"Legendary
-        Creature \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":null},{"artist":"Zoltan
+        Creature \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Zoltan
         Boros","border":"black","cmc":5,"colors":["White","Black","Red"],"flavor":"The
         stature of the fighter matters less than the depth of the cut.","foreignNames":[{"language":"Chinese
         Traditional","name":"\u65b7\u8e1d\u9b3c\u602a"},{"language":"Chinese Simplified","name":"\u65ad\u8e1d\u9b3c\u602a"},{"language":"French","name":"Attrapeur
         de chevilles"},{"language":"German","name":"Kn\u00f6chelkerber"},{"language":"Italian","name":"Trinciastinchi"},{"language":"Japanese","name":"\u8db3\u9996\u88c2\u304d"},{"language":"Korean","name":"\ubc1c\ubaa9\uc744
         \ub178\ub9ac\ub294 \uace0\ube14\ub9b0"},{"language":"Portuguese (Brazil)","name":"Cortador
         de Tornozelos"},{"language":"Russian","name":"\u041b\u043e\u0434\u044b\u0436\u043a\u043e\u0440\u0435\u0437"},{"language":"Spanish","name":"Tobillero"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386477","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ankle
-        shanker.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}{W}{B}","multiverseid":386477,"name":"Ankle
+        shanker.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}{W}{B}","multiverseid":386477,"name":"Ankle
         Shanker","names":null,"number":"164","originalText":"Haste\nWhenever Ankle
         Shanker attacks, creatures you control gain first strike and deathtouch until
-        end of turn.","originalType":"Creature \u2014 Goblin Berserker","power":"2","printings":["Khans
-        of Tarkir"],"rarity":"Rare","rulings":null,"set":"KTK","subtypes":["Goblin","Berserker"],"supertypes":null,"text":"Haste\nWhenever
+        end of turn.","originalType":"Creature \u2014 Goblin Berserker","power":"2","printings":["Media
+        Inserts","Khans of Tarkir"],"rarity":"Rare","rulings":null,"set":"KTK","subtypes":["Goblin","Berserker"],"supertypes":null,"text":"Haste\nWhenever
         Ankle Shanker attacks, creatures you control gain first strike and deathtouch
-        until end of turn.","toughness":"2","type":"Creature \u2014 Goblin Berserker","types":["Creature"],"variations":null,"watermark":null},{"artist":"Seb
+        until end of turn.","toughness":"2","type":"Creature \u2014 Goblin Berserker","types":["Creature"],"variations":null,"watermark":"Mardu"},{"artist":"Seb
         McKinnon","border":"black","cmc":3,"colors":["Red"],"flavor":"Lightning burns
         its own path.","foreignNames":[{"language":"Chinese Traditional","name":"\u5f27\u72c0\u9583\u96fb"},{"language":"Chinese
         Simplified","name":"\u5f27\u72b6\u95ea\u7535"},{"language":"French","name":"Arc
@@ -304,14 +452,18 @@ http_interactions:
         \ubc29\uc804"},{"language":"Portuguese (Brazil)","name":"Raio Voltaico"},{"language":"Russian","name":"\u0414\u0443\u0433\u043e\u0432\u0430\u044f
         \u041c\u043e\u043b\u043d\u0438\u044f"},{"language":"Spanish","name":"Rel\u00e1mpago
         arco"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386478","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/arc
-        lightning.jpg"},"layout":"normal","legalities":{"Urza Block":"Legal","Legacy":"Legal","Vintage":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}","multiverseid":386478,"name":"Arc
+        lightning.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Urza
+        Block":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}","multiverseid":386478,"name":"Arc
         Lightning","names":null,"number":"97","originalText":"Arc Lightning deals
         3 damage divided as you choose among one, two, or three target creatures and\/or
         players.","originalType":"Sorcery","power":null,"printings":["Arena League","Urza''s
-        Saga","Battle Royale Box Set","Planechase","Khans of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2004-10-04","text":"Each
-        target must receive at least 1 damage. You can''t choose a target to take
-        zero damage."},{"date":"2004-10-04","text":"You can''t choose zero targets.
-        You must choose at least one target."}],"set":"KTK","subtypes":null,"supertypes":null,"text":"Arc
+        Saga","Battle Royale Box Set","Planechase","Khans of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"You
+        choose how many targets Arc Lightning has and how the damage is divided as
+        you cast the spell. Each target must receive at least 1 damage."},{"date":"2014-09-20","text":"If
+        some of the creatures are illegal targets as Arc Lightning tries to resolve,
+        the original division of damage still applies but no damage is dealt to the
+        illegal targets. If all targets are illegal, Arc Lightning is countered."}],"set":"KTK","subtypes":null,"supertypes":null,"text":"Arc
         Lightning deals 3 damage divided as you choose among one, two, or three target
         creatures and\/or players.","toughness":null,"type":"Sorcery","types":["Sorcery"],"variations":null,"watermark":null},{"artist":"Wayne
         Reynolds","border":"black","cmc":2,"colors":["Green"],"flavor":"Every shaft
@@ -323,12 +475,13 @@ http_interactions:
         \ud749\ubcbd"},{"language":"Portuguese (Brazil)","name":"Parapeito dos Arqueiros"},{"language":"Russian","name":"\u0411\u0430\u0448\u043d\u044f
         \u041b\u0443\u0447\u043d\u0438\u043a\u043e\u0432"},{"language":"Spanish","name":"Parapeto
         de los arqueros"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386479","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/archers''
-        parapet.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}{G}","multiverseid":386479,"name":"Archers''
+        parapet.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}{G}","multiverseid":386479,"name":"Archers''
         Parapet","names":null,"number":"128","originalText":"Defender\n{1}{B}, {T}:
         Each opponent loses 1 life.","originalType":"Creature \u2014 Wall","power":"0","printings":["Khans
         of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Wall"],"supertypes":null,"text":"Defender\n{1}{B},
         {T}: Each opponent loses 1 life.","toughness":"5","type":"Creature \u2014
-        Wall","types":["Creature"],"variations":null,"watermark":null},{"artist":"Steven
+        Wall","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Steven
         Belledin","border":"black","cmc":5,"colors":["White","Black","Green"],"flavor":"The
         Abzan avoid extended supply lines by incorporating weapons stores into their
         battle formations.","foreignNames":[{"language":"Chinese Traditional","name":"\u8ecd\u5099\u90e8\u968a"},{"language":"Chinese
@@ -338,14 +491,21 @@ http_interactions:
         \ubd80\ub300"},{"language":"Portuguese (Brazil)","name":"Tropas de Armamento"},{"language":"Russian","name":"\u0412\u043e\u043e\u0440\u0443\u0436\u0435\u043d\u043d\u044b\u0439
         \u041a\u043e\u0440\u043f\u0443\u0441"},{"language":"Spanish","name":"Cuerpo
         de infanter\u00eda"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386480","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/armament
-        corps.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{W}{B}{G}","multiverseid":386480,"name":"Armament
+        corps.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{W}{B}{G}","multiverseid":386480,"name":"Armament
         Corps","names":null,"number":"165","originalText":"When Armament Corps enters
         the battlefield, distribute two +1\/+1 counters among one or two target creatures
         you control.","originalType":"Creature \u2014 Human Soldier","power":"4","printings":["Khans
-        of Tarkir"],"rarity":"Uncommon","rulings":null,"set":"KTK","subtypes":["Human","Soldier"],"supertypes":null,"text":"When
+        of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
+        enters-the-battlefield ability can target Armament Corps itself."},{"date":"2014-09-20","text":"You
+        choose how the counters will be distributed as you put the ability on the
+        stack. Notably, if you choose to put one +1\/+1 counter on each of two target
+        creatures, and one of those creatures becomes an illegal target in response,
+        the +1\/+1 counter that would\u2019ve gone on that creature is lost. It can\u2019t
+        be put on the remaining legal target."}],"set":"KTK","subtypes":["Human","Soldier"],"supertypes":null,"text":"When
         Armament Corps enters the battlefield, distribute two +1\/+1 counters among
         one or two target creatures you control.","toughness":"4","type":"Creature
-        \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":null},{"artist":"Steve
+        \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Steve
         Prescott","border":"black","cmc":5,"colors":["Red"],"flavor":"First the thunder,
         then the rain.","foreignNames":[{"language":"Chinese Traditional","name":"\u7bad\u77e2\u98a8\u66b4"},{"language":"Chinese
         Simplified","name":"\u7bad\u77e2\u98ce\u66b4"},{"language":"French","name":"Orage
@@ -354,15 +514,23 @@ http_interactions:
         (Brazil)","name":"Tempestade de Flechas"},{"language":"Russian","name":"\u0411\u0443\u0440\u044f
         \u0421\u0442\u0440\u0435\u043b"},{"language":"Spanish","name":"Tormenta de
         flechas"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386481","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/arrow
-        storm.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{R}{R}","multiverseid":386481,"name":"Arrow
+        storm.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{R}{R}","multiverseid":386481,"name":"Arrow
         Storm","names":null,"number":"98","originalText":"Arrow Storm deals 4 damage
         to target creature or player.\nRaid \u2014 If you attacked with a creature
         this turn, instead Arrow Storm deals 5 damage to that creature or player and
         the damage can''t be prevented.","originalType":"Sorcery","power":null,"printings":["Khans
-        of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"Arrow
+        of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Raid
+        abilities care only that you attacked with a creature. It doesn\u2019t matter
+        how many creatures you attacked with, or which opponent or planeswalker controlled
+        by an opponent those creatures attacked."},{"date":"2014-09-20","text":"Raid
+        abilities evaluate the entire turn to see if you attacked with a creature.
+        That creature doesn\u2019t have to still be on the battlefield. Similarly,
+        the player or planeswalker it attacked doesn\u2019t have to still be in the
+        game or on the battlefield, respectively."}],"set":"KTK","subtypes":null,"supertypes":null,"text":"Arrow
         Storm deals 4 damage to target creature or player.\nRaid \u2014 If you attacked
         with a creature this turn, instead Arrow Storm deals 5 damage to that creature
-        or player and the damage can''t be prevented.","toughness":null,"type":"Sorcery","types":["Sorcery"],"variations":null,"watermark":null},{"artist":"Howard
+        or player and the damage can''t be prevented.","toughness":null,"type":"Sorcery","types":["Sorcery"],"variations":null,"watermark":"Mardu"},{"artist":"Howard
         Lyon","border":"black","cmc":4,"colors":["Red"],"flavor":null,"foreignNames":[{"language":"Chinese
         Traditional","name":"\u71fc\u96f2\u9cf3\u51f0"},{"language":"Chinese Simplified","name":"\u70ec\u4e91\u51e4\u51f0"},{"language":"French","name":"Ph\u00e9nix
         des nu\u00e9es cendreuses"},{"language":"German","name":"Aschewolkenphoenix"},{"language":"Italian","name":"Fenice
@@ -371,18 +539,56 @@ http_interactions:
         Nuvem-de-cinzas"},{"language":"Russian","name":"\u0424\u0435\u043d\u0438\u043a\u0441
         \u041f\u0435\u043f\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u041e\u0431\u043b\u0430\u043a\u0430"},{"language":"Spanish","name":"F\u00e9nix
         nubecin\u00e9reo"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386482","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ashcloud
-        phoenix.jpg"},"layout":"normal","legalities":{"Vintage":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}{R}","multiverseid":386482,"name":"Ashcloud
+        phoenix.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
+        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}{R}","multiverseid":386482,"name":"Ashcloud
         Phoenix","names":null,"number":"99","originalText":"Flying\nWhen Ashcloud
         Phoenix dies, return it to the battlefield face down.\nMorph {4}{R}{R} (You
         may cast this card face down as a 2\/2 creature for {3}. Turn it face up any
         time for its morph cost.)\nWhen Ashcloud Phoenix is turned face up, it deals
         2 damage to each player.","originalType":"Creature \u2014 Phoenix","power":"4","printings":["Khans
-        of Tarkir"],"rarity":"Mythic Rare","rulings":null,"set":"KTK","subtypes":["Phoenix"],"supertypes":null,"text":"Flying\nWhen
+        of Tarkir"],"rarity":"Mythic Rare","rulings":[{"date":"2014-09-20","text":"If
+        Ashcloud Phoenix is face down, you can turn it face up for its morph cost,
+        even if you didn\u2019t cast Ashcloud Phoenix face down using its morph ability."},{"date":"2014-09-20","text":"If
+        Ashcloud Phoenix leaves the graveyard before its \u201cdies\u201d ability
+        resolves, it won\u2019t return to the battlefield."},{"date":"2014-09-20","text":"Once
+        Ashcloud Phoenix returns to the battlefield face down, each player will know
+        which face-down creature it is. You can\u2019t mix up the positions of your
+        face-down permanents to disguise this."},{"date":"2014-09-20","text":"Morph
+        lets you cast a card face down by paying {3}, and lets you turn the face-down
+        permanent face up any time you have priority by paying its morph cost."},{"date":"2014-09-20","text":"The
+        face-down spell has no mana cost and has a converted mana cost of 0. When
+        you cast a face-down spell, put it on the stack face down so no other player
+        knows what it is, and pay {3}. This is an alternative cost."},{"date":"2014-09-20","text":"When
+        the spell resolves, it enters the battlefield as a 2\/2 creature with no name,
+        mana cost, creature types, or abilities. It\u2019s colorless and has a converted
+        mana cost of 0. Other effects that apply to the creature can still grant it
+        any of these characteristics."},{"date":"2014-09-20","text":"Any time you
+        have priority, you may turn the face-down creature face up by revealing what
+        its morph cost is and paying that cost. This is a special action. It doesn\u2019t
+        use the stack and can\u2019t be responded to. Only a face-down permanent can
+        be turned face up this way; a face-down spell cannot."},{"date":"2014-09-20","text":"Because
+        the permanent is on the battlefield both before and after it\u2019s turned
+        face up, turning a permanent face up doesn\u2019t cause any enters-the-battlefield
+        abilities to trigger."},{"date":"2014-09-20","text":"A permanent that turns
+        face up or face down changes characteristics but is otherwise the same permanent.
+        Spells and abilities that were targeting that permanent, as well as Auras
+        and Equipment that were attached to the permanent, aren\u2019t affected."},{"date":"2014-09-20","text":"At
+        any time, you can look at a face-down spell or permanent you control. You
+        can\u2019t look at face-down spells or permanents you don\u2019t control unless
+        an effect instructs you to do so."},{"date":"2014-09-20","text":"You must
+        ensure that your face-down spells and permanents can easily be differentiated
+        from each other. You\u2019re not allowed to mix up the cards that represent
+        them on the battlefield in order to confuse other players. The order they
+        entered the battlefield should remain clear. Common methods for doing this
+        include using markers or dice, or simply placing them in order on the battlefield."},{"date":"2014-09-20","text":"If
+        a face-down permanent leaves the battlefield, you must reveal it. You must
+        also reveal all face-down spells and permanents you control if you leave the
+        game or if the game ends."}],"set":"KTK","subtypes":["Phoenix"],"supertypes":null,"text":"Flying\nWhen
         Ashcloud Phoenix dies, return it to the battlefield face down.\nMorph {4}{R}{R}
         (You may cast this card face down as a 2\/2 creature for {3}. Turn it face
         up any time for its morph cost.)\nWhen Ashcloud Phoenix is turned face up,
         it deals 2 damage to each player.","toughness":"1","type":"Creature \u2014
         Phoenix","types":["Creature"],"variations":null,"watermark":null}],"total":269,"perPage":20,"links":{"first":"http:\/\/api.mtgapi.com\/v2\/cards?set=KTK","previous":null,"current":"http:\/\/api.mtgapi.com\/v2\/cards?page=1&set=KTK","next":"http:\/\/api.mtgapi.com\/v2\/cards?page=2&set=KTK","last":"http:\/\/api.mtgapi.com\/v2\/cards?page=14&set=KTK"}}'
     http_version: 
-  recorded_at: Fri, 26 Sep 2014 18:46:20 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Wed, 12 Nov 2014 20:40:49 GMT
+recorded_with: VCR 2.9.3
