@@ -25,51 +25,19 @@
   </div>
 
   <div class="box pure-u-lg-1-6 pure-u-1">
-    <h2>Top cards</h2>
-    <hr/>
-    <ol>
-      <% @orthanc.top_cards.each do |deck_entry| %>
-        <li>
-        <%= deck_entry.name %> <i class=""></i>
-        </li>
-      <% end %>
-    </ol>
+    <%= render 'cards_list', label: "Top cards", cards: @orthanc.top_cards %>
   </div>
 
   <div class="box pure-u-lg-1-6 pure-u-1">
-    <h2>Top Creatures</h2>
-    <hr/>
-    <ol>
-      <% Orthanc.new(type: :c).top_cards.each do |deck_entry| %>
-        <li>
-        <%= deck_entry.name %>
-        </li>
-      <% end %>
-    </ol>
+    <%= render 'cards_list', label: "Top creatures", cards: Orthanc.new(type: :c).top_cards %>
   </div>
 
   <div class="box pure-u-lg-1-6 pure-u-1">
-    <h2>Top Instants</h2>
-    <hr/>
-    <ol>
-      <% Orthanc.new(type: :i).top_cards.each do |deck_entry| %>
-        <li>
-        <%= deck_entry.name %>
-        </li>
-      <% end %>
-    </ol>
+    <%= render 'cards_list', label: "Top instants", cards: Orthanc.new(type: :i).top_cards %>
   </div>
 
   <div class="box pure-u-lg-1-6 pure-u-1">
-    <h2>Top Sorceries</h2>
-    <hr/>
-    <ol>
-      <% Orthanc.new(type: :s).top_cards.each do |deck_entry| %>
-        <li>
-        <%= deck_entry.name %>
-        </li>
-      <% end %>
-    </ol>
+    <%= render 'cards_list', label: "Top sorceries", cards: Orthanc.new(type: :s).top_cards %>
   </div>
 </div>
 

@@ -1,11 +1,11 @@
 require './lib/game/mana_cost'
 class Deck < ActiveRecord::Base
   paginates_per 10
+
   has_many :card_decks
   has_many :cards, through: :card_decks
 
   validates_uniqueness_of :url
-
 
   def table
     Deck.arel_table

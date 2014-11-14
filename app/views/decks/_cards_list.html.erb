@@ -1,0 +1,10 @@
+<h2><%= label %></h2>
+<hr/>
+<ol>
+  <% cards.each do |deck_entry| %>
+    <li>
+    <%= deck_entry.name %>
+    <%= render "inventory_form", card: deck_entry %>
+    </li>
+  <% end %>
+</ol>

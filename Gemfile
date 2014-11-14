@@ -11,6 +11,11 @@ gem "unicorn"
 
 gem "rails_12factor", group: :production
 
+group :development do
+  gem "awesome_print"
+  gem "guard-rspec", require: false
+end
+
 group :test, :development do
   gem "factory_girl_rails"
   gem "mocha", require: false
