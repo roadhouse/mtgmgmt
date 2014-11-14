@@ -1,4 +1,9 @@
 language: ruby
-script: bundle exec rspec
 rvm:
   - 2.0.0
+script: 
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake db:seed
+  - bundle exec rake 
