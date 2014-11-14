@@ -24,7 +24,7 @@ class InventoriesController < ApplicationController
   def create
     @inventory = Inventory.create!(inventory_params)
 
-    redirect_to :root
+    redirect_to :back
   end
 
   def update

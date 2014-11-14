@@ -14,6 +14,7 @@ gem "rails_12factor", group: :production
 group :development do
   gem "awesome_print"
   gem "guard-rspec", require: false
+  gem "travis"
 end
 
 group :test, :development do

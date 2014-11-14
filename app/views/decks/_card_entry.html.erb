@@ -2,11 +2,12 @@
   <h5><%= card_type %></h5>
   <ul class="card_entry_box">
     <% cards.each do |card| %>
-        <li>
+      <li>
         <strong><%= card[:copies] %></strong>
         <%= link_to card[:card].name, "#", class: "card-image", data: { card_image: card[:card].image }%>
 
-        </li>
+        <%= render "inventory_form", card: card[:card] %>
+      </li>
     <% end %>
   </ul>
 <% end %>
