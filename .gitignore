@@ -14,7 +14,7 @@
 /log/*.log
 /tmp
 /.dropbox
-binstubs/*
+bin_stubs/*
 vendor/gems/*
 spec/helpers/*
 .env
