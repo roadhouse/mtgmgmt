@@ -1,9 +1,11 @@
-[![Build Status](https://travis-ci.org/roadhouse/mtgmgmt.svg?branch=master)](https://travis-ci.org/roadhouse/mtgmgmt)
+== Code Status
 
-## Description of Contents
+* [![Build Status](https://travis-ci.org/roadhouse/mtgmgmt.svg?branch=master)](https://travis-ci.org/roadhouse/mtgmgmt)
 
-I try to isolate all business logic in `lib` dir, so the rails app has only the basic code to glue things.
+== Description of Contents
 
-### lib/orthanc/
+I try to isolate all business logic in ```lib``` dir, so the rails app has only the basic code to glue things.
+
+=== lib/orthanc/
   A "Query Service" responsable to make complex query using arel, like top decks (decks more playables) and a basic card finder.
 
