@@ -79,7 +79,8 @@ class CardDeckParam
 end
 
 # cards table wrapper
-# PARAMS: {type: [:a|:l|:i|:s|:c|:p], color: [:r|:w|:b|:u|:g]}
+# PARAMS: {type: [:a|:l|:i|:s|:c|:p], color: [:r|:w|:b|:u|:g], name: "Black Lotus"}
+# when name was passed the the scope the query included lands
 class CardParam
   def initialize(options)
     @options = options 
@@ -91,19 +92,18 @@ class CardParam
 
     color = c[@options[:color]]
     type = t[@options[:type]]
-    name = t[@options[:name]]
+    name = @options[:name]
 
-    where = not_lands
+    where = name ? card_name_is(name) : not_lands
 
     where = where.and(card_type_is(type))   if type
     where = where.and(card_color_is(color)) if color
-    where = where.and(card_name_is(name))   if name
 
     where
   end
 
   def card_name_is(name)
-    card[:name].matches(name).or(card[:portuguese_name].matches(name))
+    card[:name].matches(name).or(card[:portuguese_name].matches("%#{name}%"))
   end
 
   def not_lands
