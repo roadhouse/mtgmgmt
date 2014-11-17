@@ -7,5 +7,6 @@
 I try to isolate all business logic in ```lib``` dir, so the rails app has only the basic code to glue things.
 
 === lib/orthanc/
-  A "Query Service" responsable to make complex query using arel, like top decks (decks more playables) and a basic card finder.
+
+A "Query Service" responsable to make complex query using arel, like top decks (decks more playables) and a basic card finder.
 
