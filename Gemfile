@@ -22,7 +22,7 @@ group :test, :development do
   gem "mocha", require: false
   gem "pry"
   gem "pry-rails"
-  # gem "pry-debugger"
+  gem "pry-byebug"
   gem "rspec-rails"
 end
 

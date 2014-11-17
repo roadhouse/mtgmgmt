@@ -30,8 +30,8 @@ class Deck < ActiveRecord::Base
     end
   end
 
-  def archeptype_deck(deck_name)
-    Deck.where(table[:name].matches("%#{deck_name}%")).last
+  def archeptype_deck
+    Deck.where(table[:name].matches(name)).last
   end
 
   def add_card(copies, name, part)

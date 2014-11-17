@@ -28,9 +28,9 @@ class InventoriesController < ApplicationController
   end
 
   def update
-    @inventory = Inventory.find(params[:id])
+    Inventory.find(params[:id]).update_attributes(inventory_params)
 
-    respond_with(@inventory.update_attributes(params[:inventory]))
+    redirect_to :back
   end
 
   def destroy
