@@ -1,10 +1,9 @@
 == Code Status
-
-* [![Build Status](https://travis-ci.org/roadhouse/mtgmgmt.svg?branch=master)](https://travis-ci.org/roadhouse/mtgmgmt)
+![](https://travis-ci.org/roadhouse/mtgmgmt.svg?branch=master)
 
 == Description of Contents
 
-I try to isolate all business logic in ```lib``` dir, so the rails app has only the basic code to glue things.
+I try to isolate all business logic in lib dir, so the rails app has only the basic code to glue things.
 
 === lib/orthanc/
 
