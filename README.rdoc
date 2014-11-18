@@ -1,5 +1,5 @@
 == Code Status
-![](https://travis-ci.org/roadhouse/mtgmgmt.svg?branch=master)
+![Build](https://api.travis-ci.org/roadhouse/mtgmgmt.svg?branch=master)
 
 == Description of Contents
 
