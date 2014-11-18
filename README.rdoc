@@ -1,5 +1,8 @@
 == Code Status
 https://travis-ci.org/roadhouse/mtgmgmt
+![travis](https://api.travis-ci.org/roadhouse/mtgmgmt.png?branch=master)
+[![Code Climate](https://codeclimate.com/github/roadhouse/mtgmgmt/badges/gpa.svg)](https://codeclimate.com/github/roadhouse/mtgmgmt)
+[![Test Coverage](https://codeclimate.com/github/roadhouse/mtgmgmt/badges/coverage.svg)](https://codeclimate.com/github/roadhouse/mtgmgmt)
 
 == Description of Contents
 
