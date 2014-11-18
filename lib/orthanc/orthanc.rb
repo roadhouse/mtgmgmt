@@ -82,6 +82,7 @@ end
 # PARAMS: {type: [:a|:l|:i|:s|:c|:p], color: [:r|:w|:b|:u|:g], name: "Black Lotus"}
 # when name was passed the the scope the query included lands
 class CardParam
+
   def initialize(options)
     @options = options 
   end
