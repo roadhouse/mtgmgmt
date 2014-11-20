@@ -1,0 +1,12 @@
+<%= form_for :query, method: :get, html: {class: "pure-form"} do |f| %>
+  <%= f.text_field :name, class: "typeahead" %>
+  <%= f.submit %>
+<% end %>
+
+<% @cards.each do |c| %>
+  <img src="<%= c.image %>"/>
+<% end %>
+
+<script>
+
+</script>
