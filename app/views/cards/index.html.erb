@@ -1,12 +1,12 @@
-<%= form_for :query, method: :get, html: {class: "pure-form"} do |f| %>
-  <%= f.text_field :name, class: "typeahead" %>
-  <%= f.submit %>
-<% end %>
+<div id="container" ng-app='demos_cfg' ng-controller='main_control' class="pure-g">
+  <div class="pure-u-1">
+    <%= form_for(:query, method: :get, html: {class: "pure-form"}) do |f| %>
+      <%= f.search_field :name, {"ng-change" =>"change(text)", "ng-model" => "search", class: "pure-input-rounded pure-input-1"} %>
+    <% end %>
+  </div>
 
-<% @cards.each do |c| %>
-  <img src="<%= c.image %>"/>
-<% end %>
-
-<script>
-
-</script>
+    <div ng-repeat="entry in entries" class="pure-u-1-4 box">
+      <div>{{entry.portuguese_name}}</div>
+      <img class="pure-img crop" src="{{entry.image}}"/>
+    </div>
+</div>

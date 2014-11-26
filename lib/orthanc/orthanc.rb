@@ -1,8 +1,8 @@
 #centralize queries (using arel) and extract reports
 # PARAMS: {color: [:w|:r|:c|:b|:a|:g], type: [:a|:l|:i|:s|:c|:p], part: [:m|:s]}
 class Orthanc
-  def initialize(options={})
-    @options = {limit: 10}.merge(options)
+  def initialize(options)
+    @options = options
     
     @c = CardParam.new(@options)
     @cd = CardDeckParam.new(@options)
@@ -11,7 +11,11 @@ class Orthanc
 
   #basic card search using CardParam params as filter
   def cards
-    @c.model.where(@c.params)
+    if @options.empty?
+      @c.model.none
+    else
+      @c.model.where(@c.params)
+    end
   end
 
   #top cards played in standard
@@ -23,14 +27,14 @@ class Orthanc
       .group(@c.name, @c.id)
       .having(@c.not_lands)
       .order(@c.count_name.desc)
-      .limit(@options[:limit])
+      .limit(@options.fetch(:limit) { 10} )
   end
 
   def top_decks
     @d.model.select(@d.name, @d.name.count.as("quantity"))
       .group(@d.name)
       .order(@d.name.count.desc)
-      .limit(@options[:limit])
+      .limit(@options.fetch(:limit) {10})
   end
 end
 
@@ -92,9 +96,9 @@ class CardParam
 
     color = c[@options[:color]]
     type = t[@options[:type]]
-    name = @options[:name]
+    name = @options[:name].to_s
 
-    where = name ? card_name_is(name) : not_lands
+    where = name.empty? ? not_lands : card_name_is(name)
 
     where = where.and(card_type_is(type))   if type
     where = where.and(card_color_is(color)) if color
