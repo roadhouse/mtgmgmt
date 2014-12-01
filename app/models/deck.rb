@@ -43,11 +43,11 @@ class Deck < ActiveRecord::Base
   end
 
   def main
-    group_by_card_type(:main)
+    for_game(:main)
   end
 
   def sideboard
-    group_by_card_type(:sideboard)
+    for_game(:sideboard)
   end
 
 
@@ -61,14 +61,6 @@ class Deck < ActiveRecord::Base
     card_list_from(part).map do |card|
       Array.new(card[:copies]) { |_| card[:card] }
     end.flatten
-  end
-
-  def main_ids
-    Card.where(id: card_decks.where(part: :main).pluck(:card_id)).pluck(:id)
-  end
-
-  def sideboard_ids
-    Card.where(id: card_decks.where(part: :sideboard).pluck(:card_id)).pluck(:id)
   end
 
   private
@@ -109,10 +101,10 @@ class DeckStats
   end
 
   def by_color
-    x=non_lands
-        .map {|i| Mana.new(i.mana_cost).colors}
-        .flatten
-        .group_by {|i| i}
+    non_lands
+      .map {|i| Mana.new(i.mana_cost).colors}
+      .flatten
+      .group_by {|i| i}
   end
 
   def total_by_color

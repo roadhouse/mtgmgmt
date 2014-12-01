@@ -3,7 +3,7 @@
     <h2>Top decks</h2>
     <hr/>
     <ol class="top_decks">
-      <% @orthanc.top_decks.each do |deck| %>
+      <% @presenter.top_decks.each do |deck| %>
         <li>
           <span> <i class="icon-codeigniter"></i> <%= deck.presence_on_field %>% </span>
           <%= render 'deck_list_link', deck: deck %>
@@ -13,19 +13,19 @@
   </div>
 
   <div class="box pure-u-lg-1-6 pure-u-1">
-    <%= render 'cards_list', label: "Top cards", cards: @orthanc.top_cards %>
+    <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards %>
   </div>
 
   <div class="box pure-u-lg-1-6 pure-u-1">
-    <%= render 'cards_list', label: "Top creatures", cards: Orthanc.new(type: :c).top_cards %>
+    <%= render 'cards_list', label: "Top creatures", cards: @presenter.top_cards(type: :c) %>
   </div>
 
   <div class="box pure-u-lg-1-6 pure-u-1">
-    <%= render 'cards_list', label: "Top instants", cards: Orthanc.new(type: :i).top_cards %>
+    <%= render 'cards_list', label: "Top instants", cards: @presenter.top_cards(type: :i) %>
   </div>
 
   <div class="box pure-u-lg-1-6 pure-u-1">
-    <%= render 'cards_list', label: "Top sorceries", cards: Orthanc.new(type: :s).top_cards %>
+    <%= render 'cards_list', label: "Top sorceries", cards: @presenter.top_cards(type: :s) %>
   </div>
 </div>
 

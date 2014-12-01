@@ -1,16 +1,10 @@
 class DecksController < ApplicationController
   def index
-    @decks = Deck.all.order(created_at: :desc).page params[:page]
-    @presenter = DeckPresenter.new(@decks)
-    @orthanc = Orthanc.new({})
-
-    respond_with(@decks)
+    @presenter = DeckPresenter.new
   end
 
   def show
-    @deck = Deck.find(params[:id])
-
-    respond_with(@deck)
+    @deck = DeckPresenter.new Deck.find(params[:id])
   end
 
   def new
