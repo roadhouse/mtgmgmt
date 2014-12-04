@@ -36,6 +36,10 @@ class Orthanc
       .order(@d.name.count.desc)
       .limit(@options.fetch(:limit) {10})
   end
+
+  # def presence_on_field
+    # ((quantity.to_f/ Deck.all.count.to_f ) * 100).truncate
+  # end
 end
 
 # decks table wrapper

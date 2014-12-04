@@ -1,9 +1,9 @@
 <span>
-  <i class="icon-addshape"></i> <%= User.first.percent_from(deck.archeptype_deck.main_ids).truncate %>%
-  <i class="icon-subtractshape"></i> <%= User.first.percent_from(deck.archeptype_deck.sideboard_ids).truncate %>%
+  <i class="icon-addshape"></i> <%= deck.percent_owned(User.first, :main) %>%
+  <i class="icon-subtractshape"></i> <%= deck.percent_owned(User.first, :sideboard) %>%
 </span>
 
-<%= link_to deck.archeptype_deck, class: "pure-button" do %> 
+<%= link_to deck.archeptype_deck.deck, class: "pure-button" do %> 
   <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
   <%= deck.archeptype_deck.name %>
 <% end %>

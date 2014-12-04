@@ -5,7 +5,6 @@
     <ol class="top_decks">
       <% @presenter.top_decks.each do |deck| %>
         <li>
-          <span> <i class="icon-codeigniter"></i> <%= deck.presence_on_field %>% </span>
           <%= render 'deck_list_link', deck: deck %>
         </li>
       <% end %>

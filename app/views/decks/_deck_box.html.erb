@@ -2,13 +2,13 @@
   <div class="deck-list deck-main pure-u-1 pure-u-lg-1-3">
     <h4>Main</h4>
     <hr/>
-    <%= render 'card_entry', cards: deck.group_by_card_type2(:main) %>
+    <%= render 'card_entry', cards: deck.group_by_card_type(:main) %>
   </div>
 
   <div class="deck-list deck-sideboard pure-u-1 pure-u-lg-1-3">
     <h4>Sideboard</h4>
     <hr/>
-    <%= render 'card_entry', cards: deck.group_by_card_type2(:sideboard) %>
+    <%= render 'card_entry', cards: deck.group_by_card_type(:sideboard) %>
   </div>
 
   <div class="deck-list deck-card-preview pure-u-1 pure-u-lg-1-3">

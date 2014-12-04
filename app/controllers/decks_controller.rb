@@ -1,6 +1,6 @@
 class DecksController < ApplicationController
   def index
-    @presenter = DeckPresenter.new
+    @presenter = MetaGamePresenter.new
   end
 
   def show
