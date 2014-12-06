@@ -11,7 +11,7 @@ class DeckBuilder
     @deck.tap do |deck|
       populate
 
-      deck.save! unless deck.cards.size.zero?
+      deck.save!
     end
   end
 

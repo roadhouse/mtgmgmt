@@ -4,6 +4,7 @@ class CardDeck < ActiveRecord::Base
 
   scope :main, -> { where(part: :main) }
   scope :sideboard, -> { where(part: :sideboard) }
+  scope :from_part, -> (part) { where(part: part) }
 
   validates_presence_of :card, :copies
 end

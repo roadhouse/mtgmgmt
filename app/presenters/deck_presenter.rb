@@ -17,14 +17,6 @@ class DeckPresenter < BasePresenter
     DeckPresenter.new @deck.archeptype_deck
   end
 
-  def main_ids
-    @deck.main.map(&:id)
-  end
-
-  def sideboard_ids
-    @deck.sideboard.map(&:id)
-  end
-
   def main
     group_by_card_type(@main)
   end
@@ -35,16 +27,6 @@ class DeckPresenter < BasePresenter
   
   def percent_owned(user, part)
     user.percent_from(card_pool(part).map {|i| i[:card]}).truncate
-  end
-
-  def percent_owned2(user)
-    user.percent_from(card_pool(:sideboard)).truncate
-  end
-
-  def card_list_from(part)
-    @deck.card_decks.where(part: part).map do |entry| 
-      { copies: entry.copies, card: entry.card }
-    end
   end
 
   def group_by_card_type(part)
@@ -71,6 +53,8 @@ class DeckPresenter < BasePresenter
   private
 
   def card_pool(part)
-    card_list_from(part)
+    @deck.card_decks.where(part: part).map do |entry| 
+      { copies: entry.copies, card: entry.card }
+    end
   end
 end

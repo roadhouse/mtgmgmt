@@ -36,5 +36,3 @@ class Crawler
     "Laracna::#{@site.to_s.camelize}::DeckPage".constantize
   end
 end
-
-require 'open-uri'

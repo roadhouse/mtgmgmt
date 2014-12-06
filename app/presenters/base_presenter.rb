@@ -1,5 +1,9 @@
 class BasePresenter
+  def initialize(model)
+    @model = model
+  end
+
   def self.map(collection)
-    collection.map { |presenter| new(presenter) } 
+    collection.map { |presenter| self.send(:new,presenter) } 
   end 
 end
