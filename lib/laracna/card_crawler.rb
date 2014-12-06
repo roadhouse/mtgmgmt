@@ -1,6 +1,5 @@
 require 'open-uri'
 
-
 class CardCrawler
   attr_reader :cards_attributes
 
