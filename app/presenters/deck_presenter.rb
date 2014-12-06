@@ -56,7 +56,7 @@ class DeckPresenter < BasePresenter
   end
   
   def colors_list
-    cards.map(&:colors).flatten.compact.uniq.map(&:downcase).sort.map do |color|
+    @deck.cards.map(&:colors).flatten.compact.uniq.map(&:downcase).sort.map do |color|
       # "<i class=\"icon-stop #{color}\"></i>"
       {
           "red" => "<i class=\"icon-fire red\"></i>",
