@@ -31,7 +31,11 @@ class Orthanc
   end
 
   def top_decks
-    @d.model.select(@d.name, @d.name.count.as("quantity"))
+    @d.model
+      .select(
+        @d.name, 
+        @d.name.count.as("quantity"),
+      )
       .group(@d.name)
       .order(@d.name.count.desc)
       .limit(@options.fetch(:limit) {10})
