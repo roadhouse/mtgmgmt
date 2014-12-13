@@ -1,3 +1,4 @@
+require 'deck_param.rb'
 #centralize queries (using arel) and extract reports
 # PARAMS: {color: [:w|:r|:c|:b|:a|:g], type: [:a|:l|:i|:s|:c|:p], part: [:m|:s]}
 class Orthanc
@@ -44,25 +45,6 @@ class Orthanc
   # def presence_on_field
     # ((quantity.to_f/ Deck.all.count.to_f ) * 100).truncate
   # end
-end
-
-# decks table wrapper
-class DeckParam
-  def table
-    Deck.arel_table
-  end
-
-  def id
-    table[:id]
-  end
-
-  def name
-    table[:name]
-  end
-
-  def model
-    Deck
-  end
 end
 
 # card_decks table wrapper
