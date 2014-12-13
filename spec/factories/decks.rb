@@ -1,7 +1,8 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
+  sequence(:url) { |n| "url#{n}" }
+  
   factory :deck do
-    name "MyString"
+    name "red deck wins"
+    url
   end
 end
