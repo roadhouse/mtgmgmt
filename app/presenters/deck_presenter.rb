@@ -1,7 +1,7 @@
 class DeckPresenter < BasePresenter
   attr_accessor :deck
 
-  delegate :name, :description, to: :@deck
+  delegate :name, :description, :quantity, to: :@deck
 
   delegate :by_manacost, :total_by_manacost, :total_by_type, :total_by_color, to: :@stats
 
@@ -49,6 +49,10 @@ class DeckPresenter < BasePresenter
       }.fetch(color)
     end
   end
+
+  # def presence_on_field
+    # ((quantity.to_f/ Deck.all.count.to_f ) * 100).truncate
+  # end
  
   private
 
