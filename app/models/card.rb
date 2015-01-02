@@ -10,4 +10,12 @@ class Card < ActiveRecord::Base
   def self.find_by_name!(name)
     per_name(name).first or Card.create!(name: name, set: :fake)
   end
+
+  def on_demand_price
+    if price || price.zero?
+      self.update_attribute(:price, CardPricer.new(self.name).price)
+    end
+
+    price
+  end
 end

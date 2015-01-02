@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 02 Jan 2015 22:09:18 GMT
+      - Fri, 02 Jan 2015 22:09:19 GMT
       Server:
       - Apache/2.2.29 (Unix) mod_ssl/2.2.29 OpenSSL/1.0.1e-fips mod_bwlimited/1.4
       X-Powered-By:
@@ -31,7 +31,7 @@ http_interactions:
       Pragma:
       - no-cache
       Set-Cookie:
-      - PHPSESSID=2b5ca06190f07008b3b111c44f55a064; path=/
+      - PHPSESSID=16fc128912c7493849b1c6bf00217fb6; path=/
       Transfer-Encoding:
       - chunked
       Content-Type:
@@ -839,5 +839,5 @@ http_interactions:
         \                       $('#mascara').hide();\r\n\t                        $('.window').hide();\r\n\t
         \               });\r\n\t        });\r\n\t    </script>\r\n\t"
     http_version: 
-  recorded_at: Fri, 02 Jan 2015 22:09:19 GMT
+  recorded_at: Fri, 02 Jan 2015 22:09:20 GMT
 recorded_with: VCR 2.9.3
