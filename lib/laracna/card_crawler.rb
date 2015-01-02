@@ -13,7 +13,7 @@ class CardCrawler
   end
 
   def build_card(data, factory = Card)
-    factory.new({
+    factory.new(
       artist: data['artist'],
       border: data["border"],
       ctype: data['type'],
@@ -46,6 +46,6 @@ class CardCrawler
       # foreign_names: data["foreignNames"],
       # legalities: data["legalities"],
       # rulings: data["rulings"]
-    })
+    )
   end
 end

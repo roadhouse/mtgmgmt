@@ -1,8 +1,8 @@
 require "./spec/support/vcr"
-require 'spec_helper_active_record'
-require 'json'
-require 'ostruct'
-require './app/models/card'
+require "spec_helper_active_record"
+require "json"
+require "ostruct"
+require "./app/models/card"
 
 require "./lib/laracna/card_crawler.rb"
 
