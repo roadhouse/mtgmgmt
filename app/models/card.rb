@@ -12,7 +12,7 @@ class Card < ActiveRecord::Base
   end
 
   def on_demand_price
-    if price || price.zero?
+    unless price
       self.update_attribute(:price, CardPricer.new(self.name).price)
     end
 

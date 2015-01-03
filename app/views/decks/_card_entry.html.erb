@@ -5,6 +5,7 @@
       <li>
         <strong><%= card[:copies] %></strong>
         <%= link_to card[:card].name, "#", class: "card-image", data: { card_image: card[:card].image }%>
+        <span><%= number_to_currency card[:card].on_demand_price %></span>
 
         <%= render "inventory_form", card: card[:card] %>
       </li>
