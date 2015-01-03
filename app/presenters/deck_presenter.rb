@@ -50,10 +50,6 @@ class DeckPresenter < BasePresenter
     end
   end
 
-  def total_price
-    @main.inject(0) { |m,v| m + v.price.to_f }
-  end
-
   # def presence_on_field
     # ((quantity.to_f/ Deck.all.count.to_f ) * 100).truncate
   # end
