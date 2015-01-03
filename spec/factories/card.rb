@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :card do
-    name  "Magmajet"
+    name  "Magma Jet"
     set   "Theros"
     ctype "Instant"
   end
