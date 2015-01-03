@@ -7,12 +7,15 @@ class CardPricer
   end
 
   def engine
-    @engine ||= Nokogiri::HTML open card_url(@card_name)
+    @engine ||= Nokogiri::HTML open card_url
   end
 
-  def card_url(card_name)
-    card_name_slug = card_name.gsub(" ","%20")
-    "http://ligamagic.com.br/?view=cartas/card&card=#{card_name_slug}"
+  def card_url
+    "http://ligamagic.com.br/?view=cartas/card&card=#{card_slug}"
+  end
+
+  def card_slug(card_name = @card_name)
+    card_name.gsub(" ","%20").gsub("Æ", "AE")
   end
 
   def price

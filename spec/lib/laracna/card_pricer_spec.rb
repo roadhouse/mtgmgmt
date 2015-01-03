@@ -21,10 +21,23 @@ describe CardPricer do
     its(:zero?) { is_expected.to be_falsy }
   end
 
+  context "#card_slug" do
+    context "with default params" do
+      subject { card_pricer.card_slug }
+
+      it { is_expected.to be_eql "Ashcloud%20Phoenix" }
+    end
+
+    context "passing params" do
+      subject { card_pricer.card_slug("Unravel the Æther") }
+
+      it { is_expected.to be_eql "Unravel%20the%20AEther" }
+    end
+  end
   context "#card_url" do
     let(:card_shop_url) { "http://ligamagic.com.br/?view=cartas/card&card=Ashcloud%20Phoenix" }
 
-    subject { card_pricer.card_url(card_name) }
+    subject { card_pricer.card_url }
 
     it { is_expected.to eq card_shop_url }
   end
