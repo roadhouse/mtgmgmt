@@ -17,6 +17,8 @@ class CardPricer
 
   def price
     engine.search(".preMen")
-      .text.split(' ').last.gsub(',', '.').to_d
+      .text.split(' ').last
+      .gsub(',', '.').gsub('Æ','AE')
+      .to_d
   end
 end
