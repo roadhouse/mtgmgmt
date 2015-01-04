@@ -11,7 +11,7 @@ class Crawler
   def initialize(page, site, options = {})
     @site = site
     @index_page = index_page.new(page)
-    @exceptions = Array[ options.fetch(:except) { nil } ].flatten
+    @exceptions = options.fetch(:except) { [] }
   end
 
   def items
