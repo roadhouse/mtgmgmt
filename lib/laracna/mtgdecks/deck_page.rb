@@ -22,12 +22,7 @@ module Laracna
         @document.search(".deckInfo strong")[0].text.split(".")[0]
       end
 
-      def date
-        Date.parse @document.search(".deckInfo strong")[1].text.match(/(\w*-\w*)/)[1]
-      end
-
       def main
-        # require "pry-byebug"; binding.pry
         main = @document.search(".md .cardItem")
 
         extract_card_list main
@@ -47,7 +42,6 @@ module Laracna
         {
           description: description,
           name: name,
-          date: date,
           card_list: deck,
           url: @url
         }

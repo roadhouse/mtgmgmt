@@ -8,7 +8,7 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
   let(:deck_id) { 63963 }
 
   let(:attributes_list) do
-    [:card_list, :date, :description, :name, :url]
+    [:card_list, :description, :name, :url]
   end
 
   let(:main) do
@@ -48,7 +48,6 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
 
   subject { Laracna::Mtgdecks::DeckPage.new(deck_id) }
 
-  its(:date) { is_expected.to eql Date.parse "2014-01-01" }
   its(:description) { is_expected.to eql "R/W Devotion. Played by Lerchenmüller, Max.Top4 in Heldenschmiede Kempten (Jan-2014)" }
   its(:name) { is_expected.to be_eql "R/W Devotion" }
   its(:main) { is_expected.to eql main }
