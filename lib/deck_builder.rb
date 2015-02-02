@@ -28,6 +28,5 @@ class DeckBuilder
 
       @deck.add_card(copies, name, part)
     end
-
   end
 end
