@@ -11,7 +11,7 @@ module Laracna
       end
 
       def deck_nodes
-        @document.search("tr a")
+        @document.search("tr td a")
         .map {|node| node.attribute("href").text}
       end
 
