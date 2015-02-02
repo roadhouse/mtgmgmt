@@ -10,11 +10,15 @@ module Laracna
         @document = Nokogiri::HTML(open(list_decks_url))
       end
 
-      def decks_ids
-        @document.search("tr strong a")
+      def deck_nodes
+        @document.search("tr a")
         .map {|node| node.attribute("href").text}
-        .map {|url| url.gsub(PageUrl::DECK_URL, "")}
-        .map(&:to_i)
+      end
+
+      def decks_ids
+        deck_nodes
+          .map {|url| url.gsub(PageUrl::DECK_URL, "")}
+          .map(&:to_i)
       end
     end
   end

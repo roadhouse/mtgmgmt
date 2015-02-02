@@ -15,18 +15,19 @@ module Laracna
       end
 
       def description
-        @document.search(".deckHeader div strong").text
+        @document.search(".deckInfo strong").text
       end
 
       def name
-        @document.search(".deckHeader .breadcrumb strong").text
+        @document.search(".deckInfo strong")[0].text.split(".")[0]
       end
 
       def date
-        Date.parse @document.search(".rightBlock ul li")[4].text
+        Date.parse @document.search(".deckInfo strong")[1].text.match(/(\w*-\w*)/)[1]
       end
 
       def main
+        # require "pry-byebug"; binding.pry
         main = @document.search(".md .cardItem")
 
         extract_card_list main
