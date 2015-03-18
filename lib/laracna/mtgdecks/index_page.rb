@@ -19,6 +19,7 @@ module Laracna
         deck_nodes
           .map {|url| url.gsub(PageUrl::DECK_URL, "")}
           .map(&:to_i)
+          .delete_if {|i| i == 0} #for some delete weirds ids
       end
     end
   end
