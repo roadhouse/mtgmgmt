@@ -7,11 +7,10 @@ module Laracna
       attr_reader :url, :document
 
       def initialize(id)
+        @id = id
         @url = PageUrl.deck_url(id)
 
         @document = Nokogiri::HTML(open(@url))
-
-        remove_unused_elements
       end
 
       def description
@@ -21,17 +20,18 @@ module Laracna
       end
 
       def name
-        @document.search(".deckInfo strong")[0].text.split(".")[0]
+        @document.search(".deck_title").text.strip
       end
 
       def main
-        main = @document.search(".md .cardItem")
+        main = @document.search(".cards_col1 ul li").map(&:text)
+        main << @document.search(".cards_col2 ul[rel='#{@id}']").first.search("li").map(&:text)
 
-        extract_card_list main
+        extract_card_list main.flatten
       end
 
       def sideboard
-        sb = @document.search(".sb .cardItem")
+        sb = @document.search(".cards_col2 ul[rel='#{@id}']").last.search("li").map(&:text)
 
         extract_card_list sb
       end
@@ -51,20 +51,15 @@ module Laracna
 
       private
 
-      def remove_unused_elements
-        @document.search("h3").remove
-        @document.search(".name").remove
-      end
-
       def extract_card_list(nodes)
-        nodes.map(&:text).map { |i| fix_typos i }
+        nodes
           .map { |raw_part_entry| part_entry_data(raw_part_entry) }
       end
 
       def part_entry_data(raw_part_entry)
         match_data = /(\d+)(.*)/.match(raw_part_entry)
 
-        {copies: match_data[1].strip, card: match_data[2].strip }
+        {copies: match_data[1].strip, card: fix_typos(match_data[2]) }
       end
 
       def fix_typos(string)
@@ -72,7 +67,7 @@ module Laracna
           .strip
           .gsub(/\t/," ")
           .gsub(/''/,"'") 
-          .gsub("Unravel the Aether", "Unravel the Æther")
+          .gsub("AE", "Æ")
       end
     end
   end

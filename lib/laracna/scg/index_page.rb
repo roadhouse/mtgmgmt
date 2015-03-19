@@ -6,7 +6,6 @@ module Laracna
     class IndexPage
       def initialize(page)
         list_decks_url = PageUrl.list_decks_url(page.to_s)
-        binding.pry
 
         @document = Nokogiri::HTML(open(list_decks_url))
       end
@@ -19,7 +18,7 @@ module Laracna
 
       def decks_ids
         deck_nodes
-          .map {|url| url.gsub(PageUrl::DECK_URL, "")}
+          .map {|url| url.gsub(PageUrl::HOST + PageUrl::DECK_URL, "")}
           .map(&:to_i)
           .delete_if {|i| i == 0} #for some delete weirds ids
       end
