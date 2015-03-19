@@ -14,9 +14,7 @@ module Laracna
       end
 
       def description
-        require 'pry'
-        binding.pry
-        @document
+        @document.search(".deck_played_placed").text.strip
       end
 
       def name
