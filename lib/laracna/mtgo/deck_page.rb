@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 module Laracna
-  module Scg
+  module Mtgdecks
     class DeckPage
       attr_reader :url, :document
 
@@ -15,13 +15,15 @@ module Laracna
       end
 
       def description
-        require 'pry'
-        binding.pry
-        @document
+        @document.search(".deckHeader div strong").text
       end
 
       def name
-        @document.search(".deckInfo strong")[0].text.split(".")[0]
+        @document.search(".deckHeader .breadcrumb strong").text
+      end
+
+      def date
+        Date.parse @document.search(".rightBlock ul li")[4].text
       end
 
       def main
@@ -44,6 +46,7 @@ module Laracna
         {
           description: description,
           name: name,
+          date: date,
           card_list: deck,
           url: @url
         }
