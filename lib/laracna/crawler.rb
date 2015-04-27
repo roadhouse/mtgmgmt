@@ -1,6 +1,6 @@
 
 class Crawler
-  def self.run!(site, page_range = 1..200, options = {})
+  def self.run!(site, page_range = 1..400, options = {})
     page_range.each do |page| 
       p "Page: #{page}"
 

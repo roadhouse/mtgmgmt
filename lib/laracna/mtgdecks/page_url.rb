@@ -2,7 +2,7 @@ module Laracna
   module Mtgdecks
     class PageUrl
       HOST = "http://www.mtgdecks.net"
-      DECK_LIST_URL = "/decks/viewByFormat/34/"
+      DECK_LIST_URL = "/decks/viewByFormat/37/"
       PAGINATION_PARAM = "page:"
       DECK_URL = "/decks/view/"
 
