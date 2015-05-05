@@ -30,9 +30,8 @@ class DeckPresenter < BasePresenter
   end
 
   def group_by_card_type(part)
-    card_types = /Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/
-
-    data = card_pool(part).group_by { |card| card[:card].ctype.match(card_types).to_s }.sort
+    card_types = /Unknown|Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/
+    data = card_pool(part).group_by { |card| (card[:card].ctype or "Unknown").match(card_types).to_s }.sort
     
     Hash[data]
   end
