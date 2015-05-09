@@ -33,6 +33,14 @@ class DecksController < ApplicationController
     respond_with(@deck.destroy)
   end
 
+  def search
+    @decks = Deck.none
+
+    if params[:search]
+      @decks = Deck.per_name(params[:search][:query])
+    end
+  end
+
   private
   
   def deck_params

@@ -3,7 +3,9 @@ Magic::Application.routes.draw do
 
   resources :searches, :only => [:index, :create]
   resources :card_decks, :only => [:create, :destroy, :update]
-  resources :decks
+  resources :decks do
+    get :search, on: :collection
+  end
   resources :cards
   resources :inventories
 end

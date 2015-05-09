@@ -2,6 +2,8 @@ require './lib/game/mana_cost'
 class Deck < ActiveRecord::Base
   paginates_per 10
 
+  scope :per_name, ->(name) { where(self.arel_table[:name].matches("%#{name}%")) }
+
   has_many :card_decks
   has_many :cards, through: :card_decks
 
