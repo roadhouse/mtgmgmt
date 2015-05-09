@@ -37,7 +37,7 @@ class DecksController < ApplicationController
     @decks = Deck.none
 
     if params[:search]
-      @decks = Deck.per_name(params[:search][:query])
+      @decks = DeckPresenter.map Deck.per_name(params[:search][:query]).limit(10)
     end
   end
 

@@ -1,6 +1,6 @@
 <span>
-  <i class="icon-addshape"></i> <%= deck.percent_owned(User.first, :main) %>%
-  <i class="icon-subtractshape"></i> <%= deck.percent_owned(User.first, :sideboard) %>%
+  <i class="icon-addshape"></i> <%= deck.percent_owned(current_user, :main) %>%
+  <i class="icon-subtractshape"></i> <%= deck.percent_owned(current_user, :sideboard) %>%
 </span>
 
 <%= link_to deck.archeptype_deck.deck, class: "pure-button" do %> 
