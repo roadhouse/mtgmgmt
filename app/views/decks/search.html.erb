@@ -4,5 +4,9 @@
 <% end %>
 
 <% @decks.each do |deck| %>
-  <%= link_to deck.name, deck_path(deck) %>
+  <p>
+    <%= link_to deck.name, deck_path(deck) %>
+    <span>main: <%= deck.percent_owned(current_user, :main) %>%</span>
+    <span>sideboard: <%= deck.percent_owned(current_user, :sideboard) %>%</span>
+  </p>
 <% end %>
