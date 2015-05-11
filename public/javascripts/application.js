@@ -17,3 +17,7 @@ app.controller('main_control', function($scope, $http, $timeout) {
     });
     };
   });
+
+$(document).ready(function() {
+    $('select').material_select();
+});

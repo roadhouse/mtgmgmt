@@ -1,10 +1,15 @@
-<h2><%= label %></h2>
-<hr/>
-<ol>
-  <% cards.each do |card| %>
-    <li>
-    <%= card.name %>
-    <%= render "inventory_form", card: card %>
-    </li>
-  <% end %>
-</ol>
+<% cards.each do |card| %>
+  <div class="row"> 
+    <%= form_for(Inventory.find_or_initialize_by(user: current_user, card: card), html: {class: "col s12"}) do |f| %>
+      <%= f.hidden_field :card_id %>
+      <%= f.hidden_field :user_id %>
+      <div class="row">
+        <div class="col s5 input-field">
+          <%= f.select :quantity, 1..4 %>
+          <%= f.label :quantity, link_to(card.name, card) %>
+        </div>
+        <%= f.submit "add", class: "btn col s4 input-field"%>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,7 +1,6 @@
-<div class="pure-g">
-  <div class="box pure-u-lg-1-6 pure-u-1">
-    <h2>Top decks</h2>
-    <hr/>
+<div class="row">
+  <div class="col s12 l7 section">
+    <h5>Top Decks</h5>
     <ol class="top_decks">
       <% @presenter.top_decks.each do |deck| %>
         <li>
@@ -11,20 +10,29 @@
     </ol>
   </div>
 
-  <div class="box pure-u-lg-1-6 pure-u-1">
-    <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards %>
-  </div>
+  <div class="col s12 l5 section ">
+    <h5>Top Cards</h5>
 
-  <div class="box pure-u-lg-1-6 pure-u-1">
-    <%= render 'cards_list', label: "Top creatures", cards: @presenter.top_cards(type: :c) %>
-  </div>
-
-  <div class="box pure-u-lg-1-6 pure-u-1">
-    <%= render 'cards_list', label: "Top instants", cards: @presenter.top_cards(type: :i) %>
-  </div>
-
-  <div class="box pure-u-lg-1-6 pure-u-1">
-    <%= render 'cards_list', label: "Top sorceries", cards: @presenter.top_cards(type: :s) %>
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">General</a></li>
+        <li class="tab col s3"><a href="#test2">Creatures</a></li>
+        <li class="tab col s3"><a href="#test3">Instants</a></li>
+        <li class="tab col s3"><a href="#test4">Sorceries</a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12">
+      <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards %>
+    </div>
+    <div id="test2" class="col s12">
+      <%= render 'cards_list', label: "Top creatures", cards: @presenter.top_cards(type: :c) %>
+    </div>
+    <div id="test3" class="col s12">
+      <%= render 'cards_list', label: "Top instants", cards: @presenter.top_cards(type: :i) %>
+    </div>
+    <div id="test4" class="col s12">
+      <%= render 'cards_list', label: "Top sourceries", cards: @presenter.top_cards(type: :s) %>
+    </div>
   </div>
 </div>
 
