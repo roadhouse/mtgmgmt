@@ -50,7 +50,7 @@ class DeckPresenter < BasePresenter
   end
 
   def total_price
-    @main.inject(0) { |m,v| m + v.price.to_f }
+    @main.inject(0) { |total,card| total + card.price.to_f }
   end
 
   # def presence_on_field
