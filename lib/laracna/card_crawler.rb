@@ -18,7 +18,7 @@ class CardCrawler
       border: data["border"],
       ctype: data['type'],
       flavor: data["flavor"],
-      image: data["images"]["mtgimage"],
+      image: "http://magiccards.info/scans/pt/#{data["set"].downcase}/#{data["number"]}.jpg",
       layout: data["layout"],
       mana_cost: data['manaCost'],
       name: data['name'], 
@@ -35,7 +35,6 @@ class CardCrawler
       multiverse_id: data["multiverseid"],
       number: data["number"].to_i,
       power: data["power"].to_i,
-      toughness: data["toughness"].to_i,
 
       colors: data["colors"],
       ctypes: data["types"],

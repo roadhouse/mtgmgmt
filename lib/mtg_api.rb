@@ -2,7 +2,7 @@ class MtgApi
   def initialize(set, page)
     @set = set
     @page = page
-    @url = "http://api.mtgapi.com/v2/cards?page=#{@page}&set=#{@set}"
+    @url = "http://api.mtgapi.com/v2/cards?page=#{@page}&set=#{@set.downcase}"
   end
 
   def self.all!(set)
