@@ -1,12 +1,15 @@
-<%= form_for :search, method: :get do |f| %>
-  <%= f.text_field :query %>
-  <%= f.submit "procurar" %>
-<% end %>
+<div class="section">
+  <nav>
+    <div class="nav-wrapper">
+      <%= form_for :search, method: :get do |f| %>
+        <div class="input-field">
+          <%= f.search_field :query %>
+          <label for="search"><i class="mdi-action-search"></i></label>
+          <i class="mdi-navigation-close"></i>
+        </div>
+      <% end %>
+    </div>
+  </nav>
+</div>
 
-<% @decks.each do |deck| %>
-  <p>
-    <%= link_to deck.deck.name, deck_path(deck.deck) %>
-    <span>main: <%= deck.percent_owned(current_user, :main) %>%</span>
-    <span>sideboard: <%= deck.percent_owned(current_user, :sideboard) %>%</span>
-  </p>
-<% end %>
+<%= render partial: 'deck_list_link', collection: @decks, as: :deck %>

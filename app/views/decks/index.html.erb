@@ -1,9 +1,8 @@
 <div class="row">
   <div class="col s12 l4 section">
     <h5>Top Decks</h5>
-    <% @presenter.top_decks.each do |deck| %>
-      <%= render 'deck_list_link', deck: deck %>
-    <% end %>
+
+    <%= render partial: 'deck_list_link', collection: @presenter.top_decks, as: :deck %>
   </div>
 
   <div class="col s12 l4 section ">
