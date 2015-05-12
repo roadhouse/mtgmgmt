@@ -11,8 +11,7 @@
       <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
     </span>
     <span class="col s5">
-      <i class="mdi-image-filter-1"><%= deck.percent_owned(current_user, :main) %>%</i>
-      <i class="mdi-image-filter-2"><%= deck.percent_owned(current_user, :sideboard) %>%</i>
+      <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
     </span>
     <span class="col s3">
       <%= number_to_currency deck.total_price %>
