@@ -40,11 +40,11 @@ class DeckPresenter < BasePresenter
     @deck.cards.map(&:colors).flatten.compact.uniq.map(&:downcase).sort.map do |color|
       # "<i class=\"icon-stop #{color}\"></i>"
       {
-          "red" => "<i class=\"icon-fire red\"></i>",
-          "blue" =>"<i class=\"icon-tint blue\"></i>",
-          "black" =>"<i class=\"icon-skull black\"></i>",
-          "green" =>"<i class=\"icon-leaf green\"></i>",
-          "white" =>"<i class=\"icon-sun-day white\"></i>"
+          "red" => "<i class=\"mdi-image-brightness-1 red-text text-accent-1\"></i>",
+          "blue" =>"<i class=\"mdi-image-brightness-1 blue-text text-accent-1\"></i>",
+          "black" =>"<i class=\"mdi-image-brightness-1  grey-text text-darken-3\"></i>",
+          "green" =>"<i class=\"mdi-image-brightness-1 green-text text-accent-1\"></i>",
+          "white" =>"<i class=\"mdi-image-brightness-1 amber-text text-lighten-5\"></i>"
       }.fetch(color)
     end
   end
