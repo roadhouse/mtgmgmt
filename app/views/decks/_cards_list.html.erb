@@ -3,7 +3,7 @@
     <li>
     <div class="collapsible-header">
       <%= card.name %>
-      <span>R$ <%= Card.find(card.id).on_demand_price %></span>
+      <span><%= number_to_currency Card.find(card.id).on_demand_price %></span>
     </div>
     <div class="collapsible-body">
       <%= form_for(Inventory.find_or_initialize_by(user: current_user, card: card), html: {class: "col s12"}) do |f| %>

@@ -7,8 +7,15 @@
     </span>
   </div>
   <div class="card-action">
-    <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
-    <i class="mdi-image-filter-1"></i> <%= deck.percent_owned(current_user, :main) %>%
-    <i class="mdi-image-filter-2"></i> <%= deck.percent_owned(current_user, :sideboard) %>%
+    <span class="col s4">
+      <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
+    </span>
+    <span class="col s5">
+      <i class="mdi-image-filter-1"><%= deck.percent_owned(current_user, :main) %>%</i>
+      <i class="mdi-image-filter-2"><%= deck.percent_owned(current_user, :sideboard) %>%</i>
+    </span>
+    <span class="col s3">
+      <%= number_to_currency deck.total_price %>
+    </span>
   </div>
 </div>
