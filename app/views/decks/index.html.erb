@@ -1,16 +1,12 @@
 <div class="row">
-  <div class="col s12 l7 section">
+  <div class="col s12 l4 section">
     <h5>Top Decks</h5>
-    <ol class="top_decks">
-      <% @presenter.top_decks.each do |deck| %>
-        <li>
-          <%= render 'deck_list_link', deck: deck %>
-        </li>
-      <% end %>
-    </ol>
+    <% @presenter.top_decks.each do |deck| %>
+      <%= render 'deck_list_link', deck: deck %>
+    <% end %>
   </div>
 
-  <div class="col s12 l5 section ">
+  <div class="col s12 l4 section ">
     <h5>Top Cards</h5>
     <ul class="collapsible" data-collapsible="accordion">
       <li>

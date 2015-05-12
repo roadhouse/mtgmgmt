@@ -1,9 +1,14 @@
-<span>
-  <i class="icon-addshape"></i> <%= deck.percent_owned(current_user, :main) %>%
-  <i class="icon-subtractshape"></i> <%= deck.percent_owned(current_user, :sideboard) %>%
-</span>
-
-<%= link_to deck.archeptype_deck.deck, class: "pure-button" do %> 
-  <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
-  <%= deck.archeptype_deck.name %>
-<% end %>
+<div class="card top-decks-box">
+  <div class="card-content blue-grey lighten-5">
+    <span>
+      <%= link_to deck.archeptype_deck.deck do %> 
+        <%= deck.archeptype_deck.name %>
+      <% end %>
+    </span>
+  </div>
+  <div class="card-action">
+    <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
+    <i class="mdi-image-filter-1"></i> <%= deck.percent_owned(current_user, :main) %>%
+    <i class="mdi-image-filter-2"></i> <%= deck.percent_owned(current_user, :sideboard) %>%
+  </div>
+</div>
