@@ -12,27 +12,42 @@
 
   <div class="col s12 l5 section ">
     <h5>Top Cards</h5>
-
-    <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s3"><a class="active" href="#test1">General</a></li>
-        <li class="tab col s3"><a href="#test2">Creatures</a></li>
-        <li class="tab col s3"><a href="#test3">Instants</a></li>
-        <li class="tab col s3"><a href="#test4">Sorceries</a></li>
-      </ul>
-    </div>
-    <div id="test1" class="col s12">
-      <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards %>
-    </div>
-    <div id="test2" class="col s12">
-      <%= render 'cards_list', label: "Top creatures", cards: @presenter.top_cards(type: :c) %>
-    </div>
-    <div id="test3" class="col s12">
-      <%= render 'cards_list', label: "Top instants", cards: @presenter.top_cards(type: :i) %>
-    </div>
-    <div id="test4" class="col s12">
-      <%= render 'cards_list', label: "Top sourceries", cards: @presenter.top_cards(type: :s) %>
-    </div>
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="active collapsible-header light-blue-text text-darken-3 blue-grey lighten-5">
+          <span>
+            General
+          </span>
+        </div>
+       <div class="collapsible-body">
+          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards %>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header light-blue-text text-darken-3 blue-grey lighten-5">
+          Creatures
+        </div>
+        <div class="collapsible-body">
+          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :c) %>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header light-blue-text text-darken-3 blue-grey lighten-5">
+          Instants
+        </div>
+        <div class="collapsible-body">
+          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :i) %>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header light-blue-text text-darken-3 blue-grey lighten-5">
+          Sorceries
+        </div>
+        <div class="collapsible-body">
+          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :s) %>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 
