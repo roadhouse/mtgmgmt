@@ -22,14 +22,25 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col s12 l12">
-          <%= yield %>
-        </div>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">MtgMgmt</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><%= link_to "Card Search", cards_path %></li>
+          <li><%= link_to "Deck Search", search_decks_path %></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><%= link_to "Card Search", cards_path %></li>
+          <li><%= link_to "Deck Search", search_decks_path %></li>
+        </ul>
       </div>
+    </nav>
+    <div class="col s12 l12">
+      <%= yield %>
     </div>
+  </div>
 
-    <%= render_ga %>
-  </body>
+  <%= render_ga %>
+</body>
 </html>
