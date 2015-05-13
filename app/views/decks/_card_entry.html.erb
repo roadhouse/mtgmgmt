@@ -1,13 +1,26 @@
 <% cards.each_pair do |card_type, cards| %>
   <h5><%= card_type %></h5>
-  <ul class="card_entry_box">
+  <ul class="collapsible" data-collapsible="accordion">
     <% cards.each do |card| %>
       <li>
-        <strong><%= card[:copies] %></strong>
-        <%= link_to card[:card].name, "#", class: "card-image", data: { card_image: card[:card].image }%>
-        <span><%= number_to_currency card[:card].on_demand_price %></span>
+        <div class="collapsible-header">
+          <%= "#{card[:copies]} #{card[:card].name}" %>
+        </div>
+        <div class="collapsible-body">
+          <ul class="collection">
+            <li class="collection-item">
+              <%= number_to_currency card[:card].on_demand_price %>
+            </li>
 
-        <%= render "inventory_form", card: card[:card] %>
+            <li class="collection-item">
+          <%= render "inventory_form", card: card[:card] %>
+            </li>
+
+            <li class="collection-item">
+          <%= image_tag card[:card].image, alt: card[:card].name, class: "responsive-img" %>
+            </li>
+          </ul>
+        </div>
       </li>
     <% end %>
   </ul>
