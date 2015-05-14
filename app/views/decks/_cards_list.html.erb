@@ -1,22 +1,17 @@
 <ul class="collapsible nested-collapsible" data-collapsible="accordion">
-<% cards.each do |card| %>
-    <li>
-    <div class="collapsible-header">
-      <%= card.name %>
-      <span><%= number_to_currency Card.find(card.id).on_demand_price %></span>
-    </div>
-    <div class="collapsible-body">
-      <%= form_for(Inventory.find_or_initialize_by(user: current_user, card: card), html: {class: "col s12"}) do |f| %>
-        <%= f.hidden_field :card_id %>
-        <%= f.hidden_field :user_id %>
-        <div class="row s12">
-          <div class="input-field col s4">
-            <%= f.select :quantity, 0..4, {}, class: "browser-default" %>
-          </div>
-          <%= f.submit "add", class: "btn input-field col s3"%>
+  <% cards.each do |card| %>
+      <li>
+        <div class="collapsible-header">
+          <%= "#{card.name} #{number_to_currency card.on_demand_price}" %>
         </div>
-      <% end %>
-    </div>
-    </li>
-<% end %>
-  </ul>
+        <div class="collapsible-body">
+            <div class="row">
+              <%= render "inventory_form", card: card %>
+            </div>
+            <div class="row">
+              <%= image_tag card.image, alt: card.name, class: "responsive-img" %>
+            </div>
+        </div>
+      </li>
+  <% end %>
+</ul>

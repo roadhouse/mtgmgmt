@@ -4,22 +4,15 @@
     <% cards.each do |card| %>
       <li>
         <div class="collapsible-header">
-          <%= "#{card[:copies]} #{card[:card].name}" %>
+          <%= "#{card[:copies]} #{card[:card].name} #{number_to_currency card[:card].on_demand_price}" %>
         </div>
         <div class="collapsible-body">
-          <ul class="collection">
-            <li class="collection-item">
-              <%= number_to_currency card[:card].on_demand_price %>
-            </li>
-
-            <li class="collection-item">
-          <%= render "inventory_form", card: card[:card] %>
-            </li>
-
-            <li class="collection-item">
-          <%= image_tag card[:card].image, alt: card[:card].name, class: "responsive-img" %>
-            </li>
-          </ul>
+            <div class="row">
+              <%= render "inventory_form", card: card[:card] %>
+            </div>
+            <div class="row">
+              <%= image_tag card[:card].image, alt: card[:card].name, class: "responsive-img" %>
+            </div>
         </div>
       </li>
     <% end %>
