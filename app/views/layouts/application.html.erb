@@ -22,25 +22,25 @@
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">welovemtg</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><%= link_to "Card Search", cards_path %></li>
-          <li><%= link_to "Deck Search", search_decks_path %></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><%= link_to "Card Search", cards_path %></li>
-          <li><%= link_to "Deck Search", search_decks_path %></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="col s12 l12">
-      <%= yield %>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <%= link_to "welovemtg", root_path, class: "brand-logo" %>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><%= link_to "Card Search", cards_path %></li>
+            <li><%= link_to "Deck Search", search_decks_path %></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><%= link_to "Card Search", cards_path %></li>
+            <li><%= link_to "Deck Search", search_decks_path %></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </div>
 
-  <%= render_ga %>
-</body>
+    <%= yield %>
+
+    <%= render_ga %>
+  </body>
 </html>

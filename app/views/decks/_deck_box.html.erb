@@ -1,6 +1,4 @@
-<div class="row">
-  <div class="col s12">
-    <ul class="tabs">
+    <ul class="tabs z-depth-1">
       <li class="tab col s3"><a href="#test1">Main</a></li>
       <li class="tab col s3"><a href="#test2">Sideboard</a></li>
     </ul>
@@ -10,5 +8,3 @@
     <div id="test2" class="col s12">
       <%= render 'card_entry', cards: deck.group_by_card_type(:sideboard) %>
     </div>
-  </div>
-</div>
