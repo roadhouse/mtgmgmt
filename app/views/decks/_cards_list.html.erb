@@ -10,10 +10,10 @@
         <%= f.hidden_field :card_id %>
         <%= f.hidden_field :user_id %>
         <div class="row s12">
-        <div class="input-field col s4">
-          <%= f.select :quantity, 0..4, {}, class: "browser-default" %>
-        </div>
-        <%= f.submit "add", class: "btn input-field col s3"%>
+          <div class="input-field col s4">
+            <%= f.select :quantity, 0..4, {}, class: "browser-default" %>
+          </div>
+          <%= f.submit "add", class: "btn input-field col s3"%>
         </div>
       <% end %>
     </div>
