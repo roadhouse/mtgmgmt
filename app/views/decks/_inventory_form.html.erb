@@ -1,4 +1,4 @@
-<%= form_for(Inventory.find_or_initialize_by(user: current_user, card: card), html: {class: "col s12"}) do |f| %>
+<%= form_for(Inventory.find_or_initialize_by(user: current_user, card: card), html: {class: "col s12 valign-wrapper"}) do |f| %>
   <%= f.hidden_field :card_id %>
   <%= f.hidden_field :user_id %>
     <div class="input-field col s4">
