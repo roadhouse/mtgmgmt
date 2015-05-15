@@ -10,8 +10,9 @@
     <ul class="collapsible" data-collapsible="accordion">
       <li>
         <div class="active collapsible-header light-blue-text text-darken-3 blue-grey lighten-5">
-          <span>
-            General
+          <span>General</span>
+          <span class="secondary-content">
+            <i class="mdi-hardware-keyboard-arrow-down"></i>
           </span>
         </div>
        <div class="collapsible-body">
@@ -20,7 +21,10 @@
       </li>
       <li>
         <div class="collapsible-header light-blue-text text-darken-3 blue-grey lighten-5">
-          Creatures
+          <span>Creatures</span>
+          <span class="secondary-content">
+            <i class="mdi-hardware-keyboard-arrow-up"></i>
+          </span>
         </div>
         <div class="collapsible-body">
           <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :c) %>
@@ -28,7 +32,10 @@
       </li>
       <li>
         <div class="collapsible-header light-blue-text text-darken-3 blue-grey lighten-5">
-          Instants
+          <span>Instants</span>
+          <span class="secondary-content">
+            <i class="mdi-hardware-keyboard-arrow-up"></i>
+          </span>
         </div>
         <div class="collapsible-body">
           <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :i) %>
@@ -36,7 +43,10 @@
       </li>
       <li>
         <div class="collapsible-header light-blue-text text-darken-3 blue-grey lighten-5">
-          Sorceries
+          <span>Sorceries</span>
+          <span class="secondary-content">
+            <i class="mdi-hardware-keyboard-arrow-up"></i>
+          </span>
         </div>
         <div class="collapsible-body">
           <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :s) %>

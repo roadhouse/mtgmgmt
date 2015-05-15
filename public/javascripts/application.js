@@ -26,4 +26,11 @@ $(document).ready(function(){
   $('.collapsible').collapsible({
     accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
+
+  $(".collapsible").on("click.collapsible", function(e) {
+    var down = "mdi-hardware-keyboard-arrow-down";
+    var up = "mdi-hardware-keyboard-arrow-up";
+
+    $(e.target).find("i").icon.toggleClass(down + " " + up)
+  })
 });
