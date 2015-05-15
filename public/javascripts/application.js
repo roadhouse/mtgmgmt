@@ -31,6 +31,6 @@ $(document).ready(function(){
     var down = "mdi-hardware-keyboard-arrow-down";
     var up = "mdi-hardware-keyboard-arrow-up";
 
-    $(e.target).find("i").icon.toggleClass(down + " " + up)
+    $(e.target).find("i").toggleClass(down + " " + up)
   })
 });
