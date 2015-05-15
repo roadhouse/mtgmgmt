@@ -41,6 +41,10 @@ class DecksController < ApplicationController
     end
   end
 
+  def print
+    @deck = Deck.find(params[:id])
+  end
+
   private
   
   def deck_params

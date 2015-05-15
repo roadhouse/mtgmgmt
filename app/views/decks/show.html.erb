@@ -11,6 +11,7 @@
       </div>
       <div class="card-action">
         preço: <%= number_to_currency @deck.total_price %>
+        <%= link_to "print", print_deck_path %>
       </div>
     </div>
   </div>
