@@ -15,4 +15,8 @@ class DeckParam
   def name
     table[:name]
   end
+
+  def season
+    table[:season]
+  end
 end

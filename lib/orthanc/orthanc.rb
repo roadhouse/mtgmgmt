@@ -39,6 +39,7 @@ class Orthanc
       )
       .group(@d.name)
       .order(@d.name.count.desc)
+      .where(@d.season.eq("BNG-DTK-FRF-JOU-KTK-M15-THS"))
       .limit(@options.fetch(:limit) {10})
   end
 
