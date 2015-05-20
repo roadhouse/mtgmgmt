@@ -39,6 +39,14 @@ class InventoriesController < ApplicationController
     respond_with(@inventory.destroy)
   end
 
+  def want
+    @inventories = current_user.inventories.where("quantity < 4").where(list: "game")
+  end
+  
+  def have
+    @inventories = current_user.inventories.where(list: "have")
+  end
+
     private
 
     def inventory_params

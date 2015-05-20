@@ -1,0 +1,17 @@
+<ul class="collapsible" data-collapsible="accordion">
+  <% @inventories.each do |card| %>
+    <li>
+      <div class="collapsible-header">
+        <%= "#{card.card.name} #{number_to_currency card.card.on_demand_price}" %>
+      </div>
+      <div class="collapsible-body">
+          <div class="row">
+            <%= render "decks/inventory_form", card: card.card %>
+          </div>
+          <div class="row">
+            <%= image_tag card.card.image, alt: card.card.name, class: "responsive-img" %>
+          </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

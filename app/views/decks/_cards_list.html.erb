@@ -1,17 +1,20 @@
 <ul class="collapsible nested-collapsible" data-collapsible="accordion">
   <% cards.each do |card| %>
-      <li>
-        <div class="collapsible-header">
-          <%= "#{card.name} #{number_to_currency card.on_demand_price}" %>
+    <li>
+      <div class="collapsible-header">
+        <span><%= card.name %></span>
+        <span class="secondary-content">
+          <%= number_to_currency card.on_demand_price %>
+        </span>
+      </div>
+      <div class="collapsible-body">
+      <div class="row">
+          <%= render "inventory_form", card: card %>
         </div>
-        <div class="collapsible-body">
-            <div class="row">
-              <%= render "inventory_form", card: card %>
-            </div>
-            <div class="row">
-              <%= image_tag card.image, alt: card.name, class: "responsive-img" %>
-            </div>
+        <div class="row">
+          <%= image_tag card.image, alt: card.name, class: "responsive-img" %>
         </div>
-      </li>
+      </div>
+    </li>
   <% end %>
 </ul>

@@ -1,0 +1,12 @@
+<ul class="collection">
+  <% @inventories.each do |card| %>
+    <li class="collection-item">
+      <span>
+        <%= card.card.name %>
+      </span>
+      <span class="secondary-content">
+        <%= number_to_currency card.card.on_demand_price %>
+      </span>
+    </li>
+  <% end %>
+</ul>

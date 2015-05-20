@@ -7,5 +7,8 @@ Magic::Application.routes.draw do
     get :print, on: :member
   end
   resources :cards
-  resources :inventories
+  resources :inventories do
+    get :want, on: :collection
+    get :have, on: :collection
+  end
 end
