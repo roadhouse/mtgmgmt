@@ -5,16 +5,15 @@
         <%= deck.archeptype_deck.name %>
       <% end %>
     </span>
+    <span class="secondary-content">
+      <%= number_to_currency deck.total_price %>
+    </span>
   </div>
   <div class="card-action">
-    <span class="col s4">
-      <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
-    </span>
-    <span class="col s5">
+    <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
+    <span class="secondary-content">
+      <i class="mdi-image-photo-library"></i>
       <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
-    </span>
-    <span class="col s3">
-      <%= number_to_currency deck.total_price %>
     </span>
   </div>
 </div>
