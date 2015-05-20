@@ -12,6 +12,8 @@ class DeckBuilder
       populate
 
       deck.save!
+      season = deck.cards.pluck(:set).compact.uniq.delete_if { |i| i == "fake"}.sort.join("-")
+      deck.update_attribute(:season, season)
     end
   end
 
