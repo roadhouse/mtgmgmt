@@ -1,11 +1,12 @@
 source "https://rubygems.org"
 
+gem "delayed_job_active_record"
 gem "foreman"
 gem "heroku"
 gem "kaminari"
 gem "nokogiri"
 gem "pg"
-gem "rails"
+gem "rails", "4.1.8"
 gem "virtus"
 gem "unicorn"
 
