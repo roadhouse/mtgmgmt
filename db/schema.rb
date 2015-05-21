@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150517231355) do
+ActiveRecord::Schema.define(version: 20150521033554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,15 +46,16 @@ ActiveRecord::Schema.define(version: 20150517231355) do
     t.integer  "loyalty"
     t.integer  "multiverse_id"
     t.integer  "cmc"
-    t.string   "ctypes",          default: [], array: true
-    t.string   "subtypes",        default: [], array: true
-    t.string   "printings",       default: [], array: true
-    t.string   "names",           default: [], array: true
-    t.string   "colors",          default: [], array: true
-    t.string   "supertypes",      default: [], array: true
+    t.string   "ctypes",           default: [], array: true
+    t.string   "subtypes",         default: [], array: true
+    t.string   "printings",        default: [], array: true
+    t.string   "names",            default: [], array: true
+    t.string   "colors",           default: [], array: true
+    t.string   "supertypes",       default: [], array: true
     t.datetime "created_at"
     t.datetime "updated_at"
     t.decimal  "price"
+    t.datetime "price_updated_at"
   end
 
   create_table "decks", force: true do |t|
@@ -67,6 +68,22 @@ ActiveRecord::Schema.define(version: 20150517231355) do
     t.string   "season"
   end
 
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
   create_table "inventories", force: true do |t|
     t.integer  "quantity"
     t.integer  "card_id"
@@ -78,6 +95,16 @@ ActiveRecord::Schema.define(version: 20150517231355) do
     t.datetime "updated_at"
     t.string   "list"
   end
+
+  create_table "prices", force: true do |t|
+    t.integer  "card_id"
+    t.decimal  "value"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "prices", ["card_id"], name: "index_prices_on_card_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "login"
