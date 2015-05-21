@@ -4,6 +4,8 @@ namespace :bootstrap do
     "db:create:all",
     "db:migrate",
     "db:seed",
+    "bootstrap:load_cards",
+    "bootstrap:mtgdecks"
   ]
 
   desc "load card data ftom mtgapi.com"
