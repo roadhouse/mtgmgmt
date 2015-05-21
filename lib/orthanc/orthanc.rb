@@ -23,7 +23,7 @@ class Orthanc
   #DEFAULT: looking in main deck and ignore land cards
   def top_cards
     @c.model.joins(:card_decks)
-      .select(@c.id, @c.name, @c.image, @c.price, @c.count_name.as("quantity"))
+      .select(@c.id, @c.name, @c.image, @c.price, @c.price_updated_at, @c.count_name.as("quantity"), @c.updated_at)
       .where(@c.params.and(@cd.params))
       .group(@c.name, @c.id)
       .having(@c.not_lands)
@@ -135,6 +135,14 @@ class CardParam
 
   def price
     card[:price]
+  end
+
+  def price_updated_at
+    card[:price_updated_at]
+  end
+
+  def updated_at
+    card[:updated_at]
   end
 
   def model
