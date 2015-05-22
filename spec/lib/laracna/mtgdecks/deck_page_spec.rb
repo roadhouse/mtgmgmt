@@ -8,7 +8,7 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
   let(:deck_id) { 63963 }
 
   let(:attributes_list) do
-    [:card_list, :description, :name, :url]
+    [:card_list, :description, :name, :url, :source]
   end
 
   let(:main) do
@@ -53,5 +53,5 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
   its(:main) { is_expected.to eql main }
   its(:sideboard) { is_expected.to eql sideboard }
 
-  its(:"attributes.keys.sort") { should be_eql attributes_list }
+  its(:"attributes.keys.sort") { should be_eql attributes_list.sort }
 end

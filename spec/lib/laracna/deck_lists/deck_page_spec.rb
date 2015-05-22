@@ -1,4 +1,5 @@
 require "./spec/support/vcr"
+require 'rspec/its'
 
 require "./lib/laracna/deck_lists/deck_page"
 require "./lib/laracna/deck_lists/page_url"
@@ -26,7 +27,7 @@ describe Laracna::DeckLists::DeckPage, :vcr do
   end
 
   let(:attributes_list) do
-    [:card_list, :date, :description, :name, :url]
+    [:card_list, :date, :description, :name, :url, :source]
   end
 
   subject { Laracna::DeckLists::DeckPage.new(deck_id) }
@@ -36,5 +37,5 @@ describe Laracna::DeckLists::DeckPage, :vcr do
   its(:name) { should be_eql "Mono Red Devotion" }
   its(:deck) { should be_eql deck }
 
-  its(:"attributes.keys.sort") { should be_eql attributes_list }
+  its(:"attributes.keys.sort") { should be_eql attributes_list.sort }
 end
