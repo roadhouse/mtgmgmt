@@ -9,9 +9,6 @@ test:
   encoding: unicode
   database: magic_test
   pool: 5
-  username: 
-  password:
-  host: localhost
 
 production:
   adapter: postgresql
