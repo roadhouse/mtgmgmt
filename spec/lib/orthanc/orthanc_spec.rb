@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe Orthanc do
-  before(:all) do 
-    create_list(:deck, 2)
-  end
+  before(:all) { create_list(:deck, 2, season: "BNG-DTK-FRF-JOU-KTK-M15-THS") }
 
   let(:orthanc) { described_class.new({}) }
 
@@ -15,10 +13,10 @@ describe Orthanc do
     context "collection item " do 
       subject { orthanc.top_decks.first }
 
-      it { is_expected.to be_a Deck  }
+      it { is_expected.to be_a Deck }
 
-      its(:name) { is_expected.to eq "red deck wins"  }
-      its(:quantity) { is_expected.to eq 2  }
+      its(:name) { is_expected.to eq "red deck wins" }
+      its(:quantity) { is_expected.to eq 2 }
     end
   end
 end
