@@ -7,7 +7,7 @@ module Laracna
       DECK_URL = "/deckdatabase/displaydeck.php?DeckID="
 
       def self.list_decks_url(page = 1)
-        HOST + DECK_LIST_URL + PAGINATION_PARAM + (page.to_i*100).to_s
+        HOST + DECK_LIST_URL + PAGINATION_PARAM + ((page.to_i-1)*100).to_s
       end
 
       def self.deck_url(deck_id)
