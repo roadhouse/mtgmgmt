@@ -53,7 +53,8 @@ module Laracna
           name: name,
           date: date,
           card_list: deck,
-          url: @url
+          url: @url,
+          source: "decklists"
         }
       end
 
