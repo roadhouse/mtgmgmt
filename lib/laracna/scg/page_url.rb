@@ -2,7 +2,7 @@ module Laracna
   module Scg
     class PageUrl
       HOST = "http://sales.starcitygames.com/"
-      DECK_LIST_URL = "/deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=12/28/2014&end_date=03/22/2015&limit=100"
+      DECK_LIST_URL = "/deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=03/22/2015&limit=100&order_1=date+desc&order_2=date+desc"
       PAGINATION_PARAM = "&start_num="
       DECK_URL = "/deckdatabase/displaydeck.php?DeckID="
 
