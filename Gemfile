@@ -29,6 +29,7 @@ end
 
 group :test do
   gem "database_cleaner"
+  gem "fuubar"
   gem "rspec-its"
   gem "vcr"
   gem "webmock"
