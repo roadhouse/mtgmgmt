@@ -10,7 +10,7 @@ http://mtgmgmt.herokuapp.com
 
 I try to isolate all business logic in `lib` dir, so the rails app has only the basic code to glue things.
 
-`lib/orthanc/` The "Query Service" responsable to make complex query using arel, like top decks (decks more playables) and a basic card finder.
+`lib/orthanc/` The "Query Service" responsable to make complex query using arel, like top decks (decks most playables) and a basic card finder.
 
 `lib/laracna` this crawler has two functions:
 * consume cards from [mtgapi.com](http://mtgapi.com/) (a JSON API) 
