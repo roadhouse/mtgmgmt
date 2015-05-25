@@ -22,9 +22,10 @@ class Orthanc
   #top cards played in standard
   #DEFAULT: looking in main deck and ignore land cards
   def top_cards
-    @c.model.joins(:card_decks)
+    @c.model.joins(card_decks: [:deck] )
       .select(@c.id, @c.name, @c.image, @c.price, @c.price_updated_at, @c.count_name.as("quantity"), @c.updated_at)
       .where(@c.params.and(@cd.params))
+      .where(@d.season.eq("BNG-DTK-FRF-JOU-KTK-M15-THS"))
       .group(@c.name, @c.id)
       .having(@c.not_lands)
       .order(@c.count_name.desc)
