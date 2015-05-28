@@ -10,9 +10,9 @@
   function LiveSearchController($scope, LiveSearchFactory) {
     $scope.change = function(text) {
       var vm = this;
-      valtosend = vm.search;
+
       LiveSearchFactory
-        .get(valtosend) 
+        .get(vm.search) 
         .then(function(result){ vm.entries = result.data; });
     };
   }
