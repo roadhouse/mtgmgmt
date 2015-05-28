@@ -11,7 +11,7 @@ module Laracna
       end
 
       def deck_nodes
-        @document.search(".deckdbbody a")
+        @document.search("td[class^=deckdbbod] a")
           .map {|node| node.attribute("href").text}
           .delete_if {|c|c.match("deckshow")}
       end
