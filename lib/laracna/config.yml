@@ -1,0 +1,17 @@
+scg:
+  host: "http://sales.starcitygames.com/"
+  deck_list_url: "/deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&limit=100&order_1=date+desc&order_2=date+desc"
+  pagination_param: "&start_num="
+  deck_url: "/deckdatabase/displaydeck.php?DeckID="
+
+mtgdecks:
+  host: "http://www.mtgdecks.net"
+  deck_list_url: "/decks/viewByFormat/37/"
+  pagination_param: "page:"
+  deck_url: "/decks/view/"
+
+deck_lists:
+  host: "http://www.decklists.net"
+  deck_list_url: "/index.php?option=com_ohmydeckdb&controller=results&orderdir=desc&view=results&sformat[]=31&Itemid=&ordering=submitdate"
+  pagination_param: "&page="
+  deck_url: "/index.php?option=com_ohmydeckdb&controller=deck&view=deck&deckId="

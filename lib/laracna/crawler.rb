@@ -1,4 +1,3 @@
-
 class Crawler
   def self.run!(site, page_range = 1..400, options = {})
     page_range.each do |page| 
@@ -10,12 +9,13 @@ class Crawler
 
   def initialize(page, site, options = {})
     @site = site
-    @index_page = index_page.new(page)
+    @config = CrawlerConfig.new(site.to_s)
+    @index_page = index_page.new(page, @config)
     @exceptions = options.fetch(:except) { [] }
   end
 
   def items
-    @index_page.decks_ids.map { |id| deck_page.new(id) unless @exceptions.include? id }.compact
+    @index_page.decks_ids.map { |id| deck_page.new(id, @config) unless @exceptions.include? id }.compact
   end
 
   def run!

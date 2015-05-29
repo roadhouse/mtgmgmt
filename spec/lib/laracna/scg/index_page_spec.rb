@@ -1,21 +1,23 @@
 require "./spec/support/vcr"
 require 'rspec/its'
 
-require "./lib/laracna/mtgdecks/index_page"
-require "./lib/laracna/mtgdecks/page_url"
+require "./lib/laracna/scg/index_page"
+require "./lib/laracna/scg/page_url"
 
-describe Laracna::Mtgdecks::IndexPage, :vcr do
-  let(:decks_list_url) {"http://www.mtgdecks.net/decks/viewByFormat/34/page:1"}
-
+describe Laracna::Scg::IndexPage, :vcr do
   context "#deck_nodes" do
-    subject { described_class.new(decks_list_url).deck_nodes }
-    it { is_expected.to_not be_nil }
-    its(:size) { is_expected.to_not be_zero }
+    subject { described_class.new(1).deck_nodes }
+
+    it { is_expected.to be_a Array }
+    its(:size) { is_expected.to be_eql 100 }
   end
 
   context "#decks_ids" do
-    subject { described_class.new(decks_list_url).decks_ids }
+    subject { described_class.new(1).decks_ids }
+
     it { is_expected.to be_a Array }
-    it { is_expected.to_not be_empty }
+    its(:size) { is_expected.to be_eql 100 }
+    its(:first) { is_expected.to be_a Integer}
+    its(:last) { is_expected.to be_a Integer}
   end
 end

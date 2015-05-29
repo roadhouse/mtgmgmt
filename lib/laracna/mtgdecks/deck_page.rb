@@ -6,8 +6,9 @@ module Laracna
     class DeckPage
       attr_reader :url, :document
 
-      def initialize(id)
-        @url = PageUrl.deck_url(id)
+      def initialize(id, config)
+        @config = config
+        @url = @config.complete_deck_url + id.to_s
 
         @document = Nokogiri::HTML(open(@url))
 
