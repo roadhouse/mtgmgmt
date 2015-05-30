@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522175436) do
+ActiveRecord::Schema.define(version: 20150530195455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20150522175436) do
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "inventories", force: true do |t|
-    t.integer  "quantity"
+    t.integer  "copies"
     t.integer  "card_id"
     t.integer  "user_id"
     t.integer  "language_id"
@@ -98,11 +98,8 @@ ActiveRecord::Schema.define(version: 20150522175436) do
   end
 
   create_table "prices", force: true do |t|
-    t.integer  "card_id"
-    t.decimal  "value"
-    t.string   "source"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "card_id"
+    t.decimal "value"
   end
 
   add_index "prices", ["card_id"], name: "index_prices_on_card_id", using: :btree
