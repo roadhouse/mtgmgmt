@@ -40,7 +40,7 @@ class InventoriesController < ApplicationController
   end
 
   def want
-    @inventories = current_user.inventories.where("quantity < 4").where(list: "game")
+    @inventories = current_user.inventories.where("copies < 4").where(list: "game")
   end
   
   def have
@@ -50,6 +50,6 @@ class InventoriesController < ApplicationController
     private
 
     def inventory_params
-      params.require(:inventory).permit(:user_id, :quantity, :card_id, :list)
+      params.require(:inventory).permit(:user_id, :copies, :card_id, :list)
     end
 end

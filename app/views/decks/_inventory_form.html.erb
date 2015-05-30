@@ -2,7 +2,7 @@
   <%= f.hidden_field :card_id %>
   <%= f.hidden_field :user_id %>
     <div class="input-field col s4">
-      <%= f.select :quantity, 0..4, {}, class: "browser-default" %>
+      <%= f.select :copies, 0..4, {}, class: "browser-default" %>
     </div>
     <div class="input-field col s5">
       <%= f.select :list, %w(game want have), {}, class: "browser-default" %>
