@@ -2,7 +2,6 @@ require "./spec/support/vcr"
 require 'rspec/its'
 
 require "./lib/laracna/deck_lists/deck_page"
-require "./lib/laracna/deck_lists/page_url"
 
 describe Laracna::DeckLists::DeckPage, :vcr do
   let(:deck_id) { 23622 }
@@ -30,12 +29,14 @@ describe Laracna::DeckLists::DeckPage, :vcr do
     [:card_list, :date, :description, :name, :url, :source]
   end
 
-  subject { Laracna::DeckLists::DeckPage.new(deck_id) }
+  let(:config) { CrawlerConfig.new(:deck_lists) }
+
+  subject { Laracna::DeckLists::DeckPage.new(deck_id, config) }
 
   its(:date) { should be_eql Date.parse("08.01.2014") }
   its(:description) { should be_eql "This deck was played at Magic Online - Standard Daily #6569298 and finished at position 5" }
   its(:name) { should be_eql "Mono Red Devotion" }
   its(:deck) { should be_eql deck }
 
-  its(:"attributes.keys.sort") { should be_eql attributes_list.sort }
+  its(:"attributes.keys.sort") { is_expected.to be_eql attributes_list.sort }
 end

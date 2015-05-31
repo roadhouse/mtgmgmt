@@ -2,7 +2,7 @@ require "./spec/support/vcr"
 require 'rspec/its'
 
 require "./lib/laracna/mtgdecks/deck_page"
-require "./lib/laracna/mtgdecks/page_url"
+require "./lib/laracna/crawler_config"
 
 describe Laracna::Mtgdecks::DeckPage, :vcr do
   let(:deck_id) { 63963 }
@@ -46,12 +46,13 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
     ]
   end
 
-  subject { Laracna::Mtgdecks::DeckPage.new(deck_id) }
+  let(:config) { CrawlerConfig.new(:mtgdecks) }
+  subject { Laracna::Mtgdecks::DeckPage.new(deck_id, config) }
 
   its(:description) { is_expected.to eql "R/W Devotion. Played by Lerchenmüller, Max.Top4 in Heldenschmiede Kempten (Jan-2014)" }
   its(:name) { is_expected.to be_eql "R/W Devotion" }
   its(:main) { is_expected.to eql main }
   its(:sideboard) { is_expected.to eql sideboard }
 
-  its(:"attributes.keys.sort") { should be_eql attributes_list.sort }
+  its(:"attributes.keys.sort") { is_expected.to be_eql attributes_list.sort }
 end

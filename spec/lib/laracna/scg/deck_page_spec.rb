@@ -2,7 +2,7 @@ require "./spec/support/vcr"
 require 'rspec/its'
 
 require "./lib/laracna/scg/deck_page"
-require "./lib/laracna/scg/page_url"
+require "./lib/laracna/crawler_config"
 
 describe Laracna::Scg::DeckPage, :vcr do
   let(:deck_id) { 63963 }
@@ -51,7 +51,9 @@ describe Laracna::Scg::DeckPage, :vcr do
     ]
   end
 
-  subject { Laracna::Scg::DeckPage.new(deck_id) }
+  let(:config) { CrawlerConfig.new(:scg) }
+
+  subject { Laracna::Scg::DeckPage.new(deck_id, config) }
 
   its(:description) { is_expected.to eql "245th Place at Pro Tour on 2/23/2014" }
   its(:name) { is_expected.to be_eql "Zoo" }

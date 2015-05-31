@@ -98,8 +98,11 @@ ActiveRecord::Schema.define(version: 20150530195455) do
   end
 
   create_table "prices", force: true do |t|
-    t.integer "card_id"
-    t.decimal "value"
+    t.integer  "card_id"
+    t.decimal  "value"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "prices", ["card_id"], name: "index_prices_on_card_id", using: :btree
