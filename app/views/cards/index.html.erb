@@ -11,8 +11,17 @@
     </div>
   </nav>
 
-  <div ng-repeat="entry in entries" class="pure-u-1-4 box">
-    <span>{{entry.portuguese_name}}</span>
-    <span>{{entry.price}}</span>
+  <div class="card top-decks-box" ng-repeat="entry in entries">
+    <div class="card-content blue-grey lighten-5">
+      <span>
+        {{entry.portuguese_name}}
+      </span>
+      <span class="secondary-content">
+        {{entry.price}}
+      </span>
+    </div>
+    <div class="card-action">
+      <a href="#">action</a>
+    </div>
   </div>
 </div>
