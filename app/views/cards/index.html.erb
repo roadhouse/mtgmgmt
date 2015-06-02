@@ -11,7 +11,7 @@
     </div>
   </nav>
 
-  <div class="card top-decks-box" ng-repeat="entry in entries">
+  <div class="card" ng-repeat="entry in entries">
     <div class="card-content blue-grey lighten-5">
       <span>
         {{entry.portuguese_name}}
@@ -22,6 +22,13 @@
     </div>
     <div class="card-action">
       <a href="#">action</a>
+      <%= form_for new_deck_path , html: {class: "valign-wrapper", "ng-submit" => "addCardToDeck($event)"} do |f| %>
+        <%= f.hidden_field :card_id, value: "{{entry.id}}", "ng-model" => "card_id"  %>
+        <div class="input-field col s4">
+          <%= f.select :copies, 0..4, {}, class: "browser-default", "ng-model" => "copies" %>
+        </div>
+        <%= f.submit "add", class: "btn input-field col s3"%>
+      <% end %>
     </div>
   </div>
 </div>

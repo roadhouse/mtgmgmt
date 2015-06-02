@@ -11,9 +11,21 @@
     $scope.change = function(text) {
       var vm = this;
 
-      LiveSearchFactory
-        .get(vm.search) 
-        .then(function(result){ vm.entries = result.data; });
+      if (vm.search.length > 3) {
+        LiveSearchFactory
+          .get(vm.search) 
+          .then(function(result){ vm.entries = result.data; });
+      }
+    };
+
+    var deck = {};
+    $scope.addCardToDeck = function($event) {
+      var cardDeck = this;
+
+      deck[cardDeck.entry.id] = parseInt(cardDeck.copies);
+      console.log(deck);
+
+      $event.preventDefault();
     };
   }
 
