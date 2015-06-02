@@ -14,9 +14,9 @@ class Card < ActiveRecord::Base
   end
 
   def on_demand_price
-    if price_updated_at.nil? or price_updated_at < 7.day.ago
-      Delayed::Job.enqueue CardPricerJob.new(self.id)
-    end
+    # if price_updated_at.nil? or price_updated_at < 7.day.ago
+      # Delayed::Job.enqueue CardPricerJob.new(self.id)
+    # end
 
     self.price
   end

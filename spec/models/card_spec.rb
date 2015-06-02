@@ -2,7 +2,7 @@ require "spec_helper"
 require "./app/models/card"
 
 describe Card do
-  context "#on_demand_price", :vcr do
+  context "#on_demand_price", :vcr, pending: "heroku limitations" do
     subject { card.on_demand_price }
 
     context "without price" do
