@@ -47,9 +47,7 @@ class Deck < ActiveRecord::Base
   private
 
   def for_game(part)
-    # @deck.find_all {|i| !i.ctype.match(TYPES[:land])}
-    card_decks.find_all{|cd| cd.part == part}.map do |entry|
-    # card_decks.from_part(part).map do |entry|
+    card_decks.find_all{|cd| cd.part == part.to_s}.map do |entry|
       Array.new(entry.copies) { |_| entry.card }
     end.flatten
   end
