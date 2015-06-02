@@ -35,10 +35,21 @@ class Deck < ActiveRecord::Base
     for_game(:sideboard)
   end
 
+  def add_card_entries(entries)
+    self.tap do |deck|
+      entries.each_pair do |key, value|
+        card = Card.find(key)
+        deck.card_decks.build(card: card, copies: value, part: :main)
+      end
+    end
+  end
+
   private
 
   def for_game(part)
-    card_decks.from_part(part).map do |entry|
+    # @deck.find_all {|i| !i.ctype.match(TYPES[:land])}
+    card_decks.find_all{|cd| cd.part == part}.map do |entry|
+    # card_decks.from_part(part).map do |entry|
       Array.new(entry.copies) { |_| entry.card }
     end.flatten
   end

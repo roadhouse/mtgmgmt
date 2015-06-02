@@ -1,4 +1,6 @@
 class DecksController < ApplicationController
+  respond_to :json, only: [:create]
+
   def index
     @presenter = MetaGamePresenter.new
   end
@@ -16,9 +18,8 @@ class DecksController < ApplicationController
   end
 
   def create
-    @deck = Deck.new
-
-    respond_with(@deck)
+    @deck = DeckPresenter.new Deck.new.add_card_entries(params.fetch(:deck))
+    respond_with @deck
   end
 
   def update

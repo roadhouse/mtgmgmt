@@ -8,34 +8,49 @@
   LiveSearchFactory.$inject = ['$http'];
 
   function LiveSearchController($scope, LiveSearchFactory) {
+    var deckEntry = {};
+
     $scope.change = function(text) {
       var vm = this;
 
       if (vm.search.length > 3) {
         LiveSearchFactory
           .get(vm.search) 
-          .then(function(result){ vm.entries = result.data; });
+          .then(function(result) { vm.entries = result.data; });
       }
     };
 
-    var deck = {};
     $scope.addCardToDeck = function($event) {
       var cardDeck = this;
 
-      deck[cardDeck.entry.id] = parseInt(cardDeck.copies);
-      console.log(deck);
+      deckEntry[cardDeck.entry.id] = parseInt(cardDeck.copies);
+      LiveSearchFactory
+        .addCardToDeck({"deck": deckEntry})
+        .then(function(result) { 
+          mana_chart(result.data.mana);
+        });
 
       $event.preventDefault();
     };
-  }
+  };
+
+  function mana_chart(data) {
+    var chartId = data.type + "_chart";
+    var ctx = document.getElementById(chartId).getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(data);
+    myNewChart.destroy();
+  };
 
   function LiveSearchFactory($http) {
     return {
       get: function(params) {
         return $http.get('/cards.json?query[name]=' + params)
+      },
+      addCardToDeck: function(params) {
+        return $http.post('/decks.json', params)
       }
     }
-  }
+  };
 })();
 
 $(document).ready(function(){

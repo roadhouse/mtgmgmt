@@ -11,24 +11,57 @@
     </div>
   </nav>
 
-  <div class="card" ng-repeat="entry in entries">
-    <div class="card-content blue-grey lighten-5">
-      <span>
-        {{entry.portuguese_name}}
-      </span>
-      <span class="secondary-content">
-        {{entry.price}}
-      </span>
+  <ul class="tabs z-depth-1">
+    <li class="tab"><a href="#test1">Cartas</a></li>
+    <li class="tab"><a href="#test2">Deck</a></li>
+  </ul>
+  <div id="test1" class="col s12">
+    <div class="card" ng-repeat="entry in entries">
+      <div class="card-content blue-grey lighten-5">
+        <span>
+          {{entry.portuguese_name}}
+        </span>
+        <span class="secondary-content">
+          {{entry.price}}
+        </span>
+      </div>
+      <div class="card-action">
+        <form class="valign-wrapper" ng-submit="addCardToDeck($event)">
+          <div class="input-field col s4">
+            <select class="browser-default" ng-model="copies">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <input class="btn input-field col s3" name="commit" type="submit" value="add" />
+        </form>
+      </div>
     </div>
-    <div class="card-action">
-      <a href="#">action</a>
-      <%= form_for new_deck_path , html: {class: "valign-wrapper", "ng-submit" => "addCardToDeck($event)"} do |f| %>
-        <%= f.hidden_field :card_id, value: "{{entry.id}}", "ng-model" => "card_id"  %>
-        <div class="input-field col s4">
-          <%= f.select :copies, 0..4, {}, class: "browser-default", "ng-model" => "copies" %>
-        </div>
-        <%= f.submit "add", class: "btn input-field col s3"%>
-      <% end %>
-    </div>
+  </div>
+  <div id="test2" class="col s12">
+    <h5>Stats</h5>
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+      <div class="collapsible-header">Manacost</div>
+      <div class="collapsible-body center-align">
+        <canvas id="mana_chart"></canvas>
+      </div>
+      </li>
+      <li>
+      <div class="collapsible-header">Types</div>
+      <div class="collapsible-body center-align">
+        <canvas id="type_chart"></canvas>
+      </div>
+      </li>
+      <li>
+      <div class="collapsible-header">Color</div>
+      <div class="collapsible-body center-align">
+        <canvas id="color_chart"></canvas>
+      </div>
+      </li>
+    </ul>
   </div>
 </div>
