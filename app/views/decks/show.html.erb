@@ -61,7 +61,12 @@ labels: <%= raw @deck.total_by_color.keys.map(&:to_s) %>,
 };
 var x =  [
 <% @deck.total_by_color.each_pair do |k,v| %>
-  {value: <%= v %>, label: "<%= k.to_s %>"},
+  {
+    value: <%= v %>, 
+    label: "<%= k.to_s %>", 
+    color:"#F7464A", 
+    highlight: "#FF5A5E"
+  },
 <% end %>
 ];
 var ctx3 = document.getElementById("color_chart").getContext("2d");
