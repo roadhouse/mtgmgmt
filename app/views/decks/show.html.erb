@@ -11,35 +11,23 @@
       </div>
       <div class="card-action">
         preço: <%= number_to_currency @deck.total_price %>
-        <%= link_to "print", print_deck_path %>
-      </div>
+      <%= link_to "print", print_deck_path %>
     </div>
   </div>
+</div>
 </div>
 
 <div class="section row">
   <div class="col s12">
-    <h5>Stats</h5>
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header">Manacost</div>
-        <div class="collapsible-body center-align">
-          <canvas id="manacost_chart"></canvas>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header">Types</div>
-        <div class="collapsible-body center-align">
-          <canvas id="type_chart"></canvas>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header">Color</div>
-        <div class="collapsible-body center-align">
-          <canvas id="color_chart"></canvas>
-        </div>
-      </li>
-    </ul>
+
+    <div class="col s12 l6">
+    <h5>Manacost</h5>
+      <canvas id="manacost_chart"></canvas>
+    </div>
+    <div class="col s12 l6">
+    <h5>Colors</h5>
+      <canvas id="color_chart"></canvas>
+    </div>
   </div>
 </div>
 
@@ -52,31 +40,30 @@
 <%= link_to 'Back', decks_path %>
 
 <script>
+Chart.defaults.global.responsive = true;
 var data = {
-labels: <%= @deck.by_manacost.keys.sort %>,  
-        datasets: [
-        { data: <%= @deck.total_by_manacost.values %> }
-        ]
+  labels: <%= @deck.by_manacost.keys.sort %>,  
+  datasets: [
+    { 
+      label: "Manacost",
+      data: <%= @deck.total_by_manacost.values %> 
+    }
+  ]
 };
 var ctx = document.getElementById("manacost_chart").getContext("2d");
 var myNewChart = new Chart(ctx).Bar(data);
 
-var data2 = {
-labels: <%= raw @deck.total_by_type.keys.map {|i| i[0]} %>,  
-        datasets: [
-        { data: <%= @deck.total_by_type.values %> }
-        ]
-};
-var ctx2 = document.getElementById("type_chart").getContext("2d");
-var myNewChart2 = new Chart(ctx2).Bar(data2);
-
-
 var data3 = {
-labels: <%= raw @deck.total_by_color.keys.map {|i| i[0]}.map(&:capitalize) %>,  
+labels: <%= raw @deck.total_by_color.keys.map(&:to_s) %>,  
         datasets: [
         { data: <%= @deck.total_by_color.values %> }
         ]
 };
+var x =  [
+<% @deck.total_by_color.each_pair do |k,v| %>
+  {value: <%= v %>, label: "<%= k.to_s %>"},
+<% end %>
+];
 var ctx3 = document.getElementById("color_chart").getContext("2d");
-var myNewChart3 = new Chart(ctx3).Bar(data3);
+var myNewChart3 = new Chart(ctx3).Pie(x);
 </script>
