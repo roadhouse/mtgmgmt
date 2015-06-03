@@ -2,32 +2,32 @@ require "spec_helper"
 require "./app/models/card"
 
 describe Card do
-  context "#on_demand_price", :vcr, pending: "heroku limitations" do
-    subject { card.on_demand_price }
+  # context "#on_demand_price", :vcr, pending: "heroku limitations" do
+    # subject { card.on_demand_price }
 
-    context "without price" do
-      let(:card) { create(:card) }
+    # context "without price" do
+      # let(:card) { create(:card) }
 
-      before { expect(Delayed::Job).to receive(:enqueue) }
+      # before { expect(Delayed::Job).to receive(:enqueue) }
 
-      it("Enqueue update price") { subject }
-    end
+      # it("Enqueue update price") { subject }
+    # end
 
-    context "with price" do
-      context "with outdated price" do
-        let(:card) { create(:card, price: 6.66, price_updated_at: 1.day.ago) }
+    # context "with price" do
+      # context "with outdated price" do
+        # let(:card) { create(:card, price: 6.66, price_updated_at: 1.day.ago) }
 
-        before { expect(Delayed::Job).to receive(:enqueue) }
+        # before { expect(Delayed::Job).to receive(:enqueue) }
 
-        it("Enqueue update price") { subject }
-      end
-      context "with updated price" do
-        let(:card) { create(:card, price: 6.66, price_updated_at: Time.zone.now) }
+        # it("Enqueue update price") { subject }
+      # end
+      # context "with updated price" do
+        # let(:card) { create(:card, price: 6.66, price_updated_at: Time.zone.now) }
 
-      before { expect(Delayed::Job).not_to receive(:enqueue) }
+      # before { expect(Delayed::Job).not_to receive(:enqueue) }
 
-        it("Not enqueue update price") { subject }
-      end
-    end
-  end
+        # it("Not enqueue update price") { subject }
+      # end
+    # end
+  # end
 end
