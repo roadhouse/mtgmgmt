@@ -56,7 +56,27 @@ class DeckPresenter < BasePresenter
   # def presence_on_field
     # ((quantity.to_f/ Deck.all.count.to_f ) * 100).truncate
   # end
- 
+
+  def type_chart_data
+    colors = {
+      black: "#424242",
+      blue: "#82B1FF",
+      red: "#FF8A80",
+      white: "#fff8e1",
+      green: "#B9F6CA"
+    }
+
+    total_by_color
+      .delete_if { |key,_| key == :colorless}
+      .map do |pair|
+        {
+          value: pair.last,
+          label: pair.first.to_s,
+          color: colors.fetch(pair.first),
+        }
+      end.to_json.html_safe
+  end
+
   private
 
   def card_pool(part)
