@@ -77,6 +77,30 @@ class DeckPresenter < BasePresenter
       end.to_json.html_safe
   end
 
+
+  # def presence_on_field
+    # ((quantity.to_f/ Deck.all.count.to_f ) * 100).truncate
+  # end
+
+  def async_color
+    total_by_color
+      .delete_if { |key,_| key == :colorless}
+      .map do |pair|
+        {
+          strokeColor: colors.fetch(pair.first),
+        }
+    end
+  end
+  def colors
+    {
+      black: "#424242",
+      blue: "#82B1FF",
+      red: "#FF8A80",
+      white: "#fff8e1",
+      green: "#B9F6CA"
+    }
+  end
+
   private
 
   def card_pool(part)

@@ -1,11 +1,39 @@
 (function() {
   angular
-    .module('demos_cfg', [])
+    .module('demos_cfg', ['chart.js'])
     .controller('LiveSearchController', LiveSearchController)
+    .controller('ManaChartController', ManaChartController)
+    .controller('ColorChartController', ColorChartController)
+    .controller('TypeChartController', TypeChartController)
     .factory('LiveSearchFactory', LiveSearchFactory);
 
   LiveSearchController.$inject = ['$scope', 'LiveSearchFactory'];
+  ManaChartController.$inject = ['$scope'];
+  ColorChartController.$inject = ['$scope'];
+  TypeChartController.$inject = ['$scope'];
   LiveSearchFactory.$inject = ['$http'];
+
+  function ManaChartController($scope) {
+    $scope.$on('updateChart', function(event, data){
+      $scope.labels = data.mana.labels;
+      $scope.data = data.mana.data;
+    })
+  };
+
+  function ColorChartController($scope) {
+    $scope.$on('updateChart', function(event, data){
+      $scope.labels = data.color.labels;
+      $scope.data = data.color.data;
+      $scope.colors = data.color.colors;
+    })
+  };
+
+  function TypeChartController($scope) {
+    $scope.$on('updateChart', function(event, data){
+      $scope.labels = data.type.labels;
+      $scope.data = data.type.data;
+    })
+  };
 
   function LiveSearchController($scope, LiveSearchFactory) {
     var deckEntry = {};
@@ -27,27 +55,20 @@
       LiveSearchFactory
         .addCardToDeck({"deck": deckEntry})
         .then(function(result) { 
-          mana_chart(result.data.mana);
+          $scope.$broadcast('updateChart', result.data);
         });
 
       $event.preventDefault();
     };
   };
 
-  function mana_chart(data) {
-    var chartId = data.type + "_chart";
-    var ctx = document.getElementById(chartId).getContext("2d");
-    var myNewChart = new Chart(ctx).Bar(data);
-    myNewChart.destroy();
-  };
-
   function LiveSearchFactory($http) {
     return {
       get: function(params) {
-        return $http.get('/cards.json?query[name]=' + params)
+        return $http.get('/cards.json?query[name]=' + params);
       },
       addCardToDeck: function(params) {
-        return $http.post('/decks.json', params)
+        return $http.post('/decks.json', params);
       }
     }
   };

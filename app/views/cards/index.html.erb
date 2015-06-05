@@ -41,27 +41,19 @@
     </div>
 
     <div id="test2" class="col s12 l6 section">
-      <h5>Stats</h5>
-      <ul class="collapsible" data-collapsible="accordion">
-        <li>
-        <div class="collapsible-header active">Manacost</div>
-        <div class="collapsible-body center-align">
-          <canvas id="mana_chart"></canvas>
-        </div>
-        </li>
-        <li>
-        <div class="collapsible-header">Types</div>
-        <div class="collapsible-body center-align">
-          <canvas id="type_chart"></canvas>
-        </div>
-        </li>
-        <li>
-        <div class="collapsible-header">Color</div>
-        <div class="collapsible-body center-align">
-          <canvas id="color_chart"></canvas>
-        </div>
-        </li>
-      </ul>
+      <h5>Manacost</h5>
+      <div ng-controller="ManaChartController">
+        <canvas class="chart chart-bar" data="data" labels="labels"></canvas>
+      </div>
+      
+      <div ng-controller="ColorChartController">
+      <h5>Colors</h5>
+        <canvas class="chart chart-pie" data="data" labels="labels" colours="colors"></canvas>
+      </div>
+      <div ng-controller="TypeChartController">
+        <h5>Types</h5>
+        <canvas class="chart chart-pie" data="data" labels="labels"></canvas>
+      </div>
     </div>
   </div>
 </div>
