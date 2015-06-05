@@ -89,13 +89,18 @@ class CardParam
     color = c[@options[:color]]
     type = t[@options[:type]]
     name = @options[:name].to_s
+    oracle = @options[:oracle].to_s
 
     where = name.empty? ? not_lands : card_name_is(name)
 
     where = where.and(card_type_is(type))   if type
     where = where.and(card_color_is(color)) if color
+    where = where.and(oracle_contains(oracle)) if oracle
 
     where
+  end
+  def oracle_contains(text)
+    card[:original_text].matches("%#{text}%")
   end
 
   def card_name_is(name)

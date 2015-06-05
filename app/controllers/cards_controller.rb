@@ -12,4 +12,12 @@ class CardsController < ApplicationController
   def search_params
     params[:query].to_h.deep_symbolize_keys
   end
+
+  def parse_params(params)
+    params.to_s.split(" ").inject({}) do |m,v|
+      p = v.split(":")
+      m[p.first.to_sym] = %w(name oracle).include?(p.first) ? p.last : p.to_sym
+      m
+    end
+  end
 end
