@@ -4,8 +4,8 @@ class Deck < ActiveRecord::Base
 
   scope :per_name, ->(name) { where(self.arel_table[:name].matches("%#{name}%")) }
 
-  has_many :card_decks
-  has_many :cards, through: :card_decks
+  has_many :card_decks, dependent: :destroy
+  has_many :cards, through: :card_decks, dependent: :destroy
 
   validates_uniqueness_of :url
 
