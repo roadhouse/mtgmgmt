@@ -1,17 +1,20 @@
 (function() {
+  'use strict';
   angular
     .module('demos_cfg', ['chart.js'])
     .controller('LiveSearchController', LiveSearchController)
     .controller('ManaChartController', ManaChartController)
     .controller('ColorChartController', ColorChartController)
     .controller('TypeChartController', TypeChartController)
-    .factory('LiveSearchFactory', LiveSearchFactory);
+    .factory('LiveSearchFactory', LiveSearchFactory)
+    .factory('DeckBuilderFactory', DeckBuilderFactory);
 
-  LiveSearchController.$inject = ['$scope', 'LiveSearchFactory'];
+  LiveSearchController.$inject = ['$scope', 'LiveSearchFactory', 'DeckBuilderFactory'];
   ManaChartController.$inject = ['$scope'];
   ColorChartController.$inject = ['$scope'];
   TypeChartController.$inject = ['$scope'];
   LiveSearchFactory.$inject = ['$http'];
+  DeckBuilderFactory.$inject = ['$http'];
 
   function ManaChartController($scope) {
     $scope.$on('updateChart', function(event, data){
@@ -35,10 +38,24 @@
     })
   };
 
-  function LiveSearchController($scope, LiveSearchFactory) {
+  function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory) {
     var deckEntry = {};
 
-    $scope.change = function(text) {
+    $scope.addCardToDeck = addCardToDeck;
+    $scope.change = change; 
+
+    function addCardToDeck() {
+      var cardDeck = this;
+
+      deckEntry[cardDeck.entry.id] = parseInt(cardDeck.copies);
+      DeckBuilderFactory
+        .addCardToDeck({"deck": deckEntry})
+        .then(function(result) { 
+          $scope.$broadcast('updateChart', result.data);
+        });
+    };
+    
+    function change() {
       var vm = this;
 
       if (vm.search.length > 3) {
@@ -47,30 +64,23 @@
           .then(function(result) { vm.entries = result.data; });
       }
     };
-
-    $scope.addCardToDeck = function($event) {
-      var cardDeck = this;
-
-      deckEntry[cardDeck.entry.id] = parseInt(cardDeck.copies);
-      LiveSearchFactory
-        .addCardToDeck({"deck": deckEntry})
-        .then(function(result) { 
-          $scope.$broadcast('updateChart', result.data);
-        });
-
-      $event.preventDefault();
-    };
   };
 
   function LiveSearchFactory($http) {
     return {
       get: function(params) {
         return $http.get('/cards.json?query[name]=' + params);
-      },
-      addCardToDeck: function(params) {
-        return $http.post('/decks.json', params);
       }
-    }
+    };
+  };
+
+  function DeckBuilderFactory($http) {
+    var x = this;
+    return {
+      addCardToDeck: function(params) {
+        return $http.post('decks.json', params);
+      }
+    };
   };
 })();
 
