@@ -19,8 +19,9 @@ group :development do
   gem "travis"
 end
 
-group :test, :development do
+group :development, :test do
   gem "factory_girl_rails"
+  gem "jasmine"
   gem "mocha", require: false
   gem "pry"
   gem "pry-rails"
