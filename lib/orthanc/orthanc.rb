@@ -28,7 +28,7 @@ class Orthanc
       .where(@d.season.eq("BNG-DTK-FRF-JOU-KTK-M15-THS"))
       .group(@c.name, @c.id)
       .having(@c.not_lands)
-      .order(@c.count_name.desc)
+      .order(Arel::Nodes::Descending.new(@c.count_name))
       .limit(@options.fetch(:limit) { 10} )
   end
 
@@ -39,7 +39,7 @@ class Orthanc
         @d.name.count.as("quantity"),
       )
       .group(@d.name)
-      .order(@d.name.count.desc)
+      .order(Arel::Nodes::Descending.new(@d.name.count))
       .where(@d.season.eq("BNG-DTK-FRF-JOU-KTK-M15-THS"))
       .limit(@options.fetch(:limit) {10})
   end

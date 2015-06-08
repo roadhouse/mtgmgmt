@@ -10,7 +10,9 @@ class CardsController < ApplicationController
   private
 
   def search_params
-    params[:query].to_h.deep_symbolize_keys
+    query = params[:query]
+
+    query ? query.permit(:name).deep_symbolize_keys : {} 
   end
 
   def parse_params(params)
