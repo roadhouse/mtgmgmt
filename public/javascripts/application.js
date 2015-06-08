@@ -75,10 +75,9 @@
   };
 
   function DeckBuilderFactory($http) {
-    var x = this;
     return {
       addCardToDeck: function(params) {
-        return $http.post('decks.json', params);
+        return $http.post('/decks.json', params);
       }
     };
   };
