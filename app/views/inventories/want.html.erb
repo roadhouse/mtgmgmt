@@ -2,7 +2,10 @@
   <% @inventories.each do |card| %>
     <li>
       <div class="collapsible-header">
-        <%= "#{card.card.name} #{number_to_currency card.card.on_demand_price}" %>
+        <span><%= card.card.name %></span>
+        <span class="secondary-content">
+          <%= number_to_currency card.card.on_demand_price %>
+        </span>
       </div>
       <div class="collapsible-body">
           <div class="row">
