@@ -37,18 +37,18 @@ class Deck < ActiveRecord::Base
 
   def add_card_entries(entries)
     self.tap do |deck|
-      entries.each_pair do |key, value|
-        card = Card.find(key)
-        deck.card_decks.build(card: card, copies: value, part: :main)
-      end
+      list = entries.map { |entry| [Card.find(entry.first).name, entry.last] }
+
+      deck.list = { main: Hash[list] }
     end
   end
 
   private
 
   def for_game(part)
-    card_decks.find_all{|cd| cd.part.to_s == part.to_s}.map do |entry|
-      Array.new(entry.copies) { |_| entry.card }
-    end.flatten
+    list[part.to_s].to_h.flat_map do |entry| 
+      card = Card.find_by_name(entry.first)
+      Array.new(entry.last) { |_| card }
+    end
   end
 end
