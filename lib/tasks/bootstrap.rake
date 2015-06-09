@@ -1,12 +1,11 @@
 namespace :bootstrap do
   desc "bootstraping app"
-  task :run => [
-    "db:create:all",
-    "db:migrate",
-    "db:seed",
-    "bootstrap:load_cards",
-    "bootstrap:mtgdecks"
-  ]
+  task :run => ["db:create"] do
+    cfg = ActiveRecord::Base.configurations[Rails.env]
+    exec_restore = "pg_restore --verbose --clean --no-acl --no-owner -d #{cfg["database"]} db/dump.bkp"
+
+    system exec_restore
+  end
 
   desc "load card data ftom mtgapi.com"
   task load_cards: :environment do
