@@ -19,4 +19,15 @@ namespace :migration do
       end
     end
   end
+
+  desc 'update season field'
+  task update_season: :environment do
+    Deck.find_each do |deck|
+      sets = Card.where(name: deck.list["main"].keys).pluck(:set)
+      season = sets.compact.uniq.delete_if { |i| i== "fake"}.sort.join("-")
+
+      deck.season = season
+      deck.save!
+    end
+  end
 end
