@@ -30,4 +30,14 @@ namespace :migration do
       deck.save!
     end
   end
+
+  desc 'delete duplicate cards'
+  task delete_duplicate: :environment do
+    # select name, count(name) as rep from cards group by name order by rep desc 
+    duplicates = ["Plains", "Swamp", "Mountain", "Island", "Forest", "Naturalize", "Divine Verdict", "Duress", "Mind Rot", "Divination", "Oppressive Rays", "Necrobite", "Dismal Backwater", "Oreskos Swiftclaw", "Typhoid Rats", "Rugged Highlands", "Swiftwater Cliffs", "Summit Prowler", "Evolving Wilds", "Wind-Scarred Crag", "Blossoming Sands", "Tranquil Cove", "Scoured Barrens", "Jungle Hollow", "Bronze Sable", "Hunt the Weak", "Satyr Wayfinder", "Cancel", "Thornwood Falls", "Battle Mastery", "Tormenting Voice", "Bloodfell Caves", "Lightning Strike", "Negate"]
+
+    duplicates.map do |name|
+      Card.where(id: Card.where(name: name).pluck(:id)[1..-1]).delete_all
+    end
+  end
 end
