@@ -1,23 +1,11 @@
 addons:
-    postgresql: "9.4"
+  postgresql: "9.4"
 language: ruby
 rvm:
   - 2.0.0
-before_script:
-  - cp config/database.yml.travis config/database.yml
-  - psql -c "select version();" -U postgres
 script: 
   - bundle exec rake db:create
   - bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rake db:seed
   - bundle exec rake 
-before_install:
-  - sudo /etc/init.d/postgresql stop
-  - sudo chmod 777 /etc/postgresql/9.4/main/pg_hba.conf
-  - sudo echo "local   all         postgres                          trust" >  /etc/postgresql/9.4/main/pg_hba.conf
-  - sudo echo "local   all         all                               trust" >> /etc/postgresql/9.4/main/pg_hba.conf
-  - sudo echo "host    all         all         127.0.0.1/32          trust" >> /etc/postgresql/9.4/main/pg_hba.conf
-  - sudo echo "host    all         all         ::1/128               trust" >> /etc/postgresql/9.4/main/pg_hba.conf
-  - sudo sh -c "echo 127.0.0.1 postgres >> /etc/hosts"
-  - sudo /etc/init.d/postgresql start
