@@ -167,7 +167,12 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (0.18.2)
+    pg_array_parser (0.0.9)
     phantomjs (1.9.8.0)
+    postgres_ext (2.4.1)
+      activerecord (>= 4.0.0)
+      arel (>= 4.0.1)
+      pg_array_parser (~> 0.0.9)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -314,6 +319,7 @@ DEPENDENCIES
   mocha
   nokogiri
   pg
+  postgres_ext
   pry
   pry-byebug
   pry-rails

@@ -4,7 +4,7 @@ require 'deck_param.rb'
 class Orthanc
   def initialize(options)
     @options = options
-    
+
     @c = CardParam.new(@options)
     @d = DeckParam.new
   end
@@ -18,24 +18,51 @@ class Orthanc
     end
   end
 
+  def cards_on_deck
+    @d.model
+      .select("jsonb_object_keys(list->'main') AS name")
+      .where(season: "BNG-DTK-FRF-JOU-KTK-M15-THS")
+  end
+
+  def total_decks
+    @d.model.select @d.name.count.as("total_decks")
+  end
+
+  def top_cards_cte
+    sql = %{
+      SELECT cards_on_deck.name, count(cards_on_deck.name) AS total_card, total_decks.total_decks AS field
+      FROM cards_on_deck, total_decks
+      GROUP BY cards_on_deck.name, total_decks
+    }
+
+    Arel.sql(sql);
+  end
+
+  def top2 
+    require 'postgres_ext'
+    @c.model
+      .with(cards_on_deck: cards_on_deck, total_decks: total_decks, top_cards_cte: top_cards_cte)
+      .joins("INNER JOIN top_cards_cte ON top_cards_cte.name = cards.name")
+      .where(@c.params)
+      .order("top_cards_cte.total_card DESC")
+      .limit(10)
+  end
+
   #top cards played in standard
   #DEFAULT: looking in main deck and ignore land cards
   def top_cards
     sql = %{
       WITH cards_on_deck AS (
         SELECT jsonb_object_keys(list->'main') AS name
-          FROM decks
-            WHERE decks.season = 'BNG-DTK-FRF-JOU-KTK-M15-THS'  
-
+        FROM decks
+        WHERE decks.season = 'BNG-DTK-FRF-JOU-KTK-M15-THS'  
       ), total_decks AS (
         SELECT COUNT(*) AS total_decks
-          FROM decks
-
+        FROM decks
       ), top_cards AS (
         SELECT cards_on_deck.name, count(cards_on_deck.name) AS total_card, total_decks.total_decks AS field
-          FROM cards_on_deck, total_decks
-            GROUP BY cards_on_deck.name, total_decks
-
+        FROM cards_on_deck, total_decks
+        GROUP BY cards_on_deck.name, total_decks
       )
 
       SELECT *, (cast(total_card as float) / cast(field as float)) * 100 AS percent
@@ -46,15 +73,13 @@ class Orthanc
       ORDER BY top_cards.total_card DESC
       LIMIT 10;
     }
-    Card.find_by_sql(sql)
+
+    @c.model.find_by_sql(sql)
   end
 
   def top_decks
     @d.model
-      .select(
-        @d.name, 
-        @d.name.count.as("quantity"),
-      )
+      .select(@d.name, @d.name.count.as("quantity"))
       .group(@d.name)
       .order(Arel::Nodes::Descending.new(@d.name.count))
       .where(@d.season.eq("BNG-DTK-FRF-JOU-KTK-M15-THS"))
