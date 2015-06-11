@@ -10,7 +10,7 @@ class DeckBuilder
   def build
     @deck.tap do |deck|
       populate
-
+      require 'pry';binding.pry 
       deck.save!
     end
   end
@@ -18,18 +18,17 @@ class DeckBuilder
   private
 
   def populate
-    @format.parts.each { |part| add_cards_from(part) }
+    list = {main: list_from(:main), sideboard: list_from(:sideboard)}
+    @deck.list = list
 
-    season = deck.cards.pluck(:set).compact.uniq.delete_if { |i| i == "fake"}.sort.join("-")
-
+    season = @deck.cards.pluck(:set).compact.uniq.delete_if { |i| i == "fake"}.sort.join("-")
     @deck.season = season
   end
 
-  def add_cards_from(part)
-    list = @card_list.fetch(part).inject({}) do |m,v|
-      m.tap { |hash| hash[v.fetch(:card)] = v.fetch(:copies) }
+  def list_from(part)
+    @card_list.fetch(part).inject({}) do |m,v|
+      m[v.fetch(:card)] = v.fetch(:copies)
+      m
     end
-
-    @deck.list = { part => list }
   end
 end
