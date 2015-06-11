@@ -5,6 +5,7 @@ rvm:
   - 2.0.0
 before_script:
   - cp config/database.yml.travis config/database.yml
+  - psql -c "select version();" -U postgres
 script: 
   - bundle exec rake db:create
   - bundle exec rake db:migrate --trace
