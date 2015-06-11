@@ -4,7 +4,6 @@ class Card < ActiveRecord::Base
 
   validates_presence_of :name
 
-  has_many :card_decks
   has_many :inventories
   has_many :users, through: :inventories
   has_many :prices

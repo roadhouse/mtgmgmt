@@ -6,7 +6,6 @@ class Orthanc
     @options = options
     
     @c = CardParam.new(@options)
-    @cd = CardDeckParam.new(@options)
     @d = DeckParam.new
   end
 
@@ -22,14 +21,32 @@ class Orthanc
   #top cards played in standard
   #DEFAULT: looking in main deck and ignore land cards
   def top_cards
-    @c.model.joins(card_decks: [:deck] )
-      .select(@c.id, @c.name, @c.image, @c.price, @c.price_updated_at, @c.count_name.as("quantity"), @c.updated_at)
-      .where(@c.params.and(@cd.params))
-      .where(@d.season.eq("BNG-DTK-FRF-JOU-KTK-M15-THS"))
-      .group(@c.name, @c.id)
-      .having(@c.not_lands)
-      .order(Arel::Nodes::Descending.new(@c.count_name))
-      .limit(@options.fetch(:limit) { 10} )
+    sql = %{
+      WITH cards_on_deck AS (
+        SELECT jsonb_object_keys(list->'main') AS name
+          FROM decks
+            WHERE decks.season = 'BNG-DTK-FRF-JOU-KTK-M15-THS'  
+
+      ), total_decks AS (
+        SELECT COUNT(*) AS total_decks
+          FROM decks
+
+      ), top_cards AS (
+        SELECT cards_on_deck.name, count(cards_on_deck.name) AS total_card, total_decks.total_decks AS field
+          FROM cards_on_deck, total_decks
+            GROUP BY cards_on_deck.name, total_decks
+
+      )
+
+      SELECT *, (cast(total_card as float) / cast(field as float)) * 100 AS percent
+      FROM cards
+      INNER JOIN top_cards
+      ON top_cards.name = cards.name
+      WHERE #{@c.params.to_sql}
+      ORDER BY top_cards.total_card DESC
+      LIMIT 10;
+    }
+    Card.find_by_sql(sql)
   end
 
   def top_decks
@@ -42,35 +59,6 @@ class Orthanc
       .order(Arel::Nodes::Descending.new(@d.name.count))
       .where(@d.season.eq("BNG-DTK-FRF-JOU-KTK-M15-THS"))
       .limit(@options.fetch(:limit) {10})
-  end
-
-  # def presence_on_field
-    # ((quantity.to_f/ Deck.all.count.to_f ) * 100).truncate
-  # end
-end
-
-# card_decks table wrapper
-# FIXME change table name do deck_entry
-# PARAMS: {color: [:w|:r|:c|:b|:a|:g], type: [:a|:l|:i|:s|:c|:p]}
-class CardDeckParam
-  def initialize(options={})
-    @options = options
-  end
-
-  def params
-    p = {m: :main, s: :sideboard}
-
-    part = p[@options.fetch(:part) { :m }]
-
-    deck_part_is(part)
-  end
-
-  def table
-    CardDeck.arel_table
-  end
-
-  def deck_part_is(part)
-    table[:part].eq(part)
   end
 end
 
@@ -89,7 +77,7 @@ class CardParam
     color = c[@options[:color]]
     type = t[@options[:type]]
     name = @options[:name].to_s
-    oracle = @options[:oracle].to_s
+    oracle = @options[:oracle]
 
     where = name.empty? ? not_lands : card_name_is(name)
 
@@ -99,12 +87,14 @@ class CardParam
 
     where
   end
+
   def oracle_contains(text)
     card[:original_text].matches("%#{text}%")
   end
 
   def card_name_is(name)
-    card[:name].matches(name).or(card[:portuguese_name].matches("%#{name}%"))
+    match = "%#{name}%" 
+    card[:name].matches(match).or(card[:portuguese_name].matches(match))
   end
 
   def not_lands

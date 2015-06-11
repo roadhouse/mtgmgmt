@@ -12,8 +12,6 @@ class DeckBuilder
       populate
 
       deck.save!
-      season = deck.cards.pluck(:set).compact.uniq.delete_if { |i| i == "fake"}.sort.join("-")
-      deck.update_attribute(:season, season)
     end
   end
 
@@ -21,14 +19,17 @@ class DeckBuilder
 
   def populate
     @format.parts.each { |part| add_cards_from(part) }
+
+    season = deck.cards.pluck(:set).compact.uniq.delete_if { |i| i == "fake"}.sort.join("-")
+
+    @deck.season = season
   end
 
   def add_cards_from(part)
-    @card_list.fetch(part).each do |attrs| 
-      name   = attrs.fetch(:card)
-      copies = attrs.fetch(:copies)
-
-      @deck.add_card(copies, name, part)
+    list = @card_list.fetch(part).inject({}) do |m,v|
+      m.tap { |hash| hash[v.fetch(:card)] = v.fetch(:copies) }
     end
+
+    @deck.list = { part => list }
   end
 end

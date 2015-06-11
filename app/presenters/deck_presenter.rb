@@ -104,8 +104,8 @@ class DeckPresenter < BasePresenter
   private
 
   def card_pool(part)
-    @deck.card_decks.where(part: part).map do |entry| 
-      { copies: entry.copies, card: entry.card }
+    @deck.list[part.to_s].map do |entry| 
+      { copies: entry.last, card: Card.where(name:entry.first).first }
     end
   end
 end

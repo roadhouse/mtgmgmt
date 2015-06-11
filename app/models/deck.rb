@@ -4,9 +4,6 @@ class Deck < ActiveRecord::Base
 
   scope :per_name, ->(name) { where(self.arel_table[:name].matches("%#{name}%")) }
 
-  has_many :card_decks, dependent: :destroy
-  has_many :cards, through: :card_decks, dependent: :destroy
-
   validates_uniqueness_of :url
 
   def table
@@ -25,6 +22,10 @@ class Deck < ActiveRecord::Base
     rescue ActiveRecord::RecordNotFound
       raise name
     end
+  end
+
+  def cards
+    Card.where(name: (self.list["main"].keys + self.list["sideboard"].keys).uniq)
   end
 
   def main
