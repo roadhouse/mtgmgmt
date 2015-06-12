@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150611045515) do
+ActiveRecord::Schema.define(version: 20150612203109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "citext"
+
+  create_table "card_decks", force: :cascade do |t|
+    t.integer  "deck_id"
+    t.integer  "card_id"
+    t.integer  "copies",                 default: 1
+    t.string   "part",       limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cards", force: :cascade do |t|
     t.string   "name",             limit: 255
@@ -23,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150611045515) do
     t.string   "set",              limit: 255
     t.string   "mana_cost",        limit: 255
     t.string   "ctype",            limit: 255
-    t.string   "power",            limit: 255
+    t.integer  "power"
     t.integer  "toughness"
     t.string   "rarity",           limit: 255
     t.string   "artist",           limit: 255
