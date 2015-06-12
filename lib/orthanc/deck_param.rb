@@ -1,5 +1,8 @@
-# decks table wrapper
 class DeckParam
+  def initialize(options)
+    @options = options 
+  end
+
   def model
     Deck
   end
