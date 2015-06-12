@@ -21,7 +21,7 @@ describe CardCrawler do
     it { is_expected.to have_attributes(rarity: "Common") }
     it { is_expected.to have_attributes(ctype: "Creature — Horror") }
     it { is_expected.to have_attributes(loyalty: 0) }
-    it { is_expected.to have_attributes(power: "3") }
+    it { is_expected.to have_attributes(power: 3) }
     it { is_expected.to have_attributes(toughness: 4) }
     it { is_expected.to have_attributes(mana_cost: "{3}{B}{G}{U}") }
     it { is_expected.to have_attributes(original_text: "Flying\nWhenever Abomination of Gudul deals combat damage to a player, you may draw a card. If you do, discard a card.\nMorph {2}{B}{G}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)") }
