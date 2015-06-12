@@ -10,7 +10,6 @@ class DeckBuilder
   def build
     @deck.tap do |deck|
       populate
-      require 'pry';binding.pry 
       deck.save!
     end
   end
