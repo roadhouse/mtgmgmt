@@ -22,4 +22,12 @@ class DeckParam
   def season
     table[:season]
   end
+
+  def season_is(str)
+    season.eq(str)
+  end
+
+  def params 
+    season_is @options.fetch(:season)
+  end
 end

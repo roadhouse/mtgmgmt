@@ -7,7 +7,12 @@ require 'card_param'
 # PARAMS: {color: [:w|:r|:c|:b|:a|:g], type: [:a|:l|:i|:s|:c|:p], name: "name", oracle: "haste"}
 class Orthanc
   def initialize(options)
-    @options = options
+    default_options = {
+      limit: 10, 
+      season: "BNG-DTK-FRF-JOU-KTK-M15-THS"
+    }
+
+    @options = default_options.merge options
 
     @card = CardParam.new(@options)
     @deck = DeckParam.new(@options)
@@ -36,8 +41,8 @@ class Orthanc
       .select(@deck.name, @deck.name.count.as("quantity"))
       .group(@deck.name)
       .order(Arel::Nodes::Descending.new(@deck.name.count))
-      .where(@deck.season.eq("BNG-DTK-FRF-JOU-KTK-M15-THS"))
-      .limit(@options.fetch(:limit) {10})
+      .where(@deck.params)
+      .limit(@options.fetch(:limit))
   end
 
   private
