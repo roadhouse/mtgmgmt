@@ -34,7 +34,7 @@ class DeckParam
   def total_decks
     model.select(name_quantity)
   end
-  
+
   def cards_on_deck
     model.select("jsonb_object_keys(list->'main') AS name")
       .where(season_is(@options.fetch(:season)))
