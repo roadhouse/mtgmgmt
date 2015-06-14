@@ -27,6 +27,19 @@ class DeckParam
     season.eq(str)
   end
 
+  def name_quantity
+    name.count.as("quantity")
+  end
+
+  def total_decks
+    model.select(name_quantity)
+  end
+  
+  def cards_on_deck
+    model.select("jsonb_object_keys(list->'main') AS name")
+      .where(season_is(@options.fetch(:season)))
+  end
+
   def params 
     season_is @options.fetch(:season)
   end

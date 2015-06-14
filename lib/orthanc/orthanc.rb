@@ -27,7 +27,7 @@ class Orthanc
   #DEFAULT: looking in main deck and ignore land cards
   def top_cards 
     @card.model
-      .with(cards_on_deck: cards_on_deck, card_quantity: card_quantity)
+      .with(cards_on_deck: @deck.cards_on_deck, card_quantity: card_quantity)
       .select("cards.*", "(cast(card_quantity.quantity as float) / cast((#{total_decks.to_sql}) as float)) * 100 AS presence")
       .joins("INNER JOIN card_quantity ON card_quantity.name = cards.name")
       .where(@card.params)
@@ -38,7 +38,7 @@ class Orthanc
   #top cards played in standard, in the last season
   def top_decks
     @deck.model
-      .select(@deck.name, @deck.name.count.as("quantity"))
+      .select(@deck.name, @deck.name_quantity)
       .group(@deck.name)
       .order(Arel::Nodes::Descending.new(@deck.name.count))
       .where(@deck.params)
@@ -48,13 +48,7 @@ class Orthanc
   private
 
   def total_decks
-    @deck.model.select @deck.name.count.as("total_decks")
-  end
-
-  def cards_on_deck
-    @deck.model
-      .select("jsonb_object_keys(list->'main') AS name")
-      .where(season: "BNG-DTK-FRF-JOU-KTK-M15-THS")
+    @deck.model.select @deck.name_quantity
   end
 
   def card_quantity
