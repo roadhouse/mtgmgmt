@@ -1,4 +1,5 @@
 require 'spec_helper'
+require './lib/orthanc/base_param'
 
 describe DeckParam do
   context "#season_is('season')" do
