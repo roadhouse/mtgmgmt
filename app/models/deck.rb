@@ -14,16 +14,6 @@ class Deck < ActiveRecord::Base
     Deck.where(table[:name].matches(name)).last
   end
 
-  #using by crawler
-  #move
-  def add_card(copies, name, part)
-    begin
-      card_decks.build(card: Card.find_by_name!(name), copies: copies, part: part)
-    rescue ActiveRecord::RecordNotFound
-      raise name
-    end
-  end
-
   def cards
     Card.where(name: (self.list["main"].keys + self.list["sideboard"].keys).uniq)
   end
@@ -49,7 +39,7 @@ class Deck < ActiveRecord::Base
   def for_game(part)
     list[part.to_s].to_h.flat_map do |entry| 
       card = Card.find_by_name(entry.first)
-      Array.new(entry.last) { |_| card }
+      Array.new(entry.last.to_i) { |_| card }
     end
   end
 end

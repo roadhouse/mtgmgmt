@@ -17,8 +17,10 @@ class DeckBuilder
   private
 
   def populate
-    list = {main: list_from(:main), sideboard: list_from(:sideboard)}
-    @deck.list = list
+    @deck.list = {
+      main: list_from(:main), 
+      sideboard: list_from(:sideboard)
+    }
 
     season = @deck.cards.pluck(:set).compact.uniq.delete_if { |i| i == "fake"}.sort.join("-")
     @deck.season = season
