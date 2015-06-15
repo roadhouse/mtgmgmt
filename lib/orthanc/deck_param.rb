@@ -1,17 +1,17 @@
 class DeckParam < BaseParam
-  ar_model Deck
-  db_fields :id, :name, :season
-
-  def initialize(options)
-    @options = options 
-  end
+  model Deck
+  fields :name, :season
 
   def season_is(str)
     season.eq(str)
   end
 
+  def name_count
+    name.count
+  end
+
   def name_quantity
-    name.count.as("quantity")
+    name_count.as("quantity")
   end
 
   def total_decks
@@ -21,6 +21,13 @@ class DeckParam < BaseParam
   def cards_on_deck
     table.select("jsonb_object_keys(list->'main') AS name")
       .where(season_is(@options.fetch(:season)))
+  end
+
+  def card_quantity
+    table = Arel::Table.new(:cards_on_deck)
+    table
+      .project(table[:name], table[:name].count.as('quantity'))
+      .group(table[:name])
   end
 
   def params 

@@ -27,8 +27,8 @@ class Orthanc
   #DEFAULT: looking in main deck and ignore land cards
   def top_cards 
     @card.model
-      .with(cards_on_deck: @deck.cards_on_deck, card_quantity: card_quantity)
-      .select("cards.*", "(cast(card_quantity.quantity as float) / cast((#{total_decks.to_sql}) as float)) * 100 AS presence")
+      .with(cards_on_deck: @deck.cards_on_deck, card_quantity: @deck.card_quantity)
+      .select("cards.*", "(cast(card_quantity.quantity as float) / cast((#{@deck.total_decks.to_sql}) as float)) * 100 AS presence")
       .joins("INNER JOIN card_quantity ON card_quantity.name = cards.name")
       .where(@card.params)
       .order("card_quantity.quantity DESC")
@@ -40,21 +40,8 @@ class Orthanc
     @deck.table
       .select(@deck.name, @deck.name_quantity)
       .group(@deck.name)
-      .order(Arel::Nodes::Descending.new(@deck.name.count))
+      .order(Arel::Nodes::Descending.new(@deck.name_count))
       .where(@deck.params)
       .limit(@options.fetch(:limit))
-  end
-
-  private
-
-  def total_decks
-    @deck.table.select @deck.name_quantity
-  end
-
-  def card_quantity
-    table = Arel::Table.new(:cards_on_deck)
-    table
-      .project(table[:name], table[:name].count.as('quantity'))
-      .group(table[:name])
   end
 end
