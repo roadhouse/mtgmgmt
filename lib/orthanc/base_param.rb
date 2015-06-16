@@ -3,22 +3,18 @@ class BaseParam
     @options = options 
   end
 
-  def self.model(model)
-    @@model = model
-  end
-
-  def self.fields(*fields)
-    @@db_fields = fields
-  end
-
   def table
-    @@model
+    raise "implement me"
+  end
+
+  def db_fields
+    raise "implement me"
   end
 
   private
 
   def method_missing(method, *args, &block)
-    @@db_fields.include?(method) ? field(method) : super
+    db_fields.include?(method) ? field(method) : super
   end
 
   def field(field)

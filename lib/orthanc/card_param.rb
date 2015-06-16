@@ -1,6 +1,14 @@
 # PARAMS: {type: [:a|:l|:i|:s|:c|:p], color: [:r|:w|:b|:u|:g], name: "Black Lotus", oracle: "haste"}
 # when name was passed the the scope the query included lands
-class CardParam
+class CardParam < BaseParam
+  def table 
+    Card
+  end
+
+  def db_fields 
+    %i{original_text ctypes colors name}
+  end
+
   def initialize(options)
     @options = options 
   end
@@ -24,60 +32,28 @@ class CardParam
   end
 
   def oracle_contains(text)
-    card[:original_text].matches("%#{text}%")
+    original_text.matches("%#{text}%")
   end
 
   def card_name_is(name)
     match = "%#{name}%" 
-    card[:name].matches(match).or(card[:portuguese_name].matches(match))
+    name.matches(match).or(portuguese_name.matches(match))
   end
 
   def not_lands
-    card[:ctypes].not_in("{Land}")
+    ctypes.not_in("{Land}")
   end
 
   def card_type_is(type)
-    card[:ctypes].in("{#{type}}")
+    ctypes.in("{#{type}}")
   end
 
   def card_color_is(color)
-    card[:colors].in("{#{color}}")
+    colors.in("{#{color}}")
   end
 
   def count_name
-    card[:name].count
-  end
-
-  def card
-    Card.arel_table
-  end
-
-  def id
-    card[:id]
-  end
-
-  def name
-    card[:name]
-  end
-
-  def image
-    card[:image]
-  end
-
-  def price
-    card[:price]
-  end
-
-  def price_updated_at
-    card[:price_updated_at]
-  end
-
-  def updated_at
-    card[:updated_at]
-  end
-
-  def model
-    Card
+    name.count
   end
 end
 

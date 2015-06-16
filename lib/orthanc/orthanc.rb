@@ -20,13 +20,13 @@ class Orthanc
 
   #basic card search using CardParam params as filter
   def cards
-    @options.empty? ? @card.model.none : @card.model.where(@card.params)
+    @options.empty? ? @card.table.none : @card.table.where(@card.params)
   end
 
   #top cards played in standard
   #DEFAULT: looking in main deck and ignore land cards
   def top_cards 
-    @card.model
+    @card.table
       .with(cards_on_deck: @deck.cards_on_deck, card_quantity: @deck.card_quantity)
       .select("cards.*", "(cast(card_quantity.quantity as float) / cast((#{@deck.total_decks.to_sql}) as float)) * 100 AS presence")
       .joins("INNER JOIN card_quantity ON card_quantity.name = cards.name")
