@@ -1,13 +1,8 @@
 # PARAMS: {type: [:a|:l|:i|:s|:c|:p], color: [:r|:w|:b|:u|:g], name: "Black Lotus", oracle: "haste"}
 # when name was passed the the scope the query included lands
 class CardParam < BaseParam
-  def table 
-    Card
-  end
-
-  def db_fields 
-    %i{original_text ctypes colors name}
-  end
+  model Card
+  fields :original_text, :ctypes, :colors, :name
 
   def initialize(options)
     @options = options 

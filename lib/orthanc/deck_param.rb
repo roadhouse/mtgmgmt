@@ -1,11 +1,6 @@
 class DeckParam < BaseParam
-  def table 
-    Deck
-  end
-
-  def db_fields 
-    %i{name season}
-  end
+  model Deck
+  fields :name, :season
 
   def season_is(str)
     season.eq(str)
