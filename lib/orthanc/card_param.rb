@@ -2,7 +2,7 @@
 # when name was passed the the scope the query included lands
 class CardParam < BaseParam
   model Card
-  fields :original_text, :ctypes, :colors, :name
+  fields :original_text, :ctypes, :colors, :name, :portuguese_name
 
   def initialize(options)
     @options = options 
@@ -30,8 +30,8 @@ class CardParam < BaseParam
     original_text.matches("%#{text}%")
   end
 
-  def card_name_is(name)
-    match = "%#{name}%" 
+  def card_name_is(str)
+    match = "%#{str}%" 
     name.matches(match).or(portuguese_name.matches(match))
   end
 
