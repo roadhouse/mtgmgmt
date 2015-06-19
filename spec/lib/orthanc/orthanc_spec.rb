@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Orthanc do
   before(:all) { create_list(:deck, 2, season: "BNG-DTK-FRF-JOU-KTK-M15-THS") }
 
-  let(:orthanc) { described_class.new({}) }
+  let(:orthanc) { described_class.new("") }
 
   context ".top_decks" do
     subject { orthanc.top_decks }
@@ -21,7 +21,7 @@ describe Orthanc do
   end
 
   context ".param_builder" do
-    subject { described_class.new({}).param_builder(filter_string) }
+    subject { orthanc.param_builder(filter_string) }
     
     context "with only arbitrary string" do
       let(:filter_string) { "brimaz" }
@@ -30,9 +30,9 @@ describe Orthanc do
     end
 
     context "with a token filter" do
-      let(:filter_string) { "brimaz t:creature" }
+      let(:filter_string) { "brimaz T:creature" }
 
-      it { is_expected.to eq({t: "creature", name: "brimaz"}) }
+      it { is_expected.to eq({t: "Creature", name: "brimaz"}) }
     end
   end
 end

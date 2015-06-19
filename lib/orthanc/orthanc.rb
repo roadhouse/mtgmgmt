@@ -12,7 +12,7 @@ class Orthanc
       season: "BNG-DTK-FRF-JOU-KTK-M15-THS"
     }
 
-    @options = default_options.merge options
+    @options = default_options.merge param_builder(options)
 
     @card = CardParam.new(@options)
     @deck = DeckParam.new(@options)
@@ -23,7 +23,7 @@ class Orthanc
       params = filter.split(":")
       
       if params.size > 1
-        query[params.first.to_sym] = params.last
+        query[params.first.downcase.to_sym] = params.last.capitalize
       else
         query[:name] = params.last
       end

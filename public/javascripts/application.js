@@ -58,7 +58,7 @@
     function change() {
       var vm = this;
 
-      if (vm.search.length > 3) {
+      if (vm.search.length > 6) {
         LiveSearchFactory
           .get(vm.search) 
           .then(function(result) { vm.entries = result.data; });
@@ -69,7 +69,7 @@
   function LiveSearchFactory($http) {
     return {
       get: function(params) {
-        return $http.get('/cards.json?query[name]=' + params);
+        return $http.get('/cards.json?query=' + params);
       }
     };
   };

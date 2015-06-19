@@ -4,17 +4,10 @@ class CardParam < BaseParam
   model Card
   fields :original_text, :ctypes, :colors, :name, :portuguese_name
 
-  def initialize(options)
-    @options = options 
-  end
-
   def params
-    c = {w: "White", u: "Blue", b: "Black", r: "Red", g: "Green"}
-    t = {c: "Creature", l: "Land", i: "Instant", s: "Sorcery", e: "Enchantment", p: "Planeswalker", a: "Artifact"}
-
-    color = c[@options[:color]]
-    type = t[@options[:type]]
-    name = @options[:name].to_s
+    color = @options[:color]
+    type = @options[:type]
+    name = @options[:name].to_s #default query not nil required
     oracle = @options[:oracle]
 
     where = name.empty? ? not_lands : card_name_is(name)
