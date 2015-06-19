@@ -18,6 +18,18 @@ class Orthanc
     @deck = DeckParam.new(@options)
   end
 
+  def param_builder(str)
+    str.split(" ").each_with_object({}) do |filter, query|
+      params = filter.split(":")
+      
+      if params.size > 1
+        query[params.first.to_sym] = params.last
+      else
+        query[:name] = params.last
+      end
+    end
+  end
+
   #basic card search using CardParam params as filter
   def cards
     @options.empty? ? @card.table.none : @card.table.where(@card.params)

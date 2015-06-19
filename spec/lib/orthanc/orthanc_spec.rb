@@ -19,4 +19,20 @@ describe Orthanc do
       its(:quantity) { is_expected.to eq 2 }
     end
   end
+
+  context ".param_builder" do
+    subject { described_class.new({}).param_builder(filter_string) }
+    
+    context "with only arbitrary string" do
+      let(:filter_string) { "brimaz" }
+
+      it { is_expected.to eq({name: "brimaz"}) }
+    end
+
+    context "with a token filter" do
+      let(:filter_string) { "brimaz t:creature" }
+
+      it { is_expected.to eq({t: "creature", name: "brimaz"}) }
+    end
+  end
 end
