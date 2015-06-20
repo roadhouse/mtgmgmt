@@ -27,7 +27,7 @@
           </span>
         </div>
         <div class="collapsible-body">
-          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :c) %>
+          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards("type:creatures") %>
         </div>
       </li>
       <li>
@@ -38,7 +38,7 @@
           </span>
         </div>
         <div class="collapsible-body">
-          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :i) %>
+          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards("type:instant") %>
         </div>
       </li>
       <li>
@@ -49,7 +49,7 @@
           </span>
         </div>
         <div class="collapsible-body">
-          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards(type: :s) %>
+          <%= render 'cards_list', label: "Top cards", cards: @presenter.top_cards("type:sorcery") %>
         </div>
       </li>
     </ul>
