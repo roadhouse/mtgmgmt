@@ -11,10 +11,12 @@ class User < ActiveRecord::Base
   end
 
   def percent_from2(cards)
+    deck_list = cards.map(&:name)
     pool = collections.where(name: "game").last
       .list.each_with_object({}) { |e, o| o[e.first] = e.last["total"] }
       .flat_map {|e| Array.new(e.last) { |_| e.first  } }
 
-    (pool.size.to_f / cards.size.to_f) * 100
+    cards_from_deck_owned = deck_list.select { |p| pool.include?(p) }
+    (cards_from_deck_owned.size.to_f / deck_list.size.to_f ) * 100
   end
 end

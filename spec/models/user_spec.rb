@@ -9,6 +9,6 @@ describe User do
 
     subject { collection.user.percent_from2([card1, card2]) }
 
-    it { is_expected.to eq 300.0 }
+    it { is_expected.to eq 100.0 }
   end
 end
