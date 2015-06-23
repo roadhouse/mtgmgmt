@@ -17,15 +17,6 @@ ActiveRecord::Schema.define(version: 20150620145645) do
   enable_extension "plpgsql"
   enable_extension "citext"
 
-  create_table "card_decks", force: :cascade do |t|
-    t.integer  "deck_id"
-    t.integer  "card_id"
-    t.integer  "copies",                 default: 1
-    t.string   "part",       limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "cards", force: :cascade do |t|
     t.string   "name",             limit: 255
     t.string   "image",            limit: 255
