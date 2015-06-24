@@ -19,7 +19,7 @@ class DeckParam < BaseParam
   end
 
   def cards_on_deck
-    table.select("jsonb_object_keys(list->'main') AS name")
+    table.select("jsonb_object_keys(list->'#{@options.fetch(:part).downcase}') AS name")
       .where(season_is(@options.fetch(:season)))
   end
 

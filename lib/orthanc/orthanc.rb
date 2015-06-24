@@ -9,7 +9,8 @@ class Orthanc
   def initialize(options)
     default_options = {
       limit: 10, 
-      season: "BNG-DTK-FRF-JOU-KTK-M15-THS"
+      season: "BNG-DTK-FRF-JOU-KTK-M15-THS",
+      part: "main"
     }
 
     @options = default_options.merge param_builder(options)

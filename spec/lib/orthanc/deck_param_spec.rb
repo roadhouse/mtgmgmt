@@ -21,9 +21,9 @@ describe DeckParam do
   end
 
   context "#cards_on_deck" do
-    let(:sql_output) { %{SELECT jsonb_object_keys(list->'main') AS name FROM "decks" WHERE "decks"."season" = 'season'} }
+    let(:sql_output) { %{SELECT jsonb_object_keys(list->'sideboard') AS name FROM "decks" WHERE "decks"."season" = 'season'} }
 
-    subject { described_class.new({season: "season"}).cards_on_deck.to_sql }
+    subject { described_class.new({season: "season", part: "Sideboard"}).cards_on_deck.to_sql }
 
     it { is_expected.to eq sql_output }
   end
