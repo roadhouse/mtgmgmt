@@ -40,11 +40,11 @@ class Orthanc
   def top_cards 
     @card.table
       .with(cards_on_deck: @deck.cards_on_deck, card_quantity: @deck.card_quantity)
-      .select("cards.*", "(cast(card_quantity.quantity as float) / cast((#{@deck.total_decks.to_sql}) as float)) * 100 AS presence")
+      .select(@card.all_fields, "(cast(card_quantity.quantity as float) / cast((#{@deck.total_decks.to_sql}) as float)) * 100 AS presence")
       .joins("INNER JOIN card_quantity ON card_quantity.name = cards.name")
       .where(@card.params)
       .order("card_quantity.quantity DESC")
-      .limit(10)
+      .limit(@options.fetch(:limit))
   end
 
   #top cards played in standard, in the last season

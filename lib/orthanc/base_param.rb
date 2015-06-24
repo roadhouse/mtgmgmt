@@ -15,6 +15,10 @@ class BaseParam
     self.class.instance_variable_get(:@model)
   end
 
+  def all_fields
+    field(Arel.star)
+  end
+
   private
 
   def self.inherited(subclass)
