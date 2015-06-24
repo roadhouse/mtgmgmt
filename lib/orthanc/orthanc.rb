@@ -20,11 +20,11 @@ class Orthanc
   end
 
   def param_builder(str)
-    str.split(" ").each_with_object({}) do |filter, query|
-      params = filter.split(":")
+    str.gsub(": ", ":").split(" ").each_with_object({}) do |filter, query|
+      params = filter.split(/:\s*/)
       
       if params.size > 1
-        query[params.first.downcase.to_sym] = params.last.capitalize
+        query[params.first.downcase.to_sym] = params.last.downcase.capitalize
       else
         query[:name] = params.last
       end

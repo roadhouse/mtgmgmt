@@ -30,9 +30,15 @@ describe Orthanc do
     end
 
     context "with a token filter" do
-      let(:filter_string) { "brimaz T:creature" }
+      let(:filter_string) { "brimaz Type:creature" }
 
-      it { is_expected.to eq({t: "Creature", name: "brimaz"}) }
+      it { is_expected.to eq({type: "Creature", name: "brimaz"}) }
+    end
+
+    context "ignoring space after filter separator" do
+      let(:filter_string) { "brimaz Type: creature" }
+
+      it { is_expected.to eq({type: "Creature", name: "brimaz"}) }
     end
   end
 end
