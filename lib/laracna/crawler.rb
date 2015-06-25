@@ -22,10 +22,15 @@ class Crawler
     items.each do |page|
       p "Deck url = #{page.url}"
 
-      DeckBuilder.new(page.attributes).build
+      begin
+        DeckBuilder.new(page.attributes).build
+      rescue Laracna::Scg::DeckPage::InvalidPageError
+        p "escaping #{page.url}"
+        next
+      end
     end
   end
-  
+
   private
 
   def index_page

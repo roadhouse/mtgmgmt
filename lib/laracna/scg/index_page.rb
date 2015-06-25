@@ -6,9 +6,13 @@ module Laracna
     class IndexPage
       def initialize(page, config)
         @config = config
-        list_decks_url = @config.list_decks_url page(page.to_s)
+        @page = page
 
         @document = Nokogiri::HTML open(list_decks_url)
+      end
+
+      def list_decks_url
+        @config.list_decks_url page(@page.to_s)
       end
 
       def page(page)

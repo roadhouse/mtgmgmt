@@ -4,6 +4,8 @@ require 'open-uri'
 module Laracna
   module Scg
     class DeckPage
+      class InvalidPageError < StandardError; end
+
       attr_reader :url, :document
 
       def initialize(id, config)
@@ -40,6 +42,16 @@ module Laracna
       end
 
       def attributes
+        valid? ? deck_attributes : raise(InvalidPageError)
+      end
+
+      def valid?
+        !@document.search(".cards_col1 ul li").empty?
+      end
+
+      private
+
+      def deck_attributes
         {
           description: description,
           name: name,
@@ -48,8 +60,6 @@ module Laracna
           source: "starcitygames"
         }
       end
-
-      private
 
       def extract_card_list(nodes)
         nodes
