@@ -78,4 +78,16 @@ describe Laracna::Scg::DeckPage, :vcr do
       it { expect  { subject }.to raise_error(Laracna::Scg::DeckPage::InvalidPageError) }
     end
   end
+
+  context ".engine" do
+    subject { described_class.new(double(to_s: "deck_id"), double).engine }
+
+    it { is_expected.to be_a Nokogiri::HTML::Document }
+  end
+
+  context ".config" do
+    subject { described_class.new(double, double).config }
+    
+    it { is_expected.to be_a CrawlerConfig }
+  end
 end

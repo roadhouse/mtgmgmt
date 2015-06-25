@@ -6,33 +6,36 @@ module Laracna
     class DeckPage
       class InvalidPageError < StandardError; end
 
-      attr_reader :url, :document
-
-      def initialize(id, config)
-        @config = config
+      def initialize(id, old_config)
         @id = id
-        @url = @config.complete_deck_url + id.to_s
+      end
 
-        @document = Nokogiri::HTML open(@url)
+      def engine
+        url = config.complete_deck_url + @id.to_s
+        @document ||= Nokogiri::HTML open(url)
+      end
+
+      def config
+        CrawlerConfig.new(:scg)
       end
 
       def description
-        @document.search(".deck_played_placed").text.strip
+        engine.search(".deck_played_placed").text.strip
       end
 
       def name
-        @document.search(".deck_title").text.strip
+        engine.search(".deck_title").text.strip
       end
 
       def main
-        main = @document.search(".cards_col1 ul li").map(&:text)
-        main << @document.search(".cards_col2 ul[rel='#{@id}']").first.search("li").map(&:text)
+        main = engine.search(".cards_col1 ul li").map(&:text)
+        main << engine.search(".cards_col2 ul[rel='#{@id}']").first.search("li").map(&:text)
 
         extract_card_list main.flatten
       end
 
       def sideboard
-        sb = @document.search(".cards_col2 ul[rel='#{@id}']").last.search("li").map(&:text)
+        sb = engine.search(".cards_col2 ul[rel='#{@id}']").last.search("li").map(&:text)
 
         extract_card_list sb
       end
@@ -46,7 +49,7 @@ module Laracna
       end
 
       def valid?
-        !@document.search(".cards_col1 ul li").empty?
+        !engine.search(".cards_col1 ul li").empty?
       end
 
       private
