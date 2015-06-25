@@ -18,6 +18,7 @@ gem "rails_12factor", group: :production
 group :development do
   gem "awesome_print"
   gem "guard-rspec", require: false
+  gem "reek"
   gem "travis"
 end
 
