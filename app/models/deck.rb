@@ -1,4 +1,21 @@
 require './lib/game/mana_cost'
+
+class LoadCards
+  def self.dump(hash)
+    hash.to_json
+  end
+
+  def self.load(hash)
+    if hash
+      hash.each_with_object({}) do |value, memo|
+        memo[value.first] = value.last.flat_map {|e| Array.new(e.last.to_i) { |_| Card.find_or_initialize_by(name: e.first) } }
+      end
+    else
+      {}
+    end.with_indifferent_access
+  end
+end
+
 class Deck < ActiveRecord::Base
   paginates_per 10
 
@@ -43,3 +60,4 @@ class Deck < ActiveRecord::Base
     end
   end
 end
+
