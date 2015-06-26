@@ -65,8 +65,7 @@ module Laracna
       end
 
       def extract_card_list(nodes)
-        nodes
-          .map { |raw_part_entry| part_entry_data(raw_part_entry) }
+        nodes.map { |raw_part_entry| part_entry_data(raw_part_entry) }
       end
 
       def part_entry_data(raw_part_entry)
