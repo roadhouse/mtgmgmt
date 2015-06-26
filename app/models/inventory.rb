@@ -5,12 +5,14 @@ class Inventory < ActiveRecord::Base
 
   def collection_to_hash(collection)
     Inventory.where(list: collection).each_with_object({}) do |v,m| 
-      m[v.card.name] = {
-        "total"=> v.copies, 
-        v.card.printings.last => {
-          "normal" => v.copies
+      if v.card
+        m[v.card.name] = {
+          total: v.copies, 
+          v.card.printings.last => {
+            normal: v.copies
+          }
         }
-      }
+      end
     end
   end
 end
