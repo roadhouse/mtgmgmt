@@ -2,7 +2,11 @@ require './lib/game/mana_cost'
 
 class LoadCards
   def self.dump(hash)
-    hash.to_json
+    hash.each_with_object({}) do |value, memo|
+      memo[value.first] = value.last
+        .group_by { |i| i.name }
+        .each_with_object({}) { |v,m| m[v.first] = v.last.size }
+    end.to_json
   end
 
   def self.load(hash)
