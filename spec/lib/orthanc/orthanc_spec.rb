@@ -15,7 +15,7 @@ describe Orthanc do
 
       it { is_expected.to be_a Deck }
 
-      its(:name) { is_expected.to eq "red deck wins" }
+      its(:name) { is_expected.to eq "Jeskai Heroic" }
       its(:quantity) { is_expected.to eq 2 }
     end
   end

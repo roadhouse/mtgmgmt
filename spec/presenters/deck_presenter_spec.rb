@@ -1,9 +1,11 @@
 require 'spec_helper'
 
 describe DeckPresenter do
-  subject { described_class.new create(:deck) }
+  let(:deck) { create(:deck) }
 
-  context "#" do
+  context ".group_by_card_type" do
+    # subject { described_class.new(deck).group_by_card_type(:main) }
     
+    # it { is_expected.to be_a Hash }
   end
 end
