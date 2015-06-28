@@ -16,14 +16,6 @@ class DeckPresenter < BasePresenter
   def archeptype_deck
     DeckPresenter.new @deck.archeptype_deck
   end
-
-  def main
-    group_by_card_type(@main)
-  end
-
-  def sideboard
-    group_by_card_type(@sideboard)
-  end
   
   def percent_owned(user, part)
     user.percent_from(card_pool(part).map {|i| i[:card]}).truncate
@@ -103,9 +95,13 @@ class DeckPresenter < BasePresenter
 
   private
 
+  def pool(part)
+    { main: @deck.main, sideboard: @deck.sideboard }.fetch(part) 
+  end
+
   def card_pool(part)
-    @deck.list[part.to_s].map do |entry| 
-      { copies: entry.last, card: Card.where(name:entry.first).first }
-    end
+    pool(part)
+      .group_by { |card| card }
+      .map { |e| { copies: e.last.size, card: e.first } }
   end
 end
