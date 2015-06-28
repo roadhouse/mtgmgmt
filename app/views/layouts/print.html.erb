@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @deck.name %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="a mtg manager">
+    <meta name="author" content="Jean Uchôa">
+    <style type="text/css">
+      body, html, img, a { margin: 0; padding: 0; border: none; }
+    </style>
+  </head>
+  <body>
+    <%= yield %>
+
+    <%= render_ga %>
+  </body>
+</html>
+

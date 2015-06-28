@@ -44,6 +44,8 @@ class DecksController < ApplicationController
 
   def print
     @deck = Deck.find(params[:id])
+
+    render layout: "print"
   end
 
   private
