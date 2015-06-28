@@ -1,5 +1,3 @@
-require './lib/game/mana_cost'
-
 class LoadCards
   def self.dump(hash)
     hash.each_with_object({}) do |value, memo|
