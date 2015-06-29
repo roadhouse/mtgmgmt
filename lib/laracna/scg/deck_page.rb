@@ -11,8 +11,11 @@ module Laracna
       end
 
       def engine
-        url = config.complete_deck_url + @id.to_s
         @document ||= Nokogiri::HTML open(url)
+      end
+
+      def url
+        config.complete_deck_url + @id.to_s
       end
 
       def config
