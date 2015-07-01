@@ -1,16 +1,19 @@
 class LoadCards
   def self.dump(hash)
     hash.each_with_object({}) do |value, memo|
-      memo[value.first] = value.last
-        .group_by { |i| i.name }
-        .each_with_object({}) { |v,m| m[v.first] = v.last.size }
+      quantities = value.last.map { |c| [c.name, value.last.count {|c1| c1.name == c.name}] }
+
+      memo[value.first] = Hash[quantities]
     end.to_json
   end
 
   def self.load(hash)
     if hash
-      hash.each_with_object({}) do |value, memo|
-        memo[value.first] = value.last.flat_map {|e| Array.new(e.last.to_i) { |_| Card.find_or_initialize_by(name: e.first) } }
+      hash.each_with_object({}) do |part, list|
+        part_name = part.first
+        card_list = part.last
+
+        list[part_name] = card_list.flat_map { |e| Array.new(e.last.to_i) { |_| Card.find_or_initialize_by(name: e.first) } }
       end
     else
       {}
@@ -19,6 +22,7 @@ class LoadCards
 end
 
 class Deck < ActiveRecord::Base
+  # serialize :list, LoadCards
   paginates_per 10
 
   scope :per_name, ->(name) { where(self.arel_table[:name].matches("%#{name}%")) }
