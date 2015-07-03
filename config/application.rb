@@ -18,5 +18,6 @@ module Magic
     config.generators.request_specs = false
     config.generators.routing_specs = false
     config.generators.view_specs = false
+    config.watchable_dirs['lib'] = [:rb]
   end
 end

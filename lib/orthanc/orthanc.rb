@@ -1,7 +1,7 @@
 require 'postgres_ext'
 
-require 'deck_param'
-require 'card_param'
+require_dependency 'deck_param'
+require_dependency 'card_param'
 
 #queries using arel and extract reports
 # PARAMS: {color: [:w|:r|:c|:b|:a|:g], type: [:a|:l|:i|:s|:c|:p], name: "name", oracle: "haste"}
