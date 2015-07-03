@@ -52,7 +52,7 @@ class DeckPresenter < BasePresenter
 
   def type_chart_data
     total_by_color
-      .delete_if { |key,_| key == :colorless}
+      .delete_if { |key,_| key == :colorless }
       .map do |pair|
       {
         value: pair.last,
@@ -64,7 +64,7 @@ class DeckPresenter < BasePresenter
 
   def async_color
     total_by_color
-      .delete_if { |key,_| key == :colorless}
+      .delete_if { |key,_| key == :colorless }
       .map do |pair| { strokeColor: colors.fetch(pair.first) }
     end
   end
