@@ -6,4 +6,8 @@ class BasePresenter
   def self.map(collection)
     collection.map { |presenter| self.send(:new,presenter) } 
   end 
+
+  def h
+    ApplicationController.helpers
+  end
 end

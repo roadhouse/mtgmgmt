@@ -32,7 +32,7 @@ class DeckPresenter < BasePresenter
     @deck.cards.map(&:colors).flatten.compact.uniq.map(&:downcase).sort.map do |color|
       classes = ["mdi-image-brightness-1"] + css_colors.fetch(color.to_sym)
 
-      ApplicationController.helpers.content_tag(:i, nil, class: classes)
+      h.content_tag(:i, nil, class: classes)
     end
   end
 
@@ -47,7 +47,7 @@ class DeckPresenter < BasePresenter
   end
 
   def total_price
-    @main.inject(0) { |total,card| total + card.price.to_f }
+    @main.inject(0) { |total, card| total + card.price.to_f }
   end
 
   def type_chart_data
