@@ -62,7 +62,7 @@ module Laracna
           description: description,
           name: name,
           card_list: deck,
-          url: @url,
+          url: url,
           source: "starcitygames"
         }
       end
