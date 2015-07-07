@@ -22,6 +22,21 @@ class InventoriesController < ApplicationController
   end
 
   def create
+    # TODO: move this to serializer/whatever remove from here
+    @collection = Collection.find_or_create_by(user_id: inventory_params[:user_id], name: inventory_params[:list]) do |collection|
+    end
+
+    card = Card.find(inventory_params[:card_id].to_i)
+    list = { 
+      card.name => { 
+        total: inventory_params[:copies].to_i,
+        card.printings.last => { normal: inventory_params[:copies].to_i }
+      }
+    }
+
+    @collection.list = @collection.list.to_h.merge!(list)
+    @collection.save!
+
     @inventory = Inventory.create!(inventory_params)
 
     redirect_to :back
@@ -42,14 +57,14 @@ class InventoriesController < ApplicationController
   def want
     @inventories = current_user.inventories.where("copies < 4").where(list: "game")
   end
-  
+
   def have
     @inventories = current_user.inventories.where(list: "have")
   end
 
-    private
+  private
 
-    def inventory_params
-      params.require(:inventory).permit(:user_id, :copies, :card_id, :list)
-    end
+  def inventory_params
+    params.require(:inventory).permit(:user_id, :copies, :card_id, :list)
+  end
 end
