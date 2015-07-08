@@ -43,7 +43,21 @@ class InventoriesController < ApplicationController
   end
 
   def update
+    #TODO messy and transitional code, remove Inventory soon
     Inventory.find(params[:id]).update_attributes(inventory_params)
+    @collection = Collection.find_or_create_by(user_id: inventory_params[:user_id], name: inventory_params[:list]) do |collection|
+    end
+
+    card = Card.find(inventory_params[:card_id].to_i)
+    list = { 
+      card.name => { 
+        total: inventory_params[:copies].to_i,
+        card.printings.last => { normal: inventory_params[:copies].to_i }
+      }
+    }
+
+    @collection.list = @collection.list.to_h.merge!(list)
+    @collection.save!
 
     redirect_to :back
   end

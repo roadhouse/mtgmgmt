@@ -7,7 +7,7 @@ describe InventoriesController, type: :controller do
 
     before do
       request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
-      put :update, id: inventory.id, inventory: { card_id: card.id, user_id: 1, copies: 4 }
+      put :update, id: inventory.id, inventory: { card_id: card.id, user_id: 1, copies: 4, list: "list" }
     end
     
     context "response" do
@@ -25,32 +25,36 @@ describe InventoriesController, type: :controller do
       its(:list) { is_expected.to eq "list" }
     end
 
-    # context "collection instance" do
-      # subject { assigns(:collection) }
+    context "collection instance" do
+      let(:collection) { create(:collection, name: "list", user_id: 666) }
+      subject { assigns(:collection) }
 
-      # it { is_expected.not_to be_nil }
-      # it { is_expected.to be_a Collection }
+      it { is_expected.not_to be_nil }
+      it { is_expected.to be_a Collection }
 
-      # its(:"class.count") { is_expected.to eq 1 }
-      # its(:user_id) { is_expected.to eq 1 }
-      # its(:name) { is_expected.to eq "list" }
+      its(:"class.count") { is_expected.to eq 1 }
+      its(:user_id) { is_expected.to eq 1 }
+      its(:name) { is_expected.to eq "list" }
 
-      # context "card list" do
-        # let(:another_card) { create(:card, name: "Erase") }
-        # subject { assigns(:collection).list }
+      context "card list" do
+        let(:another_card) { create(:card, name: "Erase") }
+        subject { assigns(:collection).list }
 
-        # its(["Magma Jet", "total"]) { is_expected.to eq 4 }
-        # its(["Magma Jet", "Theros", "normal"]) { is_expected.to eq 4 }
+        its(["Magma Jet", "total"]) { is_expected.to eq 4 }
+        its(["Magma Jet", "Theros", "normal"]) { is_expected.to eq 4 }
 
-        # it "update current list" do
-          # request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
-          # post :create, inventory: { card_id: another_card.id, user_id: 1, copies: 4, list: "list" }
+        it "update current list" do
+          request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
+          put :update, id: inventory.id, inventory: { card_id: another_card.id, user_id: 1, copies: 4, list: "list" }
 
-          # expect(subject["Erase"]["total"]).to eq 4
-          # expect(subject["Erase"]["Theros"]["normal"]).to eq 4
-        # end
-      # end
-    # end
+          expect(subject["Erase"]["total"]).to eq 4
+          expect(subject["Erase"]["Theros"]["normal"]).to eq 4
+
+          expect(subject.keys).to eq ["Magma Jet", "Erase"]
+        end
+
+      end
+    end
   end
 
   context "POST on /create" do
