@@ -7,9 +7,10 @@ describe CollectionsController, type: :controller do
 
     before do
       request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
-      put :update, id: collection.id, collection: { card_id: card.id, user_id: 666, copies: 4, list: "list" }
+
+      put :update, id: collection.id, collection: { card_id: card.id, user_id: collection.user_id, copies: 4, list: collection.name }
     end
-    
+
     context "response" do
       subject { response }
 
@@ -23,11 +24,11 @@ describe CollectionsController, type: :controller do
       it { is_expected.to be_a Collection }
 
       its(:"class.count") { is_expected.to eq 1 }
-      its(:user_id) { is_expected.to eq 666 }
-      its(:name) { is_expected.to eq "list" }
+      its(:user_id) { is_expected.to eq collection.user_id }
+      its(:name) { is_expected.to eq collection.name }
 
       context "card list" do
-        let(:another_card) { create(:card, name: "Erase") }
+        let(:another_card) { create(:card, name: "Naturalize") }
         subject { assigns(:collection).list }
 
         its(["Magma Jet", "total"]) { is_expected.to eq 4 }
@@ -35,12 +36,13 @@ describe CollectionsController, type: :controller do
 
         it "update current list" do
           request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
-          put :update, id: collection.id, collection: { card_id: another_card.id, user_id: 666, copies: 4, list: "list" }
 
-          expect(subject["Erase"]["total"]).to eq 4
-          expect(subject["Erase"]["Theros"]["normal"]).to eq 4
+          put :update, id: collection.id, collection: { card_id: another_card.id, user_id: collection.user_id, copies: 1, list: collection.name }
 
-          expect(subject.keys).to eq ["Erase", "Roast", "Magma Jet"]
+          expect(subject["Naturalize"]["total"]).to eq 1
+          expect(subject["Naturalize"]["Theros"]["normal"]).to eq 1
+
+          expect(subject.keys).to eq ["Erase", "Roast", "Magma Jet", "Naturalize"]
         end
       end
     end
