@@ -30,19 +30,18 @@ module Laracna
 
         name = node.search(".deck-meta h4").text
         description = node.search(".deck-meta h5").text.strip
-        url = url
 
         {
           description: description,
           name: name,
-          card_list: deck,
+          list: deck,
           url: @url,
           source: "mtgo"
         }
       end
 
       def build_hash(nodes)
-        nodes.each_with_object({}) { |v,m| m[v.search(".card-name").text] = v.search(".card-count").text }
+        nodes.each_with_object({}) { |v,m| m[v.search(".card-name").text] = v.search(".card-count").text.to_i }
       end
 
       def deck

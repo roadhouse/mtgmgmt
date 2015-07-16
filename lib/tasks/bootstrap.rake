@@ -32,4 +32,28 @@ namespace :bootstrap do
     require './lib/laracna/crawler.rb'
     Crawler.run!(:deck_lists)
   end
+
+  desc "load decks from wizards (MTGO)"
+  task mtgo: :environment do
+    (8.months.ago.to_date..DateTime.now.to_date).each do |date|
+      formated_date = date.strftime("%Y-%m-%d")
+      url = "http://magic.wizards.com/en/articles/archive/mtgo-standings/standard-daily-#{formated_date}"
+
+      begin
+        deck_page = Laracna::Mtgo::DeckPage.new(url)
+
+        p "save decks from #{url}"
+
+        deck_page.decks.each do |deck|
+          d = Deck.new(deck)
+          season = d.cards.pluck(:set).compact.uniq.delete_if { |i| i == "fake"}.sort.join("-")
+          d.season = season
+          d.save!
+        end
+      rescue OpenURI::HTTPError
+        p "escaping #{url}"
+        next
+      end
+    end
+  end
 end
