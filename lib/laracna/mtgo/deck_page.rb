@@ -15,16 +15,30 @@ module Laracna
       end
 
       def decks_nodes
-        engine.search(".deck-list-text")
+        engine.search(".deck-group")
       end
 
       def decks
-        decks_nodes.map do |node|
-          {
-            main: build_hash(node.search(".sorted-by-overview-container .row")),
-            sideboard: build_hash(node.search(".sorted-by-overview-sideboard .row"))
-          }
-        end
+        decks_nodes.map { |node| build_deck(node) }
+      end
+
+      def build_deck(node)
+        deck = {
+          main: build_hash(node.search(".sorted-by-overview-container .row")),
+          sideboard: build_hash(node.search(".sorted-by-sideboard-container .row"))
+        }
+
+        name = node.search(".deck-meta h4").text
+        description = node.search(".deck-meta h5").text.strip
+        url = url
+
+        {
+          description: description,
+          name: name,
+          card_list: deck,
+          url: @url,
+          source: "mtgo"
+        }
       end
 
       def build_hash(nodes)
