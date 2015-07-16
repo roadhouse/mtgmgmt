@@ -24,12 +24,14 @@
           <%= link_to "welovemtg", root_path, class: "brand-logo" %>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
           <ul class="right hide-on-med-and-down">
+            <%= navigation_item "Deck Builder", new_deck_path %>
             <%= navigation_item "Card Search", cards_path %>
             <%= navigation_item "Deck Search", search_decks_path %>
             <%= navigation_item "Want List", want_inventories_path %>
             <%= navigation_item "Have List", have_inventories_path %>
           </ul>
           <ul class="side-nav" id="mobile-demo">
+            <%= navigation_item "Deck Builder", new_deck_path %>
             <%= navigation_item "Card Search", cards_path %>
             <%= navigation_item "Deck Search", search_decks_path %>
             <%= navigation_item "Want List", want_inventories_path %>

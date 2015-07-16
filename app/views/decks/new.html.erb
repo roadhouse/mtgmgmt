@@ -1,5 +1,59 @@
-<h1>New deck</h1>
+<div id="container" ng-app='demos_cfg' ng-controller='LiveSearchController' class="section">
+  <nav>
+    <div class="nav-wrapper">
+      <%= form_for(:query, method: :get, html: {class: "pure-form"}) do |f| %>
+        <div class="input-field">
+          <%= f.search_field :name, "ng-change" =>"change(text)", "ng-model" => "search" %>
+          <label for="search"><i class="mdi-action-search"></i></label>
+          <i class="mdi-navigation-close"></i>
+        </div>
+      <% end %>
+    </div>
+  </nav>
 
-<%= render 'form' %>
+  <div class="row section">
+    <div id="test1" class="col s12 l6 section">
+      <h5 class="center-align">Resultados</h5>
+      <div class="card" ng-repeat="entry in entries">
+        <div class="card-content blue-grey lighten-5">
+          <span>
+            {{entry.portuguese_name}}
+          </span>
+          <span class="secondary-content">
+            {{entry.price}}
+          </span>
+        </div>
+        <div class="card-action">
+          <form class="valign-wrapper" ng-submit="addCardToDeck($event)">
+            <div class="input-field col s4">
+              <select class="browser-default" ng-model="copies">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <input class="btn input-field col s3" name="commit" type="submit" value="add" />
+          </form>
+        </div>
+      </div>
+    </div>
 
-<%= link_to 'Back', decks_path %>
+    <div id="test2" class="col s12 l6 section">
+      <h5 class="center-align">Manacost</h5>
+      <div ng-controller="ManaChartController">
+        <canvas class="chart chart-bar" data="data" labels="labels"></canvas>
+      </div>
+      
+      <div ng-controller="ColorChartController">
+      <h5 class="center-align">Colors</h5>
+        <canvas class="chart chart-pie" data="data" labels="labels" colours="colors"></canvas>
+      </div>
+      <div ng-controller="TypeChartController">
+        <h5 class="center-align">Types</h5>
+        <canvas class="chart chart-pie" data="data" labels="labels"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

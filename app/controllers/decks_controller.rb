@@ -10,7 +10,7 @@ class DecksController < ApplicationController
   end
 
   def new
-    @deck = DeckForm.new(Deck.new)
+
   end
 
   def edit
