@@ -41,7 +41,12 @@ module Laracna
       end
 
       def build_hash(nodes)
-        nodes.each_with_object({}) { |v,m| m[v.search(".card-name").text] = v.search(".card-count").text.to_i }
+        nodes.each_with_object({}) do |node, list| 
+          card_name = node.search(".card-name").text
+          copies = node.search(".card-count").text.to_i
+          
+          list[card_name] = copies 
+        end
       end
 
       def deck
