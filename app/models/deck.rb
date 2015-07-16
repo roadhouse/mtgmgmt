@@ -4,8 +4,6 @@ class Deck < ActiveRecord::Base
 
   scope :per_name, ->(name) { where(self.arel_table[:name].matches("%#{name}%")) }
 
-  validates_uniqueness_of :url
-
   def table
     Deck.arel_table
   end

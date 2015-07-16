@@ -48,20 +48,6 @@ module Laracna
           list[card_name] = copies 
         end
       end
-
-      def deck
-        { main: main, sideboard: sideboard }
-      end
-
-      def attributes
-        {
-          description: description,
-          name: name,
-          card_list: deck,
-          url: url,
-          source: "mtgo"
-        }
-      end
     end
   end
 end
