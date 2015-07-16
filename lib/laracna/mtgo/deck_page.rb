@@ -2,40 +2,33 @@ require 'nokogiri'
 require 'open-uri'
 
 module Laracna
-  module Mtgdecks
+  module Mtgo
     class DeckPage
-      attr_reader :url, :document
+      class InvalidPageError < StandardError; end
 
-      def initialize(id)
-        @url = PageUrl.deck_url(id)
-
-        @document = Nokogiri::HTML(open(@url))
-
-        remove_unused_elements
+      def initialize(url)
+        @url = url
       end
 
-      def description
-        @document.search(".deckHeader div strong").text
+      def engine
+        @document ||= Nokogiri::HTML open(@url)
       end
 
-      def name
-        @document.search(".deckHeader .breadcrumb strong").text
+      def decks_nodes
+        engine.search(".deck-list-text")
       end
 
-      def date
-        Date.parse @document.search(".rightBlock ul li")[4].text
+      def decks
+        decks_nodes.map do |node|
+          {
+            main: build_hash(node.search(".sorted-by-overview-container .row")),
+            sideboard: build_hash(node.search(".sorted-by-overview-sideboard .row"))
+          }
+        end
       end
 
-      def main
-        main = @document.search(".md .cardItem")
-
-        extract_card_list main
-      end
-
-      def sideboard
-        sb = @document.search(".sb .cardItem")
-
-        extract_card_list sb
+      def build_hash(nodes)
+        nodes.each_with_object({}) { |v,m| m[v.search(".card-name").text] = v.search(".card-count").text }
       end
 
       def deck
@@ -46,36 +39,10 @@ module Laracna
         {
           description: description,
           name: name,
-          date: date,
           card_list: deck,
-          url: @url
+          url: url,
+          source: "mtgo"
         }
-      end
-
-      private
-
-      def remove_unused_elements
-        @document.search("h3").remove
-        @document.search(".name").remove
-      end
-
-      def extract_card_list(nodes)
-        nodes.map(&:text).map { |i| fix_typos i }
-          .map { |raw_part_entry| part_entry_data(raw_part_entry) }
-      end
-
-      def part_entry_data(raw_part_entry)
-        match_data = /(\d+)(.*)/.match(raw_part_entry)
-
-        {copies: match_data[1].strip, card: match_data[2].strip }
-      end
-
-      def fix_typos(string)
-        string
-          .strip
-          .gsub(/\t/," ")
-          .gsub(/''/,"'") 
-          .gsub("Unravel the Aether", "Unravel the Æther")
       end
     end
   end
