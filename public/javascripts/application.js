@@ -7,14 +7,16 @@
     .controller('ColorChartController', ColorChartController)
     .controller('TypeChartController', TypeChartController)
     .factory('LiveSearchFactory', LiveSearchFactory)
-    .factory('DeckBuilderFactory', DeckBuilderFactory);
+    .factory('DeckBuilderFactory', DeckBuilderFactory)
+    .factory('CollectionFactory', CollectionFactory);
 
-  LiveSearchController.$inject = ['$scope', 'LiveSearchFactory', 'DeckBuilderFactory'];
+  LiveSearchController.$inject = ['$scope', 'LiveSearchFactory', 'DeckBuilderFactory', 'CollectionFactory'];
   ManaChartController.$inject = ['$scope'];
   ColorChartController.$inject = ['$scope'];
   TypeChartController.$inject = ['$scope'];
   LiveSearchFactory.$inject = ['$http'];
   DeckBuilderFactory.$inject = ['$http'];
+  CollectionFactory.$inject = ['$http'];
 
   function ManaChartController($scope) {
     $scope.$on('updateChart', function(event, data){
@@ -38,12 +40,28 @@
     })
   };
 
-  function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory) {
+  function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, CollectionFactory) {
     var deckEntry = {};
 
     $scope.addCardToDeck = addCardToDeck;
+    $scope.addCardToCollection = addCardToCollection;
     $scope.change = change; 
 
+    function addCardToCollection() {
+      var cardDeck = this;
+
+      var collectionEntry = {
+        card_id: cardDeck.id
+        , user_id: cardDeck.user_id
+        , copies: cardDeck.copies
+        , list: cardDeck.list
+      };
+
+      CollectionFactory
+        .addCardToCollection({"collection": collectionEntry})
+        .then(function(result) { console.log(result.data); });
+    };
+    
     function addCardToDeck() {
       var cardDeck = this;
 
@@ -78,6 +96,14 @@
     return {
       addCardToDeck: function(params) {
         return $http.post('/decks.json', params);
+      }
+    };
+  };
+  
+  function CollectionFactory($http) {
+    return {
+      addCardToCollection: function(params) {
+        return $http.post('/collections.json', params);
       }
     };
   };
