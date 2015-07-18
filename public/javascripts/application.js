@@ -51,8 +51,8 @@
       var cardDeck = this;
 
       var collectionEntry = {
-        card_id: cardDeck.id
-        , user_id: cardDeck.user_id
+        card_id: cardDeck.entry.id
+        , user_id: cardDeck.userId
         , copies: cardDeck.copies
         , list: cardDeck.list
       };
