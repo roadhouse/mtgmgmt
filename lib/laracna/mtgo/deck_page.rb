@@ -30,12 +30,13 @@ module Laracna
 
         name = node.search(".deck-meta h4").text
         description = node.search(".deck-meta h5").text.strip
+        id = node.attr("subid")
 
         {
           description: description,
           name: name,
           list: deck,
-          url: @url,
+          url: @url + "#" + id,
           source: "mtgo"
         }
       end
