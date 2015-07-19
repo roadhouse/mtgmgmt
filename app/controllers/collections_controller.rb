@@ -1,7 +1,6 @@
 class CollectionsController < ApplicationController
   def create
-    @collection = Collection.find_or_create_by(user_id: collection_params[:user_id], name: collection_params[:list]) do |collection|
-    end
+    @collection = Collection.find_or_create_by(user_id: current_user.id, name: collection_params[:list])
 
     card = Card.find(collection_params[:card_id].to_i)
     list = { 

@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe CollectionsController, type: :controller do
+  let(:logged_user) { build(:user) }
+  before { allow(controller).to receive(:current_user) { logged_user } } 
   context "PUT on /update" do
     let!(:card) { create(:card) }
     let(:collection) { create(:collection, name: "list", user_id: 666) }
@@ -69,7 +71,7 @@ describe CollectionsController, type: :controller do
       it { is_expected.to be_a Collection }
 
       its(:"class.count") { is_expected.to eq 1 }
-      its(:user_id) { is_expected.to eq 1 }
+      its(:user_id) { is_expected.to eq logged_user.id }
       its(:name) { is_expected.to eq "list" }
 
       context "card list" do

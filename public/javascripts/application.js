@@ -52,7 +52,6 @@
 
       var collectionEntry = {
         card_id: cardDeck.entry.id
-        , user_id: cardDeck.userId
         , copies: cardDeck.copies
         , list: cardDeck.list
       };
