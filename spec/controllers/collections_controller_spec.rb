@@ -31,7 +31,7 @@ describe CollectionsController, type: :controller do
       its(:user_id) { is_expected.to eq logged_user.id }
       its(:name) { is_expected.to eq collection.name }
 
-      context "card list" do
+      context "list attribute" do
         let(:another_card) { create(:card, name: "Naturalize") }
         subject { assigns(:collection).list }
 
@@ -57,7 +57,7 @@ describe CollectionsController, type: :controller do
 
     before do
       request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
-      post :create, collection: { card_id: card.id, user_id: 1, copies: 4, list: "list" }
+      post :create, collection: { card_id: card.id, user_id: 1, copies: 4, list: "another_list" }
     end
 
     context "response" do
@@ -72,9 +72,9 @@ describe CollectionsController, type: :controller do
       it { is_expected.not_to be_nil }
       it { is_expected.to be_a Collection }
 
-      its(:"class.count") { is_expected.to eq 1 }
+      its(:"class.count") { is_expected.to eq 2 }
       its(:user_id) { is_expected.to eq logged_user.id }
-      its(:name) { is_expected.to eq "list" }
+      its(:name) { is_expected.to eq "another_list" }
 
       context "card list" do
         let(:another_card) { create(:card, name: "Erase") }
