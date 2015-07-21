@@ -1,16 +1,18 @@
 require 'spec_helper'
 
 describe CollectionsController, type: :controller do
-  let(:logged_user) { build(:user) }
+  let(:collection) { create(:collection) }
+  let(:logged_user) { collection.user }
+
   before { allow(controller).to receive(:current_user) { logged_user } } 
+
   context "PUT on /update" do
     let!(:card) { create(:card) }
-    let(:collection) { create(:collection, name: "list", user_id: 666) }
 
     before do
       request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
 
-      put :update, id: collection.id, collection: { card_id: card.id, user_id: collection.user_id, copies: 4, list: collection.name }
+      put :update, id: collection.id, collection: { card_id: card.id, copies: 4, list: collection.name }
     end
 
     context "response" do
@@ -26,7 +28,7 @@ describe CollectionsController, type: :controller do
       it { is_expected.to be_a Collection }
 
       its(:"class.count") { is_expected.to eq 1 }
-      its(:user_id) { is_expected.to eq collection.user_id }
+      its(:user_id) { is_expected.to eq logged_user.id }
       its(:name) { is_expected.to eq collection.name }
 
       context "card list" do
@@ -39,7 +41,7 @@ describe CollectionsController, type: :controller do
         it "update current list" do
           request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
 
-          put :update, id: collection.id, collection: { card_id: another_card.id, user_id: collection.user_id, copies: 1, list: collection.name }
+          put :update, id: collection.id, collection: { card_id: another_card.id, copies: 1, list: collection.name }
 
           expect(subject["Naturalize"]["total"]).to eq 1
           expect(subject["Naturalize"]["Theros"]["normal"]).to eq 1
