@@ -7,7 +7,14 @@ namespace :bootstrap do
     system exec_restore
   end
 
-  desc "load card data ftom mtgapi.com"
+  desc "load card data from specific set from mtgapi.com"
+  task :load_set, [:set] => [:environment] do |t, args|
+    p "t-> #{t}"
+    p "args -> #{args}"
+      MtgApi.all!(args[:set])
+  end
+
+  desc "load card data from mtgapi.com"
   task load_cards: :environment do
     %w(THS BNG JOU M15 KTK FRF DTK).each do |set|
       require './lib/laracna/crawler.rb'
