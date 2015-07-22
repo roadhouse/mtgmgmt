@@ -24,7 +24,7 @@ class CardCrawler
       name: data['name'], 
       original_text: data['originalText'],
       original_type: data["originalType"],
-      portuguese_name: data["foreignNames"].find {|i| i["language"] == "Portuguese (Brazil)"}.to_h.fetch("name"){data["name"]},
+      portuguese_name: data["foreignNames"].to_a.find {|i| i["language"] == "Portuguese (Brazil)"}.to_h.fetch("name"){data["name"]},
       rarity: data['rarity'],
       set: data['set'],
       supertypes: data["supertypes"],
