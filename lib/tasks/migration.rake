@@ -40,4 +40,20 @@ namespace :migration do
       Card.where(id: Card.where(name: name).pluck(:id)[1..-1]).delete_all
     end
   end
+
+  desc 'migrate deck list in old format to new format'
+  task update_deck: :environment do
+    query = Deck.where(unique_cards: [])
+    total_decks = query.count
+    label = "#{total_decks} decks migrados"
+
+    Benchmark.bm(label.size) do |x|
+      x.report(label) do
+        query.find_each do |deck|
+          deck.unique_cards = deck.list['main'].keys.sort
+          deck.save!
+        end
+      end
+    end
+  end
 end
