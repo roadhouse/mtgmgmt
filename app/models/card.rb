@@ -2,7 +2,9 @@ class Card < ActiveRecord::Base
   scope :per_name, ->(name) { where(["name ilike ?", "%#{name}%"]) }
   scope :per_type, ->(type) { where(["ctype ilike ?", "%#{type}%"]) }
 
-  validates_presence_of :name
+  validates :name, 
+    uniqueness: true, 
+    presence: true
 
   has_many :inventories
   has_many :users, through: :inventories

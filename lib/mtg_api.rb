@@ -11,7 +11,8 @@ class MtgApi
   end
 
   def persist!
-    cards.flatten.map(&:save!)
+    #TODO if the card is a reprint, update the card data
+    cards.flatten.map(&:save)
   end
 
   def cards
