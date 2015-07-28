@@ -40,7 +40,7 @@ namespace :bootstrap do
 
   desc "load decks from wizards (MTGO)"
   task mtgo: :environment do
-    (8.months.ago.to_date..Date.new(2015,06,24)).to_a.reverse.each do |date|
+    (8.months.ago.to_date..DateTime.now.to_date).to_a.reverse.each do |date|
       formated_date = date.strftime("%Y-%m-%d")
       url = "http://magic.wizards.com/en/articles/archive/mtgo-standings/standard-daily-#{formated_date}"
 
