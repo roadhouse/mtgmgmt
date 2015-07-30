@@ -24,6 +24,9 @@
           </span>
         </div>
         <div class="card-action">
+            {{entry.original_text}}
+        </div>
+        <div class="card-action">
           <form class="valign-wrapper" ng-submit="addCardToDeck($event)">
             <div class="input-field col s4">
               <select class="browser-default" ng-model="copies">
