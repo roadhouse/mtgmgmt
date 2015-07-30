@@ -1,9 +1,19 @@
 class DeckStats
   TYPES =  {land: /Land/, instant: /Instant/, sorcery: /Sorcery/, enchantment: /Enchantment/, planeswalker: /Planeswalker/, creature: /Creature/, artifact: /Artifact/}
+  COLORS = { red: "{R}", blue: "{U}", green: "{G}", black: "{B}", white: "{W}"}
 
   # [Card, Card]
   def initialize(deck)
     @deck = deck
+  end
+
+  def colored_cost(color)
+    @deck
+      .map(&:mana_cost).join
+      .gsub(non_color, "")
+      .split(any_color)
+      .delete_if { |entry| entry.empty? }
+      .count { |mana| mana == COLORS.fetch(color) }
   end
 
   def lands
@@ -49,5 +59,15 @@ class DeckStats
     end.sort
     
     Hash[data]
+  end
+
+  private
+  
+  def any_color
+    Regexp.new("(#{COLORS.values.join("|")})")
+  end
+
+  def non_color
+    /({\d}|{X})/
   end
 end
