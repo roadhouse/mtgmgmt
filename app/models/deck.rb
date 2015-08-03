@@ -34,6 +34,28 @@ class Deck < ActiveRecord::Base
     end
   end
 
+  def only_cards_list(part = :main)
+    list[part.to_s].keys
+      .sort
+      .join("::")
+  end
+
+  def generate_season_tag
+    cards.pluck(:set)
+      .compact
+      .uniq
+      .delete_if { |i| i == "fake"}
+      .sort
+      .join("-")
+  end
+
+  def update_meta_data
+   update({
+     season => generate_season_tag,
+     list["main_cards"] => only_cards_list
+   })
+  end
+
   private
 
   def for_game(part)
