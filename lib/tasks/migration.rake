@@ -41,18 +41,15 @@ namespace :migration do
     end
   end
 
-  desc 'migrate deck list in old format to new format'
-  task update_deck: :environment do
-    query = Deck.where(unique_cards: [])
+  desc 'update deck meta data'
+  task update_meta_data: :environment do
+    query = Deck.all
     total_decks = query.count
     label = "#{total_decks} decks migrados"
 
     Benchmark.bm(label.size) do |x|
       x.report(label) do
-        query.find_each do |deck|
-          deck.unique_cards = deck.list['main'].keys.sort
-          deck.save!
-        end
+        query.find_each { |deck| deck.update_meta_data }
       end
     end
   end

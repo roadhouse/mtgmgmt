@@ -50,10 +50,10 @@ class Deck < ActiveRecord::Base
   end
 
   def update_meta_data
-   update({
-     season => generate_season_tag,
-     list["main_cards"] => only_cards_list
-   })
+   update(
+     season: generate_season_tag,
+     list: list.merge(main_cards:only_cards_list)
+   )
   end
 
   private
