@@ -42,15 +42,24 @@ namespace :migration do
   end
 
   desc 'update deck meta data'
-  task update_meta_data: :environment do
+  task update_metadata: :environment do
     query = Deck.all
-    total_decks = query.count
-    label = "#{total_decks} decks migrados"
 
-    Benchmark.bm(label.size) do |x|
-      x.report(label) do
-        query.find_each { |deck| deck.update_meta_data }
-      end
+    progress = ProgressBar.create(format: '%a %bᗧ%i %p%% %t',
+                                  progress_mark: ' ',
+                                  remainder_mark: '･',
+                                  total: query.count)
+
+    query.find_each do |deck|
+      deck.update_meta_data
+      progress.increment
     end
+
+
+    # Benchmark.bm(label.size) do |x|
+      # x.report(label) do
+        # query.find_each { |deck| deck.update_meta_data }
+      # end
+    # end
   end
 end

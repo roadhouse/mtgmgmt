@@ -356,6 +356,7 @@ DEPENDENCIES
   responders
   rspec-its
   rspec-rails
+  ruby-progressbar
   travis
   unicorn
   vcr
