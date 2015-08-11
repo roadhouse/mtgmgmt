@@ -1,6 +1,8 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :inventory do
+    user
+    card
+    list "game"
+    copies 1
   end
 end

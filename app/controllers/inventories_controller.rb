@@ -22,7 +22,15 @@ class InventoriesController < ApplicationController
   end
 
   def create
-    @inventory = Inventory.create!(inventory_params)
+    scope = {
+      card_id: inventory_params[:card_id],
+      user_id: current_user.id,
+      list: inventory_params[:list],
+    }
+
+    @inventory = Inventory.find_or_create_by(scope)
+    @inventory.copies = inventory_params[:copies]
+    @inventory.save!
 
     redirect_to :back
   end
@@ -50,6 +58,6 @@ class InventoriesController < ApplicationController
   private
 
   def inventory_params
-    params.require(:inventory).permit(:user_id, :copies, :card_id, :list)
+    params.require(:inventory).permit(:copies, :card_id, :list)
   end
 end

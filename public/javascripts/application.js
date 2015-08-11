@@ -52,12 +52,12 @@
 
       var collectionEntry = {
         card_id: cardDeck.entry.id
-        , copies: cardDeck.copies
+        , copies: parseInt(cardDeck.copies)
         , list: cardDeck.list
       };
 
       CollectionFactory
-        .addCardToCollection({"collection": collectionEntry})
+        .addCardToCollection({"inventory": collectionEntry})
         .then(function(result) { console.log(result.data); });
     };
     
@@ -102,7 +102,7 @@
   function CollectionFactory($http) {
     return {
       addCardToCollection: function(params) {
-        return $http.post('/collections.json', params);
+        return $http.post('/inventories.json', params);
       }
     };
   };
