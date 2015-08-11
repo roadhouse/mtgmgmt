@@ -51,9 +51,8 @@ namespace :bootstrap do
 
         deck_page.decks.each do |deck|
           d = Deck.new(deck)
-          season = d.cards.pluck(:set).compact.uniq.delete_if { |i| i == "fake"}.sort.join("-")
-          d.season = season
           d.save!
+          d.update_meta_data
         end
       rescue OpenURI::HTTPError
         p "escaping #{url}"
