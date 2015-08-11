@@ -9,7 +9,7 @@ class Orthanc
   def initialize(options)
     default_options = {
       limit: 10, 
-      season: "BNG-DTK-FRF-JOU-KTK-M15-THS",
+      season: "BNG-DTK-FRF-JOU-KTK-M15-ORI-THS",
       part: "main"
     }
 

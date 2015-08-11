@@ -11,6 +11,7 @@ class DeckBuilder
     @deck.tap do |deck|
       populate
       deck.save!
+      deck.update_meta_data
     end
   end
 
