@@ -58,7 +58,10 @@
 
       CollectionFactory
         .addCardToCollection({"inventory": collectionEntry})
-        .then(function(result) { console.log(result.data); });
+        .then(function(result) { 
+          Materialize.toast('Adicionado a coleção!', 1500)
+          console.log(result.data); 
+        });
     };
     
     function addCardToDeck() {
