@@ -20,14 +20,20 @@ class Orthanc
   end
 
   def param_builder(str)
-    str.gsub(": ", ":").split(" ").each_with_object({}) do |filter, query|
+    params = str.gsub(": ", ":").split(" ").each_with_object({}) do |filter, query|
       params = filter.split(/:\s*/)
       
       if params.size > 1
         query[params.first.downcase.to_sym] = params.last.downcase.capitalize
       else
-        query[:name] = params.last
+        query[:name] = query[:name].to_a << params.last
       end
+    end 
+
+    if params[:name]
+      params.tap { |query| query[:name] = query[:name].join(' ') }
+    else
+      params
     end
   end
 

@@ -29,6 +29,12 @@ describe Orthanc do
       it { is_expected.to eq({name: "brimaz"}) }
     end
 
+    context "with only arbitrary string with spaces" do
+      let(:filter_string) { "elmo dos de" }
+
+      it { is_expected.to eq({name: "elmo dos de"}) }
+    end
+
     context "with a token filter" do
       let(:filter_string) { "brimaz Type:creature" }
 
