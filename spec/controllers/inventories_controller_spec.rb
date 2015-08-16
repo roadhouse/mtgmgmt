@@ -9,14 +9,12 @@ describe InventoriesController, type: :controller do
 
   context "POST on /create" do
     before do
-      request.env["HTTP_REFERER"] = 'http://test.hostprevious_page'
       post :create, inventory: { card_id: card.id, copies: 4, list: inventory.list }
     end
-
     context "response" do
       subject { response }
 
-      it { is_expected.to redirect_to(:back) }
+      it { is_expected.to be_success }
     end
 
     context "inventory instance" do

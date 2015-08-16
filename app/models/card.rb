@@ -9,6 +9,10 @@ class Card < ActiveRecord::Base
   has_many :inventories
   has_many :users, through: :inventories
   has_many :prices
+
+  def portuguese_name
+    super or name
+  end
   
   def self.find_by_name!(name)
     per_name(name).first or Card.create!(name: name, set: :fake)

@@ -59,8 +59,7 @@
       CollectionFactory
         .addCardToCollection({"inventory": collectionEntry})
         .then(function(result) { 
-          Materialize.toast('Adicionado a coleção!', 1500)
-          console.log(result.data); 
+          Materialize.toast('Adicionada a coleção '+result.data.inventory.list, 1500)
         });
     };
     
@@ -116,9 +115,7 @@ $(document).ready(function(){
 
   $('select').material_select();
 
-  $('.collapsible').collapsible({
-    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-  });
+  $('.collapsible').collapsible({ accordion: false });
 
   $(".collapsible").on("click.collapsible", function(e) {
     var down = "mdi-hardware-keyboard-arrow-down";

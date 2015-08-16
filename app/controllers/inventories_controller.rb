@@ -31,8 +31,6 @@ class InventoriesController < ApplicationController
     @inventory = Inventory.find_or_create_by(scope)
     @inventory.copies = inventory_params[:copies]
     @inventory.save!
-
-    redirect_to :back
   end
 
   def update
