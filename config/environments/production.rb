@@ -5,5 +5,6 @@ Magic::Application.configure do
   config.consider_all_requests_local = false
   config.eager_load = true
   config.i18n.fallbacks = true
-  config.serve_static_assets = false
+  config.log_level = :info
+  config.serve_static_files = false
 end
