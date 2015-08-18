@@ -2,7 +2,7 @@
   <% @inventories.each do |card| %>
     <li>
       <div class="collapsible-header">
-        <span><%= card.card.name %></span>
+        <span><%= card.card.portuguese_name %></span>
         <span class="secondary-content">
           <%= number_to_currency card.card.on_demand_price %>
         </span>
