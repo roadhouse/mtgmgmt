@@ -43,17 +43,16 @@
       </div>
     </div>
 
-    <div id="test2" class="col s12 l6 section">
-      <h5 class="center-align">Manacost</h5>
-      <div ng-controller="ManaChartController">
+      <div class="col s12 l2 section" ng-controller="ManaChartController">
+        <h5 class="center-align">Manacost</h5>
         <canvas class="chart chart-bar" data="data" labels="labels"></canvas>
       </div>
       
-      <div ng-controller="ColorChartController">
+      <div class="col s12 l2 section" ng-controller="ColorChartController">
       <h5 class="center-align">Colors</h5>
         <canvas class="chart chart-pie" data="data" labels="labels" colours="colors"></canvas>
       </div>
-      <div ng-controller="TypeChartController">
+      <div class="col s12 l2 section" ng-controller="TypeChartController">
         <h5 class="center-align">Types</h5>
         <canvas class="chart chart-pie" data="data" labels="labels"></canvas>
       </div>
