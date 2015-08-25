@@ -2,10 +2,12 @@
   <%= f.hidden_field :card_id %>
   <%= f.hidden_field :user_id %>
     <div class="input-field col s4">
-      <%= f.select :copies, 0..4, {}, class: "browser-default" %>
+      <%= f.select :copies, 0..4 %>
+      <%= f.label :copies, "Cópias" %>
     </div>
     <div class="input-field col s5">
-      <%= f.select :list, %w(game want have), {}, class: "browser-default" %>
+      <%= f.select :list, %w(game want have) %>
+      <%= f.label :list, "Lista" %>
     </div>
     <%= f.submit "add", class: "btn input-field col s3"%>
 <% end %>
