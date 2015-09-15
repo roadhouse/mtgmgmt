@@ -82,7 +82,8 @@ module Laracna
           .strip
           .gsub(/\t/," ")
           .gsub(/''/,"'") 
-          .gsub("AE", "Æ")
+          .gsub("AEther", "Æther")
+          .gsub("Aether", "Æther")
       end
     end
   end

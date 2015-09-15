@@ -6,7 +6,7 @@ require "./lib/laracna/crawler_config"
 
 describe Laracna::Scg::DeckPage, :vcr do
   context "with a valid deck page" do
-    let(:deck_id) { 63963 }
+    let(:deck_id) { 91127 }
 
     let(:attributes_list) do
       [:card_list, :description, :name, :url, :source]
@@ -14,41 +14,47 @@ describe Laracna::Scg::DeckPage, :vcr do
 
     let(:main) do
       [
-        {:copies=>"4", :card=>"Experiment One"},
-        {:copies=>"1", :card=>"Figure of Destiny"},
-        {:copies=>"2", :card=>"Flinthoof Boar"},
-        {:copies=>"4", :card=>"Ghor-Clan Rampager"},
-        {:copies=>"4", :card=>"Kird Ape"},
-        {:copies=>"4", :card=>"Loam Lion"},
-        {:copies=>"4", :card=>"Tarmogoyf"},
-        {:copies=>"4", :card=>"Wild Nacatl"},
-        {:copies=>"1", :card=>"Forest"},
-        {:copies=>"1", :card=>"Mountain"},
-        {:copies=>"4", :card=>"Arid Mesa"},
-        {:copies=>"2", :card=>"Misty Rainforest"},
-        {:copies=>"1", :card=>"Sacred Foundry"},
-        {:copies=>"2", :card=>"Scalding Tarn"},
-        {:copies=>"3", :card=>"Stomping Ground"},
-        {:copies=>"2", :card=>"Temple Garden"},
-        {:copies=>"4", :card=>"Verdant Catacombs"},
-        {:copies=>"1", :card=>"Chained to the Rocks"},
-        {:copies=>"4", :card=>"Lightning Bolt"},
-        {:copies=>"1", :card=>"Lightning Helix"},
-        {:copies=>"3", :card=>"Mutagenic Growth"},
-        {:copies=>"4", :card=>"Path to Exile"}
+        {:copies=>"4", :card=>"Den Protector"},
+        {:copies=>"4", :card=>"Siege Rhino"},
+        {:copies=>"4", :card=>"Courser of Kruphix"},
+        {:copies=>"1", :card=>"Dragonlord Dromoka"},
+        {:copies=>"1", :card=>"Tasigur, the Golden Fang"},
+        {:copies=>"2", :card=>"Elspeth, Sun's Champion"},
+        {:copies=>"1", :card=>"Ugin, the Spirit Dragon"},
+        {:copies=>"2", :card=>"Forest"},
+        {:copies=>"2", :card=>"Plains"},
+        {:copies=>"2", :card=>"Caves of Koilos"},
+        {:copies=>"4", :card=>"Llanowar Wastes"},
+        {:copies=>"4", :card=>"Sandsteppe Citadel"},
+        {:copies=>"4", :card=>"Temple of Malady"},
+        {:copies=>"3", :card=>"Temple of Silence"},
+        {:copies=>"4", :card=>"Windswept Heath"},
+        {:copies=>"1", :card=>"Urborg, Tomb of Yawgmoth"},
+        {:copies=>"4", :card=>"Abzan Charm"},
+        {:copies=>"1", :card=>"Bile Blight"},
+        {:copies=>"2", :card=>"Dromoka's Command"},
+        {:copies=>"3", :card=>"Hero's Downfall"},
+        {:copies=>"1", :card=>"Murderous Cut"},
+        {:copies=>"1", :card=>"Silence the Believers"},
+        {:copies=>"1", :card=>"Ultimate Price"},
+        {:copies=>"1", :card=>"Languish"},
+        {:copies=>"4", :card=>"Thoughtseize"}
       ]
     end
 
     let(:sideboard) do
       [
-        {:copies=>"1", :card=>"Grafdigger's Cage"},
-        {:copies=>"2", :card=>"Spellskite"},
-        {:copies=>"2", :card=>"Ranger of Eos"},
-        {:copies=>"2", :card=>"Chained to the Rocks"},
-        {:copies=>"2", :card=>"Stony Silence"},
-        {:copies=>"2", :card=>"Combust"},
-        {:copies=>"1", :card=>"Destructive Revelry"},
-        {:copies=>"3", :card=>"Pyroclasm"}
+        {:copies=>"3", :card=>"Fleecemane Lion"},
+        {:copies=>"1", :card=>"Gaea's Revenge"},
+        {:copies=>"1", :card=>"Evolutionary Leap"},
+        {:copies=>"1", :card=>"Ultimate Price"},
+        {:copies=>"1", :card=>"Unravel the Æther"},
+        {:copies=>"1", :card=>"Utter End"},
+        {:copies=>"1", :card=>"Dragonlord Dromoka"},
+        {:copies=>"1", :card=>"Whip of Erebos"},
+        {:copies=>"2", :card=>"Duress"},
+        {:copies=>"1", :card=>"Languish"},
+        {:copies=>"2", :card=>"Tragic Arrogance"}
       ]
     end
 
@@ -56,8 +62,8 @@ describe Laracna::Scg::DeckPage, :vcr do
 
     subject { Laracna::Scg::DeckPage.new(deck_id, config) }
 
-    its(:description) { is_expected.to eql "245th Place at Pro Tour on 2/23/2014" }
-    its(:name) { is_expected.to be_eql "Zoo" }
+    its(:description) { is_expected.to eql "1st Place at StarCityGames.com Invitational Qualifier on 9/5/2015" }
+    its(:name) { is_expected.to be_eql "Abzan Control" }
     its(:main) { is_expected.to eql main }
     its(:sideboard) { is_expected.to eql sideboard }
 
