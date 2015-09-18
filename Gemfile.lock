@@ -144,7 +144,6 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.9.3)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (2.10.0)
@@ -195,6 +194,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    puma (2.13.4)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -233,7 +233,6 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
-    raindrops (0.13.0)
     rake (10.4.2)
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
@@ -305,10 +304,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
-    unicorn (4.9.0)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
     unparser (0.2.4)
       abstract_type (~> 0.0.7)
       adamantium (~> 0.2.0)
@@ -349,6 +344,7 @@ DEPENDENCIES
   pry
   pry-byebug
   pry-rails
+  puma
   rabl
   rails
   rails_12factor
@@ -358,7 +354,6 @@ DEPENDENCIES
   rspec-rails
   ruby-progressbar
   travis
-  unicorn
   vcr
   virtus
   webmock

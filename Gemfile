@@ -12,7 +12,7 @@ gem "rails"
 gem "ruby-progressbar"
 gem "responders"
 gem "virtus"
-gem "unicorn"
+gem "puma"
 
 gem "rails_12factor", group: :production
 
