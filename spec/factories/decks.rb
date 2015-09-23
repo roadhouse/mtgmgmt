@@ -32,7 +32,8 @@ def deck_list
       "Lightning Strike" => 1,
       "Ordeal of Heliod" => 3,
       "Seeker of the Way" => 3
-    }
+    },
+    "main_cards" => "arbitrary_string"
   }
 end
 

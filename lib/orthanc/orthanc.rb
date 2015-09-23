@@ -57,9 +57,9 @@ class Orthanc
   #top cards played in standard, in the last season
   def top_decks
     @deck.table
-      .select(@deck.name, @deck.name_quantity)
+      .select("name, COUNT(decks.list->'main_cards') AS quantity")
       .group(@deck.name)
-      .order(Arel::Nodes::Descending.new(@deck.name_count))
+      .order("COUNT(decks.list->'main_cards') DESC")
       .where(@deck.params)
       .limit(@options.fetch(:limit))
   end
