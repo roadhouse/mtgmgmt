@@ -84,6 +84,7 @@ module Laracna
           .gsub(/''/,"'") 
           .gsub("AEther", "Æther")
           .gsub("Aether", "Æther")
+          .gsub("Hero Of Iroas", "Hero of Iroas")
       end
     end
   end

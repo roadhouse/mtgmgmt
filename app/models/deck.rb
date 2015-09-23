@@ -60,6 +60,10 @@ class Deck < ActiveRecord::Base
 
   def for_game(part)
     list[part.to_s].to_h.flat_map do |entry| 
+      entry[0] = entry.first
+                      .gsub("AEther", "Æther")
+                      .gsub("Aether", "Æther")
+                      .gsub("Hero Of Iroas", "Hero of Iroas")
       card = Card.find_by_name(entry.first)
       Array.new(entry.last.to_i) { |_| card }
     end
