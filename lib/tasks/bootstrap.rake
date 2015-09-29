@@ -14,7 +14,7 @@ namespace :bootstrap do
 
   desc "load card data from mtgapi.com"
   task load_cards: :environment do
-    %w(THS BNG JOU M15 KTK FRF DTK).each do |set|
+    %w(BFZ).each do |set|
       require './lib/laracna/crawler.rb'
       MtgApi.all!(set)
     end
