@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Orthanc do
-  before(:all) { create_list(:deck, 2, season: "BFZ-DTK-FRF-KTK-M15-ORI") }
+  before(:all) { create_list(:deck, 2, season: "BFZ-DTK-FRF-KTK-ORI") }
 
   let(:orthanc) { described_class.new("") }
 
