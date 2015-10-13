@@ -2,9 +2,12 @@
   <% cards.each do |card| %>
     <li>
       <div class="collapsible-header">
+        <span class="mtg  <%= [Card::ICON_NAME[card.set.to_sym],card.rarity.downcase].join(" ") %>"></span>
         <span><%= card.name %></span>
+          
         <span class="secondary-content">
-          <%= number_to_currency card.on_demand_price %>
+        <span><%= number_to_currency card.on_demand_price %></span>
+        <!-- <span class="mtg  <%= [Card::ICON_NAME[card.set.to_sym],card.rarity.downcase].join(" ") %>"></span> -->
         </span>
       </div>
       <div class="collapsible-body">

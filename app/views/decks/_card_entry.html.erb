@@ -5,6 +5,7 @@
       <li>
       <div class="collapsible-header">
         <%= "#{card[:copies]} #{card[:card].name}" %>
+        <span class="mtg  <%= [Card::ICON_NAME[card[:card].set.to_s.to_sym],card[:card].rarity.downcase].join(" ") %>"></span>
         <span class="secondary-content">
           <%= number_to_currency card[:card].on_demand_price %>
         </span>

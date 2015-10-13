@@ -1,4 +1,12 @@
 class Card < ActiveRecord::Base
+  ICON_NAME = {
+    KTK: "khans-of-tarkir",
+    FRF: "fate-reforged",
+    DTK: "dragons-of-tarkir",
+    ORI: "magic-origins",
+    BFZ: "battle-for-zendikar"
+  }
+
   scope :per_name, ->(name) { where(["name ilike ?", "%#{name}%"]) }
   scope :per_type, ->(type) { where(["ctype ilike ?", "%#{type}%"]) }
 
