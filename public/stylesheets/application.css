@@ -10,4 +10,10 @@
 
 .mtg {
   font-size: 1.6em;
+  position: relative;
+  top: 0.25em;
+}
+
+.mtg + .mtg {
+  margin-left: 3px;
 }

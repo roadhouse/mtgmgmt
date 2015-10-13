@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular
-    .module('demos_cfg', ['chart.js'])
+    .module('demos_cfg', ['chart.js', 'ngSanitize'])
     .controller('LiveSearchController', LiveSearchController)
     .controller('ManaChartController', ManaChartController)
     .controller('ColorChartController', ColorChartController)
@@ -10,7 +10,7 @@
     .factory('DeckBuilderFactory', DeckBuilderFactory)
     .factory('CollectionFactory', CollectionFactory);
 
-  LiveSearchController.$inject = ['$scope', 'LiveSearchFactory', 'DeckBuilderFactory', 'CollectionFactory'];
+  LiveSearchController.$inject = ['$scope', 'LiveSearchFactory', 'DeckBuilderFactory', 'CollectionFactory', '$sce'];
   ManaChartController.$inject = ['$scope'];
   ColorChartController.$inject = ['$scope'];
   TypeChartController.$inject = ['$scope'];
@@ -40,7 +40,7 @@
     })
   };
 
-  function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, CollectionFactory) {
+  function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, CollectionFactory, $sce) {
     var deckEntry = {};
 
     $scope.addCardToDeck = addCardToDeck;
