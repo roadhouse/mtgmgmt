@@ -26,11 +26,11 @@ class Card < ActiveRecord::Base
     self.price
   end
 
-  def image
-    if set == "BFZ"
-      "http://ligamagic.com.br/arquivos/up/cartas/images/pt#{number}#{set.downcase}.jpg"
-    else
-      super
-    end
-  end
+  # def image
+    # if set == "BFZ"
+      # "http://ligamagic.com.br/arquivos/up/cartas/images/pt#{number}#{set.downcase}.jpg"
+    # else
+      # super
+    # end
+  # end
 end
