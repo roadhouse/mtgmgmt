@@ -30,7 +30,7 @@ class DeckPresenter < BasePresenter
   
   def colors_list
     @deck.cards.map(&:colors).flatten.compact.uniq.map(&:downcase).sort.map do |color|
-      classes = ["mdi-image-brightness-1"] + css_colors.fetch(color.to_sym)
+      classes = ["mtg"] + css_colors.fetch(color.to_sym)
 
       h.content_tag(:i, nil, class: classes)
     end
@@ -38,11 +38,11 @@ class DeckPresenter < BasePresenter
 
   def css_colors
     {
-      red: %w{red-text text-accent-1},
-      blue: %w{blue-text text-accent-1},
-      black: %w{grey-text text-darken-3},
-      green: %w{green-text text-accent-1},
-      white: %w{amber-text text-lighten-5}
+      red: %w{mana-r},
+      blue: %w{mana-u},
+      black: %w{mana-b},
+      green: %w{mana-g},
+      white: %w{mana-w}
     }
   end
 

@@ -6,11 +6,11 @@
       <% end %>
     </span>
     <span class="secondary-content">
-      <%= number_to_currency deck.total_price %>
+      <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
     </span>
   </div>
   <div class="card-action">
-    <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
+    <%= number_to_currency deck.total_price %>
     <span class="secondary-content">
       <i class="mdi-image-photo-library"></i>
       <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
