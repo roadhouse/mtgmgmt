@@ -4,16 +4,19 @@
     <% cards.each do |card| %>
       <li>
       <div class="collapsible-header">
-        <%= "#{card[:copies]} #{card[:card].name}" %>
-        <span class="mtg  <%= [Card::ICON_NAME[card[:card].set.to_s.to_sym],card[:card].rarity.downcase].join(" ") %>"></span>
-        <span class="secondary-content">
-          <%= number_to_currency card[:card].on_demand_price %>
-        </span>
+        <span><%= card[:copies] %></span>
+        <div class="secondary-content">
+          <%= card[:card].name %>
+          <span class="mtg  <%= [Card::ICON_NAME[card[:card].set.to_s.to_sym],card[:card].rarity.to_s.downcase].join(" ") %>"></span>
+        </div>
       </div>
       <div class="collapsible-body">
         <div class="row">
           <%= render "inventory_form", card: card[:card] %>
         </div>
+        <span class="secondary-content">
+          <%= number_to_currency card[:card].on_demand_price %>
+        </span>
         <div class="row">
           <%= image_tag card[:card].image, alt: card[:card].name, class: "responsive-img" %>
         </div>
