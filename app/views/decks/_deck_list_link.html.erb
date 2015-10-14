@@ -5,9 +5,9 @@
         <%= deck.archeptype_deck.name %>
       <% end %>
     </span>
-    <span class="secondary-content">
+    <p>
       <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
-    </span>
+    </p>
   </div>
   <div class="card-action">
     <%= number_to_currency deck.total_price %>
