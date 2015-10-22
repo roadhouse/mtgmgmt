@@ -47,4 +47,14 @@ describe Orthanc do
       it { is_expected.to eq({type: "Creature", name: "brimaz"}) }
     end
   end
+
+  context ".from_user" do
+    let(:user) { create(:user) }
+    let(:card1) { create(:card) }
+    let(:card2) { create(:card, name: "Dispel", set:"BFZ") }
+    let(:inventory1) { create(:inventory, user: user, card: card1) }
+    let(:inventory2) { create(:inventory, user: user, card: card2) }
+
+    subject { described_class.new("").from_user(user) }
+  end
 end
