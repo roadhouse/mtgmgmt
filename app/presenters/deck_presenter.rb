@@ -47,7 +47,7 @@ class DeckPresenter < BasePresenter
   end
 
   def total_price
-    @main.inject(0) { |total, card| total + card.price.to_f }
+    @main.inject(0) { |total, card| total + card.try(:price).to_f }
   end
 
   def type_chart_data
