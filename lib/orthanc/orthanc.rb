@@ -39,7 +39,7 @@ class Orthanc
 
   #basic card search using CardParam params as filter
   def cards
-    @options.empty? ? @card.table.none : @card.table.where(@card.params)
+    @options.empty? ? @card.table.none : @card.table.where(@card.params).where.not(set: 'fake')
   end
 
   #top cards played in standard
