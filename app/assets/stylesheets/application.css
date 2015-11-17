@@ -1,0 +1,42 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.nested-collapsible {
+ border-right: 0;
+ border-left: 0;
+ margin: 0;
+}
+
+.top-decks-box {
+  line-height: 0.1;
+}
+
+.top-decks-box .card-content .secondary-content {
+  position: relative;
+  top: -1.2em;
+}
+
+.mtg {
+  font-size: 1.1em;
+  position: relative;
+}
+
+.card-content .mtg {
+  top: 0.5em;
+}
+
+.mtg + .mtg {
+  margin-left: 3px;
+}
