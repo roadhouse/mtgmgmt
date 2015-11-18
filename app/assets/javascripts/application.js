@@ -2,7 +2,7 @@
 (function() {
   'use strict';
   angular
-    .module('demos_cfg', ['chart.js', 'ngSanitize'])
+    .module('demos_cfg', ['chart.js', 'ngSanitize', 'ngAnimate'])
     .controller('LiveSearchController', LiveSearchController)
     .controller('ManaChartController', ManaChartController)
     .controller('ColorChartController', ColorChartController)

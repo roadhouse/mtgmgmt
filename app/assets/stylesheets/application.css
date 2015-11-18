@@ -40,3 +40,36 @@
 .mtg + .mtg {
   margin-left: 3px;
 }
+
+.card {
+  line-height:40px;
+  list-style:none;
+  box-sizing:border-box;
+}
+
+.card.ng-move,
+.card.ng-enter,
+.card.ng-leave {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.card.ng-leave.ng-leave-active,
+.card.ng-move,
+.card.ng-enter {
+  opacity: 0;
+}
+
+.ng-enter-stagger {
+  transition-delay: 0.3s;
+  transition-duration: 0s;
+}
+
+.card.ng-leave,
+.card.ng-move.ng-move-active,
+.card.ng-enter.ng-enter-active {
+  opacity: 1;
+}
