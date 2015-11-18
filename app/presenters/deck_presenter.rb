@@ -79,6 +79,10 @@ class DeckPresenter < BasePresenter
     }
   end
 
+  def first_hand
+    @deck.main.map(&:name).shuffle![0..6]
+  end
+
   private
 
   def pool(part)
