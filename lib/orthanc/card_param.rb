@@ -2,7 +2,7 @@
 # when name was passed the the scope the query included lands
 class CardParam < BaseParam
   model Card
-  fields :original_text, :ctypes, :colors, :name, :portuguese_name, :rarity
+  fields :original_text, :ctypes, :colors, :name, :portuguese_name, :rarity, :cmc
 
   def params
     color = @options[:color]
@@ -10,6 +10,7 @@ class CardParam < BaseParam
     name = @options[:name].to_s #default query not nil required
     oracle = @options[:oracle]
     rarity = @options[:rarity]
+    cmc = @options[:cmc]
 
     where = name.empty? ? not_lands : card_name_is(name)
 
@@ -17,8 +18,13 @@ class CardParam < BaseParam
     where = where.and(card_color_is(color)) if color
     where = where.and(oracle_contains(oracle)) if oracle
     where = where.and(rarity_is(rarity)) if rarity
+    where = where.and(cmc_is(cmc)) if cmc
 
     where
+  end
+
+  def cmc_is(value)
+    cmc.eq(value)
   end
 
   def rarity_is(card_rarity)
