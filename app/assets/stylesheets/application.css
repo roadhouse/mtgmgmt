@@ -45,31 +45,27 @@
   line-height:40px;
   list-style:none;
   box-sizing:border-box;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.card.ng-move,
-.card.ng-enter,
-.card.ng-leave {
-  -webkit-transition: all linear 0.5s;
-  -moz-transition: all linear 0.5s;
-  -ms-transition: all linear 0.5s;
-  -o-transition: all linear 0.5s;
-  transition: all linear 0.5s;
-}
-
-.card.ng-leave.ng-leave-active,
-.card.ng-move,
-.card.ng-enter {
+.ng-enter {
   opacity: 0;
+  transform: translate(0, -15px);
 }
 
 .ng-enter-stagger {
-  transition-delay: 0.3s;
+  transition-delay: 0.2s;
   transition-duration: 0s;
 }
 
-.card.ng-leave,
-.card.ng-move.ng-move-active,
-.card.ng-enter.ng-enter-active {
+.ng-enter-active {
+  /* transition-delay: 0.02s; */
   opacity: 1;
+  transform: translate(0, 0);
+  /* transition-duration: 0s; */
+}
+
+.ng-leave {
+  opacity: 0;
+  transition-delay: 0;
 }
