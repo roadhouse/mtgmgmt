@@ -72,6 +72,9 @@
         .addCardToDeck({"deck": deckEntry})
         .then(function(result) { 
           $scope.$broadcast('updateChart', result.data);
+          $scope.deck_list = result.data.deck_list;
+          $scope.deck_size = result.data.deck_size;
+          $scope.first_hand = result.data.first_hand;
         });
     };
     

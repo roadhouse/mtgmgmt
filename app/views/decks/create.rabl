@@ -1,7 +1,10 @@
+
 node(:manacost_labels) { @deck.by_manacost.keys.sort }
 node(:manacost_data) { @deck.total_by_manacost.values }
-node(:price) { @deck.total_price }
+node(:deck_list) { @deck.deck_list(:main) }
+node(:deck_size) { @deck.deck_list.map { |x| x.fetch(:copies)  }.sum }
 node(:first_hand) { @deck.first_hand }
+
 node :mana do
   { 
     labels: @deck.by_manacost.keys.sort, 

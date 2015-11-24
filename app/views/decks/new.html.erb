@@ -12,7 +12,7 @@
   </nav>
 
   <div class="row section">
-    <div id="test1" class="col s12 l6 section">
+    <div id="test1" class="col s12 l4 section">
       <h5 class="center-align">Resultados</h5>
       <div class="card" ng-repeat="entry in entries">
         <div class="card-content blue-grey lighten-5">
@@ -43,19 +43,38 @@
       </div>
     </div>
 
-      <div class="col s12 l2 section" ng-controller="ManaChartController">
-        <h5 class="center-align">Manacost</h5>
-        <canvas class="chart chart-bar" data="data" labels="labels"></canvas>
-      </div>
-      
-      <div class="col s12 l2 section" ng-controller="ColorChartController">
+    <div class="col s12 l2 section">
+      <h5 class="center-align">Initial Hand</h5>
+      <ul class="collection">
+        <li class="collection-item" ng-repeat="card in first_hand track by $index">
+          {{ card }}
+        </li>
+      </ul>
+    </div>
+    <div class="col s12 l2 section">
+      <h5 class="center-align">Deck List</h5>
+      <ul class="collection with-header">
+        <li class="collection-header">Total cards: {{ deck_size }}</li>
+        <li class="collection-item" ng-repeat="card in deck_list">
+        {{ card.copies}}
+        <span class="secondary-content">{{ card.name }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col s12 l2 section" ng-controller="ManaChartController">
+      <h5 class="center-align">Manacost</h5>
+      <canvas class="chart chart-bar" data="data" labels="labels"></canvas>
+    </div>
+
+    <div class="col s12 l2 section" ng-controller="ColorChartController">
       <h5 class="center-align">Colors</h5>
-        <canvas class="chart chart-pie" data="data" labels="labels" colours="colors"></canvas>
-      </div>
-      <div class="col s12 l2 section" ng-controller="TypeChartController">
-        <h5 class="center-align">Types</h5>
-        <canvas class="chart chart-pie" data="data" labels="labels"></canvas>
-      </div>
+      <canvas class="chart chart-pie" data="data" labels="labels" colours="colors"></canvas>
+    </div>
+
+    <div class="col s12 l2 section" ng-controller="TypeChartController">
+      <h5 class="center-align">Types</h5>
+      <canvas class="chart chart-pie" data="data" labels="labels"></canvas>
     </div>
   </div>
 </div>

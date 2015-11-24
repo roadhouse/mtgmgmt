@@ -83,6 +83,11 @@ class DeckPresenter < BasePresenter
     @deck.main.map(&:name).shuffle![0..6]
   end
 
+  def deck_list(part = :main)
+    card_pool(part)
+      .map { |entry| {copies: entry[:copies], name: entry[:card].name, id: entry[:card].id} }
+  end
+
   private
 
   def pool(part)
