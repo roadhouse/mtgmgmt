@@ -44,6 +44,9 @@
 .card {
   line-height:40px;
   list-style:none;
+}
+
+.search-result {
   box-sizing:border-box;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -59,10 +62,8 @@
 }
 
 .ng-enter-active {
-  /* transition-delay: 0.02s; */
   opacity: 1;
   transform: translate(0, 0);
-  /* transition-duration: 0s; */
 }
 
 .ng-leave {

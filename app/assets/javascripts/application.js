@@ -11,7 +11,7 @@
     .factory('DeckBuilderFactory', DeckBuilderFactory)
     .factory('CollectionFactory', CollectionFactory);
 
-  LiveSearchController.$inject = ['$scope', 'LiveSearchFactory', 'DeckBuilderFactory', 'CollectionFactory', '$sce'];
+  LiveSearchController.$inject = ['$scope', 'LiveSearchFactory', 'DeckBuilderFactory', 'CollectionFactory', '$sce', '$timeout'];
   ManaChartController.$inject = ['$scope'];
   ColorChartController.$inject = ['$scope'];
   TypeChartController.$inject = ['$scope'];
@@ -41,7 +41,7 @@
     })
   };
 
-  function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, CollectionFactory, $sce) {
+  function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, CollectionFactory, $sce, $timeout) {
     var deckEntry = {};
 
     $scope.addCardToDeck = addCardToDeck;
@@ -75,7 +75,7 @@
           $scope.deck_list = result.data.deck_list;
           $scope.deck_size = result.data.deck_size;
           $scope.first_hand = result.data.first_hand;
-        });
+        })
     };
     
     function change() {
@@ -84,7 +84,9 @@
       if (vm.search.length > 6) {
         LiveSearchFactory
           .get(vm.search) 
-          .then(function(result) { vm.entries = result.data; });
+          .then(function(result) { vm.entries = result.data; })
+
+        $timeout(function(){ $('.collapsible').collapsible({}); }, 500);
       }
     };
   };
