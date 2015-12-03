@@ -9,11 +9,11 @@ runBlock.$inject = [
 ]
 
 function runBlock($document) {
-  $(".button-collapse").sideNav();
-  $('select').material_select();
-  $('.collapsible').collapsible({ accordion: false });
-
   $document.ready(function(){
+    $(".button-collapse").sideNav();
+    $('select').material_select();
+    $('.collapsible').collapsible({ accordion: false });
+
     $(".collapsible").on("click.collapsible", function(e) {
       var down = "mdi-hardware-keyboard-arrow-down";
       var up = "mdi-hardware-keyboard-arrow-up";
