@@ -44,6 +44,8 @@ class DecksController < ApplicationController
 
   def print
     @deck = Deck.find(params[:id])
+    
+    @cards = {main: @deck.main, sideboard: @deck.sideboard}.fetch(params[:part].to_sym)
 
     render layout: "print"
   end
