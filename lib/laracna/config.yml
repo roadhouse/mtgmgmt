@@ -9,9 +9,3 @@ mtgdecks:
   deck_list_url: "/decks/viewByFormat/39/"
   pagination_param: "page:"
   deck_url: "/decks/view/"
-
-deck_lists:
-  host: "http://www.decklists.net"
-  deck_list_url: "/index.php?option=com_ohmydeckdb&controller=results&orderdir=desc&view=results&sformat[]=31&Itemid=&ordering=submitdate"
-  pagination_param: "&page="
-  deck_url: "/index.php?option=com_ohmydeckdb&controller=deck&view=deck&deckId="

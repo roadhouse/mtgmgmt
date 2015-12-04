@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 12 Nov 2014 20:40:49 GMT
+      - Mon, 07 Dec 2015 01:16:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -27,37 +27,41 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d7e8d2e8057e1a154e84fc96b9eb8fc8e1415824848; expires=Thu, 12-Nov-15
-        20:40:48 GMT; path=/; domain=.mtgapi.com; HttpOnly
-      - laravel_session=eyJpdiI6InRsamhUOEtmN1VIcUFxMlBuS1RIYUE9PSIsInZhbHVlIjoiU0xsZ1ZDZU4ra1ppY3cyOGNheDY1TzBKQTZYKzVvaFh4OXlWUHdjblhJTU1mM3Q2YlR4N3FOMmtGSW51SStkMWRCNEFrWU9ReWNXbDVycFk1UUhzRUE9PSIsIm1hYyI6IjE3ZWIyMGNkNjI2ZGM1YzBjNTNlMjNhMTMwOTAyNWJjOTVlM2JmODJhZjA0OTU5ZjNmYmEzNDVmYWZhNjUxMGUifQ%3D%3D;
-        expires=Wed, 12-Nov-2014 22:40:48 GMT; Max-Age=7200; path=/; httponly
+      - __cfduid=d8e46bd4f140dc19f521214778df5e0a41449450989; expires=Tue, 06-Dec-16
+        01:16:29 GMT; path=/; domain=.mtgapi.com; HttpOnly
+      - laravel_session=eyJpdiI6InJja0xmM2VJZG14M0xKVVZkRlh4Smc9PSIsInZhbHVlIjoicXZwQjdtbHA3TlwvSk41MW41bmxWc0lncVl6eEh5SzQ3S3l5VUhOZFZNY0ZwM1JSZ3RvYk9vS3MwVnJFSE9aZjdLRTlESUVYWnVFSHkxN0xncVBoWStnPT0iLCJtYWMiOiI0MzQwY2IyMjM4YjJhMWViNGQ5NGFmOTQzNTQ2ZGQ4M2M2NjdmZTZkNGYyZDU0ZmY2ODFlOTE5YjJiNTAxOGFmIn0%3D;
+        expires=Mon, 07-Dec-2015 03:16:30 GMT; Max-Age=7200; path=/; httponly
       X-Powered-By:
       - PHP/5.5.13-2+deb.sury.org~trusty+1
       Cache-Control:
       - no-cache
+      X-Content-Type-Options:
+      - nosniff
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 18858bf88d7601ef-EWR
+      - 250c62aa5f070321-MIA
     body:
       encoding: UTF-8
       string: '{"query":[{"command":"where","key":"set","conditional":"=","value":"KTK"}],"cards":[{"artist":"Erica
         Yang","border":"black","cmc":6,"colors":["Blue","Black","Green"],"flavor":null,"foreignNames":[{"language":"Chinese
-        Traditional","name":"\u8c37\u6e21\u618e\u6068\u7378"},{"language":"Chinese
-        Simplified","name":"\u8c37\u6e21\u618e\u6068\u517d"},{"language":"French","name":"Abomination
-        de Gud\u00f9l"},{"language":"German","name":"Gudul-Scheu\u00dflichkeit"},{"language":"Italian","name":"Abominio
-        di Gudul"},{"language":"Japanese","name":"\u30b0\u30c9\u30a5\u30eb\u306e\u5acc\u60aa\u8005"},{"language":"Korean","name":"\uad6c\ub458\uc758
-        \ud749\ubb3c"},{"language":"Portuguese (Brazil)","name":"Abomina\u00e7\u00e3o
-        de Gudul"},{"language":"Russian","name":"\u0413\u0443\u0434\u0443\u043b\u044c\u0441\u043a\u0430\u044f
-        \u041c\u0435\u0440\u0437\u043e\u0441\u0442\u044c"},{"language":"Spanish","name":"Abominaci\u00f3n
-        de Gudul"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386463","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abomination
-        of gudul.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{B}{G}{U}","multiverseid":386463,"name":"Abomination
+        Simplified","name":"\u8c37\u6e21\u618e\u6068\u517d","multiverseid":386732},{"language":"Chinese
+        Traditional","name":"\u8c37\u6e21\u618e\u6068\u7378","multiverseid":387001},{"language":"French","name":"Abomination
+        de Gud\u00f9l","multiverseid":387539},{"language":"German","name":"Gudul-Scheu\u00dflichkeit","multiverseid":387270},{"language":"Italian","name":"Abominio
+        di Gudul","multiverseid":387808},{"language":"Japanese","name":"\u30b0\u30c9\u30a5\u30eb\u306e\u5acc\u60aa\u8005","multiverseid":388077},{"language":"Korean","name":"\uad6c\ub458\uc758
+        \ud749\ubb3c","multiverseid":388346},{"language":"Portuguese (Brazil)","name":"Abomina\u00e7\u00e3o
+        de Gudul","multiverseid":388615},{"language":"Russian","name":"\u0413\u0443\u0434\u0443\u043b\u044c\u0441\u043a\u0430\u044f
+        \u041c\u0435\u0440\u0437\u043e\u0441\u0442\u044c","multiverseid":388884},{"language":"Spanish","name":"Abominaci\u00f3n
+        de Gudul","multiverseid":389153}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386463","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abomination
+        of gudul.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{B}{G}{U}","multiverseid":386463,"name":"Abomination
         of Gudul","names":null,"number":"159","originalText":"Flying\nWhenever Abomination
         of Gudul deals combat damage to a player, you may draw a card. If you do,
         discard a card.\nMorph {2}{B}{G}{U} (You may cast this card face down as a
         2\/2 creature for {3}. Turn it face up any time for its morph cost.)","originalType":"Creature
-        \u2014 Horror","power":"3","printings":["Khans of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
+        \u2014 Horror","power":"3","printings":["KTK"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
         lets you cast a card face down by paying {3}, and lets you turn the face-down
         permanent face up any time you have priority by paying its morph cost."},{"date":"2014-09-20","text":"The
         face-down spell has no mana cost and has a converted mana cost of 0. When
@@ -93,54 +97,59 @@ http_interactions:
         down as a 2\/2 creature for {3}. Turn it face up any time for its morph cost.)","toughness":"4","type":"Creature
         \u2014 Horror","types":["Creature"],"variations":null,"watermark":"Sultai"},{"artist":"Mark
         Winters","border":"black","cmc":3,"colors":["White","Black","Green"],"flavor":null,"foreignNames":[{"language":"Chinese
-        Traditional","name":"\u963f\u5e03\u8d0a\u9738\u6b0a"},{"language":"Chinese
-        Simplified","name":"\u963f\u5e03\u8d5e\u9738\u6743"},{"language":"French","name":"Ascendance
-        abzane"},{"language":"German","name":"Vormacht der Abzan"},{"language":"Italian","name":"Autorit\u00e0
-        Abzan"},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u9686\u76db"},{"language":"Korean","name":"\uc544\ube0c\uc794\uc758
-        \uc9c0\ubc30\ub825"},{"language":"Portuguese (Brazil)","name":"Ascend\u00eancia
-        Abzan"},{"language":"Russian","name":"\u0412\u043e\u0437\u0432\u044b\u0448\u0435\u043d\u0438\u0435
-        \u0410\u0431\u0437\u0430\u043d\u0430"},{"language":"Spanish","name":"Supremac\u00eda
-        abzana"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386464","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        ascendancy.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386464,"name":"Abzan
+        Simplified","name":"\u963f\u5e03\u8d5e\u9738\u6743","multiverseid":386733},{"language":"Chinese
+        Traditional","name":"\u963f\u5e03\u8d0a\u9738\u6b0a","multiverseid":387002},{"language":"French","name":"Ascendance
+        abzane","multiverseid":387540},{"language":"German","name":"Vormacht der Abzan","multiverseid":387271},{"language":"Italian","name":"Autorit\u00e0
+        Abzan","multiverseid":387809},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u9686\u76db","multiverseid":388078},{"language":"Korean","name":"\uc544\ube0c\uc794\uc758
+        \uc9c0\ubc30\ub825","multiverseid":388347},{"language":"Portuguese (Brazil)","name":"Ascend\u00eancia
+        Abzan","multiverseid":388616},{"language":"Russian","name":"\u0412\u043e\u0437\u0432\u044b\u0448\u0435\u043d\u0438\u0435
+        \u0410\u0431\u0437\u0430\u043d\u0430","multiverseid":388885},{"language":"Spanish","name":"Supremac\u00eda
+        abzana","multiverseid":389154}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386464","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
+        ascendancy.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386464,"name":"Abzan
         Ascendancy","names":null,"number":"160","originalText":"When Abzan Ascendancy
         enters the battlefield, put a +1\/+1 counter on each creature you control.\nWhenever
         a nontoken creature you control dies, put a 1\/1 white Spirit creature token
-        with flying onto the battlefield.","originalType":"Enchantment","power":null,"printings":["Khans
-        of Tarkir"],"rarity":"Rare","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"When
+        with flying onto the battlefield.","originalType":"Enchantment","power":null,"printings":["pPRE","KTK"],"rarity":"Rare","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"When
         Abzan Ascendancy enters the battlefield, put a +1\/+1 counter on each creature
         you control.\nWhenever a nontoken creature you control dies, put a 1\/1 white
         Spirit creature token with flying onto the battlefield.","toughness":null,"type":"Enchantment","types":["Enchantment"],"variations":null,"watermark":"Abzan"},{"artist":"Daniel
         Ljunggren","border":"black","cmc":3,"colors":null,"flavor":"Stone to endure,
-        roots to remember.","foreignNames":[{"language":"Chinese Traditional","name":"\u963f\u5e03\u8d0a\u6230\u65d7"},{"language":"Chinese
-        Simplified","name":"\u963f\u5e03\u8d5e\u6218\u65d7"},{"language":"French","name":"\u00c9tendard
-        d''Abzan"},{"language":"German","name":"Banner der Abzan"},{"language":"Italian","name":"Stendardo
-        Abzan"},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u6226\u65d7"},{"language":"Korean","name":"\uc544\ube0c\uc794
-        \uae43\ubc1c"},{"language":"Portuguese (Brazil)","name":"Estandarte Abzan"},{"language":"Russian","name":"\u0417\u043d\u0430\u043c\u044f
-        \u0410\u0431\u0437\u0430\u043d\u0430"},{"language":"Spanish","name":"Estandarte
-        abzano"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386465","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        banner.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}","multiverseid":386465,"name":"Abzan
+        roots to remember.","foreignNames":[{"language":"Chinese Simplified","name":"\u963f\u5e03\u8d5e\u6218\u65d7","multiverseid":386734},{"language":"Chinese
+        Traditional","name":"\u963f\u5e03\u8d0a\u6230\u65d7","multiverseid":387003},{"language":"French","name":"\u00c9tendard
+        d''Abzan","multiverseid":387541},{"language":"German","name":"Banner der Abzan","multiverseid":387272},{"language":"Italian","name":"Stendardo
+        Abzan","multiverseid":387810},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u6226\u65d7","multiverseid":388079},{"language":"Korean","name":"\uc544\ube0c\uc794
+        \uae43\ubc1c","multiverseid":388348},{"language":"Portuguese (Brazil)","name":"Estandarte
+        Abzan","multiverseid":388617},{"language":"Russian","name":"\u0417\u043d\u0430\u043c\u044f
+        \u0410\u0431\u0437\u0430\u043d\u0430","multiverseid":388886},{"language":"Spanish","name":"Estandarte
+        abzano","multiverseid":389155}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386465","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
+        banner.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}","multiverseid":386465,"name":"Abzan
         Banner","names":null,"number":"215","originalText":"{T}: Add {W}, {B}, or
-        {G} to your mana pool.\n{W}{B}{G}, {T}, Sacrifice Abzan Banner: Draw a card.","originalType":"Artifact","power":null,"printings":["Khans
-        of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"{T}:
+        {G} to your mana pool.\n{W}{B}{G}, {T}, Sacrifice Abzan Banner: Draw a card.","originalType":"Artifact","power":null,"printings":["KTK"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":null,"supertypes":null,"text":"{T}:
         Add {W}, {B}, or {G} to your mana pool.\n{W}{B}{G}, {T}, Sacrifice Abzan Banner:
         Draw a card.","toughness":null,"type":"Artifact","types":["Artifact"],"variations":null,"watermark":"Abzan"},{"artist":"Chris
         Rahn","border":"black","cmc":4,"colors":["White"],"flavor":"\"Wherever I walk,
-        the ancestors walk too.\"","foreignNames":[{"language":"Chinese Traditional","name":"\u963f\u5e03\u8d0a\u6230\u9b25\u50e7\u4fb6"},{"language":"Chinese
-        Simplified","name":"\u963f\u5e03\u8d5e\u6218\u6597\u50e7\u4fa3"},{"language":"French","name":"Pr\u00eatre
-        de bataille abzan"},{"language":"German","name":"Abzan-Kampfpriester"},{"language":"Italian","name":"Sacerdote
-        Guerriero Abzan"},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u6226\u50e7\u4fb6"},{"language":"Korean","name":"\uc544\ube0c\uc794
-        \uc804\ud22c \uc0ac\uc81c"},{"language":"Portuguese (Brazil)","name":"Sacerdote
-        de Batalha Abzan"},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0438\u0439
-        \u0411\u043e\u0435\u0432\u043e\u0439 \u0416\u0440\u0435\u0446"},{"language":"Spanish","name":"Sacerdote
-        guerrero abzano"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386466","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        battle priest.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}","multiverseid":386466,"name":"Abzan
+        the ancestors walk too.\"","foreignNames":[{"language":"Chinese Simplified","name":"\u963f\u5e03\u8d5e\u6218\u6597\u50e7\u4fa3","multiverseid":386735},{"language":"Chinese
+        Traditional","name":"\u963f\u5e03\u8d0a\u6230\u9b25\u50e7\u4fb6","multiverseid":387004},{"language":"French","name":"Pr\u00eatre
+        de bataille abzan","multiverseid":387542},{"language":"German","name":"Abzan-Kampfpriester","multiverseid":387273},{"language":"Italian","name":"Sacerdote
+        Guerriero Abzan","multiverseid":387811},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u6226\u50e7\u4fb6","multiverseid":388080},{"language":"Korean","name":"\uc544\ube0c\uc794
+        \uc804\ud22c \uc0ac\uc81c","multiverseid":388349},{"language":"Portuguese
+        (Brazil)","name":"Sacerdote de Batalha Abzan","multiverseid":388618},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0438\u0439
+        \u0411\u043e\u0435\u0432\u043e\u0439 \u0416\u0440\u0435\u0446","multiverseid":388887},{"language":"Spanish","name":"Sacerdote
+        guerrero abzano","multiverseid":389156}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386466","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
+        battle priest.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}","multiverseid":386466,"name":"Abzan
         Battle Priest","names":null,"number":"1","originalText":"Outlast {W} ({W},
         {T}: Put a +1\/+1 counter on this creature. Outlast only as a sorcery.)\nEach
         creature you control with a +1\/+1 counter on it has lifelink.","originalType":"Creature
-        \u2014 Human Cleric","power":"3","printings":["Khans of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
+        \u2014 Human Cleric","power":"3","printings":["KTK"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
         cost to activate a creature\u2019s outlast ability includes the tap symbol
         ({T}). A creature\u2019s outlast ability can\u2019t be activated unless that
         creature has been under your control continuously since the beginning of your
@@ -152,20 +161,22 @@ http_interactions:
         creature you control with a +1\/+1 counter on it has lifelink.","toughness":"2","type":"Creature
         \u2014 Human Cleric","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Mathias
         Kollros","border":"black","cmc":3,"colors":["White","Black","Green"],"flavor":null,"foreignNames":[{"language":"Chinese
-        Traditional","name":"\u963f\u5e03\u8d0a\u8b77\u7b26"},{"language":"Chinese
-        Simplified","name":"\u963f\u5e03\u8d5e\u62a4\u7b26"},{"language":"French","name":"Charme
-        d''Abzan"},{"language":"German","name":"Abzan-Amulett"},{"language":"Italian","name":"Talismano
-        Abzan"},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u9b54\u9664\u3051"},{"language":"Korean","name":"\uc544\ube0c\uc794
-        \ubd80\uc801"},{"language":"Portuguese (Brazil)","name":"Amuleto Abzan"},{"language":"Russian","name":"\u0422\u0430\u043b\u0438\u0441\u043c\u0430\u043d
-        \u0410\u0431\u0437\u0430\u043d\u0430"},{"language":"Spanish","name":"Sortilegio
-        abzano"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386467","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        charm.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386467,"name":"Abzan
+        Simplified","name":"\u963f\u5e03\u8d5e\u62a4\u7b26","multiverseid":386736},{"language":"Chinese
+        Traditional","name":"\u963f\u5e03\u8d0a\u8b77\u7b26","multiverseid":387005},{"language":"French","name":"Charme
+        d''Abzan","multiverseid":387543},{"language":"German","name":"Abzan-Amulett","multiverseid":387274},{"language":"Italian","name":"Talismano
+        Abzan","multiverseid":387812},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u9b54\u9664\u3051","multiverseid":388081},{"language":"Korean","name":"\uc544\ube0c\uc794
+        \ubd80\uc801","multiverseid":388350},{"language":"Portuguese (Brazil)","name":"Amuleto
+        Abzan","multiverseid":388619},{"language":"Russian","name":"\u0422\u0430\u043b\u0438\u0441\u043c\u0430\u043d
+        \u0410\u0431\u0437\u0430\u043d\u0430","multiverseid":388888},{"language":"Spanish","name":"Sortilegio
+        abzano","multiverseid":389157}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386467","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
+        charm.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386467,"name":"Abzan
         Charm","names":null,"number":"161","originalText":"Choose one \u2014\n\u2022
         Exile target creature with power 3 or greater.\n\u2022 You draw two cards
         and you lose 2 life.\n\u2022 Distribute two +1\/+1 counters among one or two
-        target creatures.","originalType":"Instant","power":null,"printings":["Khans
-        of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"If
+        target creatures.","originalType":"Instant","power":null,"printings":["KTK"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"If
         you choose the third mode, you choose how the counters will be distributed
         as you cast the spell. Notably, if you choose to put one +1\/+1 counter on
         each of two target creatures, and one of those creatures becomes an illegal
@@ -175,20 +186,22 @@ http_interactions:
         You draw two cards and you lose 2 life.\n\u2022 Distribute two +1\/+1 counters
         among one or two target creatures.","toughness":null,"type":"Instant","types":["Instant"],"variations":null,"watermark":"Abzan"},{"artist":"Steven
         Belledin","border":"black","cmc":3,"colors":["White"],"flavor":"The fastest
-        way across the dunes is above.","foreignNames":[{"language":"Chinese Traditional","name":"\u963f\u5e03\u8d0a\u8a13\u96bc\u5175"},{"language":"Chinese
-        Simplified","name":"\u963f\u5e03\u8d5e\u8bad\u96bc\u5175"},{"language":"French","name":"Fauconnier
-        abzan"},{"language":"German","name":"Abzan-Falkner"},{"language":"Italian","name":"Falconiere
-        Abzan"},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u9df9\u5320"},{"language":"Korean","name":"\uc544\ube0c\uc794
-        \ub9e4 \uc870\ub828\uc0ac"},{"language":"Portuguese (Brazil)","name":"Falcoeiro
-        Abzan"},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0438\u0439
-        \u0421\u043e\u043a\u043e\u043b\u044c\u043d\u0438\u0447\u0438\u0439"},{"language":"Spanish","name":"Halconero
-        abzano"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386468","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        falconer.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{W}","multiverseid":386468,"name":"Abzan
+        way across the dunes is above.","foreignNames":[{"language":"Chinese Simplified","name":"\u963f\u5e03\u8d5e\u8bad\u96bc\u5175","multiverseid":386737},{"language":"Chinese
+        Traditional","name":"\u963f\u5e03\u8d0a\u8a13\u96bc\u5175","multiverseid":387006},{"language":"French","name":"Fauconnier
+        abzan","multiverseid":387544},{"language":"German","name":"Abzan-Falkner","multiverseid":387275},{"language":"Italian","name":"Falconiere
+        Abzan","multiverseid":387813},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u9df9\u5320","multiverseid":388082},{"language":"Korean","name":"\uc544\ube0c\uc794
+        \ub9e4 \uc870\ub828\uc0ac","multiverseid":388351},{"language":"Portuguese
+        (Brazil)","name":"Falcoeiro Abzan","multiverseid":388620},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0438\u0439
+        \u0421\u043e\u043a\u043e\u043b\u044c\u043d\u0438\u0447\u0438\u0439","multiverseid":388889},{"language":"Spanish","name":"Halconero
+        abzano","multiverseid":389158}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386468","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
+        falconer.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{W}","multiverseid":386468,"name":"Abzan
         Falconer","names":null,"number":"2","originalText":"Outlast {W} ({W}, {T}:
         Put a +1\/+1 counter on this creature. Outlast only as a sorcery.)\nEach creature
         you control with a +1\/+1 counter on it has flying.","originalType":"Creature
-        \u2014 Human Soldier","power":"2","printings":["Khans of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
+        \u2014 Human Soldier","power":"2","printings":["KTK"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
         cost to activate a creature\u2019s outlast ability includes the tap symbol
         ({T}). A creature\u2019s outlast ability can\u2019t be activated unless that
         creature has been under your control continuously since the beginning of your
@@ -201,20 +214,22 @@ http_interactions:
         \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Steve
         Prescott","border":"black","cmc":6,"colors":["White","Black","Green"],"flavor":"\"These
         roads are desolate and changeable. Follow me, or die in the wastes.\"","foreignNames":[{"language":"Chinese
-        Traditional","name":"\u963f\u5e03\u8d0a\u56ae\u5c0e"},{"language":"Chinese
-        Simplified","name":"\u963f\u5e03\u8d5e\u5411\u5bfc"},{"language":"French","name":"Guide
-        abzane"},{"language":"German","name":"Abzan-F\u00fchrerin"},{"language":"Italian","name":"Guida
-        Abzan"},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u5148\u9054"},{"language":"Korean","name":"\uc544\ube0c\uc794
-        \uae38\uc7a1\uc774"},{"language":"Portuguese (Brazil)","name":"Guia Azban"},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0430\u044f
-        \u041f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u0446\u0430"},{"language":"Spanish","name":"Gu\u00eda
-        abzana"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386469","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
-        guide.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}{B}{G}","multiverseid":386469,"name":"Abzan
+        Simplified","name":"\u963f\u5e03\u8d5e\u5411\u5bfc","multiverseid":386738},{"language":"Chinese
+        Traditional","name":"\u963f\u5e03\u8d0a\u56ae\u5c0e","multiverseid":387007},{"language":"French","name":"Guide
+        abzane","multiverseid":387545},{"language":"German","name":"Abzan-F\u00fchrerin","multiverseid":387276},{"language":"Italian","name":"Guida
+        Abzan","multiverseid":387814},{"language":"Japanese","name":"\u30a2\u30d6\u30b6\u30f3\u306e\u5148\u9054","multiverseid":388083},{"language":"Korean","name":"\uc544\ube0c\uc794
+        \uae38\uc7a1\uc774","multiverseid":388352},{"language":"Portuguese (Brazil)","name":"Guia
+        Azban","multiverseid":388621},{"language":"Russian","name":"\u0410\u0431\u0437\u0430\u043d\u0441\u043a\u0430\u044f
+        \u041f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u0446\u0430","multiverseid":388890},{"language":"Spanish","name":"Gu\u00eda
+        abzana","multiverseid":389159}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386469","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/abzan
+        guide.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}{B}{G}","multiverseid":386469,"name":"Abzan
         Guide","names":null,"number":"162","originalText":"Lifelink (Damage dealt
         by this creature also causes you to gain that much life.)\nMorph {2}{W}{B}{G}
         (You may cast this card face down as a 2\/2 creature for {3}. Turn it face
-        up any time for its morph cost.)","originalType":"Creature \u2014 Human Warrior","power":"4","printings":["Khans
-        of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
+        up any time for its morph cost.)","originalType":"Creature \u2014 Human Warrior","power":"4","printings":["KTK"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
         lets you cast a card face down by paying {3}, and lets you turn the face-down
         permanent face up any time you have priority by paying its morph cost."},{"date":"2014-09-20","text":"The
         face-down spell has no mana cost and has a converted mana cost of 0. When
@@ -251,21 +266,21 @@ http_interactions:
         \u2014 Human Warrior","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Min
         Yum","border":"black","cmc":3,"colors":["Red"],"flavor":"\"The Sultai take
         our dead, so we shall take their living!\"\n\u2014Taklai, Mardu ragesinger","foreignNames":[{"language":"Chinese
-        Simplified","name":"\u53db\u884c"},{"language":"Chinese Traditional","name":"\u53db\u884c"},{"language":"French","name":"Acte
-        de trahison"},{"language":"German","name":"Verr\u00e4terische Tat"},{"language":"Italian","name":"Atto
-        di Tradimento"},{"language":"Japanese","name":"\u53cd\u9006\u306e\u884c\u52d5"},{"language":"Korean","name":"\ubc18\uc5ed
-        \ud589\uc704"},{"language":"Portuguese","name":"Ato de Trai\u00e7\u00e3o"},{"language":"Portuguese
-        (Brazil)","name":"Ato de Trai\u00e7\u00e3o"},{"language":"Russian","name":"\u0410\u043a\u0442
-        \u0418\u0437\u043c\u0435\u043d\u044b"},{"language":"Spanish","name":"Acto
-        de traici\u00f3n"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386470","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/act
-        of treason.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Return
-        to Ravnica Block":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Tribal Wars Standard":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}","multiverseid":386470,"name":"Act
+        Simplified","name":"\u53db\u884c","multiverseid":386739},{"language":"Chinese
+        Traditional","name":"\u53db\u884c","multiverseid":387008},{"language":"French","name":"Acte
+        de trahison","multiverseid":387546},{"language":"German","name":"Verr\u00e4terische
+        Tat","multiverseid":387277},{"language":"Italian","name":"Atto di Tradimento","multiverseid":387815},{"language":"Japanese","name":"\u53cd\u9006\u306e\u884c\u52d5","multiverseid":388084},{"language":"Korean","name":"\ubc18\uc5ed
+        \ud589\uc704","multiverseid":388353},{"language":"Portuguese (Brazil)","name":"Ato
+        de Trai\u00e7\u00e3o","multiverseid":388622},{"language":"Russian","name":"\u0410\u043a\u0442
+        \u0418\u0437\u043c\u0435\u043d\u044b","multiverseid":388891},{"language":"Spanish","name":"Acto
+        de traici\u00f3n","multiverseid":389160}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386470","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/act
+        of treason.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Return
+        to Ravnica Block","legality":"Legal"},{"format":"Singleton 100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}","multiverseid":386470,"name":"Act
         of Treason","names":null,"number":"95","originalText":"Gain control of target
         creature until end of turn. Untap that creature. It gains haste until end
-        of turn.","originalType":"Sorcery","power":null,"printings":["Magic 2010","Duels
-        of the Planeswalkers","Magic 2011","Magic 2012","Gatecrash","Magic 2014 Core
-        Set","Duel Decks: Speed vs. Cunning","Khans of Tarkir"],"rarity":"Common","rulings":[{"date":"2009-10-01","text":"Act
+        of turn.","originalType":"Sorcery","power":null,"printings":["M10","DPA","M11","M12","GTC","M14","DDN","KTK","ORI"],"rarity":"Common","rulings":[{"date":"2009-10-01","text":"Act
         of Treason can target any creature, even one that''s untapped or one you already
         control."},{"date":"2010-08-15","text":"Gaining control of a creature doesn''t
         cause you to gain control of any Auras or Equipment attached to it."},{"date":"2013-07-01","text":"If
@@ -273,20 +288,23 @@ http_interactions:
         with the same name, you\u2019ll choose one to remain on the battlefield and
         put the other into its owner\u2019s graveyard."}],"set":"KTK","subtypes":null,"supertypes":null,"text":"Gain
         control of target creature until end of turn. Untap that creature. It gains
-        haste until end of turn.","toughness":null,"type":"Sorcery","types":["Sorcery"],"variations":null,"watermark":null},{"artist":"Chris
+        haste until end of turn. (It can attack and {T} this turn.)","toughness":null,"type":"Sorcery","types":["Sorcery"],"variations":null,"watermark":null},{"artist":"Chris
         Rahn","border":"black","cmc":2,"colors":["White"],"flavor":"\"Hold the line,
-        for family and the fallen!\"","foreignNames":[{"language":"Chinese Traditional","name":"\u7fa9\u7de3\u72ac\u4eba"},{"language":"Chinese
-        Simplified","name":"\u4e49\u7f18\u72ac\u4eba"},{"language":"French","name":"Fr\u00e8re
-        d''armes a\u00efnok"},{"language":"German","name":"Ainok-Schwurbruder"},{"language":"Italian","name":"Ainok
-        Fratello d''Onore"},{"language":"Japanese","name":"\u30a2\u30a4\u30ce\u30af\u306e\u76df\u65cf"},{"language":"Korean","name":"\uc544\uc774\ub179
-        \uc758\ud615\uc81c"},{"language":"Portuguese (Brazil)","name":"Ainok La\u00e7o-de-honra"},{"language":"Russian","name":"\u0410\u0438\u043d\u043e\u043a-\u041f\u043e\u0431\u0440\u0430\u0442\u0438\u043c"},{"language":"Spanish","name":"Ainok
-        unido por la fe"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386471","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ainok
-        bond-kin.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}{W}","multiverseid":386471,"name":"Ainok
+        for family and the fallen!\"","foreignNames":[{"language":"Chinese Simplified","name":"\u4e49\u7f18\u72ac\u4eba","multiverseid":386740},{"language":"Chinese
+        Traditional","name":"\u7fa9\u7de3\u72ac\u4eba","multiverseid":387009},{"language":"French","name":"Fr\u00e8re
+        d''armes a\u00efnok","multiverseid":387547},{"language":"German","name":"Ainok-Schwurbruder","multiverseid":387278},{"language":"Italian","name":"Ainok
+        Fratello d''Onore","multiverseid":387816},{"language":"Japanese","name":"\u30a2\u30a4\u30ce\u30af\u306e\u76df\u65cf","multiverseid":388085},{"language":"Korean","name":"\uc544\uc774\ub179
+        \uc758\ud615\uc81c","multiverseid":388354},{"language":"Portuguese (Brazil)","name":"Ainok
+        La\u00e7o-de-honra","multiverseid":388623},{"language":"Russian","name":"\u0410\u0438\u043d\u043e\u043a-\u041f\u043e\u0431\u0440\u0430\u0442\u0438\u043c","multiverseid":388892},{"language":"Spanish","name":"Ainok
+        unido por la fe","multiverseid":389161}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386471","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ainok
+        bond-kin.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}{W}","multiverseid":386471,"name":"Ainok
         Bond-Kin","names":null,"number":"3","originalText":"Outlast {1}{W} ({1}{W},
         {T}: Put a +1\/+1 counter on this creature. Outlast only as a sorcery.)\nEach
         creature you control with a +1\/+1 counter on it has first strike.","originalType":"Creature
-        \u2014 Hound Soldier","power":"2","printings":["Khans of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"The
+        \u2014 Hound Soldier","power":"2","printings":["KTK"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"The
         cost to activate a creature\u2019s outlast ability includes the tap symbol
         ({T}). A creature\u2019s outlast ability can\u2019t be activated unless that
         creature has been under your control continuously since the beginning of your
@@ -299,18 +317,20 @@ http_interactions:
         strike.","toughness":"1","type":"Creature \u2014 Hound Soldier","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Evan
         Shipard","border":"black","cmc":6,"colors":["Red"],"flavor":"Some ainok of
         the mountains are accepted among the Temur as trusted hunt-mates.","foreignNames":[{"language":"Chinese
-        Traditional","name":"\u5075\u7375\u72ac\u4eba"},{"language":"Chinese Simplified","name":"\u4fa6\u730e\u72ac\u4eba"},{"language":"French","name":"Traqueur
-        a\u00efnok"},{"language":"German","name":"Ainok-Spurensucher"},{"language":"Italian","name":"Ainok
-        Battipista"},{"language":"Japanese","name":"\u30a2\u30a4\u30ce\u30af\u306e\u8db3\u8de1\u8ffd\u3044"},{"language":"Korean","name":"\uc544\uc774\ub179
-        \ucd94\uc801\uafbc"},{"language":"Portuguese (Brazil)","name":"Rastreador
-        Ainok"},{"language":"Russian","name":"\u0410\u0438\u043d\u043e\u043a-\u0421\u043b\u0435\u0434\u043e\u043f\u044b\u0442"},{"language":"Spanish","name":"Rastreador
-        ainok"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386472","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ainok
-        tracker.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{5}{R}","multiverseid":386472,"name":"Ainok
+        Simplified","name":"\u4fa6\u730e\u72ac\u4eba","multiverseid":386741},{"language":"Chinese
+        Traditional","name":"\u5075\u7375\u72ac\u4eba","multiverseid":387010},{"language":"French","name":"Traqueur
+        a\u00efnok","multiverseid":387548},{"language":"German","name":"Ainok-Spurensucher","multiverseid":387279},{"language":"Italian","name":"Ainok
+        Battipista","multiverseid":387817},{"language":"Japanese","name":"\u30a2\u30a4\u30ce\u30af\u306e\u8db3\u8de1\u8ffd\u3044","multiverseid":388086},{"language":"Korean","name":"\uc544\uc774\ub179
+        \ucd94\uc801\uafbc","multiverseid":388355},{"language":"Portuguese (Brazil)","name":"Rastreador
+        Ainok","multiverseid":388624},{"language":"Russian","name":"\u0410\u0438\u043d\u043e\u043a-\u0421\u043b\u0435\u0434\u043e\u043f\u044b\u0442","multiverseid":388893},{"language":"Spanish","name":"Rastreador
+        ainok","multiverseid":389162}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386472","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ainok
+        tracker.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{5}{R}","multiverseid":386472,"name":"Ainok
         Tracker","names":null,"number":"96","originalText":"First strike\nMorph {4}{R}
         (You may cast this card face down as a 2\/2 creature for {3}. Turn it face
-        up any time for its morph cost.)","originalType":"Creature \u2014 Hound Scout","power":"3","printings":["Khans
-        of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
+        up any time for its morph cost.)","originalType":"Creature \u2014 Hound Scout","power":"3","printings":["KTK","FRF_UGIN"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Morph
         lets you cast a card face down by paying {3}, and lets you turn the face-down
         permanent face up any time you have priority by paying its morph cost."},{"date":"2014-09-20","text":"The
         face-down spell has no mana cost and has a converted mana cost of 0. When
@@ -347,75 +367,87 @@ http_interactions:
         Kieryluk","border":"black","cmc":4,"colors":["White"],"flavor":"The appearance
         of a kirin signifies the passing or arrival of an important figure. As word
         of sightings spread, all the khans took it to mean themselves. Only the shaman
-        Chianul thought of Sarkhan Vol.","foreignNames":[{"language":"Chinese Traditional","name":"\u8056\u6f54\u9e92\u9e9f"},{"language":"Chinese
-        Simplified","name":"\u5723\u6d01\u9e92\u9e9f"},{"language":"French","name":"Kirin
-        d''alb\u00e2tre"},{"language":"German","name":"Alabaster-Kirin"},{"language":"Italian","name":"Kirin
-        di Alabastro"},{"language":"Japanese","name":"\u96ea\u82b1\u77f3\u306e\u9e92\u9e9f"},{"language":"Korean","name":"\uc21c\ubc31\uc758
-        \uae30\ub9b0"},{"language":"Portuguese (Brazil)","name":"Kirin de Alabastro"},{"language":"Russian","name":"\u0410\u043b\u0435\u0431\u0430\u0441\u0442\u0440\u043e\u0432\u044b\u0439
-        \u041a\u0438\u0440\u0438\u043d"},{"language":"Spanish","name":"Kirin de alabastro"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386473","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/alabaster
-        kirin.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}","multiverseid":386473,"name":"Alabaster
+        Chianul thought of Sarkhan Vol.","foreignNames":[{"language":"Chinese Simplified","name":"\u5723\u6d01\u9e92\u9e9f","multiverseid":386742},{"language":"Chinese
+        Traditional","name":"\u8056\u6f54\u9e92\u9e9f","multiverseid":387011},{"language":"French","name":"Kirin
+        d''alb\u00e2tre","multiverseid":387549},{"language":"German","name":"Alabaster-Kirin","multiverseid":387280},{"language":"Italian","name":"Kirin
+        di Alabastro","multiverseid":387818},{"language":"Japanese","name":"\u96ea\u82b1\u77f3\u306e\u9e92\u9e9f","multiverseid":388087},{"language":"Korean","name":"\uc21c\ubc31\uc758
+        \uae30\ub9b0","multiverseid":388356},{"language":"Portuguese (Brazil)","name":"Kirin
+        de Alabastro","multiverseid":388625},{"language":"Russian","name":"\u0410\u043b\u0435\u0431\u0430\u0441\u0442\u0440\u043e\u0432\u044b\u0439
+        \u041a\u0438\u0440\u0438\u043d","multiverseid":388894},{"language":"Spanish","name":"Kirin
+        de alabastro","multiverseid":389163}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386473","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/alabaster
+        kirin.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{W}","multiverseid":386473,"name":"Alabaster
         Kirin","names":null,"number":"4","originalText":"Flying, vigilance","originalType":"Creature
-        \u2014 Kirin","power":"2","printings":["Khans of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Kirin"],"supertypes":null,"text":"Flying,
+        \u2014 Kirin","power":"2","printings":["KTK"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Kirin"],"supertypes":null,"text":"Flying,
         vigilance","toughness":"3","type":"Creature \u2014 Kirin","types":["Creature"],"variations":null,"watermark":null},{"artist":"John
         Severin Brassell","border":"black","cmc":3,"colors":["Green"],"flavor":"The
         Temur welcome bears into the clan, fighting alongside them in battle. The
         relationship dates back to when they labored side by side under Sultai rule.","foreignNames":[{"language":"Chinese
-        Traditional","name":"\u9ad8\u5c71\u7070\u718a"},{"language":"Chinese Simplified","name":"\u9ad8\u5c71\u7070\u718a"},{"language":"French","name":"Grizzly
-        alpin"},{"language":"German","name":"Alpiner Grizzly"},{"language":"Italian","name":"Grizzly
-        Alpina"},{"language":"Japanese","name":"\u9ad8\u5c71\u306e\u7070\u8272\u718a"},{"language":"Korean","name":"\uace0\uc0b0\uc9c0\ub300
-        \ud68c\uc0c9\uacf0"},{"language":"Portuguese (Brazil)","name":"Urso Pardo
-        Alpino"},{"language":"Russian","name":"\u0413\u043e\u0440\u043d\u044b\u0439
-        \u0413\u0440\u0438\u0437\u043b\u0438"},{"language":"Spanish","name":"Parda
-        alpina"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386474","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/alpine
-        grizzly.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{G}","multiverseid":386474,"name":"Alpine
+        Simplified","name":"\u9ad8\u5c71\u7070\u718a","multiverseid":386743},{"language":"Chinese
+        Traditional","name":"\u9ad8\u5c71\u7070\u718a","multiverseid":387012},{"language":"French","name":"Grizzly
+        alpin","multiverseid":387550},{"language":"German","name":"Alpiner Grizzly","multiverseid":387281},{"language":"Italian","name":"Grizzly
+        Alpina","multiverseid":387819},{"language":"Japanese","name":"\u9ad8\u5c71\u306e\u7070\u8272\u718a","multiverseid":388088},{"language":"Korean","name":"\uace0\uc0b0\uc9c0\ub300
+        \ud68c\uc0c9\uacf0","multiverseid":388357},{"language":"Portuguese (Brazil)","name":"Urso
+        Pardo Alpino","multiverseid":388626},{"language":"Russian","name":"\u0413\u043e\u0440\u043d\u044b\u0439
+        \u0413\u0440\u0438\u0437\u043b\u0438","multiverseid":388895},{"language":"Spanish","name":"Parda
+        alpina","multiverseid":389164}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386474","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/alpine
+        grizzly.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{G}","multiverseid":386474,"name":"Alpine
         Grizzly","names":null,"number":"127","originalText":null,"originalType":"Creature
-        \u2014 Bear","power":"4","printings":["Khans of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Bear"],"supertypes":null,"text":null,"toughness":"2","type":"Creature
+        \u2014 Bear","power":"4","printings":["KTK"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Bear"],"supertypes":null,"text":null,"toughness":"2","type":"Creature
         \u2014 Bear","types":["Creature"],"variations":null,"watermark":null},{"artist":"Erica
         Yang","border":"black","cmc":1,"colors":null,"flavor":"Supplicants offer flesh
         and silver, flowers and blood. The altar takes what it will, eyes gleaming
-        with unspoken promises.","foreignNames":[{"language":"Chinese Traditional","name":"\u65cf\u7fa4\u796d\u58c7"},{"language":"Chinese
-        Simplified","name":"\u65cf\u7fa4\u796d\u575b"},{"language":"French","name":"Autel
-        de la Couv\u00e9e"},{"language":"German","name":"Altar der Brut"},{"language":"Italian","name":"Altare
-        della Nidiata"},{"language":"Japanese","name":"\u7fa4\u306e\u796d\u58c7"},{"language":"Korean","name":"\uad70\ub77d\uc758
-        \uc81c\ub2e8"},{"language":"Portuguese (Brazil)","name":"Altar da Linhagem"},{"language":"Russian","name":"\u0410\u043b\u0442\u0430\u0440\u044c
-        \u0412\u044b\u0432\u043e\u0434\u043a\u0430"},{"language":"Spanish","name":"Altar
-        de la progenie"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386475","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/altar
-        of the brood.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}","multiverseid":386475,"name":"Altar
+        with unspoken promises.","foreignNames":[{"language":"Chinese Simplified","name":"\u65cf\u7fa4\u796d\u575b","multiverseid":386744},{"language":"Chinese
+        Traditional","name":"\u65cf\u7fa4\u796d\u58c7","multiverseid":387013},{"language":"French","name":"Autel
+        de la Couv\u00e9e","multiverseid":387551},{"language":"German","name":"Altar
+        der Brut","multiverseid":387282},{"language":"Italian","name":"Altare della
+        Nidiata","multiverseid":387820},{"language":"Japanese","name":"\u7fa4\u306e\u796d\u58c7","multiverseid":388089},{"language":"Korean","name":"\uad70\ub77d\uc758
+        \uc81c\ub2e8","multiverseid":388358},{"language":"Portuguese (Brazil)","name":"Altar
+        da Linhagem","multiverseid":388627},{"language":"Russian","name":"\u0410\u043b\u0442\u0430\u0440\u044c
+        \u0412\u044b\u0432\u043e\u0434\u043a\u0430","multiverseid":388896},{"language":"Spanish","name":"Altar
+        de la progenie","multiverseid":389165}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386475","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/altar
+        of the brood.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}","multiverseid":386475,"name":"Altar
         of the Brood","names":null,"number":"216","originalText":"Whenever another
         permanent enters the battlefield under your control, each opponent puts the
-        top card of his or her library into his or her graveyard.","originalType":"Artifact","power":null,"printings":["Khans
-        of Tarkir"],"rarity":"Rare","rulings":[{"date":"2014-09-20","text":"If Altar
-        of the Brood enters the battlefield under your control at the same time as
-        other permanents, its ability will trigger for each of those permanents."}],"set":"KTK","subtypes":null,"supertypes":null,"text":"Whenever
+        top card of his or her library into his or her graveyard.","originalType":"Artifact","power":null,"printings":["KTK","FRF_UGIN"],"rarity":"Rare","rulings":[{"date":"2014-09-20","text":"If
+        Altar of the Brood enters the battlefield under your control at the same time
+        as other permanents, its ability will trigger for each of those permanents."}],"set":"KTK","subtypes":null,"supertypes":null,"text":"Whenever
         another permanent enters the battlefield under your control, each opponent
         puts the top card of his or her library into his or her graveyard.","toughness":null,"type":"Artifact","types":["Artifact"],"variations":null,"watermark":null},{"artist":"James
         Ryman","border":"black","cmc":3,"colors":["White","Black","Green"],"flavor":"Rarely
         at rest on the Amber Throne, Anafenza always leads the Abzan Houses to battle.","foreignNames":[{"language":"Chinese
-        Traditional","name":"\u9996\u9818\u963f\u5a1c\u82ac\u672d"},{"language":"Chinese
-        Simplified","name":"\u9996\u9886\u963f\u5a1c\u82ac\u672d"},{"language":"French","name":"Anafenza,
-        la Primordiale"},{"language":"German","name":"Anafenza die Vorderste"},{"language":"Italian","name":"Anafenza,
-        la Preminente"},{"language":"Japanese","name":"\u5148\u982d\u306b\u7acb\u3064\u3082\u306e\u3001\u30a2\u30ca\u30d5\u30a7\u30f3\u30b6"},{"language":"Korean","name":"\uc77c\uc778\uc790
-        \uc544\ub098\ud39c\uc790"},{"language":"Portuguese (Brazil)","name":"Anafenza,
-        a Principal"},{"language":"Russian","name":"\u0410\u043d\u0430\u0444\u0435\u043d\u0437\u0430,
-        \u041f\u0435\u0440\u0432\u0435\u0439\u0448\u0430\u044f"},{"language":"Spanish","name":"Anafenza,
-        la l\u00edder"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386476","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/anafenza,
-        the foremost.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386476,"name":"Anafenza,
+        Simplified","name":"\u9996\u9886\u963f\u5a1c\u82ac\u672d","multiverseid":386745},{"language":"Chinese
+        Traditional","name":"\u9996\u9818\u963f\u5a1c\u82ac\u672d","multiverseid":387014},{"language":"French","name":"Anafenza,
+        la Primordiale","multiverseid":387552},{"language":"German","name":"Anafenza
+        die Vorderste","multiverseid":387283},{"language":"Italian","name":"Anafenza,
+        la Preminente","multiverseid":387821},{"language":"Japanese","name":"\u5148\u982d\u306b\u7acb\u3064\u3082\u306e\u3001\u30a2\u30ca\u30d5\u30a7\u30f3\u30b6","multiverseid":388090},{"language":"Korean","name":"\uc77c\uc778\uc790
+        \uc544\ub098\ud39c\uc790","multiverseid":388359},{"language":"Portuguese (Brazil)","name":"Anafenza,
+        a Principal","multiverseid":388628},{"language":"Russian","name":"\u0410\u043d\u0430\u0444\u0435\u043d\u0437\u0430,
+        \u041f\u0435\u0440\u0432\u0435\u0439\u0448\u0430\u044f","multiverseid":388897},{"language":"Spanish","name":"Anafenza,
+        la l\u00edder","multiverseid":389166}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386476","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/anafenza,
+        the foremost.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{W}{B}{G}","multiverseid":386476,"name":"Anafenza,
         the Foremost","names":null,"number":"163","originalText":"Whenever Anafenza,
         the Foremost attacks, put a +1\/+1 counter on another target tapped creature
         you control.\nIf a creature card would be put into an opponent''s graveyard
         from anywhere, exile it instead.","originalType":"Legendary Creature \u2014
-        Human Soldier","power":"4","printings":["Khans of Tarkir"],"rarity":"Mythic
-        Rare","rulings":[{"date":"2014-09-20","text":"Anafenza\u2019s first ability
-        can target any tapped creature you control. That creature doesn\u2019t necessarily
-        have to be attacking."},{"date":"2014-09-20","text":"While Anafenza is on
-        the battlefield, abilities that trigger whenever a nontoken creature your
-        opponent owns dies won\u2019t trigger, as that card will never reach that
-        player\u2019s graveyard. (Token creatures will still go to the graveyard briefly
-        before ceasing to exist.)"},{"date":"2014-09-20","text":"If your opponent
+        Human Soldier","power":"4","printings":["pPRE","KTK"],"rarity":"Mythic Rare","rulings":[{"date":"2014-09-20","text":"Anafenza\u2019s
+        first ability can target any tapped creature you control. That creature doesn\u2019t
+        necessarily have to be attacking."},{"date":"2014-09-20","text":"While Anafenza
+        is on the battlefield, abilities that trigger whenever a nontoken creature
+        your opponent owns dies won\u2019t trigger, as that card will never reach
+        that player\u2019s graveyard. (Token creatures will still go to the graveyard
+        briefly before ceasing to exist.)"},{"date":"2014-09-20","text":"If your opponent
         discards a creature card while Anafenza is on the battlefield, abilities that
         function when a card is discarded (such as madness) still work, even though
         that card never reaches a graveyard. In addition, spells or abilities that
@@ -432,33 +464,36 @@ http_interactions:
         Creature \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Zoltan
         Boros","border":"black","cmc":5,"colors":["White","Black","Red"],"flavor":"The
         stature of the fighter matters less than the depth of the cut.","foreignNames":[{"language":"Chinese
-        Traditional","name":"\u65b7\u8e1d\u9b3c\u602a"},{"language":"Chinese Simplified","name":"\u65ad\u8e1d\u9b3c\u602a"},{"language":"French","name":"Attrapeur
-        de chevilles"},{"language":"German","name":"Kn\u00f6chelkerber"},{"language":"Italian","name":"Trinciastinchi"},{"language":"Japanese","name":"\u8db3\u9996\u88c2\u304d"},{"language":"Korean","name":"\ubc1c\ubaa9\uc744
-        \ub178\ub9ac\ub294 \uace0\ube14\ub9b0"},{"language":"Portuguese (Brazil)","name":"Cortador
-        de Tornozelos"},{"language":"Russian","name":"\u041b\u043e\u0434\u044b\u0436\u043a\u043e\u0440\u0435\u0437"},{"language":"Spanish","name":"Tobillero"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386477","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ankle
-        shanker.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}{W}{B}","multiverseid":386477,"name":"Ankle
+        Simplified","name":"\u65ad\u8e1d\u9b3c\u602a","multiverseid":386746},{"language":"Chinese
+        Traditional","name":"\u65b7\u8e1d\u9b3c\u602a","multiverseid":387015},{"language":"French","name":"Attrapeur
+        de chevilles","multiverseid":387553},{"language":"German","name":"Kn\u00f6chelkerber","multiverseid":387284},{"language":"Italian","name":"Trinciastinchi","multiverseid":387822},{"language":"Japanese","name":"\u8db3\u9996\u88c2\u304d","multiverseid":388091},{"language":"Korean","name":"\ubc1c\ubaa9\uc744
+        \ub178\ub9ac\ub294 \uace0\ube14\ub9b0","multiverseid":388360},{"language":"Portuguese
+        (Brazil)","name":"Cortador de Tornozelos","multiverseid":388629},{"language":"Russian","name":"\u041b\u043e\u0434\u044b\u0436\u043a\u043e\u0440\u0435\u0437","multiverseid":388898},{"language":"Spanish","name":"Tobillero","multiverseid":389167}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386477","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ankle
+        shanker.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}{W}{B}","multiverseid":386477,"name":"Ankle
         Shanker","names":null,"number":"164","originalText":"Haste\nWhenever Ankle
         Shanker attacks, creatures you control gain first strike and deathtouch until
-        end of turn.","originalType":"Creature \u2014 Goblin Berserker","power":"2","printings":["Media
-        Inserts","Khans of Tarkir"],"rarity":"Rare","rulings":null,"set":"KTK","subtypes":["Goblin","Berserker"],"supertypes":null,"text":"Haste\nWhenever
+        end of turn.","originalType":"Creature \u2014 Goblin Berserker","power":"2","printings":["pMEI","pPRE","KTK"],"rarity":"Rare","rulings":null,"set":"KTK","subtypes":["Goblin","Berserker"],"supertypes":null,"text":"Haste\nWhenever
         Ankle Shanker attacks, creatures you control gain first strike and deathtouch
         until end of turn.","toughness":"2","type":"Creature \u2014 Goblin Berserker","types":["Creature"],"variations":null,"watermark":"Mardu"},{"artist":"Seb
         McKinnon","border":"black","cmc":3,"colors":["Red"],"flavor":"Lightning burns
-        its own path.","foreignNames":[{"language":"Chinese Traditional","name":"\u5f27\u72c0\u9583\u96fb"},{"language":"Chinese
-        Simplified","name":"\u5f27\u72b6\u95ea\u7535"},{"language":"French","name":"Arc
-        \u00e9lectrique"},{"language":"German","name":"Lichtbogen"},{"language":"Italian","name":"Fulmine
-        ad Arco"},{"language":"Japanese","name":"\u5f27\u72b6\u306e\u7a32\u59bb"},{"language":"Korean","name":"\uc544\ud06c
-        \ubc29\uc804"},{"language":"Portuguese (Brazil)","name":"Raio Voltaico"},{"language":"Russian","name":"\u0414\u0443\u0433\u043e\u0432\u0430\u044f
-        \u041c\u043e\u043b\u043d\u0438\u044f"},{"language":"Spanish","name":"Rel\u00e1mpago
-        arco"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386478","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/arc
-        lightning.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Urza
-        Block":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}","multiverseid":386478,"name":"Arc
+        its own path.","foreignNames":[{"language":"Chinese Simplified","name":"\u5f27\u72b6\u95ea\u7535","multiverseid":386747},{"language":"Chinese
+        Traditional","name":"\u5f27\u72c0\u9583\u96fb","multiverseid":387016},{"language":"French","name":"Arc
+        \u00e9lectrique","multiverseid":387554},{"language":"German","name":"Lichtbogen","multiverseid":387285},{"language":"Italian","name":"Fulmine
+        ad Arco","multiverseid":387823},{"language":"Japanese","name":"\u5f27\u72b6\u306e\u7a32\u59bb","multiverseid":388092},{"language":"Korean","name":"\uc544\ud06c
+        \ubc29\uc804","multiverseid":388361},{"language":"Portuguese (Brazil)","name":"Raio
+        Voltaico","multiverseid":388630},{"language":"Russian","name":"\u0414\u0443\u0433\u043e\u0432\u0430\u044f
+        \u041c\u043e\u043b\u043d\u0438\u044f","multiverseid":388899},{"language":"Spanish","name":"Rel\u00e1mpago
+        arco","multiverseid":389168}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386478","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/arc
+        lightning.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Urza Block","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}","multiverseid":386478,"name":"Arc
         Lightning","names":null,"number":"97","originalText":"Arc Lightning deals
         3 damage divided as you choose among one, two, or three target creatures and\/or
-        players.","originalType":"Sorcery","power":null,"printings":["Arena League","Urza''s
-        Saga","Battle Royale Box Set","Planechase","Khans of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"You
+        players.","originalType":"Sorcery","power":null,"printings":["pARL","USG","BRB","HOP","KTK","FRF_UGIN"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"You
         choose how many targets Arc Lightning has and how the damage is divided as
         you cast the spell. Each target must receive at least 1 damage."},{"date":"2014-09-20","text":"If
         some of the creatures are illegal targets as Arc Lightning tries to resolve,
@@ -468,35 +503,40 @@ http_interactions:
         creatures and\/or players.","toughness":null,"type":"Sorcery","types":["Sorcery"],"variations":null,"watermark":null},{"artist":"Wayne
         Reynolds","border":"black","cmc":2,"colors":["Green"],"flavor":"Every shaft
         is graven with a name from a kin tree, calling upon the spirits of the ancestors
-        to make it fly true.","foreignNames":[{"language":"Chinese Traditional","name":"\u7bad\u624b\u80f8\u7246"},{"language":"Chinese
-        Simplified","name":"\u7bad\u624b\u80f8\u5899"},{"language":"French","name":"Parapet
-        des archers"},{"language":"German","name":"Br\u00fcstung der Bogensch\u00fctzen"},{"language":"Italian","name":"Parapetto
-        degli Arcieri"},{"language":"Japanese","name":"\u5c04\u624b\u306e\u80f8\u58c1"},{"language":"Korean","name":"\uad81\uc218\uc6a9
-        \ud749\ubcbd"},{"language":"Portuguese (Brazil)","name":"Parapeito dos Arqueiros"},{"language":"Russian","name":"\u0411\u0430\u0448\u043d\u044f
-        \u041b\u0443\u0447\u043d\u0438\u043a\u043e\u0432"},{"language":"Spanish","name":"Parapeto
-        de los arqueros"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386479","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/archers''
-        parapet.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}{G}","multiverseid":386479,"name":"Archers''
+        to make it fly true.","foreignNames":[{"language":"Chinese Simplified","name":"\u7bad\u624b\u80f8\u5899","multiverseid":386748},{"language":"Chinese
+        Traditional","name":"\u7bad\u624b\u80f8\u7246","multiverseid":387017},{"language":"French","name":"Parapet
+        des archers","multiverseid":387555},{"language":"German","name":"Br\u00fcstung
+        der Bogensch\u00fctzen","multiverseid":387286},{"language":"Italian","name":"Parapetto
+        degli Arcieri","multiverseid":387824},{"language":"Japanese","name":"\u5c04\u624b\u306e\u80f8\u58c1","multiverseid":388093},{"language":"Korean","name":"\uad81\uc218\uc6a9
+        \ud749\ubcbd","multiverseid":388362},{"language":"Portuguese (Brazil)","name":"Parapeito
+        dos Arqueiros","multiverseid":388631},{"language":"Russian","name":"\u0411\u0430\u0448\u043d\u044f
+        \u041b\u0443\u0447\u043d\u0438\u043a\u043e\u0432","multiverseid":388900},{"language":"Spanish","name":"Parapeto
+        de los arqueros","multiverseid":389169}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386479","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/archers''
+        parapet.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{1}{G}","multiverseid":386479,"name":"Archers''
         Parapet","names":null,"number":"128","originalText":"Defender\n{1}{B}, {T}:
-        Each opponent loses 1 life.","originalType":"Creature \u2014 Wall","power":"0","printings":["Khans
-        of Tarkir"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Wall"],"supertypes":null,"text":"Defender\n{1}{B},
+        Each opponent loses 1 life.","originalType":"Creature \u2014 Wall","power":"0","printings":["KTK"],"rarity":"Common","rulings":null,"set":"KTK","subtypes":["Wall"],"supertypes":null,"text":"Defender\n{1}{B},
         {T}: Each opponent loses 1 life.","toughness":"5","type":"Creature \u2014
         Wall","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Steven
         Belledin","border":"black","cmc":5,"colors":["White","Black","Green"],"flavor":"The
         Abzan avoid extended supply lines by incorporating weapons stores into their
-        battle formations.","foreignNames":[{"language":"Chinese Traditional","name":"\u8ecd\u5099\u90e8\u968a"},{"language":"Chinese
-        Simplified","name":"\u519b\u5907\u90e8\u961f"},{"language":"French","name":"Corps
-        de lanciers lourds"},{"language":"German","name":"R\u00fcstungskorps"},{"language":"Italian","name":"Corpo
-        d''Armamenti"},{"language":"Japanese","name":"\u8ecd\u5099\u90e8\u968a"},{"language":"Korean","name":"\uc911\ubb34\uc7a5
-        \ubd80\ub300"},{"language":"Portuguese (Brazil)","name":"Tropas de Armamento"},{"language":"Russian","name":"\u0412\u043e\u043e\u0440\u0443\u0436\u0435\u043d\u043d\u044b\u0439
-        \u041a\u043e\u0440\u043f\u0443\u0441"},{"language":"Spanish","name":"Cuerpo
-        de infanter\u00eda"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386480","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/armament
-        corps.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{W}{B}{G}","multiverseid":386480,"name":"Armament
+        battle formations.","foreignNames":[{"language":"Chinese Simplified","name":"\u519b\u5907\u90e8\u961f","multiverseid":386749},{"language":"Chinese
+        Traditional","name":"\u8ecd\u5099\u90e8\u968a","multiverseid":387018},{"language":"French","name":"Corps
+        de lanciers lourds","multiverseid":387556},{"language":"German","name":"R\u00fcstungskorps","multiverseid":387287},{"language":"Italian","name":"Corpo
+        d''Armamenti","multiverseid":387825},{"language":"Japanese","name":"\u8ecd\u5099\u90e8\u968a","multiverseid":388094},{"language":"Korean","name":"\uc911\ubb34\uc7a5
+        \ubd80\ub300","multiverseid":388363},{"language":"Portuguese (Brazil)","name":"Tropas
+        de Armamento","multiverseid":388632},{"language":"Russian","name":"\u0412\u043e\u043e\u0440\u0443\u0436\u0435\u043d\u043d\u044b\u0439
+        \u041a\u043e\u0440\u043f\u0443\u0441","multiverseid":388901},{"language":"Spanish","name":"Cuerpo
+        de infanter\u00eda","multiverseid":389170}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386480","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/armament
+        corps.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{W}{B}{G}","multiverseid":386480,"name":"Armament
         Corps","names":null,"number":"165","originalText":"When Armament Corps enters
         the battlefield, distribute two +1\/+1 counters among one or two target creatures
-        you control.","originalType":"Creature \u2014 Human Soldier","power":"4","printings":["Khans
-        of Tarkir"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
+        you control.","originalType":"Creature \u2014 Human Soldier","power":"4","printings":["KTK"],"rarity":"Uncommon","rulings":[{"date":"2014-09-20","text":"The
         enters-the-battlefield ability can target Armament Corps itself."},{"date":"2014-09-20","text":"You
         choose how the counters will be distributed as you put the ability on the
         stack. Notably, if you choose to put one +1\/+1 counter on each of two target
@@ -507,20 +547,21 @@ http_interactions:
         one or two target creatures you control.","toughness":"4","type":"Creature
         \u2014 Human Soldier","types":["Creature"],"variations":null,"watermark":"Abzan"},{"artist":"Steve
         Prescott","border":"black","cmc":5,"colors":["Red"],"flavor":"First the thunder,
-        then the rain.","foreignNames":[{"language":"Chinese Traditional","name":"\u7bad\u77e2\u98a8\u66b4"},{"language":"Chinese
-        Simplified","name":"\u7bad\u77e2\u98ce\u66b4"},{"language":"French","name":"Orage
-        de fl\u00e8ches"},{"language":"German","name":"Pfeilgewitter"},{"language":"Italian","name":"Tempesta
-        di Frecce"},{"language":"Japanese","name":"\u77e2\u306e\u5d50"},{"language":"Korean","name":"\ud654\uc0b4\ube44"},{"language":"Portuguese
-        (Brazil)","name":"Tempestade de Flechas"},{"language":"Russian","name":"\u0411\u0443\u0440\u044f
-        \u0421\u0442\u0440\u0435\u043b"},{"language":"Spanish","name":"Tormenta de
-        flechas"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386481","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/arrow
-        storm.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{R}{R}","multiverseid":386481,"name":"Arrow
+        then the rain.","foreignNames":[{"language":"Chinese Simplified","name":"\u7bad\u77e2\u98ce\u66b4","multiverseid":386750},{"language":"Chinese
+        Traditional","name":"\u7bad\u77e2\u98a8\u66b4","multiverseid":387019},{"language":"French","name":"Orage
+        de fl\u00e8ches","multiverseid":387557},{"language":"German","name":"Pfeilgewitter","multiverseid":387288},{"language":"Italian","name":"Tempesta
+        di Frecce","multiverseid":387826},{"language":"Japanese","name":"\u77e2\u306e\u5d50","multiverseid":388095},{"language":"Korean","name":"\ud654\uc0b4\ube44","multiverseid":388364},{"language":"Portuguese
+        (Brazil)","name":"Tempestade de Flechas","multiverseid":388633},{"language":"Russian","name":"\u0411\u0443\u0440\u044f
+        \u0421\u0442\u0440\u0435\u043b","multiverseid":388902},{"language":"Spanish","name":"Tormenta
+        de flechas","multiverseid":389171}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386481","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/arrow
+        storm.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{3}{R}{R}","multiverseid":386481,"name":"Arrow
         Storm","names":null,"number":"98","originalText":"Arrow Storm deals 4 damage
         to target creature or player.\nRaid \u2014 If you attacked with a creature
         this turn, instead Arrow Storm deals 5 damage to that creature or player and
-        the damage can''t be prevented.","originalType":"Sorcery","power":null,"printings":["Khans
-        of Tarkir"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Raid
+        the damage can''t be prevented.","originalType":"Sorcery","power":null,"printings":["KTK"],"rarity":"Common","rulings":[{"date":"2014-09-20","text":"Raid
         abilities care only that you attacked with a creature. It doesn\u2019t matter
         how many creatures you attacked with, or which opponent or planeswalker controlled
         by an opponent those creatures attacked."},{"date":"2014-09-20","text":"Raid
@@ -532,23 +573,26 @@ http_interactions:
         with a creature this turn, instead Arrow Storm deals 5 damage to that creature
         or player and the damage can''t be prevented.","toughness":null,"type":"Sorcery","types":["Sorcery"],"variations":null,"watermark":"Mardu"},{"artist":"Howard
         Lyon","border":"black","cmc":4,"colors":["Red"],"flavor":null,"foreignNames":[{"language":"Chinese
-        Traditional","name":"\u71fc\u96f2\u9cf3\u51f0"},{"language":"Chinese Simplified","name":"\u70ec\u4e91\u51e4\u51f0"},{"language":"French","name":"Ph\u00e9nix
-        des nu\u00e9es cendreuses"},{"language":"German","name":"Aschewolkenphoenix"},{"language":"Italian","name":"Fenice
-        della Nube Cinerea"},{"language":"Japanese","name":"\u7070\u96f2\u306e\u30d5\u30a7\u30cb\u30c3\u30af\u30b9"},{"language":"Korean","name":"\uc7ac\uad6c\ub984
-        \ubd88\uc0ac\uc870"},{"language":"Portuguese (Brazil)","name":"F\u00eanix
-        Nuvem-de-cinzas"},{"language":"Russian","name":"\u0424\u0435\u043d\u0438\u043a\u0441
-        \u041f\u0435\u043f\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u041e\u0431\u043b\u0430\u043a\u0430"},{"language":"Spanish","name":"F\u00e9nix
-        nubecin\u00e9reo"}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386482","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ashcloud
-        phoenix.jpg"},"layout":"normal","legalities":{"Standard":"Legal","Modern":"Legal","Legacy":"Legal","Vintage":"Legal","Freeform":"Legal","Prismatic":"Legal","Tribal
-        Wars Legacy":"Legal","Singleton 100":"Legal","Commander":"Legal"},"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}{R}","multiverseid":386482,"name":"Ashcloud
+        Simplified","name":"\u70ec\u4e91\u51e4\u51f0","multiverseid":386751},{"language":"Chinese
+        Traditional","name":"\u71fc\u96f2\u9cf3\u51f0","multiverseid":387020},{"language":"French","name":"Ph\u00e9nix
+        des nu\u00e9es cendreuses","multiverseid":387558},{"language":"German","name":"Aschewolkenphoenix","multiverseid":387289},{"language":"Italian","name":"Fenice
+        della Nube Cinerea","multiverseid":387827},{"language":"Japanese","name":"\u7070\u96f2\u306e\u30d5\u30a7\u30cb\u30c3\u30af\u30b9","multiverseid":388096},{"language":"Korean","name":"\uc7ac\uad6c\ub984
+        \ubd88\uc0ac\uc870","multiverseid":388365},{"language":"Portuguese (Brazil)","name":"F\u00eanix
+        Nuvem-de-cinzas","multiverseid":388634},{"language":"Russian","name":"\u0424\u0435\u043d\u0438\u043a\u0441
+        \u041f\u0435\u043f\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u041e\u0431\u043b\u0430\u043a\u0430","multiverseid":388903},{"language":"Spanish","name":"F\u00e9nix
+        nubecin\u00e9reo","multiverseid":389172}],"hand":null,"images":{"gatherer":"http:\/\/gatherer.wizards.com\/Handlers\/Image.ashx?type=card&multiverseid=386482","mtgimage":"http:\/\/mtgimage.com\/set\/KTK\/ashcloud
+        phoenix.jpg"},"layout":"normal","legalities":[{"format":"Commander","legality":"Legal"},{"format":"Freeform","legality":"Legal"},{"format":"Legacy","legality":"Legal"},{"format":"Modern","legality":"Legal"},{"format":"Prismatic","legality":"Legal"},{"format":"Singleton
+        100","legality":"Legal"},{"format":"Standard","legality":"Legal"},{"format":"Tarkir
+        Block","legality":"Legal"},{"format":"Tribal Wars Legacy","legality":"Legal"},{"format":"Tribal
+        Wars Standard","legality":"Legal"},{"format":"Vintage","legality":"Legal"}],"life":null,"links":{"set":"http:\/\/api.mtgapi.com\/v2\/sets?code=KTK"},"loyalty":null,"manaCost":"{2}{R}{R}","multiverseid":386482,"name":"Ashcloud
         Phoenix","names":null,"number":"99","originalText":"Flying\nWhen Ashcloud
         Phoenix dies, return it to the battlefield face down.\nMorph {4}{R}{R} (You
         may cast this card face down as a 2\/2 creature for {3}. Turn it face up any
         time for its morph cost.)\nWhen Ashcloud Phoenix is turned face up, it deals
-        2 damage to each player.","originalType":"Creature \u2014 Phoenix","power":"4","printings":["Khans
-        of Tarkir"],"rarity":"Mythic Rare","rulings":[{"date":"2014-09-20","text":"If
-        Ashcloud Phoenix is face down, you can turn it face up for its morph cost,
-        even if you didn\u2019t cast Ashcloud Phoenix face down using its morph ability."},{"date":"2014-09-20","text":"If
+        2 damage to each player.","originalType":"Creature \u2014 Phoenix","power":"4","printings":["KTK"],"rarity":"Mythic
+        Rare","rulings":[{"date":"2014-09-20","text":"If Ashcloud Phoenix is face
+        down, you can turn it face up for its morph cost, even if you didn\u2019t
+        cast Ashcloud Phoenix face down using its morph ability."},{"date":"2014-09-20","text":"If
         Ashcloud Phoenix leaves the graveyard before its \u201cdies\u201d ability
         resolves, it won\u2019t return to the battlefield."},{"date":"2014-09-20","text":"Once
         Ashcloud Phoenix returns to the battlefield face down, each player will know
@@ -584,11 +628,11 @@ http_interactions:
         a face-down permanent leaves the battlefield, you must reveal it. You must
         also reveal all face-down spells and permanents you control if you leave the
         game or if the game ends."}],"set":"KTK","subtypes":["Phoenix"],"supertypes":null,"text":"Flying\nWhen
-        Ashcloud Phoenix dies, return it to the battlefield face down.\nMorph {4}{R}{R}
-        (You may cast this card face down as a 2\/2 creature for {3}. Turn it face
-        up any time for its morph cost.)\nWhen Ashcloud Phoenix is turned face up,
-        it deals 2 damage to each player.","toughness":"1","type":"Creature \u2014
-        Phoenix","types":["Creature"],"variations":null,"watermark":null}],"total":269,"perPage":20,"links":{"first":"http:\/\/api.mtgapi.com\/v2\/cards?set=KTK","previous":null,"current":"http:\/\/api.mtgapi.com\/v2\/cards?page=1&set=KTK","next":"http:\/\/api.mtgapi.com\/v2\/cards?page=2&set=KTK","last":"http:\/\/api.mtgapi.com\/v2\/cards?page=14&set=KTK"}}'
+        Ashcloud Phoenix dies, return it to the battlefield face down under your control.\nMorph
+        {4}{R}{R} (You may cast this card face down as a 2\/2 creature for {3}. Turn
+        it face up any time for its morph cost.)\nWhen Ashcloud Phoenix is turned
+        face up, it deals 2 damage to each player.","toughness":"1","type":"Creature
+        \u2014 Phoenix","types":["Creature"],"variations":null,"watermark":null}],"total":269,"perPage":20,"links":{"first":"http:\/\/api.mtgapi.com\/v2\/cards?set=KTK","previous":null,"current":"http:\/\/api.mtgapi.com\/v2\/cards?page=1&set=KTK","next":"http:\/\/api.mtgapi.com\/v2\/cards?page=2&set=KTK","last":"http:\/\/api.mtgapi.com\/v2\/cards?page=14&set=KTK"}}'
     http_version: 
-  recorded_at: Wed, 12 Nov 2014 20:40:49 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Fri, 04 Dec 2015 02:22:07 GMT
+recorded_with: VCR 3.0.0

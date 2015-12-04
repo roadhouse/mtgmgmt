@@ -6,7 +6,7 @@ require "./lib/laracna/crawler_config"
 
 describe Laracna::Mtgdecks::IndexPage, :vcr do
   let(:config) { CrawlerConfig.new(:mtgdecks) }
-  let(:decks_list_url) {"http://www.mtgdecks.net/decks/viewByFormat/34/page:1"}
+  let(:decks_list_url) {"http://www.mtgdecks.net/decks/viewByFormat/39/page:1"}
 
   context "#deck_nodes" do
     subject { described_class.new(decks_list_url, config).deck_nodes }

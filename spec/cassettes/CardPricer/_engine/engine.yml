@@ -10,7 +10,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - '*/*'
       User-Agent:
       - Ruby
   response:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 May 2015 18:27:08 GMT
+      - Mon, 07 Dec 2015 01:16:26 GMT
       Server:
       - Apache/2.2.29 (Unix) mod_ssl/2.2.29 OpenSSL/1.0.1e-fips mod_bwlimited/1.4
       Expires:
@@ -29,72 +29,75 @@ http_interactions:
       Pragma:
       - no-cache
       Set-Cookie:
-      - PHPSESSID=c3f4000c0f3403a4ef168d086f5c9169; path=/
+      - PHPSESSID=f0a464aad49034a306cfc476fb3a2655; path=/
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '12868'
+      - '13894'
       Content-Type:
       - text/html
     body:
       encoding: UTF-8
-      string: "\n            <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
-        \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n            <html
-        \  xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:og=\"http://ogp.me/ns#\" xmlns:fb=\"https://www.facebook.com/2008/fbml\">\n
-        \               <head>\n                    <title>F&ecirc;nix Nuvem-de-cinzas
-        / Ashcloud Phoenix | Busca de Cards | Ligamagic</title>\n                    \n
-        \                   <meta http-equiv=\"Content-Type\" content=\"text/html;
-        charset=UTF-8\">\n                    <meta name=\"copyright\" content=\"(c)
-        2001-2015 Ligamagic\" />\n                    <meta name=\"description\" content=\"Acesse
-        a LigaMagic e veja o pre&ccedil;o / cota&ccedil;&atilde;o desta carta nos
-        maiores sites de Magic: The Gathering\" />\n                    <meta name=\"keywords\"
-        content=\"card game, estrategia, vendas, compras, torneios, lojas, eventos,
-        magic\" />\n                    <meta property=\"fb:admins\" content=\"100002032577024\"
-        />\n                    <meta property=\"fb:app_id\" content=\"485444348186214\"
-        />\n                    <meta property=\"og:title\" content=\"F&ecirc;nix
-        Nuvem-de-cinzas / Ashcloud Phoenix | Busca de Cards | Ligamagic\"/>\n                    <meta
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n
+        \           <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:og=\"http://ogp.me/ns#\"
+        xmlns:fb=\"https://www.facebook.com/2008/fbml\">\r\n                <head>\r\n
+        \                   <title>F&ecirc;nix Nuvem-de-cinzas / Ashcloud Phoenix
+        | Busca de Cards | Ligamagic</title>\r\n                    \r\n                    <meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n                    <meta
+        name=\"copyright\" content=\"(c) 2001-2015 Ligamagic\" />\r\n                    <meta
+        name=\"description\" content=\"Acesse a LigaMagic e veja o pre&ccedil;o /
+        cota&ccedil;&atilde;o desta carta nos maiores sites de Magic: The Gathering\"
+        />\r\n                    <meta name=\"keywords\" content=\"card game, estrategia,
+        vendas, compras, torneios, lojas, eventos, magic\" />\r\n                    <meta
+        name=\"google-site-verification\" content=\"LYE4-pq_Zv3fmMhXuyOLxSqLrsMO5pewM-uuGQ-cBYU\"
+        />\r\n                    <meta property=\"fb:admins\" content=\"100002032577024\"
+        />\r\n                    <meta property=\"fb:app_id\" content=\"485444348186214\"
+        />\r\n                    <meta property=\"og:title\" content=\"F&ecirc;nix
+        Nuvem-de-cinzas / Ashcloud Phoenix | Busca de Cards | Ligamagic\"/>\r\n                    <meta
         property=\"og:description\" content=\"Acesse a LigaMagic e veja o pre&ccedil;o
         / cota&ccedil;&atilde;o desta carta nos maiores sites de Magic: The Gathering\"
-        />\n                    <meta property=\"og:type\" content=\"product\">\n
-        \                   <meta property=\"og:image\" content=\"http://www.ligamagic.com.br/arquivos/up/cartas/images/pt99ktk.jpg\"/>\n
-        \                   <meta property=\"og:url\" content=\"http://www.ligamagic.com.br/?view=cartas/card&card=Ashcloud%20Phoenix\"/>\n
-        \                   <meta name=\"robots\" content=\"INDEX,FOLLOW\" />\n                    \n
-        \                   <link rel='stylesheet' type='text/css' href='arquivos/css_laranja/main_v5.css'
-        /><link rel='stylesheet' type='text/css' href='arquivos/css_laranja/main_menu.css'
-        />\n                    <SCRIPT type=\"text/javascript\" src=\"arquivos/js_v1/cards_v1.js\"></SCRIPT><SCRIPT
-        type=\"text/javascript\" src=\"arquivos/js_v1/comum_v3.js\"></SCRIPT>\n                </head>\n
-        \       \n            <body leftmargin=\"0\" topmargin=\"0\" marginwidth=\"0\"
-        marginheight=\"0\">\n                <div align=\"center\">\n                    <table
-        width=\"1100\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\n                        <tr>\n
-        \                           <td vAlign=\"top\" bgcolor=\"#ff5a00\">\n                                \n
-        \           <div align=\"center\" style=\"background:#262626;\">\n                <table
-        bgcolor=\"#262626\" height=\"30\" style=\"min-height:30px;\" border=\"0\"
-        cellpadding=\"0\" cellspacing=\"0\" width=\"1082\">\n                    <tr>\n
-        \                       <td width=\"826\" align=\"left\">\n                            <div
-        >\n                                <font color=\"#f0f0f0\"><a href=\"./?view=newuser\"
-        class=\"cinza\">Criar meu cadastro</a> | <a href=\"./?view=logar\" class=\"cinza\">Login</a>
-        | <a href=\"./?view=logar_senha\" class=\"cinza\">Recuperar Senha</a></font>\n
-        \                           </div>\n                        </td>\n                        <td
-        width=\"256\" align=\"right\">\n                            <div style=\"margin-right:0px;\">\n
-        \                               &nbsp;\n                            </div>\n
-        \                       </td>\n                    </tr>\n                </table>\n
-        \           </div>\n        \n                                \n                <table
-        height=\"68\" style=\"min-height:68px;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"
-        width=\"1056\" bgcolor=\"#ff5a00\" align=\"center\">\n                    <tr>\n
-        \                       <td width=\"40%\" align=\"left\" vAlign=\"bottom\">\n
-        \                           <a href=\"./?view=home\"><img style=\"margin-top:2px;\"
-        src=\"images/layout_laranja/logo_branco.png\" width=\"129\" height=\"56\"
-        alt=\"Home\" title=\"Home\"></a>\n                        </td>\n                        <td
-        width=\"60%\" align=\"right\"><a href='./b/?i=99' target='_blank'><img src='arquivos/up/banner/1421850902_275.gif'
-        title='GPSP 2015 - By: Igor Silva' alt='GPSP 2015 - By: Igor Silva' width='514'
-        height='60' border='0'/></a></td>\n                    </tr>\n                </table>\n
-        \           \n                                <table height=\"34\" style=\"min-height:34px;\"
-        border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"1056\" bgcolor=\"#ff5a00\"
-        align=\"center\">\n        <tr>\n            <td>\n<table border=\"0\" width=\"100%\"
-        cellpadding=\"0\" cellspacing=\"0\">\n<tr>\n<td>\n    <div class=\"menu menuMain\"
-        style=\"width:790px;margin-left:0px;\">\n    <ul>\n    <li><a href=\"./?view=home\">Home</a></li>\n
-        \   \n    <li><a href=\"#\">VIP<!--[if IE 7]><!--></a><!--<![endif]-->\n    <!--[if
-        lte IE 6]><table><tr><td><![endif]-->\n    <ul>\n    <li><a href=\"./?view=vip/ativadeposito\">Ativar
+        />\r\n                    <meta property=\"og:type\" content=\"product\">\r\n
+        \                   <meta property=\"og:image\" content=\"http://www.ligamagic.com.br/arquivos/up/cartas/images/pt99ktk.jpg\"/>\r\n
+        \                   <meta property=\"og:url\" content=\"http://ligamagic.com.br/?view=cartas/card&card=Ashcloud%20Phoenix\"/>\r\n
+        \                   <meta name=\"robots\" content=\"INDEX,FOLLOW\" />\r\n
+        \                   \r\n                    <link rel='stylesheet' type='text/css'
+        href='arquivos/css_laranja/main_v29.css' /><link rel='stylesheet' type='text/css'
+        href='arquivos/css_laranja/main_menu.css' />\r\n                    \n            <SCRIPT
+        type=\"text/javascript\" src=\"arquivos/js_v1/cards_v4.js\"></SCRIPT>\n            <SCRIPT
+        type=\"text/javascript\" src=\"arquivos/js_v1/comum_v5.js\"></SCRIPT>\n        \r\n
+        \               </head>\r\n        \n            <body leftmargin=\"0\" topmargin=\"0\"
+        marginwidth=\"0\" marginheight=\"0\">\n                <div align=\"center\">\n
+        \                   <table width=\"1100\" cellpadding=\"0\" cellspacing=\"0\"
+        border=\"0\">\n                        <tr>\n                            <td
+        vAlign=\"top\" bgcolor=\"#ff5a00\">\n                                \n            <div
+        align=\"center\" style=\"background:#262626;\">\n                <table bgcolor=\"#262626\"
+        height=\"30\" style=\"min-height:30px;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"
+        width=\"1082\">\n                    <tr>\n                        \n                        <td
+        width=\"826\" align=\"left\">\n                            <div >\n                                <font
+        color=\"#f0f0f0\"><a href=\"./?view=newuser\" class=\"cinza\">Criar meu cadastro</a>
+        | <a href=\"./?view=logar\" class=\"cinza\">Login</a> | <a href=\"./?view=logar_senha\"
+        class=\"cinza\">Recuperar Senha</a></font>\n                            </div>\n
+        \                       </td>\n                        <td width=\"256\" align=\"right\">\n
+        \                           <div style=\"margin-right:0px;\">\n                                &nbsp;\n
+        \                           </div>\n                        </td>\n                    </tr>\n
+        \               </table>\n            </div>\n        \n                                \n
+        \               <table height=\"68\" style=\"min-height:68px;\" border=\"0\"
+        cellpadding=\"0\" cellspacing=\"0\" width=\"1056\" bgcolor=\"#ff5a00\" align=\"center\">\n
+        \                   <tr>\n                        <td width=\"40%\" align=\"left\"
+        vAlign=\"bottom\">\n                            <a href=\"./?view=home\"><img
+        style=\"margin-top:2px;\" src=\"images/layout_laranja/logo_branco.png\" width=\"129\"
+        height=\"56\" alt=\"Home\" title=\"Home\"></a>\n                        </td>\n
+        \                       <td width=\"60%\" align=\"right\"><a href='./b/?i=99'
+        target='_blank'><img src='arquivos/up/banner/1445687496_606.gif' title='Cards
+        of Paradise' alt='Cards of Paradise' width='514' height='60' border='0'/></a></td>\n
+        \                   </tr>\n                </table>\n            \n                                <table
+        height=\"34\" style=\"min-height:34px;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"
+        width=\"1056\" bgcolor=\"#ff5a00\" align=\"center\">\n        <tr>\n            <td>\n<table
+        border=\"0\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\">\n<tr>\n<td>\n
+        \   <div class=\"menu menuMain\" style=\"width:790px;margin-left:0px;\">\n
+        \   <ul>\n    <li><a href=\"./?view=home\">Home</a></li>\n    \n    <li><a
+        href=\"#\">VIP<!--[if IE 7]><!--></a><!--<![endif]-->\n    <!--[if lte IE
+        6]><table><tr><td><![endif]-->\n    <ul>\n    <li><a href=\"./?view=vip/ativadeposito\">Ativar
         Dep&oacute;sito</a></li>\n    <li><a href=\"./?view=vip/comprar\">Assinar
         Plano VIP</a></li>\n    <li><a href=\"./?view=vip/faq#7\">Onde Depositar</a></li>\n
         \   <li><a href=\"./?view=vip/faq#2\">Vantagens em ser VIP</a></li>\n    <li><a
@@ -103,7 +106,7 @@ http_interactions:
         lte IE 6]></td></tr></table></a><![endif]-->\n    </li>\n    \n    <li><a
         href=\"http://www.circuitoligamagic.com.br\">Circuito</a></li>\n    \n    <li><a
         href=\"#\">Decks<!--[if IE 7]><!--></a><!--<![endif]-->\n    <!--[if lte IE
-        6]><table><tr><td><![endif]-->\n    <ul>\n    <li><a href=\"./?view=decks/circuito\">Decks
+        6]><table><tr><td><![endif]-->\n    <ul>\n    <li><a href=\"http://www.circuitoligamagic.com.br/?view=decks\">Decks
         do <font class=\"bsp4 b43\"></font>Circuito LigaMagic</a></li>\n    <li><a
         href=\"./?view=decks/listar\">Decks de Torneios Importantes</a></li>\n    <li><a
         class=\"lb\" href=\"./?view=decks/jogadores\">Decks de Usu&aacute;rios e Jogadores</a></li>\n
@@ -155,8 +158,8 @@ http_interactions:
         class=\"lb\" href=\"./?view=torneios/cobertura/home\">Ver Coberturas de Torneios</a></li>\n
         \   </ul>\n    <!--[if lte IE 6]></td></tr></table></a><![endif]-->\n    </li>\n\n
         \   <li><a href=\"#\">Cards<!--[if IE 7]><!--></a><!--<![endif]-->\n    <!--[if
-        lte IE 6]><table><tr><td><![endif]-->\n    <ul>\n    <li><a href=\"./cards\">Todos
-        Cards</a></li>\n    <li><a href=\"./?view=cards/variacao&show=alta\">Cards
+        lte IE 6]><table><tr><td><![endif]-->\n    <ul>\n    <li><a href=\"./?view=cards/spoiler\">Spoilers</a></li>\n
+        \   <li><a href=\"./cards\">Todos Cards</a></li>\n    <li><a href=\"./?view=cards/variacao&show=alta\">Cards
         em Alta</a></li>\n    <li><a href=\"./?view=cards/variacao&show=queda\">Cards
         em Queda</a></li>\n    <li><a class=\"lb\" href=\"./?view=cards/hits\">Cards
         Mais Pesquisados</a></li>\n    </ul>\n    <!--[if lte IE 6]></td></tr></table></a><![endif]-->\n
@@ -190,8 +193,8 @@ http_interactions:
         style=\"margin-top:4px;margin-bottom:8px;\">\n                            <font
         class=\"cardTitle\">F&ecirc;nix Nuvem-de-cinzas</font>\n                            <br><font
         class=\"cardSubtitle\">Ashcloud Phoenix</font>\n                        </div>\n\n
-        \                       <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"
-        width=\"318\">\n                            <tr>\n                                <td
+        \                       \n\n                        <table border=\"0\" cellpadding=\"0\"
+        cellspacing=\"0\" width=\"318\">\n                            <tr>\n                                <td
         width=\"78\" vAlign=\"top\">\n                                    \n            <div
         id=\"scrollbar1\">\n                <div class=\"scrollbar\"><div class=\"track\"><div
         class=\"thumb\"><div class=\"end\"></div></div></div></div>\n                <div
@@ -213,30 +216,23 @@ http_interactions:
         \                               <td>\n                                    <table
         border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"250\">\n                                        <tr>\n
         \                                           <td vAlign=\"top\"><div id=\"omoMenorPreco\"
-        title=\"Menor Pre&ccedil;o\" class=\"price price_min\">R$ 9,30 <a href='./?view=cards/variacao&show=queda'><img
+        title=\"Menor Pre&ccedil;o\" class=\"price price_min\">R$ 3,00 </div>&nbsp;&nbsp;</td>\n
+        \                                           <td vAlign=\"top\"><div id=\"omoMedioPreco\"
+        title=\"Pre&ccedil;o M&eacute;dio\" class=\"price price_avg\">R$ 4,23 <a href='./?view=cards/variacao&show=queda'><img
         src='images/cards/seta_down_vermelho.png' alt='Varia&ccedil;&atilde;o de pre&ccedil;o
-        no dia: R$ -0,33' title='Varia&ccedil;&atilde;o de pre&ccedil;o no dia: R$
-        -0,33' border='0'></a></div>&nbsp;&nbsp;</td>\n                                            <td
-        vAlign=\"top\"><div id=\"omoMedioPreco\" title=\"Pre&ccedil;o M&eacute;dio\"
-        class=\"price price_avg\">R$ 11,67 <a href='./?view=cards/variacao&show=queda'><img
-        src='images/cards/seta_down_vermelho.png' alt='Varia&ccedil;&atilde;o de pre&ccedil;o
-        no dia: R$ -0,30' title='Varia&ccedil;&atilde;o de pre&ccedil;o no dia: R$
-        -0,30' border='0'></a></div>&nbsp;&nbsp;</td>\n                                            <td
+        no dia: R$ -0,06' title='Varia&ccedil;&atilde;o de pre&ccedil;o no dia: R$
+        -0,06' border='0'></a></div>&nbsp;&nbsp;</td>\n                                            <td
         vAlign=\"top\"><div id=\"omoMaiorPreco\" title=\"Maior Pre&ccedil;o\" class=\"price
-        price_max\">R$ 14,89 </div></td>\n                                        </tr>\n
+        price_max\">R$ 8,00 </div></td>\n                                        </tr>\n
         \                                   </table>\n                                </td>\n
-        \                           </tr>\n                        </table>\n                        \r\n
-        \           <div id=\"fb-root\"></div>\r\n            <script>(function(d,
-        s, id) {\r\n              var js, fjs = d.getElementsByTagName(s)[0];\r\n
-        \             if (d.getElementById(id)) return;\r\n              js = d.createElement(s);
-        js.id = id;\r\n              js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=485444348186214&version=v2.0\";\r\n
-        \             fjs.parentNode.insertBefore(js, fjs);\r\n            }(document,
-        \"script\", \"facebook-jssdk\"));</script>\r\n\r\n            <div style=\"margin-top:
-        5px;margin-bottom: 5px;\">&nbsp;<div class=\"fb-like\" data-href=\"%2F%3Fview%3Dcartas%2Fcard%26card%3DAshcloud%2520Phoenix\"
-        data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"false\"
-        data-share=\"true\"></div>&nbsp;</div>\n                    </td>\n                </tr>\n
-        \               <tr>\n                    <td class=\"cardLeftWMiddle\" align=\"center\">\n\n
-        \                       <div style=\"width:318px;margin-top:8px;\">\n                            <table
+        \                           </tr>\n                        </table>\n                        <div
+        style=\"margin-top:8px;margin-bottom:6px;\">\n                            <iframe
+        src=\"http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.ligamagic.com.br%2F%3Fview%3Dcards%252Fsearch%26card%3DAshcloud%20Phoenix&amp;\r\nlayout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light\"\r\nallowtransparency=\"true\"
+        style=\"border:medium none; overflow: hidden; width: 90px; height: 21px;\"
+        frameborder=\"0\" scrolling=\"no\"></iframe>\n                        </div>\n
+        \                   </td>\n                </tr>\n                <tr>\n                    <td
+        class=\"cardLeftWMiddle\" align=\"center\">\n\n                        <div
+        style=\"width:318px;margin-top:8px;\">\n                            <table
         border=\"0\" cellpadding=\"2\" cellspacing=\"1\" width=\"308\" class=\"cardInfo\">\n
         \                               <tr>\n                                    <td
         align=\"left\"><b>Raridade:</b> <font id=\"omoRaridade\"><a href=\"./?view=cards/search&card=rarid%3DM\">M&iacute;tica</a></font></td>\n
@@ -256,9 +252,6 @@ http_interactions:
         \                               \n                                <tr>\n                                    <td
         align=\"left\"><b>Tipo:</b> <a href=\"./?view=cards/search&card=tipo%3DCreature\">Creature</a>
         - <a href=\"./?view=cards/search&card=sub%3DPhoenix\">Phoenix</a></td>\n                                </tr>\n
-        \                               \n                                    <tr>\n
-        \                                       <td align=\"left\"><b>P/R:</b> <a
-        href=\"./?view=cards/search&card=poder%3D4%20resist%3D1\">4/1</a></td>\n                                    </tr>\n
         \                               \n                                \n                                <tr>\n
         \                                   <td align=\"left\"><b>Artista:</b> <font
         id=\"omoArtista\"><a class=brancoSimples href=\"./?view=cards/search&card=artista%3DHoward
@@ -281,27 +274,36 @@ http_interactions:
         onmouseover='omoCard(0);' src='images/emot/ed/KTK_M.gif' title=\"Khans de
         Tarkir / Khans of Tarkir\" height='21' border='0'></a></td>\n                    <td
         id='omoPrimeMenor_0' class='priceNoPad price_min_sel' width='74' align='center'>R$
-        9,30 <a href='./?view=cards/variacao&show=queda'><img src='images/cards/seta_down_vermelho.png'
-        alt='Varia&ccedil;&atilde;o de pre&ccedil;o no dia: R$ -0,33' title='Varia&ccedil;&atilde;o
-        de pre&ccedil;o no dia: R$ -0,33' border='0'></a></td>\n                    <td
-        id='omoPrimeMedio_0' class='priceNoPad price_avg_sel' width='74' align='center'>R$
-        11,67 <a href='./?view=cards/variacao&show=queda'><img src='images/cards/seta_down_vermelho.png'
-        alt='Varia&ccedil;&atilde;o de pre&ccedil;o no dia: R$ -0,30' title='Varia&ccedil;&atilde;o
-        de pre&ccedil;o no dia: R$ -0,30' border='0'></a></td>\n                    <td
-        id='omoPrimeMaior_0' class='priceNoPad price_max_sel' width='74' align='center'>R$
-        14,89 </td>\n                </tr>\n            </table>\n                        </div>\n
+        3,00 </td>\n                    <td id='omoPrimeMedio_0' class='priceNoPad
+        price_avg_sel' width='74' align='center'>R$ 4,23 <a href='./?view=cards/variacao&show=queda'><img
+        src='images/cards/seta_down_vermelho.png' alt='Varia&ccedil;&atilde;o de pre&ccedil;o
+        no dia: R$ -0,06' title='Varia&ccedil;&atilde;o de pre&ccedil;o no dia: R$
+        -0,06' border='0'></a></td>\n                    <td id='omoPrimeMaior_0'
+        class='priceNoPad price_max_sel' width='74' align='center'>R$ 8,00 </td>\n
+        \               </tr>\n            </table>\n                        </div>\n
         \                       <br>\n                    </td>\n                </tr>\n
         \               <tr>\n                    <td class=\"cardLeftWBottom\"> </td>\n
-        \               </tr>\n            </table>\n        </td>\n                    <td
-        width=\"12\"><img src=\"images/spacer.gif\" width=\"10\" height=\"1\"></td>\n
-        \                   <td width=\"696\" vAlign=\"top\" align=\"left\">\n            \n
-        \           <form method=\"get\" action=\"./?view=cards/search\" name=\"principal\"
-        id=\"principal\">\n                <input type=\"hidden\" name=\"view\" value=\"cards/search\">\n
-        \               <input style=\"display:none;\" type=\"submit\" name=\"btSubmit\"
-        id=\"btSubmit\" value=\"btSubmit\">\n\n                <table border=\"0\"
-        cellpadding=\"0\" cellspacing=\"0\" class=\"cardsSearch\">\n                    <tr>\n
-        \                       <td width=\"654\" align=\"left\" onclick=\"focusSearchField();\">\n
-        \                           <input\n                                type=\"text\"
+        \               </tr>\n            </table>\n            \n            \n
+        \                   <div align=\"center\">\n                    <br><script
+        type=\"text/javascript\">google_ad_client = \"ca-pub-8533196174988722\";google_ad_slot
+        = \"5455695621\";google_ad_width = 300;google_ad_height = 250;</script><script
+        type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></script>\n
+        \                   <br><br> <script type=\"text/javascript\">if (!window.OX_ads)
+        { OX_ads = []; }OX_ads.push({ \"auid\" : \"537971831\" });</script><script
+        type=\"text/javascript\">document.write('<scr'+'ipt src=\"http://ax-d.pixfuture.net/w/1.0/jstag\"><\\/scr'+'ipt>');</script><noscript><iframe
+        id=\"0c10953116\" name=\"0c10953116\" src=\"http://ax-d.pixfuture.net/w/1.0/afr?auid=537971831&cb=47\"
+        frameborder=\"0\" scrolling=\"no\" width=\"300\" height=\"250\"><a href=\"http://ax-d.pixfuture.net/w/1.0/rc?cs=0c10953116&cb=47\"
+        ><img src=\"http://ax-d.pixfuture.net/w/1.0/ai?auid=537971831&cs=0c10953116&cb=47\"
+        border=\"0\" alt=\"\"></a></iframe></noscript>\n                    </div>\n
+        \           \n        </td>\n                    <td width=\"12\"><img src=\"images/spacer.gif\"
+        width=\"10\" height=\"1\"></td>\n                    <td width=\"696\" vAlign=\"top\"
+        align=\"left\">\n            \n            <form method=\"get\" action=\"./?view=cards/search\"
+        name=\"principal\" id=\"principal\">\n                <input type=\"hidden\"
+        name=\"view\" value=\"cards/search\">\n                <input style=\"display:none;\"
+        type=\"submit\" name=\"btSubmit\" id=\"btSubmit\" value=\"btSubmit\">\n\n
+        \               <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"cardsSearch\">\n
+        \                   <tr>\n                        <td width=\"654\" align=\"left\"
+        onclick=\"focusSearchField();\">\n                            <input\n                                type=\"text\"
         \n                                name=\"card\" id=\"card\"\n                                onFocus=\"execFocus(this,
         'buscaSimples');\" \n                                onKeyPress=\"baKP(event);\"
         \n                                onBlur=\"execBlur(this, 'buscaSimples buscaSimplesSemFoco');\"\n
@@ -310,14 +312,16 @@ http_interactions:
         \                       </td>\n                        <td width=\"42\" align=\"left\"
         onclick=\"baSUBMIT();\" style=\"cursor:pointer;\">&nbsp;</td>\n                    </tr>\n
         \               </table>\n            </form>\n            \n            <form
-        method=\"get\" action=\"./?view=cards/search\" name=\"avancado\" id=\"avancado\"
-        onsubmit=\"return false;\">\n                <div id=\"buscaAvancada\" style=\"display:none;\">\n
-        \                   <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"
-        width=\"696\">\n                        <tr>\n                            <td
-        class=\"buscaAvancadaTop\"></td>\n                        </tr>\n                        <tr>\n
-        \                           <td class=\"buscaAvancadaMiddle\">\n                                <div
-        id=\"teste\" style=\"width:666px;margin:6px 0px 4px 14px;\">\n\n                                    <table
-        border=\"0\" cellpadding=\"2\" cellspacing=\"2\" width=\"666\">\n                                        <tr>\n
+        onkeypress=\"if (event.keyCode==13)baKP(event);\" method=\"get\" action=\"./?view=cards/search\"
+        name=\"avancado\" id=\"avancado\" onsubmit=\"return false;\">\n            <input
+        type=\"hidden\" name=\"view\" value=\"cards/buscar\">\n                <div
+        id=\"buscaAvancada\" style=\"display:none;\">\n                    <table
+        border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"696\">\n                        <tr>\n
+        \                           <td class=\"buscaAvancadaTop\"></td>\n                        </tr>\n
+        \                       <tr>\n                            <td class=\"buscaAvancadaMiddle\">\n
+        \                               <div id=\"teste\" style=\"width:666px;margin:6px
+        0px 4px 14px;\">\n\n                                    <table border=\"0\"
+        cellpadding=\"2\" cellspacing=\"2\" width=\"666\">\n                                        <tr>\n
         \                                           <td width=\"80\" align=\"right\">Edi&ccedil;&atilde;o:</td>\n
         \                                           <td width=\"240\">\n                                                 &nbsp;<select
         size=\"1\" style=\"margin-top:3px;width:210px;\" name=\"edicao\" id=\"edicao\"
@@ -334,47 +338,53 @@ http_interactions:
         \ value='arena'>Arena League</option><option  value='dka'>Ascens&atilde;o
         das Trevas / Dark Ascension</option><option  value='roe'>Ascens&atilde;o dos
         Eldrazi / Rise of the Eldrazi</option><option  value='apac'>Asia Pacific Land
-        Program</option><option  value='br'>Battle Royale Box Set</option><option
-        \ value='bd'>Beatdown Box Set</option><option  value='chk'>Campe&otilde;es
-        de Kamigawa / Champions of Kamigawa</option><option  value='pc'>Caos Planar
-        / Planar Chaos</option><option  value='uqc'>Celebration Cards</option><option
-        \ value='cp'>Champs</option><option  value='ch'>Chronicles</option><option
-        \ value='som'>Cicatrizes de Mirrodin / Scars of Mirrodin</option><option  value='cstd'>Coldsnap
-        Theme Decks</option><option  value='ced'>Collector's Edition</option><option
-        \ value='cmd'>Commander</option><option  value='c13'>Commander 2013</option><option
-        \ value='c14'>Commander 2014</option><option  value='cma'>Commander's Arsenal</option><option
-        \ value='cfx'>Conflux / Conflux</option><option  value='ps'>Conjun&ccedil;&atilde;o
-        / Planeshift</option><option  value='cns'>Conspiracy</option><option  value='4eb'>Cuarta
-        Edici&oacute;n BB</option><option  value='10e'>D&eacute;cima Edi&ccedil;&atilde;o
-        / Tenth Edition</option><option  value='ds'>Darksteel / Darksteel</option><option
+        Program</option><option  value='bfz'>Battle for Zendikar</option><option  value='br'>Battle
+        Royale Box Set</option><option  value='bd'>Beatdown Box Set</option><option
+        \ value='chk'>Campe&otilde;es de Kamigawa / Champions of Kamigawa</option><option
+        \ value='pc'>Caos Planar / Planar Chaos</option><option  value='uqc'>Celebration
+        Cards</option><option  value='cp'>Champs</option><option  value='ch'>Chronicles</option><option
+        \ value='som'>Cicatrizes de Mirrodin / Scars of Mirrodin</option><option  value='clash'>Clash
+        Pack</option><option  value='cstd'>Coldsnap Theme Decks</option><option  value='ced'>Collector's
+        Edition</option><option  value='cmd'>Commander</option><option  value='c13'>Commander
+        2013</option><option  value='c14'>Commander 2014</option><option  value='c15'>Commander
+        2015</option><option  value='cma'>Commander's Arsenal</option><option  value='cfx'>Conflux
+        / Conflux</option><option  value='ps'>Conjun&ccedil;&atilde;o / Planeshift</option><option
+        \ value='cns'>Conspiracy</option><option  value='4eb'>Cuarta Edici&oacute;n
+        BB</option><option  value='10e'>D&eacute;cima Edi&ccedil;&atilde;o / Tenth
+        Edition</option><option  value='ds'>Darksteel / Darksteel</option><option
         \ value='dm'>Deckmasters</option><option  value='wwk'>Despertar do Mundo /
         Worldwake</option><option  value='frf'>Destino Reescrito / Fate Reforged</option><option
         \ value='dtk'>Drag&otilde;es de Tarkir / Dragons of Tarkir</option><option
-        \ value='drc'>Dragon Con</option><option  value='ddh'>Duel Decks: Ajani vs.
-        Nicol Bolas</option><option  value='dvd'>Duel Decks: Divine vs. Demonic</option><option
-        \ value='ddf'>Duel Decks: Elspeth vs. Tezzeret</option><option  value='evg'>Duel
-        Decks: Elves vs. Goblins</option><option  value='gvl'>Duel Decks: Garruk vs.
-        Liliana</option><option  value='ddl'>Duel Decks: Heroes vs. Monsters</option><option
-        \ value='ddj'>Duel Decks: Izzet vs. Golgari</option><option  value='jvc'>Duel
-        Decks: Jace vs. Chandra</option><option  value='ddm'>Duel Decks: Jace vs.
-        Vraska</option><option  value='ddo'>Duel Decks: Kiora vs. Elspeth</option><option
-        \ value='ddg'>Duel Decks: Knights vs. Dragons</option><option  value='pvc'>Duel
-        Decks: Phyrexia vs. The Coalition</option><option  value='ddk'>Duel Decks:
-        Sorin vs. Tibalt</option><option  value='ddn'>Duel Decks: Speed vs. Cunning</option><option
-        \ value='ddi'>Duel Decks: Venser vs. Koth</option><option  value='dpa'>Duels
-        of the Planeswalkers</option><option  value='eve'>Entardecer / Eventide</option><option
-        \ value='ia'>Era Glacial / Ice Age</option><option  value='ts'>Espiral Temporal
-        / Time Spiral</option><option  value='euro'>European Land Program</option><option
-        \ value='fe'>Fallen Empires</option><option  value='sc'>Flagelo / Scourge</option><option
-        \ value='sh'>Fortaleza / Stronghold</option><option  value='ala'>Fragmentos
-        de Alara / Shards of Alara</option><option  value='cs'>Frente Fria / Coldsnap</option><option
-        \ value='fnmp'>Friday Night Magic</option><option  value='v14'>From the Vault:
-        Annihilation</option><option  value='fvd'>From the Vault: Dragons</option><option
+        \ value='drc'>Dragon Con</option><option  value='ddadvd'>Duel Decks Anthology:
+        Divine vs. Demonic</option><option  value='ddaevg'>Duel Decks Anthology: Elves
+        vs. Goblins</option><option  value='ddagvl'>Duel Decks Anthology: Garruk vs.
+        Liliana</option><option  value='ddajvc'>Duel Decks Anthology: Jace vs. Chandra</option><option
+        \ value='ddh'>Duel Decks: Ajani vs. Nicol Bolas</option><option  value='dvd'>Duel
+        Decks: Divine vs. Demonic</option><option  value='ddf'>Duel Decks: Elspeth
+        vs. Tezzeret</option><option  value='evg'>Duel Decks: Elves vs. Goblins</option><option
+        \ value='gvl'>Duel Decks: Garruk vs. Liliana</option><option  value='ddl'>Duel
+        Decks: Heroes vs. Monsters</option><option  value='ddj'>Duel Decks: Izzet
+        vs. Golgari</option><option  value='jvc'>Duel Decks: Jace vs. Chandra</option><option
+        \ value='ddm'>Duel Decks: Jace vs. Vraska</option><option  value='ddo'>Duel
+        Decks: Kiora vs. Elspeth</option><option  value='ddg'>Duel Decks: Knights
+        vs. Dragons</option><option  value='pvc'>Duel Decks: Phyrexia vs. The Coalition</option><option
+        \ value='ddk'>Duel Decks: Sorin vs. Tibalt</option><option  value='ddn'>Duel
+        Decks: Speed vs. Cunning</option><option  value='ddi'>Duel Decks: Venser vs.
+        Koth</option><option  value='ddp'>Duel Decks: Zendikar vs. Eldrazi</option><option
+        \ value='dpa'>Duels of the Planeswalkers</option><option  value='eve'>Entardecer
+        / Eventide</option><option  value='ia'>Era Glacial / Ice Age</option><option
+        \ value='ts'>Espiral Temporal / Time Spiral</option><option  value='euro'>European
+        Land Program</option><option  value='fe'>Fallen Empires</option><option  value='sc'>Flagelo
+        / Scourge</option><option  value='sh'>Fortaleza / Stronghold</option><option
+        \ value='ala'>Fragmentos de Alara / Shards of Alara</option><option  value='cs'>Frente
+        Fria / Coldsnap</option><option  value='fnmp'>Friday Night Magic</option><option
+        \ value='v15'>From the Vault: Angels</option><option  value='v14'>From the
+        Vault: Annihilation</option><option  value='fvd'>From the Vault: Dragons</option><option
         \ value='fve'>From the Vault: Exiled</option><option  value='fvl'>From the
         Vault: Legends</option><option  value='v12'>From the Vault: Realms</option><option
         \ value='fvr'>From the Vault: Relics</option><option  value='v13'>From the
         Vault: Twenty</option><option  value='gpx'>Grand Prix</option><option  value='guru'>Guru</option><option
-        \ value='salvat'>Hachette Encyclopedia Inserts</option><option  value='hachette'>Hachette
+        \ value='hachette'>Hachette Encyclopedia Inserts</option><option  value='salvat'>Hachette
         Encyclopedia Inserts</option><option  value='hho'>Happy Holidays</option><option
         \ value='hjcc'>Hobby Japan Commemorative Cards</option><option  value='isd'>Innistrad
         / Innistrad</option><option  value='di'>Insurrei&ccedil;&atilde;o / Dissension</option><option
@@ -395,24 +405,25 @@ http_interactions:
         \ value='m11'>Magic 2011 / Magic 2011</option><option  value='m12'>Magic 2012
         / Magic 2012</option><option  value='m13'>Magic 2013 / Magic 2013</option><option
         \ value='m14'>Magic 2014 / Magic 2014</option><option  value='m15'>Magic 2015</option><option
-        \ value='mgdc'>Magic Game Day Cards</option><option  value='mprp'>Magic Player
-        Rewards</option><option  value='mps'>Magic Premiere Shop</option><option  value='mss'>Magic
-        Scholarship Series</option><option  value='mlp'>Magic: The Gathering Launch
-        Parties</option><option  value='mbp'>Media Inserts / Media Inserts</option><option
-        \ value='jpmbp'>Media Inserts</option><option  value='itmbp'>Media Inserts</option><option
-        \ value='dembp'>Media Inserts</option><option  value='mr'>Miragem / Mirage</option><option
-        \ value='mi'>Mirrodin / Mirrodin</option><option  value='mbs'>Mirrodin Sitiada
-        / Mirrodin Besieged</option><option  value='md1'>Modern Event Deck</option><option
-        \ value='mma'>Modern Masters</option><option  value='mm2'>Modern Masters 2015</option><option
-        \ value='med'>MTGO Masters Edition</option><option  value='me2'>MTGO Masters
-        Edition II</option><option  value='me3'>MTGO Masters Edition III</option><option
-        \ value='me4'>MTGO Masters Edition IV</option><option  value='mgbc'>Multiverse
-        Gift Box Cards</option><option  value='ne'>N&ecirc;mesis / Nemesis</option><option
-        \ value='bng'>Nascidos dos Deuses / Born of the Gods</option><option  value='9e'>Nona
-        Edi&ccedil;&atilde;o - Kit B&aacute;sico / Ninth Edition</option><option  value='9eb'>Nona
-        Edi&ccedil;&atilde;o Box Set / Ninth Edition Box Set</option><option  value='nph'>Nova
-        Phyrexia / New Phyrexia</option><option  value='ud'>O Destino de Urza / Urza's
-        Destiny</option><option  value='ul'>O Legado de Urza / Urza's Legacy</option><option
+        \ value='mgdc'>Magic Game Day Cards</option><option  value='ori'>Magic Origins</option><option
+        \ value='mprp'>Magic Player Rewards</option><option  value='mps'>Magic Premiere
+        Shop</option><option  value='mss'>Magic Scholarship Series</option><option
+        \ value='mlp'>Magic: The Gathering Launch Parties</option><option  value='dembp'>Media
+        Inserts</option><option  value='jpmbp'>Media Inserts</option><option  value='itmbp'>Media
+        Inserts</option><option  value='mbp'>Media Inserts / Media Inserts</option><option
+        \ value='mr'>Miragem / Mirage</option><option  value='mi'>Mirrodin / Mirrodin</option><option
+        \ value='mbs'>Mirrodin Sitiada / Mirrodin Besieged</option><option  value='md1'>Modern
+        Event Deck</option><option  value='mma'>Modern Masters</option><option  value='mm2'>Modern
+        Masters 2015</option><option  value='med'>MTGO Masters Edition</option><option
+        \ value='me2'>MTGO Masters Edition II</option><option  value='me3'>MTGO Masters
+        Edition III</option><option  value='me4'>MTGO Masters Edition IV</option><option
+        \ value='mgbc'>Multiverse Gift Box Cards</option><option  value='ne'>N&ecirc;mesis
+        / Nemesis</option><option  value='bng'>Nascidos dos Deuses / Born of the Gods</option><option
+        \ value='9e'>Nona Edi&ccedil;&atilde;o - Kit B&aacute;sico / Ninth Edition</option><option
+        \ value='9eb'>Nona Edi&ccedil;&atilde;o Box Set / Ninth Edition Box Set</option><option
+        \ value='nph'>Nova Phyrexia / New Phyrexia</option><option  value='ud'>O Destino
+        de Urza / Urza's Destiny</option><option  value='ul'>O Legado de Urza / Urza's
+        Legacy</option><option  value='ogw'>Oath of the Gatewatch</option><option
         \ value='od'>Odiss&eacute;ia / Odyssey</option><option  value='8e'>Oitava
         Edi&ccedil;&atilde;o - Kit B&aacute;sico / Eighth Edition</option><option
         \ value='8eb'>Oitava Edi&ccedil;&atilde;o Box Set / Eighth Edition Box Set</option><option
@@ -437,24 +448,26 @@ http_interactions:
         of Kamigawa</option><option  value='6e'>Sexta Edi&ccedil;&atilde;o Classica
         / Classic Sixth Edition</option><option  value='st'>Starter 1999</option><option
         \ value='st2k'>Starter 2000 / Starter 2000</option><option  value='sum'>Summer
-        of Magic</option><option  value='sus'>Super Series</option><option  value='tp'>Tempestade
-        / Tempest</option><option  value='hl'>Terras Natais / Homelands</option><option
-        \ value='dk'>The Dark</option><option  value='ths'>Theros / Theros</option><option
-        \ value='tsts'>Time Spiral \"Timeshifted\" / Time Spiral \"Timeshifted\"</option><option
-        \ value='tr'>Tormento / Torment</option><option  value='bok'>Traidores de
-        Kamigawa / Betrayers of Kamigawa</option><option  value='thgt'>Two-Headed
-        Giant Tournament</option><option  value='ug'>Unglued</option><option  value='uh'>Unhinged</option><option
+        of Magic</option><option  value='sus'>Super Series</option><option  value='tpr'>Tempest
+        Remastered</option><option  value='tp'>Tempestade / Tempest</option><option
+        \ value='hl'>Terras Natais / Homelands</option><option  value='dk'>The Dark</option><option
+        \ value='ths'>Theros / Theros</option><option  value='tsts'>Time Spiral \"Timeshifted\"
+        / Time Spiral \"Timeshifted\"</option><option  value='tr'>Tormento / Torment</option><option
+        \ value='bok'>Traidores de Kamigawa / Betrayers of Kamigawa</option><option
+        \ value='thgt'>Two-Headed Giant Tournament</option><option  value='ugin'>Ugin's
+        Fate / Ugin's Fate</option><option  value='ug'>Unglued</option><option  value='uh'>Unhinged</option><option
         \ value='uhaa'>Unhinged Alternate Foils</option><option  value='un'>Unlimited
         Edition</option><option  value='jou'>Viagem para Nyx / Journey into Nyx</option><option
         \ value='vma'>Vintage Masters</option><option  value='fut'>Vis&atilde;o do
         Futuro / Future Sight</option><option  value='vi'>Vis&otilde;es / Visions</option><option
         \ value='wmcq'>World Magic Cup Qualifiers</option><option  value='wrl'>Worlds</option><option
         \ value='wotc'>WotC Online Store</option><option  value='grc'>WPN/Gateway</option><option
-        \ value='zen'>Zendikar / Zendikar</option>\n                                                 </select>\n
-        \                                           </td>\n                                            <td
-        width=\"106\" align=\"right\">Menor Pre&ccedil;o:</td>\n                                            <td
-        width=\"240\">\n                                                 &nbsp;<input
-        type=\"text\" onkeypress=\"if(event.keyCode==13){validaNumero(this, true);baKP(event);}\"
+        \ value='zen'>Zendikar / Zendikar</option><option  value='exp'>Zendikar Expeditions</option>\n
+        \                                                </select>\n                                            </td>\n
+        \                                           <td width=\"106\" align=\"right\">Menor
+        Pre&ccedil;o:</td>\n                                            <td width=\"240\">\n
+        \                                                &nbsp;<input type=\"text\"
+        onkeypress=\"if(event.keyCode==13){validaNumero(this, true);baKP(event);}\"
         onblur=\"validaNumero(this, true);\" style=\"width:82px;\" name=\"precoMenorDe\"
         value=\"\">\n                                                 at&eacute; <input
         type=\"text\" onkeypress=\"if(event.keyCode==13){validaNumero(this, true);baKP(event);}\"
@@ -594,194 +607,198 @@ http_interactions:
         class='abaW'>Coment&aacute;rios</a></td>\n                            </tr>\n
         \                       </table>\n                    </td>\n                </tr>\n
         \               <tr>\n                    <td class='cardRightMiddle' vAlign='top'>
-        \ \n                        \n                <div align=\"center\" style=\"margin-top:10px;margin-bottom:8px;\">\n
-        \                   <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"
-        width=\"680\">\n                        <tr>\n                            <td
-        align=\"left\" width=\"343\">\n                                <script async
-        src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\n
-        \                               <ins class=\"adsbygoogle\" style=\"display:inline-block;width:336px;height:280px\"
+        \ \n                        \n                    <div align=\"center\" style=\"margin-top:10px;margin-bottom:8px;\">\n
+        \                       <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"
+        width=\"680\">\n                            <tr>\n                                <td
+        align=\"left\" width=\"343\">\n                                    <script
+        async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\n
+        \                                   <ins class=\"adsbygoogle\" style=\"display:inline-block;width:336px;height:280px\"
         data-ad-client=\"ca-pub-8533196174988722\" data-ad-slot=\"2976540429\"></ins>\n
-        \                               <script>(adsbygoogle = window.adsbygoogle
-        || []).push({});</script>\n                            </td>\n                            <td
-        align=\"left\" width=\"335\">\n                                <script async
-        src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\n
-        \                               <ins class=\"adsbygoogle\" style=\"display:inline-block;width:336px;height:280px\"
+        \                                   <script>(adsbygoogle = window.adsbygoogle
+        || []).push({});</script>\n                                </td>\n                                <td
+        align=\"left\" width=\"335\">\n                                    <script
+        async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\n
+        \                                   <ins class=\"adsbygoogle\" style=\"display:inline-block;width:336px;height:280px\"
         data-ad-client=\"ca-pub-8533196174988722\" data-ad-slot=\"2976540429\"></ins>\n
-        \                               <script>(adsbygoogle = window.adsbygoogle
-        || []).push({});</script>\n                            </td>\n                        </tr>\n
-        \                   </table>\n                </div>\n            \n\n                        <div
-        style='width:656px;margin:12px 0px 12px 19px;'>\n                           \n
-        \           &nbsp;<font class='title'>Cota&ccedil;&atilde;o nos sites</font>\n
-        \           <div class='divisoriaHeader'></div>\n            <div style='margin-left:5px;'>\n
+        \                                   <script>(adsbygoogle = window.adsbygoogle
+        || []).push({});</script>\n                                </td>\n                            </tr>\n
+        \                       </table>\n                    </div>\n                \n
+        \                       <div style='width:656px;margin:6px 0px 12px 19px;'>\n
+        \                          \n            <table border='0' cellpadding='0'
+        cellspacing='0' width='100%'>\n                <tr>\n                    <td
+        align='left' vAlign='bottom'>&nbsp;<font class='title'>Cota&ccedil;&atilde;o
+        nos sites</font></td>\n                    <td align='right'>\n                        \n
+        \                   </td>\n                </tr>\n            </table>\n            <div
+        class='divisoriaHeader'></div>\n            <div style='margin-left:5px;'>\n
         \               <table border='0' cellpadding='0' cellspacing='0' width='647'>\n
         \                   \n                <tr  onmouseover=\"omoEstoque(this,0,'KTK');\"
         onmouseout=\"omoEstoque(this,0,0);\"'>\n                    <td width='130'
-        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=2837' target='_blank'><img
-        border='0' class='icon' src='arquivos/up/precos/16.jpg' width='101' height='30'
-        title='magicbembarato'/></a></td>\n                    <td width='244' class='hmin44
+        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=109076' target='_blank'><img
+        border='0' class='icon' src='arquivos/up/precos/20.jpg' width='101' height='30'
+        title='CardsOfParadise'/></a></td>\n                    <td width='244' class='hmin44
         brdb' align='left'><a href='./?view=cards/search&card=ed=ktk' class='preto'><img
         src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\" class='icon' height='21'>
-        Khans de Tarkir</a></td>\n                    <td width='94' class='hmin44
-        \ brdb fLaranja' align='left'><b>R$ 9,30</b></td>\n                    <td
-        width='72' class='hmin44 defaultBlack brdb' align='left'>22 unids.</td>\n
-        \                   <td width='114' class='hmin44 brdb' align='left'><a href='b/?p=2837'
-        target='_blank'><img id='iraloja_0' title='Ir &agrave; loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png'
+        Khans de Tarkir</a> </td>\n                    <td width='94' class='hmin44
+        \ brdb fLaranja' align='left'><b>R$ 3,00</b></td>\n                    <td
+        width='72' class='hmin44 defaultBlack brdb' align='left'>6 unids.</td>\n                    <td
+        width='114' class='hmin44 brdb' align='left'><a href='b/?p=109076' target='_blank'><img
+        id='iraloja_0' title='Ir &agrave; loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png'
         width='105' height='31' class='icon' border='0'></a></td>\n                </tr>\n
         \           \n                <tr bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,1,'KTK');\"
         onmouseout=\"omoEstoque(this,1,0);\"'>\n                    <td width='130'
-        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=80241' target='_blank'><img
-        border='0' class='icon' src='arquivos/up/precos/10.jpg' width='101' height='30'
-        title='UPONLINE'/></a></td>\n                    <td width='244' class='hmin44
-        brdb' align='left'><a href='./?view=cards/search&card=ed=ktk' class='preto'><img
-        src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\" class='icon' height='21'>
-        Khans de Tarkir</a></td>\n                    <td width='94' class='hmin44
-        \ brdb fLaranja' align='left'><b>R$ 9,63</b></td>\n                    <td
-        width='72' class='hmin44 defaultBlack brdb' align='left'>4 unids.</td>\n                    <td
-        width='114' class='hmin44 brdb' align='left'><a href='b/?p=80241' target='_blank'><img
-        id='iraloja_1' title='Ir &agrave; loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png'
-        width='105' height='31' class='icon' border='0'></a></td>\n                </tr>\n
-        \           \n                <tr  onmouseover=\"omoEstoque(this,2,'KTK');\"
-        onmouseout=\"omoEstoque(this,2,0);\"'>\n                    <td width='130'
-        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=166578' target='_blank'><img
-        border='0' class='icon' src='arquivos/up/precos/23.jpg' width='101' height='30'
-        title='HobbieIsland'/></a></td>\n                    <td width='244' class='hmin44
-        brdb' align='left'><a href='./?view=cards/search&card=ed=ktk' class='preto'><img
-        src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\" class='icon' height='21'>
-        Khans de Tarkir</a></td>\n                    <td width='94' class='hmin44
-        \ brdb fLaranja' align='left'><b>R$ 10,18</b></td>\n                    <td
-        width='72' class='hmin44 defaultBlack brdb' align='left'>4 unids.</td>\n                    <td
-        width='114' class='hmin44 brdb' align='left'><a href='b/?p=166578' target='_blank'><img
-        id='iraloja_2' title='Ir &agrave; loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png'
-        width='105' height='31' class='icon' border='0'></a></td>\n                </tr>\n
-        \           \n                <tr bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,3,'KTK');\"
-        onmouseout=\"omoEstoque(this,3,0);\"'>\n                    <td width='130'
-        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=114604' target='_blank'><img
-        border='0' class='icon' src='arquivos/up/precos/18.jpg' width='101' height='30'
-        title='TAVERNATCG'/></a></td>\n                    <td width='244' class='hmin44
-        brdb' align='left'><a href='./?view=cards/search&card=ed=ktk' class='preto'><img
-        src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\" class='icon' height='21'>
-        Khans de Tarkir</a></td>\n                    <td width='94' class='hmin44
-        \ brdb fLaranja' align='left'><b>R$ 10,45</b></td>\n                    <td
-        width='72' class='hmin44 defaultBlack brdb' align='left'>13 unids.</td>\n
-        \                   <td width='114' class='hmin44 brdb' align='left'><a href='b/?p=114604'
-        target='_blank'><img id='iraloja_3' title='Ir &agrave; loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png'
-        width='105' height='31' class='icon' border='0'></a></td>\n                </tr>\n
-        \           \n                <tr  onmouseover=\"omoEstoque(this,4,'KTK');\"
-        onmouseout=\"omoEstoque(this,4,0);\"'>\n                    <td width='130'
-        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=21049' target='_blank'><img
-        border='0' class='icon' src='arquivos/up/precos/6.jpg' width='101' height='30'
-        title='MUNDOKINOENE'/></a></td>\n                    <td width='244' class='hmin44
-        brdb' align='left'><a href='./?view=cards/search&card=ed=ktk' class='preto'><img
-        src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\" class='icon' height='21'>
-        Khans de Tarkir</a></td>\n                    <td width='94' class='hmin44
-        \ brdb fLaranja' align='left'><b>R$ 10,75</b></td>\n                    <td
-        width='72' class='hmin44 defaultBlack brdb' align='left'>17 unids.</td>\n
-        \                   <td width='114' class='hmin44 brdb' align='left'><a href='b/?p=21049'
-        target='_blank'><img id='iraloja_4' title='Ir &agrave; loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png'
-        width='105' height='31' class='icon' border='0'></a></td>\n                </tr>\n
-        \           \n                <tr bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,5,'KTK');\"
-        onmouseout=\"omoEstoque(this,5,0);\"'>\n                    <td width='130'
-        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=79099' target='_blank'><img
-        border='0' class='icon' src='arquivos/up/precos/7.jpg' width='101' height='30'
-        title='UGCardShop'/></a></td>\n                    <td width='244' class='hmin44
-        brdb' align='left'><a href='./?view=cards/search&card=ed=ktk' class='preto'><img
-        src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\" class='icon' height='21'>
-        Khans de Tarkir</a></td>\n                    <td width='94' class='hmin44
-        \ brdb fLaranja' align='left'><b>R$ 10,79</b></td>\n                    <td
-        width='72' class='hmin44 defaultBlack brdb' align='left'>65 unids.</td>\n
-        \                   <td width='114' class='hmin44 brdb' align='left'><a href='b/?p=79099'
-        target='_blank'><img id='iraloja_5' title='Ir &agrave; loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png'
-        width='105' height='31' class='icon' border='0'></a></td>\n                </tr>\n
-        \           \n                <tr  onmouseover=\"omoEstoque(this,6,'KTK');\"
-        onmouseout=\"omoEstoque(this,6,0);\"'>\n                    <td width='130'
-        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=e60112' target='_blank'><img
-        border='0' class='icon' src='arquivos/up/ecom/comparador/56698.jpg' width='101'
-        height='30' title='Magic Leste'/></a></td>\n                    <td width='244'
-        class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
-        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 11,49</b></td>\n
-        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>3
-        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
-        href='b/?p=e60112' target='_blank'><img id='iraloja_6' title='Ir &agrave;
-        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
-        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
-        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,7,'KTK');\" onmouseout=\"omoEstoque(this,7,0);\"'>\n
-        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
-        <a href='b/?p=e55703' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/32645.jpg'
-        width='101' height='30' title='Mulligan Game Shop'/></a></td>\n                    <td
+        class='hmin44 brdb' align='left'>&nbsp; <a href='b/?p=e131558' target='_blank'><img
+        border='0' class='icon' src='arquivos/up/ecom/comparador/63802.jpg' width='101'
+        height='30' title='House of Cards - Cardgames'/></a></td>\n                    <td
         width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
         class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 11,75</b></td>\n
-        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>7
-        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
-        href='b/?p=e55703' target='_blank'><img id='iraloja_7' title='Ir &agrave;
-        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
-        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
-        \ onmouseover=\"omoEstoque(this,8,'KTK');\" onmouseout=\"omoEstoque(this,8,0);\"'>\n
-        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
-        <a href='b/?p=e33476' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/39542.jpg'
-        width='101' height='30' title='Monster Games Cards'/></a></td>\n                    <td
-        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
-        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 12,00</b></td>\n
-        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>2
-        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
-        href='b/?p=e33476' target='_blank'><img id='iraloja_8' title='Ir &agrave;
-        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
-        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
-        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,9,'KTK');\" onmouseout=\"omoEstoque(this,9,0);\"'>\n
-        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
-        <a href='b/?p=109076' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/20.jpg'
-        width='101' height='30' title='CardsOfParadise'/></a></td>\n                    <td
-        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
-        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 12,75</b></td>\n
-        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>9
-        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
-        href='b/?p=109076' target='_blank'><img id='iraloja_9' title='Ir &agrave;
-        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
-        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
-        \ onmouseover=\"omoEstoque(this,10,'KTK');\" onmouseout=\"omoEstoque(this,10,0);\"'>\n
-        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
-        <a href='b/?p=126002' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/21.jpg'
-        width='101' height='30' title='BurnMana'/></a></td>\n                    <td
-        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
-        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 12,90</b></td>\n
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 3,00</b></td>\n
         \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>1
         unid.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
-        href='b/?p=126002' target='_blank'><img id='iraloja_10' title='Ir &agrave;
+        href='b/?p=e131558' target='_blank'><img id='iraloja_1' title='Ir &agrave;
         loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
         class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
-        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,11,'KTK');\" onmouseout=\"omoEstoque(this,11,0);\"'>\n
+        \ onmouseover=\"omoEstoque(this,2,'KTK');\" onmouseout=\"omoEstoque(this,2,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=e80527' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/46384.jpg'
+        width='101' height='30' title='Caves Hobbies & Colecion&aacute;veis'/></a></td>\n
+        \                   <td width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 3,42</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>8
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=e80527' target='_blank'><img id='iraloja_2' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,3,'KTK');\" onmouseout=\"omoEstoque(this,3,0);\"'>\n
         \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
         <a href='b/?p=e33902' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/48734.jpg'
         width='101' height='30' title='LOJA CALABOU&Ccedil;O - HOBBIES E COLECION&Aacute;VEIS'/></a></td>\n
         \                   <td width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
         class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 13,90</b></td>\n
-        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>1
-        unid.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
-        href='b/?p=e33902' target='_blank'><img id='iraloja_11' title='Ir &agrave;
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 3,50</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>11
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=e33902' target='_blank'><img id='iraloja_3' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        \ onmouseover=\"omoEstoque(this,4,'KTK');\" onmouseout=\"omoEstoque(this,4,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=e55703' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/32645.jpg'
+        width='101' height='30' title='Mulligan Game Shop'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 3,75</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>24
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=e55703' target='_blank'><img id='iraloja_4' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,5,'KTK');\" onmouseout=\"omoEstoque(this,5,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=21049' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/6.jpg'
+        width='101' height='30' title='MUNDOKINOENE'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 3,90</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>28
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=21049' target='_blank'><img id='iraloja_5' title='Ir &agrave; loja'
+        src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        \ onmouseover=\"omoEstoque(this,6,'KTK');\" onmouseout=\"omoEstoque(this,6,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=114604' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/18.jpg'
+        width='101' height='30' title='TAVERNATCG'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 3,95</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>2
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=114604' target='_blank'><img id='iraloja_6' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,7,'KTK');\" onmouseout=\"omoEstoque(this,7,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=e32563' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/52062.jpg'
+        width='101' height='30' title='Cards e Games'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 3,98</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>30
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=e32563' target='_blank'><img id='iraloja_7' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        \ onmouseover=\"omoEstoque(this,8,'KTK');\" onmouseout=\"omoEstoque(this,8,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=79099' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/7.jpg'
+        width='101' height='30' title='UGCardShop'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 3,98</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>110
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=79099' target='_blank'><img id='iraloja_8' title='Ir &agrave; loja'
+        src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,9,'KTK');\" onmouseout=\"omoEstoque(this,9,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=e32587' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/42453.jpg'
+        width='101' height='30' title='Arena Hobby Store'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 4,00</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>2
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=e32587' target='_blank'><img id='iraloja_9' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        \ onmouseover=\"omoEstoque(this,10,'KTK');\" onmouseout=\"omoEstoque(this,10,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=218227' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/16.jpg'
+        width='101' height='30' title='magicbembarato'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 4,27</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>13
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=218227' target='_blank'><img id='iraloja_10' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,11,'KTK');\" onmouseout=\"omoEstoque(this,11,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=137217' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/1.jpg'
+        width='101' height='30' title='LetsCollect'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 4,28</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>6
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=137217' target='_blank'><img id='iraloja_11' title='Ir &agrave;
         loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
         class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
         \ onmouseover=\"omoEstoque(this,12,'KTK');\" onmouseout=\"omoEstoque(this,12,0);\"'>\n
         \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
-        <a href='b/?p=56124' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/14.jpg'
-        width='101' height='30' title='MTGCARDS'/></a></td>\n                    <td
+        <a href='b/?p=e60112' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/56698.jpg'
+        width='101' height='30' title='Magic Leste'/></a></td>\n                    <td
         width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
         class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 13,95</b></td>\n
-        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>7
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 4,40</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>10
         unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
-        href='b/?p=56124' target='_blank'><img id='iraloja_12' title='Ir &agrave;
+        href='b/?p=e60112' target='_blank'><img id='iraloja_12' title='Ir &agrave;
         loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
         class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
         bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,13,'KTK');\" onmouseout=\"omoEstoque(this,13,0);\"'>\n
@@ -790,34 +807,113 @@ http_interactions:
         width='101' height='30' title='Shaman'/></a></td>\n                    <td
         width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
         class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 13,95</b></td>\n
-        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>8
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 4,90</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>17
         unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
         href='b/?p=49815' target='_blank'><img id='iraloja_13' title='Ir &agrave;
         loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
         class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
         \ onmouseover=\"omoEstoque(this,14,'KTK');\" onmouseout=\"omoEstoque(this,14,0);\"'>\n
         \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
-        <a href='b/?p=e32563' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/52062.jpg'
-        width='101' height='30' title='Cards e Games'/></a></td>\n                    <td
+        <a href='b/?p=e163778' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/63249.jpg'
+        width='101' height='30' title='Deck Store Cards'/></a></td>\n                    <td
         width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
         class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
-        class='icon' height='21'> Khans de Tarkir</a></td>\n                    <td
-        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 14,89</b></td>\n
-        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>33
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 4,90</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>8
         unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
-        href='b/?p=e32563' target='_blank'><img id='iraloja_14' title='Ir &agrave;
+        href='b/?p=e163778' target='_blank'><img id='iraloja_14' title='Ir &agrave;
         loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
-        class='icon' border='0'></a></td>\n                </tr>\n            \n                </table>\n
-        \           </div>\n        \n            <br>\n            <table border='0'
-        cellpadding='0' cellspacing='0' width='100%'>\n                <tr>\n                    <td>&nbsp;<font
-        class='title'>Leil&otilde;es</font></td>\n                    <td align='right'><a
-        href='./?view=leilao/postar'><i>Criar meu leil&atilde;o</i></a>&nbsp;</td>\n
-        \               </tr>\n            </table>\n            <div class='divisoriaHeader'></div>\n
-        \           <div style='margin-left:5px;'>\n                \n                <table
-        border='0' cellpadding='0' cellspacing='0' width='647'>\n                    <tr>\n
-        \                       <td width='52' class='titleTable'></td>\n                        <td
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,15,'KTK');\" onmouseout=\"omoEstoque(this,15,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=56124' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/14.jpg'
+        width='101' height='30' title='MTGCARDS'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 4,95</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>20
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=56124' target='_blank'><img id='iraloja_15' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        \ onmouseover=\"omoEstoque(this,16,'KTK');\" onmouseout=\"omoEstoque(this,16,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=80241' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/10.jpg'
+        width='101' height='30' title='UPONLINE'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 4,99</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>7
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=80241' target='_blank'><img id='iraloja_16' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,17,'KTK');\" onmouseout=\"omoEstoque(this,17,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=210334' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/24.jpg'
+        width='101' height='30' title='Legion CG'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 5,50</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>11
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=210334' target='_blank'><img id='iraloja_17' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        \ onmouseover=\"omoEstoque(this,18,'KTK');\" onmouseout=\"omoEstoque(this,18,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=193319' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/4.jpg'
+        width='101' height='30' title='BAZARDEBAGDA'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 5,99</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>11
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=193319' target='_blank'><img id='iraloja_18' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        bgcolor='#e7e7e7' onmouseover=\"omoEstoque(this,19,'KTK');\" onmouseout=\"omoEstoque(this,19,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=e33476' target='_blank'><img border='0' class='icon' src='arquivos/up/ecom/comparador/39542.jpg'
+        width='101' height='30' title='Monster Games Cards'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> </td>\n                    <td
+        width='94' class='hmin44  brdb fLaranja' align='left'><b>R$ 8,00</b></td>\n
+        \                   <td width='72' class='hmin44 defaultBlack brdb' align='left'>2
+        unids.</td>\n                    <td width='114' class='hmin44 brdb' align='left'><a
+        href='b/?p=e33476' target='_blank'><img id='iraloja_19' title='Ir &agrave;
+        loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png' width='105' height='31'
+        class='icon' border='0'></a></td>\n                </tr>\n            \n                <tr
+        \ onmouseover=\"omoEstoque(this,20,'KTK');\" onmouseout=\"omoEstoque(this,20,0);\"'>\n
+        \                   <td width='130' class='hmin44 brdb' align='left'>&nbsp;
+        <a href='b/?p=236612' target='_blank'><img border='0' class='icon' src='arquivos/up/precos/18.jpg'
+        width='101' height='30' title='TAVERNATCG'/></a></td>\n                    <td
+        width='244' class='hmin44 brdb' align='left'><a href='./?view=cards/search&card=ed=ktk'
+        class='preto'><img src='images/emot/ed/KTK_M.gif' title=\"Khans de Tarkir\"
+        class='icon' height='21'> Khans de Tarkir</a> <font style='font-size:8pt;'
+        color='red'><b>(Foil)</b></font></td>\n                    <td width='94'
+        class='hmin44  brdb fLaranja' align='left'><b>R$ 8,49</b></td>\n                    <td
+        width='72' class='hmin44 defaultBlack brdb' align='left'>2 unids.</td>\n                    <td
+        width='114' class='hmin44 brdb' align='left'><a href='b/?p=236612' target='_blank'><img
+        id='iraloja_20' title='Ir &agrave; loja' src='images/layout_laranja/cards/bt_ir_a_loja_sel.png'
+        width='105' height='31' class='icon' border='0'></a></td>\n                </tr>\n
+        \           \n                </table>\n            </div>\n        \n            <br>\n
+        \           <table border='0' cellpadding='0' cellspacing='0' width='100%'>\n
+        \               <tr>\n                    <td>&nbsp;<font class='title'>Leil&otilde;es</font></td>\n
+        \                   <td align='right'><a href='./?view=leilao/postar&card=30058'><i>Criar
+        meu leil&atilde;o</i></a>&nbsp;</td>\n                </tr>\n            </table>\n
+        \           <div class='divisoriaHeader'></div>\n            <div style='margin-left:5px;'>\n
+        \               \n                <table border='0' cellpadding='0' cellspacing='0'
+        width='647'>\n                    <tr>\n                        <td width='50'
+        class='titleTable'></td>\n                        \n                        <td
         width='250' class='titleTable'></td>\n                        <td width='80'
         align='right' class='titleTable'>Pre&ccedil;o Final</td>\n                        <td
         width='4' class='titleTable'></td>\n                        <td width='187'
@@ -825,97 +921,129 @@ http_interactions:
         width='74' align='right' class='titleTable'>T&eacute;rmino&nbsp;</td>\n                    </tr>\n
         \           \n                        <tr  onmouseover='omoDestaque(this,1);'
         onmouseout='omoDestaque(this,0);'>\n                            <td class='hmin42
-        brdb'>\n                                <a href='./?view=leilao/view&id=3023973'><a
-        data-tooltip='sticky1'><img style='margin-top:2px;margin-left:2px;' width='40'
-        height='40' src='arquivos/up/leilao/2015/05/04/3023973_0_p.jpg' border='0'
-        alt='' title=''></a>\n                            </td>\n                            <td
-        vAlign='top' class='hmin42 brdb'><div style='margin-top:4px;'>\n                                <a
-        href='./?view=leilao/view&id=3023973' class='cinzaEscuro'>PROMO&Ccedil;&Atilde;O
-        4 x Ashcloud Phoenix</a></div>\n                            </td>\n\n                            <td
+        brdb'>\n                                <a href='./?view=leilao/view&id=3615515'><img
+        style='margin-top:2px;margin-left:2px;' width='40' height='40' src='images/leilao/noimage_p.jpg'
+        border='0' alt='' title=''></a>\n                            </td>\n                            \n
+        \                               \n                            <td vAlign='top'
+        class='hmin42 brdb'><div style='margin-top:4px;'>\n                                <a
+        href='./?view=leilao/view&id=3615515' class='cinzaEscuro'>1x Ashcloud Phoenix
+        FOIL</a></div>\n                            </td>\n\n                            <td
         align='right' class='hmin42 defaultBlack brdb'>\n                                <font
-        class='fLaranja'><b>R$ 25,00</b></font><br><a class='cinzaEscuroP' href='./?view=leilao/view&id=3023973&ofertas=1#ofertas'><i>0
+        class='fLaranja'><b>R$ 6,00</b></font><br><a class='cinzaEscuroP' href='./?view=leilao/view&id=3615515&ofertas=1#ofertas'><i>0
         lances</i></a>\n                            </td>\n                            <td
         align='right' class='hmin42 defaultBlack brdb'> </td>\n                            <td
         align='left' class='hmin42 brdb'>\n                                &nbsp;&nbsp;<a
         href=\"./?view=vip/home\"><img src=\"./images/vip/2.gif\" alt=\"Usu&aacute;rio
-        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=SrPiccolo'>SrPiccolo</a>\n
-        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=SrPiccolo'>508
-        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=SrPiccolo&tipo=P'>98.62%
+        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=PRC_Events'>PRC_Events</a>\n
+        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=PRC_Events'>429
+        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=PRC_Events&tipo=P'>100.00%
         positivas</a>)\n                            </td>\n                            <td
-        align='right' class='hmin42 defaultBlackP brdb'>\n                                9h
-        47m&nbsp;\n                            </td>\n                        </tr>\n
+        align='right' class='hmin42 defaultBlackP brdb'>\n                                16h
+        58m&nbsp;\n                            </td>\n                        </tr>\n
         \                   \n                        <tr bgcolor='#e7e7e7' onmouseover='omoDestaque(this,1);'
         onmouseout='omoDestaque(this,0);'>\n                            <td class='hmin42
-        brdb'>\n                                <a href='./?view=leilao/view&id=3022062'><img
-        style='margin-top:2px;margin-left:2px;' width='40' height='40' src='images/leilao/noimage_p.jpg'
-        border='0' alt='' title=''></a>\n                            </td>\n                            <td
-        vAlign='top' class='hmin42 brdb'><div style='margin-top:4px;'>\n                                <a
-        href='./?view=leilao/view&id=3022062' class='cinzaEscuro'>1x Ashcloud Phoenix
-        - NM</a></div>\n                            </td>\n\n                            <td
+        brdb'>\n                                <a href='./?view=leilao/view&id=3570887'><a
+        data-tooltip='sticky1'><img style='margin-top:2px;margin-left:2px;' width='40'
+        height='40' src='arquivos/up/leilao/2015/12/03/3570887_0_p.jpg' border='0'
+        alt='' title=''></a>\n                            </td>\n                            \n
+        \                               \n                            <td vAlign='top'
+        class='hmin42 brdb'><div style='margin-top:4px;'>\n                                <a
+        href='./?view=leilao/view&id=3570887' class='cinzaEscuro'>Lote Vermelho *TOP*
+        45 Cards</a></div>\n                            </td>\n\n                            <td
         align='right' class='hmin42 defaultBlack brdb'>\n                                <font
-        class='fLaranja'><b>R$ 9,00</b></font><br><a class='cinzaEscuroP' href='./?view=leilao/view&id=3022062&ofertas=1#ofertas'><i>0
+        class='fLaranja'><b>R$ 70,00</b></font><br><a class='cinzaEscuroP' href='./?view=leilao/view&id=3570887&ofertas=1#ofertas'><i>0
         lances</i></a>\n                            </td>\n                            <td
         align='right' class='hmin42 defaultBlack brdb'> </td>\n                            <td
         align='left' class='hmin42 brdb'>\n                                &nbsp;&nbsp;<a
         href=\"./?view=vip/home\"><img src=\"./images/vip/2.gif\" alt=\"Usu&aacute;rio
-        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=zeleleh'>zeleleh</a>\n
-        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=zeleleh'>175
-        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=zeleleh&tipo=P'>99.43%
+        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=aguilda'>aguilda</a>\n
+        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=aguilda'>85
+        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=aguilda&tipo=P'>100.00%
         positivas</a>)\n                            </td>\n                            <td
-        align='right' class='hmin42 defaultBlackP brdb'>\n                                2d
-        47m&nbsp;\n                            </td>\n                        </tr>\n
+        align='right' class='hmin42 defaultBlackP brdb'>\n                                21h
+        18m&nbsp;\n                            </td>\n                        </tr>\n
         \                   \n                        <tr  onmouseover='omoDestaque(this,1);'
         onmouseout='omoDestaque(this,0);'>\n                            <td class='hmin42
-        brdb'>\n                                <a href='./?view=leilao/view&id=3024278'><img
-        style='margin-top:2px;margin-left:2px;' width='40' height='40' src='images/leilao/noimage_p.jpg'
-        border='0' alt='' title=''></a>\n                            </td>\n                            <td
-        vAlign='top' class='hmin42 brdb'><div style='margin-top:4px;'>\n                                <a
-        href='./?view=leilao/view&id=3024278' class='cinzaEscuro'>1 Ashcloud Phoenix
-        + 1 Wingmate Roc</a></div>\n                            </td>\n\n                            <td
+        brdb'>\n                                <a href='./?view=leilao/view&id=3579024'><a
+        data-tooltip='sticky2'><img style='margin-top:2px;margin-left:2px;' width='40'
+        height='40' src='arquivos/up/leilao/2015/12/06/3579024_0_p.jpg' border='0'
+        alt='' title=''></a>\n                            </td>\n                            \n
+        \                               \n                            <td vAlign='top'
+        class='hmin42 brdb'><div style='margin-top:4px;'>\n                                <a
+        href='./?view=leilao/view&id=3579024' class='cinzaEscuro'>1 F&ecirc;nix Nuvem-de-cinzas
+        / Ashcloud Phoenix</a></div>\n                            </td>\n\n                            <td
         align='right' class='hmin42 defaultBlack brdb'>\n                                <font
-        class='fLaranja'><b>R$ 25,00</b></font><br><a class='cinzaEscuroP' href='./?view=leilao/view&id=3024278&ofertas=1#ofertas'><i>0
+        class='fLaranja'><b>R$ 4,00</b></font><br><a class='cinzaEscuroP' href='./?view=leilao/view&id=3579024&ofertas=1#ofertas'><i>0
         lances</i></a>\n                            </td>\n                            <td
         align='right' class='hmin42 defaultBlack brdb'> </td>\n                            <td
         align='left' class='hmin42 brdb'>\n                                &nbsp;&nbsp;<a
-        href=\"./?view=vip/home\"><img src=\"./images/vip/0.gif\" alt=\"Usu&aacute;rio
-        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=Schettini'>Schettini</a>\n
-        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=Schettini'>151
-        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=Schettini&tipo=P'>100.00%
+        href=\"./?view=vip/home\"><img src=\"./images/vip/2.gif\" alt=\"Usu&aacute;rio
+        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=joaodecampogrande'>joaodecampogrande</a>\n
+        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=joaodecampogrande'>181
+        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=joaodecampogrande&tipo=P'>100.00%
         positivas</a>)\n                            </td>\n                            <td
-        align='right' class='hmin42 defaultBlackP brdb'>\n                                2d
-        17h&nbsp;\n                            </td>\n                        </tr>\n
+        align='right' class='hmin42 defaultBlackP brdb'>\n                                1d
+        12h&nbsp;\n                            </td>\n                        </tr>\n
         \                   \n                        <tr bgcolor='#e7e7e7' onmouseover='omoDestaque(this,1);'
         onmouseout='omoDestaque(this,0);'>\n                            <td class='hmin42
-        '>\n                                <a href='./?view=leilao/view&id=3025123'><a
-        data-tooltip='sticky2'><img style='margin-top:2px;margin-left:2px;' width='40'
-        height='40' src='arquivos/up/leilao/2015/05/04/3025123_0_p.jpg' border='0'
-        alt='' title=''></a>\n                            </td>\n                            <td
-        vAlign='top' class='hmin42 '><div style='margin-top:4px;'>\n                                <a
-        href='./?view=leilao/view&id=3025123' class='cinzaEscuro'>F&ecirc;nix Nuvem-de-cinzas
-        / Ashcloud Phoenix</a></div>\n                            </td>\n\n                            <td
-        align='right' class='hmin42 defaultBlack '>\n                                <font
-        class='fLaranja'><b>R$ 1,00</b></font><br><a class='cinzaEscuroP' href='./?view=leilao/view&id=3025123&ofertas=1#ofertas'><i>0
+        '>\n                                <a href='./?view=leilao/view&id=3609781'><a
+        data-tooltip='sticky3'><img style='margin-top:2px;margin-left:2px;' width='40'
+        height='40' src='arquivos/up/leilao/2015/12/04/3609781_0_p.jpg' border='0'
+        alt='' title=''></a>\n                            </td>\n                            \n
+        \                               \n                            <td vAlign='top'
+        class='hmin42 '><div style='margin-top:4px;'>\n                                <a
+        href='./?view=leilao/view&id=3609781' class='cinzaEscuro'>1x  F&ecirc;nix
+        Nuvem-de-cinzas / Ashcloud Phoenix </a></div>\n                            </td>\n\n
+        \                           <td align='right' class='hmin42 defaultBlack '>\n
+        \                               <font class='fLaranja'><b>R$ 2,50</b></font><br><a
+        class='cinzaEscuroP' href='./?view=leilao/view&id=3609781&ofertas=1#ofertas'><i>0
         lances</i></a>\n                            </td>\n                            <td
         align='right' class='hmin42 defaultBlack '> </td>\n                            <td
         align='left' class='hmin42 '>\n                                &nbsp;&nbsp;<a
         href=\"./?view=vip/home\"><img src=\"./images/vip/2.gif\" alt=\"Usu&aacute;rio
-        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=predador'>predador</a>\n
-        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=predador'>506
-        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=predador&tipo=P'>99.41%
+        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=Argen'>Argen</a>\n
+        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=Argen'>270
+        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=Argen&tipo=P'>100.00%
         positivas</a>)\n                            </td>\n                            <td
-        align='right' class='hmin42 defaultBlackP '>\n                                13d
-        23h&nbsp;\n                            </td>\n                        </tr>\n
-        \                   </table>\n                <div id=\"mystickytooltip\"
+        align='right' class='hmin42 defaultBlackP '>\n                                1d
+        21h&nbsp;\n                            </td>\n                        </tr>\n
+        \                   \n                        <tr  onmouseover='omoDestaque(this,1);'
+        onmouseout='omoDestaque(this,0);'>\n                            <td class='hmin42
+        brdb'>\n                                <a href='./?view=leilao/view&id=3616741'><img
+        style='margin-top:2px;margin-left:2px;' width='40' height='40' src='images/leilao/noimage_p.jpg'
+        border='0' alt='' title=''></a>\n                            </td>\n                            \n
+        \                               \n                            <td vAlign='top'
+        class='hmin42 brdb'><div style='margin-top:4px;'>\n                                <a
+        href='./?view=leilao/view&id=3616741' class='cinzaEscuro'>1 F&ecirc;nix Nuvem-de-cinzas
+        / Ashcloud Phoenix PORTUGU&Ecirc;S</a></div>\n                            </td>\n\n
+        \                           <td align='right' class='hmin42 defaultBlack brdb'>\n
+        \                               <font class='fLaranja'><b>R$ 3,00</b></font><br><a
+        class='cinzaEscuroP' href='./?view=leilao/view&id=3616741&ofertas=1#ofertas'><i>0
+        lances</i></a>\n                            </td>\n                            <td
+        align='right' class='hmin42 defaultBlack brdb'> </td>\n                            <td
+        align='left' class='hmin42 brdb'>\n                                &nbsp;&nbsp;<a
+        href=\"./?view=vip/home\"><img src=\"./images/vip/2.gif\" alt=\"Usu&aacute;rio
+        VIP\" border=\"0\" class=\"icon\"></a> <a class='cinzaEscuroP' href='./?view=user&nick=Joviano'>Joviano</a>\n
+        \                               <br>&nbsp;&nbsp;<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=Joviano'>458
+        refer&ecirc;ncias</a> (<a class='cinzaEscuroPP' href='./?view=ref2/ref&nick=Joviano&tipo=P'>100.00%
+        positivas</a>)\n                            </td>\n                            <td
+        align='right' class='hmin42 defaultBlackP brdb'>\n                                2d
+        13h&nbsp;\n                            </td>\n                        </tr>\n
+        \                   </table>\n                    <div align='right' style='margin-top:3px;margin-right:6px;'>\n
+        \                       <a class='' href=\"./?view=cards/card&card=Ashcloud
+        Phoenix&show=3\"><i>Visualizar mais leil&otilde;es com <b>F&ecirc;nix Nuvem-de-cinzas</b></i></a>\n
+        \                   </div>\n                \n            </div>\n        \n
+        \                       </div>\n                        <br>\n                    </td>\n
+        \               </tr>\n                <tr>\n                    <td class='cardRightBottom'>
+        </td>\n                </tr>\n            </table>\n        </td>\n                </tr>\n
+        \           </table>\n        \n                <div id=\"mystickytooltip\"
         class=\"stickytooltip\">\n                    <div style=\"padding:4px\">\n
-        \                       <div id=\"sticky1\" class=\"atip\"><img src=\"arquivos/up/leilao/2015/05/04/3023973_0_p.jpg\"/></div><div
-        id=\"sticky2\" class=\"atip\"><img src=\"arquivos/up/leilao/2015/05/04/3025123_0_p.jpg\"/></div>\n
+        \                       <div id=\"sticky1\" class=\"atip\"><img src=\"arquivos/up/leilao/2015/12/03/3570887_0_p.jpg\"/></div><div
+        id=\"sticky2\" class=\"atip\"><img src=\"arquivos/up/leilao/2015/12/06/3579024_0_p.jpg\"/></div><div
+        id=\"sticky3\" class=\"atip\"><img src=\"arquivos/up/leilao/2015/12/04/3609781_0_p.jpg\"/></div>\n
         \                   </div>\n                    <div class=\"stickystatus\"></div>\n
-        \               </div>    \n            \n            </div>\n        \n                        </div>\n
-        \                       <br>\n                    </td>\n                </tr>\n
-        \               <tr>\n                    <td class='cardRightBottom'> </td>\n
-        \               </tr>\n            </table>\n        </td>\n                </tr>\n
-        \           </table>\n        \n                        </td>\n                    </tr>\n
-        \               </table>\n            \n                            </td>\n
+        \               </div>    \n            \n                        </td>\n
+        \                   </tr>\n                </table>\n            \n                            </td>\n
         \                       </tr>\n                        <tr>\n                            <td
         bgcolor=\"#ff5a00\" style=\"height:19px;min-height:19px;\">\n                                &nbsp;\n
         \                           </td>\n                        </tr>\n                        \n
@@ -924,7 +1052,7 @@ http_interactions:
         width=\"1056\" align=\"center\" style=\"margin-top:12px;margin-bottom:14px;\">\n
         \                       <tr>\n                            <td vAlign=\"top\"
         align=\"center\">\n                                <a href='./b/?i=7' target='_blank'><img
-        src='arquivos/up/banner/1349041613_245.jpg' title='UG Card Shop' alt='UG Card
+        src='arquivos/up/banner/1441212173_300.gif' title='UG Card Shop' alt='UG Card
         Shop' width='728' height='90' border='0'/></a>\n                            </td>\n
         \                       </tr>\n                        <tr>\n                            <td
         vAlign=\"top\">\n                                <table border=\"0\" cellpadding=\"0\"
@@ -938,11 +1066,10 @@ http_interactions:
         \                                           <a href=\"./?view=vip/suporte\"
         class=\"cinza2\">FALE CONOSCO</a> &nbsp; | &nbsp;\n                                            <a
         href=\"./?view=anuncie\" class=\"cinza2\">ANUNCIE NA LIGAMAGIC</a> &nbsp;
-        | &nbsp;\n                                            <a href=\"./?view=uonline\"
-        class=\"cinza2\">USU&Aacute;RIOS ONLINE: 1090</a>\n                                            </div>\n
-        \                                           <div style=\"margin-top:6px;font-size:8pt;color:#e6e6e6\">\n
-        \                                               @ Copyrighted por Wizards
-        of the Coast Inc. &nbsp; | &nbsp; \n                                                <a
+        | &nbsp;<a href=\"./?view=uonline\" class=\"cinza2\">USU&Aacute;RIOS ONLINE:
+        1129</a>\n                                            </div>\n                                            <div
+        style=\"margin-top:6px;font-size:8pt;color:#e6e6e6\">\n                                                @
+        Copyrighted por Wizards of the Coast Inc. &nbsp; | &nbsp; \n                                                <a
         href=\"./?view=privacidade\" class=\"cinza2P\">Pol&iacute;tica de Privacidade</a>
         &nbsp; | &nbsp; \n                                                <a href=\"./?view=avisolegal\"
         class=\"cinza2P\">Aviso Legal</a> &nbsp; | &nbsp; \n                                                <a
@@ -957,9 +1084,10 @@ http_interactions:
         title=\"Ligamagic | Twitter\" alt=\"Ligamagic | Twitter\"></a>\n                                        </td>\n
         \                                   </tr>\n                                </table>\n
         \                           </td>\n                        </tr>\n                    </table>\n
-        \               </td>\n            </tr>\n        \n            <SCRIPT type=\"text/javascript\"
-        src=\"arquivos/js_v1/jq/jquery-1.7.2.min.js\"></script>\n            <script
-        type=\"text/javascript\" src=\"arquivos/js_v1/jq/jquery.stickytooltip.js\"></script>\n
+        \               </td>\n            </tr>\n        \r\n        <script type=\"text/javascript\"
+        src=\"arquivos/js_v1/leilao/leiloes.js\"></script>\r\n    \n            <SCRIPT
+        type=\"text/javascript\" src=\"arquivos/js_v1/jq/jquery-1.7.2.min.js\"></script>\n
+        \           <script type=\"text/javascript\" src=\"arquivos/js_v1/jq/jquery.stickytooltip.js\"></script>\n
         \           <script type=\"text/javascript\" src=\"arquivos/js_v1/jq/jquery.tinyscrollbar.min.js\"></script>\n
         \       <script type='text/javascript'>\r\nVETiRaridade = new Array();\r\nVETiID_Site
         = new Array();\r\nVETsArtista = new Array();\r\nVETsNomeOficial = new Array();\r\nVETsNomePortugues
@@ -968,17 +1096,17 @@ http_interactions:
         = new Array();\r\nVETdiarioMaior = new Array();\r\nVETimage = new Array();\r\nVETsimboloPath
         = new Array();\r\nVETiRaridade[0] = \"4\";\r\nVETiID_Site[0] = \"99\";\r\nVETsArtista[0]
         = \"Howard Lyon\";\r\nVETsNomeOficial[0] = \"Khans of Tarkir\";\r\nVETsNomePortugues[0]
-        = \"Khans de Tarkir\";\r\nVETsSigla[0] = \"ktk\";\r\nVETprecoMaior[0] = \"14,89\";\r\nVETprecoMedio[0]
-        = \"11,67\";\r\nVETprecoMenor[0] = \"9,30\";\r\nVETdiarioMenor[0] = \"-0.33\";\r\nVETdiarioMedio[0]
-        = \"-0.30\";\r\nVETdiarioMaior[0] = \"\";\r\nVETimage[0] = \"arquivos/up/cartas/images/pt99ktk.jpg\";\r\nVETsimboloPath[0]
+        = \"Khans de Tarkir\";\r\nVETsSigla[0] = \"ktk\";\r\nVETprecoMaior[0] = \"8,00\";\r\nVETprecoMedio[0]
+        = \"4,23\";\r\nVETprecoMenor[0] = \"3,00\";\r\nVETdiarioMenor[0] = \"\";\r\nVETdiarioMedio[0]
+        = \"-0.06\";\r\nVETdiarioMaior[0] = \"\";\r\nVETimage[0] = \"arquivos/up/cartas/images/pt99ktk.jpg\";\r\nVETsimboloPath[0]
         = \"images/emot/ed/KTK_M.gif\";\r\n\r\n</script>\n            <script type=\"text/javascript\">\n
         \               $(document).ready(function(){\n                    $('#scrollbar1').tinyscrollbar();\n
-        \               });\n            </script>\n        \n            <script
-        type='text/javascript'>\n                jQuery(function(){\n                    var
-        objACS=$('#card').autocomplete({formName:'principal',serviceUrl:'ajax/cardsearch.php',minChars:3,deferRequestBy:100,maxHeight:220,width:396,zIndex:9999});\n
+        \                   g_omoLine = 0;\n                    \n                });\n
+        \           </script>\n        \n            <script type='text/javascript'>\n
+        \               jQuery(function(){\n                    var objACS=$('#card').autocomplete({formName:'principal',serviceUrl:'ajax/cardsearch.php',minChars:3,deferRequestBy:100,maxHeight:220,width:396,zIndex:9999});\n
         \                   var objACS2=$('#tipo').autocomplete({submitOnClick:2,idCSS:'bAdvanced',formName:'avancado',serviceUrl:'ajax/cardsearch.php?tipo=1',minChars:1,deferRequestBy:100,maxHeight:220,width:169,zIndex:9999});\n
         \                   var objACS3=$('#subtipo').autocomplete({submitOnClick:2,idCSS:'bAdvanced',formName:'avancado',serviceUrl:'ajax/cardsearch.php?subtipo=1',minChars:1,deferRequestBy:100,maxHeight:220,width:167,zIndex:9999});\n
-        \               });\n            </script>\n        <script src='arquivos/js_v1/jq/jquery.autocomplete.js'
+        \               });\n            </script>\n        <script src='arquivos/js_v1/jq/jquery.autocomplete_v2.js?v2'
         type='text/javascript'></script><script type='text/javascript'>jQuery(function(){var
         objAC=$('#query').autocomplete({formName:'ac',serviceUrl:'ajax/cardsearch.php',minChars:3,deferRequestBy:100,maxHeight:220,width:220,zIndex:9999});});</script>\n
         \                   </table>\n                </div>\n                \n<!--
@@ -987,5 +1115,5 @@ http_interactions:
         Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-TW6DML');</script>\n<!--
         End Google Tag Manager -->  \n\n            </body>\n        "
     http_version: 
-  recorded_at: Tue, 05 May 2015 18:24:39 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Fri, 04 Dec 2015 02:22:03 GMT
+recorded_with: VCR 3.0.0
