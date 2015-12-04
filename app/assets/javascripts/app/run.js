@@ -4,12 +4,10 @@ angular
   .module('demos_cfg')
   .run(runBlock);
 
-runBlock.$inject = [
-  '$document'
-]
+runBlock.$inject = [];
 
-function runBlock($document) {
-  $document.ready(function(){
+function runBlock() {
+  $(document).ready(function(){
     $(".button-collapse").sideNav();
     $('select').material_select();
     $('.collapsible').collapsible({ accordion: false });
