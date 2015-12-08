@@ -14,11 +14,10 @@ LiveSearchController.$inject = [
 ];
 
 function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, CollectionFactory, $sce, $timeout) {
-  $scope.deckEntry = {};
-
-  $scope.addCardToDeck = addCardToDeck;
   $scope.addCardToCollection = addCardToCollection;
+  $scope.addCardToDeck = addCardToDeck;
   $scope.change = change; 
+  $scope.deckEntry = {};
 
   function addCardToCollection() {
     var cardDeck = this;
