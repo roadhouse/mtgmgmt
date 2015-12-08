@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "angularjs-rails"
+gem "chartjs-ror"
 gem "delayed_job_active_record"
 gem "foreman"
 gem "heroku"
@@ -28,7 +29,6 @@ group :development do
 end
 
 group :development, :test do
-  gem "chartjs-ror"
   gem "factory_girl_rails"
   gem "jasmine-rails"
   gem "mocha", require: false
