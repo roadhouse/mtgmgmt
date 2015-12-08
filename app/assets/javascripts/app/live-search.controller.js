@@ -14,7 +14,7 @@ LiveSearchController.$inject = [
 ];
 
 function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, CollectionFactory, $sce, $timeout) {
-  var deckEntry = {};
+  $scope.deckEntry = {};
 
   $scope.addCardToDeck = addCardToDeck;
   $scope.addCardToCollection = addCardToCollection;
@@ -39,9 +39,9 @@ function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, Col
   function addCardToDeck() {
     var cardDeck = this;
 
-    deckEntry[cardDeck.entry.id] = parseInt(cardDeck.copies);
+    $scope.deckEntry[cardDeck.entry.id] = parseInt(cardDeck.copies);
     DeckBuilderFactory
-      .addCardToDeck({"deck": deckEntry})
+      .addCardToDeck({"deck": $scope.deckEntry})
       .then(function(result) { 
         $scope.$broadcast('updateChart', result.data);
         $scope.deck_list = result.data.deck_list;
