@@ -28,7 +28,7 @@ group :development do
 end
 
 group :development, :test do
-  gem "chart-js-rails"
+  gem "chartjs-ror"
   gem "factory_girl_rails"
   gem "jasmine-rails"
   gem "mocha", require: false

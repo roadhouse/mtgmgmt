@@ -52,8 +52,8 @@ GEM
     backports (3.6.7)
     builder (3.2.2)
     byebug (8.2.0)
-    chart-js-rails (0.0.9)
-      railties (> 3.1)
+    chartjs-ror (2.2.0)
+      rails (>= 3.1)
     coderay (1.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -351,7 +351,7 @@ PLATFORMS
 DEPENDENCIES
   angularjs-rails
   awesome_print
-  chart-js-rails
+  chartjs-ror
   database_cleaner
   delayed_job_active_record
   factory_girl_rails
