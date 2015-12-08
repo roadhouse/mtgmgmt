@@ -28,6 +28,7 @@ group :development do
 end
 
 group :development, :test do
+  gem "chart-js-rails"
   gem "factory_girl_rails"
   gem "jasmine-rails"
   gem "mocha", require: false
@@ -35,6 +36,7 @@ group :development, :test do
   gem "pry-rails"
   gem "pry-byebug"
   gem "rspec-rails"
+  gem "sinon-rails"
 end
 
 group :test do
