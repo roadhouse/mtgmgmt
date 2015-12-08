@@ -1,8 +1,10 @@
 source "https://rubygems.org"
 
+gem "angularjs-rails"
 gem "delayed_job_active_record"
 gem "foreman"
 gem "heroku"
+gem "jasmine"
 gem "kaminari"
 gem "nokogiri"
 gem "pg"
@@ -27,7 +29,7 @@ end
 
 group :development, :test do
   gem "factory_girl_rails"
-  gem "jasmine"
+  gem "jasmine-rails"
   gem "mocha", require: false
   gem "pry"
   gem "pry-rails"
