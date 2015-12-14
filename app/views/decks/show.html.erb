@@ -13,6 +13,7 @@
         preço: <%= number_to_currency @deck.total_price %>
       <%= link_to "print main", print_deck_path(part: :main) %>
       <%= link_to "print sideboard", print_deck_path(part: :sideboard) %>
+      <%= link_to "cockatrice", cockatrice_deck_path %>
     </div>
   </div>
 </div>

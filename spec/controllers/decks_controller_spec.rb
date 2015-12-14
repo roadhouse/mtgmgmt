@@ -25,4 +25,16 @@ describe DecksController, type: :controller do
       end
     end
   end
+
+  context "GET on /cockatrice" do
+    let(:deck) { create(:deck) }
+    
+    before { get :cockatrice, id: deck.id }
+
+    context "response" do
+      subject { response }
+
+      it { is_expected.to be_successful }
+    end
+  end
 end

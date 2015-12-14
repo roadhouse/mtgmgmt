@@ -50,6 +50,15 @@ class DecksController < ApplicationController
     render layout: "print"
   end
 
+  def cockatrice
+    deck = Deck.find(params[:id])
+    output = CockatriceBuilder.new(deck).output
+    temp_file  = Tempfile.new(deck.name)
+    temp_file.open { |f| f.write(output) }
+
+    send_file temp_file.path, filename: deck.name + ".cod"
+  end
+
   private
   
   def deck_params
