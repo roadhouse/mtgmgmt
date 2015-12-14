@@ -15,5 +15,12 @@ describe CockatriceBuilder do
 
     it { is_expected.not_to be_nil }
   end
+
+  context ".file" do
+    subject { builder.file }
+
+    it { is_expected.not_to be_nil }
+    its(:class) { is_expected.to be_eql Tempfile }
+  end
 end
 

@@ -1,4 +1,6 @@
 class CockatriceBuilder
+  # temp_file  = Tempfile.new(deck.name)
+  # temp_file.open { |f| f.write(output) }
   def initialize(deck)
     @deck = deck
   end
@@ -30,5 +32,12 @@ class CockatriceBuilder
 
   def output
     format.to_xml
+  end
+  
+  def file
+    Tempfile.new([@deck.name, '.cod']).tap do |file|
+      file.write(output)
+      file.rewind
+    end
   end
 end
