@@ -17,13 +17,13 @@ class CockatriceBuilder
 
         xml.zone(name: "main") do
           @deck.list["main"].each_pair do |card, copies| 
-            xml.send(:card, card: card, number: copies)
+            xml.send(:card, name: card, number: copies)
           end
         end
 
         xml.zone(name: "side") do
           @deck.list["sideboard"].each_pair do |card, copies| 
-            xml.send(:card, card: card, number: copies)
+            xml.send(:card, name: card, number: copies)
           end
         end
       end
