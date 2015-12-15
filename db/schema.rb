@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150620145645) do
+ActiveRecord::Schema.define(version: 20151215134657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,16 +38,17 @@ ActiveRecord::Schema.define(version: 20150620145645) do
     t.integer  "loyalty"
     t.integer  "multiverse_id"
     t.integer  "cmc"
-    t.string   "ctypes",                       default: [], array: true
-    t.string   "subtypes",                     default: [], array: true
-    t.string   "printings",                    default: [], array: true
-    t.string   "names",                        default: [], array: true
-    t.string   "colors",                       default: [], array: true
-    t.string   "supertypes",                   default: [], array: true
+    t.string   "ctypes",           limit: 255, default: [], array: true
+    t.string   "subtypes",         limit: 255, default: [], array: true
+    t.string   "printings",        limit: 255, default: [], array: true
+    t.string   "names",            limit: 255, default: [], array: true
+    t.string   "colors",           limit: 255, default: [], array: true
+    t.string   "supertypes",       limit: 255, default: [], array: true
     t.datetime "created_at"
     t.datetime "updated_at"
     t.decimal  "price"
     t.datetime "price_updated_at"
+    t.boolean  "is_standard"
   end
 
   create_table "collections", force: :cascade do |t|
