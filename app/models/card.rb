@@ -1,4 +1,6 @@
 class Card < ActiveRecord::Base
+  default_scope { where(is_standard: true) }
+
   ICON_NAME = {
     KTK: "khans-of-tarkir",
     FRF: "fate-reforged",

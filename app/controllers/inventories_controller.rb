@@ -47,6 +47,7 @@ class InventoriesController < ApplicationController
 
   def want
     @inventories = current_user.inventories.where("copies < 4").where(list: "game")
+      .joins(:card).merge(Card.order(price: :desc))
   end
 
   def have
