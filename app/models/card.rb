@@ -1,5 +1,6 @@
 class Card < ActiveRecord::Base
   default_scope { where(is_standard: true) }
+  default_scope { where.not(set: :fake) }
 
   ICON_NAME = {
     KTK: "khans-of-tarkir",

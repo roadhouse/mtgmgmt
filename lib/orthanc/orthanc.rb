@@ -1,10 +1,8 @@
-require 'postgres_ext'
+require "postgres_ext"
 
-require_dependency 'deck_param'
-require_dependency 'card_param'
+require_dependency "deck_param"
+require_dependency "card_param"
 
-#queries using arel and extract reports
-# PARAMS: {color: [:w|:r|:c|:b|:a|:g], type: [:a|:l|:i|:s|:c|:p], name: "name", oracle: "haste"}
 class Orthanc
   def initialize(options)
     default_options = {
@@ -20,7 +18,8 @@ class Orthanc
   end
 
   def param_builder(str)
-    params = str.gsub(": ", ":").split(" ").each_with_object({}) do |filter, query|
+    fixed_params = str.gsub(": ", ":").split(" ")
+    params = fixed_params.each_with_object({}) do |filter, query|
       params = filter.split(/:\s*/)
       
       if params.size > 1
@@ -39,7 +38,7 @@ class Orthanc
 
   #basic card search using CardParam params as filter
   def cards
-    @options.empty? ? @card.table.none : @card.table.where(@card.params).where.not(set: 'fake')
+    @options.empty? ? @card.table.none : @card.table.where(@card.params)
   end
 
   #top cards played in standard
