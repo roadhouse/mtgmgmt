@@ -4,7 +4,7 @@ class BasePresenter
   end
 
   def self.map(collection)
-    collection.map { |presenter| self.send(:new,presenter) } 
+    collection.map { |presenter| send(:new, presenter) }
   end 
 
   def h
