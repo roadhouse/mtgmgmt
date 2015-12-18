@@ -62,4 +62,10 @@ class Orthanc
       .where(@deck.params)
       .limit(@options.fetch(:limit))
   end
+
+  def from_user(user)
+    card_filters = @card.table.where(@card.params).order(price: :desc)
+
+    user.inventories.joins(:card).merge(card_filters)
+  end
 end

@@ -2,7 +2,7 @@
 # when name was passed the the scope the query included lands
 class CardParam < BaseParam
   model Card
-  fields :original_text, :ctypes, :colors, :name, :portuguese_name, :rarity, :cmc
+  fields :original_text, :ctypes, :colors, :name, :portuguese_name, :rarity, :cmc, :set, :is_standard
 
   def params
     color = @options[:color]
@@ -12,7 +12,10 @@ class CardParam < BaseParam
     rarity = @options[:rarity]
     cmc = @options[:cmc]
 
-    where = name.empty? ? not_lands : card_name_is(name)
+    # query only cards valid in standard and ignoring fake cards
+    where = is_standard.eq(true).and(set.not_eq(:fake))
+
+    where = where.and(name.empty? ? not_lands : card_name_is(name))
 
     where = where.and(card_type_is(type))   if type
     where = where.and(card_color_is(color)) if color

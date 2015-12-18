@@ -23,5 +23,6 @@ FactoryGirl.define do
     ctypes [ "Creature" ]
     subtypes [ "Human" "Rogue" "Ally" ]
     printings [ "BFZ" ]
+    is_standard true
   end
 end

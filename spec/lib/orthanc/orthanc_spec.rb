@@ -52,9 +52,22 @@ describe Orthanc do
     let(:user) { create(:user) }
     let(:card1) { create(:card) }
     let(:card2) { create(:card, name: "Dispel", set:"BFZ") }
-    let(:inventory1) { create(:inventory, user: user, card: card1) }
-    let(:inventory2) { create(:inventory, user: user, card: card2) }
+    let!(:inventory1) { create(:inventory, user: user, card: card1) }
+    let!(:inventory2) { create(:inventory, user: user, card: card2) }
 
-    subject { described_class.new("").from_user(user) }
+    subject { described_class.new(filter_string).from_user(user) }
+
+    context "with an empty filter string" do
+      let(:filter_string) { "" }
+
+      its(:size) { is_expected.to be_eql 2 }
+    end
+
+    context "search specific card on user collection" do
+      let(:filter_string) { "Dis" }
+
+      its(:size) { is_expected.to be_eql 1}
+      its(:"first.card") { is_expected.to be_eql card2 }
+    end
   end
 end
