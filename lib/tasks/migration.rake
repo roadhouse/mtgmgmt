@@ -59,7 +59,7 @@ namespace :migration do
   task valid_in_standard: :environment do
     standard_sets = %w{BFZ DTK FRF KTK ORI}
 
-    Card.where(set: standard_sets).update_all(is_standard: true)
-    Card.where.not(set: standard_sets).update_all(is_standard: false)
+    Card.unscoped.where(set: standard_sets).update_all(is_standard: true)
+    Card.unscoped.where.not(set: standard_sets).update_all(is_standard: false)
   end
 end
