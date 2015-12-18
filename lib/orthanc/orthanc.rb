@@ -2,6 +2,7 @@ require "postgres_ext"
 
 require_dependency "deck_param"
 require_dependency "card_param"
+require_dependency "inventory_param"
 
 class Orthanc
   def initialize(options)
@@ -63,9 +64,13 @@ class Orthanc
       .limit(@options.fetch(:limit))
   end
 
-  def from_user(user)
+  # TODO remove dependency from a inventory filter
+  def from_user(user, inventory_filters = {})
     card_filters = @card.table.where(@card.params).order(price: :desc)
+    inventory = InventoryParam.new(inventory_filters)
 
-    user.inventories.joins(:card).merge(card_filters)
+    user.inventories
+      .where(inventory.params)
+      .joins(:card).merge(card_filters)
   end
 end

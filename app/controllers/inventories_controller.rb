@@ -46,12 +46,13 @@ class InventoriesController < ApplicationController
   end
 
   def want
-    @inventories = current_user.inventories.where("copies < 4").where(list: "game")
-      .joins(:card).merge(Card.order(price: :desc))
+    @inventories = Orthanc.new(params[:query].to_s)
+      .from_user(current_user, copies: 4, list: :game)
   end
 
   def have
-    @inventories = current_user.inventories.where(list: "have")
+    @inventories = Orthanc.new(params[:query].to_s)
+      .from_user(current_user, list: :have)
   end
 
   private
