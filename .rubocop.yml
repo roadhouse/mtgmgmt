@@ -7,7 +7,7 @@ Style/StringLiterals:
 Style/SpaceInsideBlockBraces:
   EnforcedStyle: space
   EnforcedStyleForEmptyBraces: space
-  SpaceBeforeBlockParameters: false
+  SpaceBeforeBlockParameters: true
 
 Style/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
