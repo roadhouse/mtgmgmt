@@ -8,12 +8,13 @@
         </span>
       </div>
       <div class="collapsible-body">
-          <div class="row">
-            <%= render "decks/inventory_form", card: card.card %>
-          </div>
-          <div class="row">
-            <%= image_tag card.card.image, alt: card.card.name, class: "responsive-img" %>
-          </div>
+        <div class="row">
+          <%= render "collection_form", card_id: card.card.id %>
+        </div>
+
+        <div class="row">
+          <%= image_tag card.card.image, alt: card.card.name, class: "responsive-img" %>
+        </div>
       </div>
     </li>
   <% end %>

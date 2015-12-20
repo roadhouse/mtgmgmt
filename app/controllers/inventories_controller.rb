@@ -29,7 +29,7 @@ class InventoriesController < ApplicationController
     }
 
     @inventory = Inventory.find_or_create_by(scope)
-    @inventory.copies = inventory_params[:copies]
+    @inventory.copies = @inventory.copies.to_i + inventory_params[:copies].to_i
     @inventory.save!
   end
 

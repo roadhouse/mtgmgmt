@@ -25,26 +25,7 @@
         </div>
         <div class="card-action" ng-bind-html="entry.original_text"></div>
         <div class="card-action">
-          <form class="valign-wrapper" ng-submit="addCardToCollection($event)">
-            <div class="input-field col s4">
-              <select class="browser-default" ng-model="copies">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            </div>
-            <div class="input-field col s4">
-              <select class="browser-default" ng-model="list">
-                <option value="want">want</option>
-                <option value="have">have</option>
-                <option value="game">game</option>
-                <option value="foil">foil</option>
-              </select>
-            </div>
-            <input class="btn input-field col s3" name="commit" type="submit" value="add" />
-          </form>
+          <%= render "form_inventory" %>
         </div>
       </div>
     </div>

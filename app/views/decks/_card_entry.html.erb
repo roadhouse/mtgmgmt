@@ -1,6 +1,6 @@
 <% cards.each_pair do |card_type, cards| %>
   <h5><%= card_type %></h5>
-  <ul class="collapsible" data-collapsible="accordion">
+  <ul class="collapsible" data-collapsible="accordion" ng-controller="InventoryController">
     <% cards.each do |card| %>
       <li>
       <div class="collapsible-header">
@@ -12,7 +12,7 @@
       </div>
       <div class="collapsible-body">
         <div class="row">
-          <%= render "inventory_form", card: card[:card] %>
+          <%= render "inventories/collection_form", card_id: card[:card].id %>
         </div>
         <span class="secondary-content">
           <%= number_to_currency card[:card].on_demand_price %>

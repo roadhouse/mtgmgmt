@@ -10,8 +10,8 @@ class Card < ActiveRecord::Base
   scope :per_name, ->(name) { where(["name ilike ?", "%#{name}%"]) }
   scope :per_type, ->(type) { where(["ctype ilike ?", "%#{type}%"]) }
 
-  validates :name, 
-    uniqueness: true, 
+  validates :name,
+    uniqueness: true,
     presence: true
 
   has_many :inventories
@@ -21,15 +21,15 @@ class Card < ActiveRecord::Base
   def portuguese_name
     super or name
   end
-  
+
   def self.find_by_name!(name)
     per_name(name).first or Card.create!(name: name, set: :fake)
   end
 
   def on_demand_price
-    if price_updated_at.nil? or price_updated_at < 1.day.ago
-      Delayed::Job.enqueue CardPricerJob.new(self.id)
-    end
+    # if price_updated_at.nil? or price_updated_at < 1.day.ago
+      # Delayed::Job.enqueue CardPricerJob.new(self.id)
+    # end
 
     self.price
   end

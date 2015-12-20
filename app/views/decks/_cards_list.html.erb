@@ -1,4 +1,4 @@
-<ul class="collapsible nested-collapsible" data-collapsible="accordion">
+<ul class="collapsible nested-collapsible" data-collapsible="accordion" ng-controller="InventoryController">
   <% cards.each do |card| %>
     <li>
       <div class="collapsible-header">
@@ -10,7 +10,7 @@
       </div>
       <div class="collapsible-body">
         <div class="row">
-          <%= render "inventory_form", card: card %>
+          <%= render "inventories/collection_form", card_id: card.id %>
         </div>
         <div class="row center-align">
           <%= image_tag card.image, alt: card.name, class: "responsive-img" %>

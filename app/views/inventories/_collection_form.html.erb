@@ -1,0 +1,21 @@
+<form class="valign-wrapper">
+  <input type="hidden" ng-init="card_id='<%= card_id %>'" >
+
+  <div class="input-field col s4">
+    <select ng-model="list" ng-init="list = 'game'">
+      <option value="game">game</option>
+      <option value="want">want</option>
+      <option value="have">have</option>
+      <option value="foil">foil</option>
+    </select>
+    <label>List</label>
+  </div>
+
+  <span class="input-field">
+    <a class="waves-effect waves-light btn" ng-click="addToCollection()">+</a>
+  </span>
+
+  <span class="input-field">
+    <a class="waves-effect waves-light btn" ng-click="removeToCollection()">-</a>
+  </span>
+</form>
