@@ -30,6 +30,10 @@ class DeckParam < BaseParam
       .group(table[:name])
   end
 
+  def card_totals
+    { cards_on_deck: cards_on_deck, card_quantity: card_quantity }
+  end
+
   def params 
     season_is @options.fetch(:season)
   end
