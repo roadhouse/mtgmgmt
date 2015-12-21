@@ -6,12 +6,10 @@ angular
 
 DeckBuilderController.$inject = [
   '$scope',
-  'DeckBuilderFactory',
-  '$sce',
-  '$timeout'
+  'DeckBuilderFactory'
 ];
 
-function DeckBuilderController($scope, DeckBuilderFactory, $sce, $timeout) {
+function DeckBuilderController($scope, DeckBuilderFactory) {
   $scope.addToDeck = addToDeck;
   $scope.removeToDeck = removeToDeck;
 

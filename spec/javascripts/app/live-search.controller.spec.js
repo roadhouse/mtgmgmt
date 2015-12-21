@@ -29,4 +29,21 @@ describe('DeckBuilderController', function() {
 
     expect($scope.deckEntry[1]).toBe(0);
   });
+
+  describe('call DeckBuilderFactory', function() {
+    var q;
+    beforeEach(inject(function($controller, $rootScope, $q) {
+      q = $q;
+    }));
+
+    it('call factory', function() {
+      var $scope = {};
+      var myService = jasmine.createSpyObj('DeckBuilderFactory', ['getStats']);
+      myService.getStats.and.returnValue(q.when({result: 'adsdsaaa'}));
+      $controller('DeckBuilderController', { $scope: $scope, DeckBuilderFactory: myService});
+
+      $scope.addToDeck(1);
+      expect(myService.getStats).toHaveBeenCalled();
+    });
+  })
 });
