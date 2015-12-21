@@ -6,15 +6,13 @@ angular
 
 LiveSearchController.$inject = [
   '$scope',
-  'LiveSearchFactory',
   'DeckBuilderFactory',
   '$sce',
   '$timeout'
 ];
 
-function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, $sce, $timeout) {
+function LiveSearchController($scope, DeckBuilderFactory, $sce, $timeout) {
   $scope.addCardToDeck = addCardToDeck;
-  $scope.change = change;
   $scope.deckEntry = {};
 
   function addCardToDeck() {
@@ -30,17 +28,5 @@ function LiveSearchController($scope, LiveSearchFactory, DeckBuilderFactory, $sc
         $scope.deck_size = result.data.deck_size;
         $scope.first_hand = result.data.first_hand;
       })
-  };
-
-  function change() {
-    var vm = this;
-
-    if (vm.search.length > 6) {
-      LiveSearchFactory
-        .get(vm.search)
-        .then(function(result) { vm.entries = result.data; })
-
-        $timeout(function(){ $('.collapsible').collapsible({}); }, 500);
-    }
   };
 };

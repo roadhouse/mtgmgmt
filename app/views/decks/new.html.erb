@@ -1,14 +1,6 @@
-<div id="container" ng-controller='LiveSearchController' class="section">
+<div id="container" class="section">
   <nav>
-    <div class="nav-wrapper">
-      <%= form_for(:query, method: :get) do |f| %>
-        <div class="input-field">
-          <%= f.search_field :name, "ng-change" =>"change(text)", "ng-model" => "search" %>
-          <label for="search"><i class="mdi-action-search"></i></label>
-          <i class="mdi-navigation-close"></i>
-        </div>
-      <% end %>
-    </div>
+    <live-search />
   </nav>
 
   <div class="row section">
