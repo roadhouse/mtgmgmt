@@ -7,26 +7,41 @@ angular
 DeckBuilderController.$inject = [
   '$scope',
   'DeckBuilderFactory',
+  '$sce',
+  '$timeout'
 ];
 
-function DeckBuilderController($scope, DeckBuilderFactory) {
-  $scope.addCardToDeck = addCardToDeck;
+function DeckBuilderController($scope, DeckBuilderFactory, $sce, $timeout) {
+  $scope.addToDeck = addToDeck;
+  $scope.removeToDeck = removeToDeck;
+
   $scope.deckEntry = {};
 
-  function addCardToDeck() {
-    var cardDeck = this;
+  function addToDeck(entryId) {
+    var copies = $scope.deckEntry[entryId] | 0 ;
 
-    $scope.deckEntry[cardDeck.entry.id] = parseInt(cardDeck.copies);
+    $scope.deckEntry[entryId] = copies + 4;
 
-    console.log($scope.deckEntry);
+    getStats($scope.deckEntry);
+  };
 
-    // DeckBuilderFactory
-      // .addCardToDeck({"deck": $scope.deckEntry})
-      // .then(function(result) {
-        // $scope.$broadcast('updateChart', result.data);
-        // $scope.deck_list = result.data.deck_list;
-        // $scope.deck_size = result.data.deck_size;
-        // $scope.first_hand = result.data.first_hand;
-      // })
+  function removeToDeck(entryId) {
+    var copies = $scope.deckEntry[entryId] | 0 ;
+
+    $scope.deckEntry[entryId] = copies - 4;
+
+    getStats($scope.deckEntry);
+  };
+
+  function getStats(deckList) {
+    DeckBuilderFactory
+      .getStats(deckList)
+      .then(function(result) {
+        $scope.$broadcast('updateChart', result.data);
+
+        $scope.deck_list = result.data.deck_list;
+        $scope.deck_size = result.data.deck_size;
+        $scope.first_hand = result.data.first_hand;
+      });
   };
 };

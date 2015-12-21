@@ -1,7 +1,6 @@
 //= require angular
 //= require angular-animate
 //= require angular-sanitize
-//= require angular-rails-templates
 //= require Chart
 //= require jquery
 

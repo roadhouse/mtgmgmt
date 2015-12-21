@@ -8,8 +8,10 @@ DeckBuilderFactory.$inject = ['$http'];
 
 function DeckBuilderFactory($http) {
   return {
-    addCardToDeck: function(params) {
-      return $http.post('/decks.json', params);
+    getStats: function(params) {
+      var deckParams = { "deck": params }
+
+      return $http.post('/decks.json', deckParams);
     }
   };
 };

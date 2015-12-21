@@ -1,4 +1,4 @@
-<div id="container" class="section">
+<div id="container" class="section" ng-controller="DeckBuilderController">
   <nav>
     <live-search />
   </nav>
@@ -18,18 +18,11 @@
           </div>
           <div class="collapsible-body">
             {{entry.original_text}}
-            <form class="valign-wrapper" ng-controller="DeckBuilderController" ng-submit="addCardToDeck()">
-              <div class="input-field col s4">
-                <select class="browser-default" ng-model="copies">
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
-              </div>
-              <input class="btn input-field col s3" name="commit" type="submit" value="add" />
-            </form>
+
+            <div div="row">
+              <a class="waves-effect waves-light btn" ng-click="addToDeck(entry.id)">+4</a>
+              <a class="waves-effect waves-light btn" ng-click="removeToDeck(entry.id)">-4</a>
+            </div>
           </div>
         </li>
       </ul>
