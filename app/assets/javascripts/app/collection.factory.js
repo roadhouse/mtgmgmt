@@ -19,7 +19,7 @@ function CollectionFactory($http) {
 
     postInventories(params)
       .then(function(result) {
-        Materialize.toast('Adicionada a coleção '+result.data.inventory.list, 1500);
+        Materialize.toast('<i class="material-icons left">done</i>Adicionada a coleção', 1000, 'green lighten-3');
         return result;
       });
   };
@@ -29,7 +29,8 @@ function CollectionFactory($http) {
 
     postInventories(params)
       .then(function(result) {
-        Materialize.toast('Removida da coleção '+result.data.inventory.list, 1500);
+
+        Materialize.toast('<i class="material-icons left">delete</i>Removida da coleção', 1000, 'green lighten-3');
         return result;
       });
   };
