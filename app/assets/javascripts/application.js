@@ -5,7 +5,7 @@
 //= require jquery
 
 //= require lib/angular-chart.js
-//= require lib/materialize-0.97.0.min.js
+//= require materialize
 
 //= require app/app.module.js
 //= require_tree .

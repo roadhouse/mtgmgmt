@@ -22,6 +22,8 @@ gem "virtus"
 
 gem "rails_12factor", group: :production
 
+gem "materialize-sass"
+
 group :development do
   gem "awesome_print"
   gem "guard-rspec", require: false
