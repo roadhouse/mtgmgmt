@@ -49,7 +49,7 @@
 
 .search-result {
   box-sizing:border-box;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.1s ease, transform 0.1s ease;
 }
 
 .ng-enter {
@@ -58,7 +58,7 @@
 }
 
 .ng-enter-stagger {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
   transition-duration: 0s;
 }
 
