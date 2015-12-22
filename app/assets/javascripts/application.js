@@ -1,8 +1,7 @@
 //= require angular
 //= require angular-animate
 //= require angular-sanitize
-//= require Chart
-//= require excanvas
+//= require chartjs
 //= require jquery
 //= require angular-chartjs
 //= require materialize

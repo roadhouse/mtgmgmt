@@ -232,6 +232,7 @@ GEM
     rails-assets-angular-chartjs (0.8.8)
       rails-assets-Chart.js (~> 1.0.1)
       rails-assets-angular (~> 1.0)
+    rails-assets-chartjs (1.0.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -383,6 +384,7 @@ DEPENDENCIES
   rabl
   rails
   rails-assets-angular-chartjs!
+  rails-assets-chartjs (= 1.0.2)!
   rails_12factor
   reek
   responders

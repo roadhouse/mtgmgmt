@@ -23,8 +23,9 @@ gem "rails_12factor", group: :production
 
 gem "materialize-sass"
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-angular-chartjs'
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-chartjs"
+  gem "rails-assets-chartjs", "1.0.2"
 end
 
 group :development do
