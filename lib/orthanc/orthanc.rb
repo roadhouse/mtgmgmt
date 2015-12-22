@@ -54,8 +54,6 @@ class Orthanc
     card_filters = @card.table.where(@card.params).order(price: :desc)
     inventory = InventoryParam.new(inventory_filters)
 
-    user.inventories
-      .where(inventory.params)
-      .joins(:card).merge(card_filters)
+    user.inventories.where(inventory.params).joins(:card).merge(card_filters)
   end
 end
