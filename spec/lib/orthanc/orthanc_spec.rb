@@ -3,7 +3,13 @@ require 'spec_helper'
 describe Orthanc do
   before(:all) { create_list(:deck, 2, season: "BFZ-DTK-FRF-KTK-ORI") }
 
-  let(:orthanc) { described_class.new("") }
+  let(:orthanc) { described_class.new() }
+
+  describe ".new" do
+    subject { orthanc }
+
+    it { expect { subject }.to_not raise_error }
+  end
 
   context ".top_decks" do
     subject { orthanc.top_decks }
@@ -16,7 +22,6 @@ describe Orthanc do
       it { is_expected.to be_a Deck }
 
       its(:name) { is_expected.to eq "Jeskai Heroic" }
-      # its(:quantity) { is_expected.to eq 2 }
     end
   end
 

@@ -6,14 +6,14 @@ require_dependency "inventory_param"
 require_dependency "param_builder"
 
 class Orthanc
-  def initialize(options)
+  def initialize(options = nil)
     default_options = {
       limit: 10,
       season: "BFZ-DTK-FRF-KTK-ORI",
       part: "main"
     }
 
-    @options = default_options.merge ParamBuilder.params(options)
+    @options = default_options.merge ParamBuilder.params(options.to_s)
 
     @card = CardParam.new(@options)
     @deck = DeckParam.new(@options)
