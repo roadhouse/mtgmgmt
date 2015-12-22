@@ -72,7 +72,7 @@
   transition-delay: 0;
 }
 
-.btn:not(.waves-light), .waves-color-demo .btn-large:not(.waves-light) {
+.btn {
   background-color: #fff;
   color: #212121;
 }
