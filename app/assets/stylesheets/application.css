@@ -71,3 +71,8 @@
   opacity: 0;
   transition-delay: 0;
 }
+
+.btn:not(.waves-light), .waves-color-demo .btn-large:not(.waves-light) {
+  background-color: #fff;
+  color: #212121;
+}
