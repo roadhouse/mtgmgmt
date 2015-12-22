@@ -1,19 +1,16 @@
-
-node(:manacost_labels) { @deck.by_manacost.keys.sort }
-node(:manacost_data) { @deck.total_by_manacost.values }
 node(:deck_list) { @deck.deck_list(:main) }
 node(:deck_size) { @deck.deck_list.map { |x| x.fetch(:copies)  }.sum }
 node(:first_hand) { @deck.first_hand }
 
 node :mana do
-  { 
-    labels: @deck.by_manacost.keys.sort, 
+  {
+    labels: @deck.by_manacost.keys.sort,
     data: [ @deck.total_by_manacost.values ]
   }
 end
 
 node :color do
-  { 
+  {
     labels: @deck.total_by_color.keys.sort
               .delete_if { |key,_| key == :colorless },
     data: @deck.total_by_color.values,
@@ -22,8 +19,8 @@ node :color do
 end
 
 node :type do
-  { 
-    labels: @deck.total_by_type.keys.sort, 
+  {
+    labels: @deck.total_by_type.keys.sort,
     data: @deck.total_by_type.values
   }
 end

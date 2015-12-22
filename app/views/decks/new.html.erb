@@ -31,7 +31,7 @@
     <div class="col s12 l2 section">
       <h5 class="center-align">Initial Hand</h5>
       <ul class="collection">
-        <li class="collection-item" ng-repeat="card in first_hand track by $index">
+        <li class="collection-item" ng-repeat="card in deck.first_hand track by $index">
           {{ card }}
         </li>
       </ul>
@@ -39,27 +39,27 @@
     <div class="col s12 l2 section">
       <h5 class="center-align">Deck List</h5>
       <ul class="collection with-header">
-        <li class="collection-header">Total cards: {{ deck_size }}</li>
-        <li class="collection-item" ng-repeat="card in deck_list">
+        <li class="collection-header">Total cards: {{ deck.deck_size }}</li>
+        <li class="collection-item" ng-repeat="card in deck.deck_list">
         {{ card.copies}}
         <span class="secondary-content">{{ card.name }}</span>
         </li>
       </ul>
     </div>
 
-    <div class="col s12 l2 section" ng-controller="ManaChartController">
+    <div class="col s12 l2 section">
       <h5 class="center-align">Manacost</h5>
-      <canvas class="chart chart-bar" data="data" labels="labels"></canvas>
+      <canvas class="chart chart-bar" data="deck.mana.data" labels="deck.mana.labels"></canvas>
     </div>
 
-    <div class="col s12 l2 section" ng-controller="ColorChartController">
+    <div class="col s12 l2 section">
       <h5 class="center-align">Colors</h5>
-      <canvas class="chart chart-pie" data="data" labels="labels" colours="colors"></canvas>
+      <canvas class="chart chart-pie" data="deck.color.data" labels="deck.color.labels" colours="deck.color.colors"></canvas>
     </div>
 
-    <div class="col s12 l2 section" ng-controller="TypeChartController">
+    <div class="col s12 l2 section">
       <h5 class="center-align">Types</h5>
-      <canvas class="chart chart-pie" data="data" labels="labels"></canvas>
+      <canvas class="chart chart-pie" data="deck.type.data" labels="deck.type.labels"></canvas>
     </div>
   </div>
 </div>

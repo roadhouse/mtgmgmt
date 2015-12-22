@@ -10,13 +10,13 @@ DeckBuilderController.$inject = [
 ];
 
 function DeckBuilderController($scope, DeckBuilderFactory) {
+  $scope.deckEntry = {};
+
   $scope.addToDeck = addToDeck;
   $scope.removeToDeck = removeToDeck;
 
-  $scope.deckEntry = {};
-
   function addToDeck(entryId) {
-    var copies = $scope.deckEntry[entryId] | 0 ;
+    var copies = $scope.deckEntry[entryId] || 0 ;
 
     $scope.deckEntry[entryId] = copies + 4;
 
@@ -24,7 +24,7 @@ function DeckBuilderController($scope, DeckBuilderFactory) {
   };
 
   function removeToDeck(entryId) {
-    var copies = $scope.deckEntry[entryId] | 0 ;
+    var copies = $scope.deckEntry[entryId] || 0 ;
 
     $scope.deckEntry[entryId] = copies - 4;
 
@@ -35,11 +35,7 @@ function DeckBuilderController($scope, DeckBuilderFactory) {
     DeckBuilderFactory
       .getStats(deckList)
       .then(function(result) {
-        $scope.$broadcast('updateChart', result.data);
-
-        $scope.deck_list = result.data.deck_list;
-        $scope.deck_size = result.data.deck_size;
-        $scope.first_hand = result.data.first_hand;
+        $scope.deck = result.data;
       });
   };
 };
