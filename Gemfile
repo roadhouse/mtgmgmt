@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem "angularjs-rails"
-gem "chartjs-ror"
 gem "delayed_job_active_record"
 gem "foreman"
 gem "heroku"
@@ -23,6 +22,10 @@ gem "virtus"
 gem "rails_12factor", group: :production
 
 gem "materialize-sass"
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-angular-chartjs'
+end
 
 group :development do
   gem "awesome_print"

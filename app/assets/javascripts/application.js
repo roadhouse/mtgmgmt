@@ -2,9 +2,9 @@
 //= require angular-animate
 //= require angular-sanitize
 //= require Chart
+//= require excanvas
 //= require jquery
-
-//= require lib/angular-chart.js
+//= require angular-chartjs
 //= require materialize
 
 //= require app/app.module.js

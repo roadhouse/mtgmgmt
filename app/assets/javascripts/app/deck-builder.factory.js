@@ -4,15 +4,30 @@ angular
   .module('demos_cfg')
   .factory('DeckBuilderFactory', DeckBuilderFactory);
 
-DeckBuilderFactory.$inject = ['$http'];
+DeckBuilderFactory.$inject = [
+  '$http',
+  'NotificationService'
+];
 
-function DeckBuilderFactory($http) {
+function DeckBuilderFactory($http, NotificationService) {
   return {
-    getStats: function(params) {
-      var deckParams = { "deck": params }
+    getStats: getStats
+  };
 
-      return $http.post('/decks.json', deckParams);
-    }
+  function getStats(params) {
+    return postDecks(params)
+      .then(function(result) {
+        NotificationService.success('deck atualizado', 'done');
+
+        return result;
+      });
+  }
+
+  function postDecks(params) {
+    return $http
+      .post('/decks.json', { "deck": params })
+      .then(function(result) { return result; })
+      .catch(function(error){ NotificationService.error('ocorreu um erro'); });
   };
 };
 

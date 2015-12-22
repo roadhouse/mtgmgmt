@@ -5,10 +5,11 @@ angular
   .factory('CollectionFactory', CollectionFactory);
 
 CollectionFactory.$inject = [
-  '$http'
+  '$http',
+  'NotificationService'
 ];
 
-function CollectionFactory($http) {
+function CollectionFactory($http, NotificationService) {
   return {
     addOne: addOne,
     removeOne: removeOne
@@ -19,7 +20,8 @@ function CollectionFactory($http) {
 
     postInventories(params)
       .then(function(result) {
-        Materialize.toast('<i class="material-icons left">done</i>Adicionada a coleção', 1000, 'green lighten-3');
+        NotificationService.success('carta adicionada da coleção', 'add');
+
         return result;
       });
   };
@@ -29,16 +31,18 @@ function CollectionFactory($http) {
 
     postInventories(params)
       .then(function(result) {
+        NotificationService.success('carta removida da coleção', 'delete');
 
-        Materialize.toast('<i class="material-icons left">delete</i>Removida da coleção', 1000, 'green lighten-3');
         return result;
-      });
+      })
   };
 
   function postInventories(params) {
-    var inventoryParams = { "inventory": params };
-
-    return $http.post('/inventories.json', inventoryParams);
+    return $http
+      .post('/inventories.json', { "inventory": params })
+      .catch(function(error){
+        NotificationService.error('ocorreu um erro');
+      });
   };
 };
 
