@@ -2,7 +2,7 @@ Magic::Application.configure do
   config.action_controller.perform_caching = true
   config.active_record.dump_schema_after_migration = false
   config.active_support.deprecation = :notify
-  config.assets.compile = false
+  config.assets.compile = true
   config.assets.digest = true
   config.assets.js_compressor = :uglifier
   config.cache_classes = true
