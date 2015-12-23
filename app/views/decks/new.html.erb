@@ -28,7 +28,7 @@
       </ul>
     </div>
 
-    <div class="col s12 l2 section">
+    <div class="col s12 l3 section">
       <h5 class="center-align">Initial Hand</h5>
       <ul class="collection">
         <li class="collection-item" ng-repeat="card in deck.first_hand track by $index">
@@ -36,10 +36,14 @@
         </li>
       </ul>
     </div>
-    <div class="col s12 l2 section">
+    <div class="col s12 l3 section">
       <h5 class="center-align">Deck List</h5>
       <ul class="collection with-header">
-        <li class="collection-header">Total cards: {{ deck.deck_size }}</li>
+        <li class="collection-header">
+          <i ng-class="isValid.color" class="material-icons red-text"/>{{ isValid.icon }}</i>
+
+          <span class="secondary-content">Total: {{ deck.deck_size }}</span>
+        </li>
         <li class="collection-item" ng-repeat="card in deck.deck_list">
         {{ card.copies}}
         <span class="secondary-content">{{ card.name }}</span>
@@ -57,7 +61,7 @@
       <canvas class="chart chart-pie" data="deck.color.data" labels="deck.color.labels" colours="deck.color.colors"></canvas>
     </div>
 
-    <div class="col s12 l2 section">
+    <div class="col s12 l2 section right">
       <h5 class="center-align">Types</h5>
       <canvas class="chart chart-pie" data="deck.type.data" labels="deck.type.labels"></canvas>
     </div>

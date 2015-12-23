@@ -1,6 +1,7 @@
 node(:deck_list) { @deck.deck_list(:main) }
 node(:deck_size) { @deck.deck_list.map { |x| x.fetch(:copies)  }.sum }
 node(:first_hand) { @deck.first_hand }
+node(:isValid) { @deck.deck.main.size >= 36 }
 
 node :mana do
   {
