@@ -4,28 +4,22 @@
   </nav>
 
   <div class="row section">
-    <div id="test1" class="col s12 l4 section">
+    <div id="test1" class="col s12 l6 section">
       <h5 class="center-align">Resultados</h5>
-      <ul class="collapsible" data-collapsible="accordion">
-        <li ng-repeat="entry in entries" class="search-result">
-          <div class="collapsible-header">
-            <span>
-              {{entry.portuguese_name}}
-            </span>
-            <span class="secondary-content">
-              {{entry.price}}
-            </span>
+        <div class="card col l4 container" ng-repeat="entry in entries" style="padding:0;" >
+          <div class="card-image">
+            <img ng-src="{{ entry.image }}">
           </div>
-          <div class="collapsible-body">
-            {{entry.original_text}}
-
-            <div div="row">
-              <a class="waves-effect waves-light btn" ng-click="addToDeck(entry.id)">+4</a>
-              <a class="waves-effect waves-light btn" ng-click="removeToDeck(entry.id)">-4</a>
-            </div>
+          <div class="card-content">
+            <i class="material-icons">{{ entry.priceStatus == 'equal' ? 'done' : 'arrow_'+entry.priceStatus+'ward' }}</i>
+            <span class="card-title activator grey-text text-darken-4">R$ {{ entry.price }}<i class="material-icons right">more_vert</i></span>
           </div>
-        </li>
-      </ul>
+          <div class="card-reveal">
+            <span class="card-title">Add to deck<i class="material-icons right">close</i></span>
+            <a class="waves-effect waves-lighpt btn" ng-click="addToDeck(entry.id)">+4</a>
+            <a class="waves-effect waves-light btn" ng-click="removeToDeck(entry.id)">-4</a>
+          </div>
+        </div>
     </div>
 
     <div class="col s12 l3 section">
@@ -65,5 +59,4 @@
       <h5 class="center-align">Types</h5>
       <canvas class="chart chart-pie" data="deck.type.data" labels="deck.type.labels"></canvas>
     </div>
-  </div>
 </div>

@@ -85,7 +85,7 @@ class DeckPresenter < BasePresenter
 
   def deck_list(part = :main)
     card_pool(part)
-      .map { |entry| {copies: entry[:copies], name: entry[:card].name, id: entry[:card].id} }
+      .map { |entry| {copies: entry[:copies], name: entry[:card].name, id: entry[:card].id, image:entry[:card].image} }
   end
 
   private
