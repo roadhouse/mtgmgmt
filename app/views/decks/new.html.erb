@@ -10,16 +10,42 @@
           <div class="card-image">
             <img ng-src="{{ entry.image }}">
           </div>
-          <div class="card-content">
-            <i class="material-icons">{{ entry.priceStatus == 'equal' ? 'done' : 'arrow_'+entry.priceStatus+'ward' }}</i>
-            <span class="card-title activator grey-text text-darken-4">R$ {{ entry.price }}<i class="material-icons right">more_vert</i></span>
+          <div class="card-action">
+            <span class="valign-wrapper center-align">
+              <a class="waves-effect waves btn col s6 valign" ng-click="addToDeck(entry.id,+4)">+4</a>
+              <a class="waves-effect waves btn col s6 valign" ng-click="addToDeck(entry.id,-4)">-4</a>
+            </span>
           </div>
-          <div class="card-reveal">
-            <span class="card-title">Add to deck<i class="material-icons right">close</i></span>
-            <a class="waves-effect waves-lighpt btn" ng-click="addToDeck(entry.id)">+4</a>
-            <a class="waves-effect waves-light btn" ng-click="removeToDeck(entry.id)">-4</a>
-          </div>
+          <%# <div class="card-reveal"> %>
+            <%# <span class="card-title"> %>
+              <%# <i class="material-icons">{{ entry.priceStatus == 'equal' ? 'done' : 'arrow_'+entry.priceStatus+'ward' }}</i> %>
+              <%# R$ {{ entry.price }} %>
+              <%# <i class="material-icons right">close</i> %>
+            <%# </span> %>
+          <%# </div> %>
         </div>
+    </div>
+
+    <div class="col s12 l6 section">
+      <h5 class="center-align">Deck List</h5>
+      <ul class="collection with-header">
+        <li class="collection-header">
+          <i ng-class="isValid.color" class="material-icons red-text"/>{{ isValid.icon }}</i>
+          <span class="secondary-content">Total: {{ deck.deck_size }}</span>
+        </li>
+        <li class="collection-item valign-wrapper" ng-repeat="card in deck.deck_list" style="padding-left:0; padding-top:0; padding-bottom:0;">
+          <a ng-click="addToDeck(card.id, -1)"class="waves-effect btn-flat btn-list col s1 center-align" style="padding: 0">
+            <i class="material-icons">remove</i>
+          </a>
+          <span class="col s1 center-align">{{ card.copies}}</span>
+          <a ng-click="addToDeck(card.id, +1)"class="waves-effect btn-flat btn-list col s1 center-align" style="padding: 0">
+            <i class="material-icons">add</i>
+          </a>
+          <div class="col s9 with-action" style="padding: 0;">
+            <span class="secondary-content">{{ card.name }}</span>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <div class="col s12 l3 section">
@@ -27,20 +53,6 @@
       <ul class="collection">
         <li class="collection-item" ng-repeat="card in deck.first_hand track by $index">
           {{ card }}
-        </li>
-      </ul>
-    </div>
-    <div class="col s12 l3 section">
-      <h5 class="center-align">Deck List</h5>
-      <ul class="collection with-header">
-        <li class="collection-header">
-          <i ng-class="isValid.color" class="material-icons red-text"/>{{ isValid.icon }}</i>
-
-          <span class="secondary-content">Total: {{ deck.deck_size }}</span>
-        </li>
-        <li class="collection-item" ng-repeat="card in deck.deck_list">
-        {{ card.copies}}
-        <span class="secondary-content">{{ card.name }}</span>
         </li>
       </ul>
     </div>
