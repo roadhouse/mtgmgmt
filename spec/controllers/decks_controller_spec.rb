@@ -3,7 +3,7 @@ require 'spec_helper'
 describe DecksController, type: :controller do
   render_views
 
-  context "POST on /create" do 
+  context "POST on /create" do
     let!(:card) { create(:card) }
     let(:copies) { 4 }
     before do
@@ -17,7 +17,7 @@ describe DecksController, type: :controller do
       its(:content_type) { is_expected.to eq "application/json" }
 
       context "json data" do
-        let(:deck_list) { [{"copies" => copies, "name" => card.name, "id" => card.id}] }
+        let(:deck_list) { [{"copies" => copies, "name" => card.name, "id" => card.id, "image"=>card.image}] }
 
         subject { OpenStruct.new JSON.parse(response.body) }
 
@@ -28,7 +28,7 @@ describe DecksController, type: :controller do
 
   context "GET on /cockatrice" do
     let(:deck) { create(:deck) }
-    
+
     before { get :cockatrice, id: deck.id }
 
     context "response" do
