@@ -17,6 +17,7 @@ class Orthanc
 
     @card = CardParam.new(@options)
     @deck = DeckParam.new(@options)
+    @inventory = InventoryParam.new(@options)
   end
 
   # basic card search using CardParam params as filter
@@ -49,10 +50,9 @@ class Orthanc
       .limit(@options.fetch(:limit))
   end
 
-  def from_user(user, inventory_filters = nil)
+  def from_user(user)
     card_filters = @card.table.where(@card.params).order(price: :desc)
-    inventory = inventory_filters ? InventoryParam.new(inventory_filters).params : inventory_filters
 
-    user.inventories.where(inventory).joins(:card).merge(card_filters)
+    user.inventories.where(@inventory.params).joins(:card).merge(card_filters)
   end
 end

@@ -32,11 +32,10 @@ describe Orthanc do
     let!(:inventory1) { create(:inventory, user: user, card: card1, copies: 4) }
     let!(:inventory2) { create(:inventory, user: user, card: card2) }
 
-    subject { described_class.new(card_filters).from_user(user, inventory_filters) }
+    subject { described_class.new(card_filters).from_user(user) }
 
     context "with an empty filter string" do
       let(:card_filters) { "" }
-      let(:inventory_filters) { nil }
 
       its(:size) { is_expected.to be_eql 2 }
     end
@@ -46,14 +45,6 @@ describe Orthanc do
       let(:inventory_filters) { nil }
 
       its(:size) { is_expected.to be_eql 1}
-      its(:"first.card") { is_expected.to be_eql card2 }
-    end
-
-    context "filter cards by collection params" do
-      let(:card_filters) { "Dis" }
-      let(:inventory_filters) { {copies: 4, list: :game} }
-
-      its(:size) { is_expected.to be_eql 1 }
       its(:"first.card") { is_expected.to be_eql card2 }
     end
   end
