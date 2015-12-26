@@ -34,7 +34,7 @@ class Orthanc
       .with(@deck.card_totals)
       .select(@card.all_fields, presence_on_field)
       .joins("INNER JOIN card_quantity ON card_quantity.name = cards.name")
-      .where(@card.params)
+      .where(@card.params).where(@card.not_lands)
       .order("card_quantity.quantity DESC")
       .limit(@options.fetch(:limit))
   end

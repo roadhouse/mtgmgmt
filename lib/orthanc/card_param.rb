@@ -15,7 +15,7 @@ class CardParam < BaseParam
     # query only cards valid in standard and ignoring fake cards
     where = is_standard.eq(true).and(set.not_eq(:fake))
 
-    where = where.and(name.empty? ? not_lands : card_name_is(name))
+    where = where.and card_name_is(name) unless name.empty?
 
     where = where.and(card_type_is(type))   if type
     where = where.and(card_color_is(color)) if color
@@ -39,7 +39,7 @@ class CardParam < BaseParam
   end
 
   def card_name_is(str)
-    match = "%#{str}%" 
+    match = "%#{str}%"
     name.matches(match).or(portuguese_name.matches(match))
   end
 
