@@ -7,8 +7,8 @@ class InventoryParam < BaseParam
     copies = @options[:copies]
     list = @options[:list]
 
-    where = list_is(list)
-    where = copies_less_than(copies) if copies
+    where = list_is(list) if list
+    where = where ? where.and(copies_less_than(copies)) : copies_less_than(copies) if copies
 
     where
   end

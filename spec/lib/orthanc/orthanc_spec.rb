@@ -36,14 +36,14 @@ describe Orthanc do
 
     context "with an empty filter string" do
       let(:card_filters) { "" }
-      let(:inventory_filters) { {list: :game} }
+      let(:inventory_filters) { nil }
 
       its(:size) { is_expected.to be_eql 2 }
     end
 
     context "search specific card on user collection" do
       let(:card_filters) { "Dis" }
-      let(:inventory_filters) { {list: :game} }
+      let(:inventory_filters) { nil }
 
       its(:size) { is_expected.to be_eql 1}
       its(:"first.card") { is_expected.to be_eql card2 }

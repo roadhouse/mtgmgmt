@@ -20,7 +20,7 @@ function LiveSearchDirective(LiveSearchFactory, $timeout) {
   function change() {
     var vm = this;
 
-    if (vm.search.length > 6) {
+    if (vm.search.length > 5) {
       LiveSearchFactory
         .get(vm.search)
         .then(function(result) { vm.entries = result.data; })
