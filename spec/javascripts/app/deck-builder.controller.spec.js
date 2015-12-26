@@ -7,8 +7,6 @@ describe('DeckBuilderController', function() {
     var controller = $controller('DeckBuilderController', { $scope: $scope });
 
     expect($scope.addToDeck).toBeDefined();
-    expect($scope.removeToDeck).toBeDefined();
-    expect($scope.deckEntry).toBeDefined();
     expect($scope.deckEntry).toBeDefined();
   });
 
@@ -16,18 +14,8 @@ describe('DeckBuilderController', function() {
     var $scope = {};
     var controller = $controller('DeckBuilderController', { $scope: $scope });
 
-    $scope.addToDeck(1);
+    $scope.addToDeck(1, 4);
     expect($scope.deckEntry[1]).toBe(4);
-  });
-
-  it('it remove 4 cards from deck', function() {
-    var $scope = {};
-    var controller = $controller('DeckBuilderController', { $scope: $scope });
-
-    $scope.addToDeck(1);
-    $scope.removeToDeck(1);
-
-    expect($scope.deckEntry[1]).toBe(0);
   });
 
   describe('call DeckBuilderFactory', function() {
@@ -40,6 +28,7 @@ describe('DeckBuilderController', function() {
       var $scope = {};
       var myService = jasmine.createSpyObj('DeckBuilderFactory', ['getStats']);
       myService.getStats.and.returnValue(q.when({result: 'adsdsaaa'}));
+
       $controller('DeckBuilderController', { $scope: $scope, DeckBuilderFactory: myService});
 
       $scope.addToDeck(1);
