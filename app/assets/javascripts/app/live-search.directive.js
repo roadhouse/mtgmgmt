@@ -4,10 +4,9 @@ angular
 
 LiveSearchDirective.$inject = [
   'LiveSearchFactory',
-  '$timeout'
 ];
 
-function LiveSearchDirective(LiveSearchFactory, $timeout) {
+function LiveSearchDirective(LiveSearchFactory) {
   return {
     restrict: 'AE',
     replace: 'true',
@@ -15,22 +14,35 @@ function LiveSearchDirective(LiveSearchFactory, $timeout) {
     link: function(scope, element, attrs) {
       scope.sourceData = attrs.source;
       scope.change = change;
+      scope.priceStatus = priceStatus;
+
+      scope.entries = attrs.default ? query(scope, "") : {};
     }
   };
 
-  function change() {
-    var vm = this;
+  function priceStatus(str) {
+    var status = {
+      'up': {color: 'green-text', icon:'arrow_upward'},
+      'down': {color: 'red-text', icon:'arrow_downward'},
+      'equal': {color: 'blue-text', icon:'done'},
+    };
+
+    return status[str];
+  };
+
+  function query(x, str) {
     var repo = {
-      cards: LiveSearchFactory.get(vm.search),
-      inventories: LiveSearchFactory.inventories(vm.search)
+      cards: LiveSearchFactory.get(str),
+      inventories: LiveSearchFactory.inventories(str)
     }
 
-    if (vm.search.length > 5) {
-      repo[vm.sourceData]
-        .then(function(result) { vm.entries = result.data; })
-        .then(function() {
-          $timeout(function(){ $('.collapsible').collapsible({}); }, 500);
-        });
-    }
+    repo[x.sourceData]
+      .then(function(result) { x.entries = result.data; })
+  }
+
+  function change() {
+    var vm = this;
+
+    if (vm.search.length > 5) { query(vm, vm.search); }
   };
 };

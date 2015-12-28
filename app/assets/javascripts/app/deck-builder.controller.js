@@ -13,7 +13,6 @@ function DeckBuilderController($scope, DeckBuilderFactory) {
   $scope.deckEntry = {};
 
   $scope.addToDeck = addToDeck;
-  $scope.priceStatus = priceStatus;
 
   function addToDeck(cardId, quantity) {
     var copies = $scope.deckEntry[cardId] || 0 ;
@@ -33,15 +32,4 @@ function DeckBuilderController($scope, DeckBuilderFactory) {
           {icon: 'error', color:'red'}
       });
   };
-
-  function priceStatus(str) {
-    var status = {
-      'up': {color: 'green-text', icon:'arrow_upward'},
-      'down': {color: 'red-text', icon:'arrow_downward'},
-      'equal': {color: 'blue-text', icon:'done'},
-    };
-
-    return status[str];
-  };
-
 };
