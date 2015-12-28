@@ -13,7 +13,7 @@
       <h5 class="center-align">Deck List</h5>
       <ul class="collection with-header">
         <li class="collection-header">
-          <i ng-class="isValid.color" class="material-icons red-text"/>{{ isValid.icon }}</i>
+          <ng-md-icon icon="{{isValid.icon}}" ng-attr-style="fill: {{isValid.color}}"></ng-md-icon>
           <span class="secondary-content">Total: {{ deck.deck_size }}</span>
         </li>
         <li class="collection-item valign-wrapper" ng-repeat="card in deck.deck_list" style="padding-left:0; padding-top:0; padding-bottom:0;">

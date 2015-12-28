@@ -29,8 +29,8 @@ function DeckBuilderController($scope, DeckBuilderFactory) {
       .then(function(result) {
         $scope.deck = result.data;
         $scope.isValid = result.data.isValid ?
-          {icon: 'done', color:'green-text'} :
-          {icon: 'error_outline', color:'red-text'}
+          {icon: 'done', color:'green'} :
+          {icon: 'error', color:'red'}
       });
   };
 

@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require materialize
+ *= require angular-material-icons
  *= require_tree .
  *= require_self
  */
