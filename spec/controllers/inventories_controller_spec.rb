@@ -30,4 +30,21 @@ describe InventoriesController, type: :controller do
       its(:list) { is_expected.to eq inventory.list }
     end
   end
+
+  context "GET on /want" do
+    context "response" do
+      before { get :want }
+      subject { response }
+
+      it { is_expected.to be_success }
+    end
+
+    context "respond in json" do
+      before { get :want, format: :json }
+      subject { response }
+
+      it { is_expected.to be_success }
+      its(:content_type) { is_expected.to eq "application/json" }
+    end
+  end
 end
