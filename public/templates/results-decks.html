@@ -1,0 +1,22 @@
+<div class="card col l4 container" style="padding:0;" >
+  <div class="card-image">
+    <img ng-src="{{ entry.image }}">
+  </div>
+  <div class="card-action">
+    <span class="valign-wrapper center-align">
+      <a class="waves-effect waves btn col s6 valign" ng-click="addToDeck(entry.id,+4)">+4</a>
+      <a class="waves-effect waves btn col s6 valign" ng-click="addToDeck(entry.id,-4)">-4</a>
+      <span class="card-title activator">
+        <i class="material-icons right">more_vert</i>
+      </span>
+    </span>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title">
+      <i class="material-icons" ng-class="priceStatus(entry.priceStatus).color">{{ priceStatus(entry.priceStatus).icon }}</i>
+      R$ {{ entry.price }}
+      <i class="material-icons right">close</i>
+    </span>
+  </div>
+</div>
+
