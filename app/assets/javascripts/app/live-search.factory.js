@@ -10,6 +10,10 @@ function LiveSearchFactory($http) {
   return {
     get: function(params) {
       return $http.get('/cards.json?query=' + params);
+    },
+
+    inventories: function(params) {
+      return $http.get('/inventories/want.json?query=' + params);
     }
   };
 };
