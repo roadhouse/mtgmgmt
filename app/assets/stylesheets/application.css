@@ -48,29 +48,17 @@
   list-style:none;
 }
 
-.search-result {
-  box-sizing:border-box;
-  transition: opacity 0.1s ease, transform 0.1s ease;
-}
-
 .ng-enter {
-  opacity: 0;
-  transform: translate(0, -15px);
+  transition: 0.2s linear all;
+  opacity:0;
 }
 
 .ng-enter-stagger {
   transition-delay: 0.1s;
   transition-duration: 0s;
 }
-
-.ng-enter-active {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.ng-leave {
-  opacity: 0;
-  transition-delay: 0;
+.ng-enter.ng-enter-active {
+  opacity:1;
 }
 
 .btn {

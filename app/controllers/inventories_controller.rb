@@ -48,7 +48,7 @@ class InventoriesController < ApplicationController
   def want
     @inventories = Orthanc
       .new(params[:query].to_s)
-      .from_user(current_user, copies: 4, list: :game)
+      .from_user(current_user)
   end
 
   def have
