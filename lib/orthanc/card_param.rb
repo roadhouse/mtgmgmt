@@ -2,7 +2,8 @@
 # when name was passed the the scope the query included lands
 class CardParam < BaseParam
   model Card
-  fields :original_text, :ctypes, :colors, :name, :portuguese_name, :rarity, :cmc, :set, :is_standard
+  fields :original_text, :ctypes, :colors, :name, :portuguese_name, :rarity,
+    :cmc, :set, :is_standard, :subtypes
 
   def params
     color = @options[:color]
@@ -48,11 +49,11 @@ class CardParam < BaseParam
   end
 
   def card_type_is(type)
-    ctypes.in("{#{type}}")
+    ctypes.contains([type]).or subtypes.contains([type])
   end
 
   def card_color_is(color)
-    colors.in("{#{color}}")
+    colors.contains([color])
   end
 
   def count_name
