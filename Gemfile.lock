@@ -403,6 +403,3 @@ DEPENDENCIES
   vcr
   virtus
   webmock
-
-BUNDLED WITH
-   1.10.6
