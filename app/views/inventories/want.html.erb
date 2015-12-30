@@ -1,12 +1,13 @@
-<ul class="collapsible" data-collapsible="accordion" ng-controller="InventoryController">
-  <nav>
-    <live-search source="inventories" default="true" />
-  </nav>
+<nav>
+  <live-search source="inventories" default="true" />
+</nav>
 
-  <div class="row section">
-    <div id="test1" class="col section">
-      <h5 class="center-align">Resultados</h5>
-      <ng-include src="'/templates/results-inventories.html'" ng-repeat="entry in entries"/>
-    </div>
+<div class="row section">
+  <div id="test1" class="col section">
+    <h5 class="center-align">Resultados</h5>
+    <ng-include
+      src="'/templates/results-inventories.html'"
+      ng-repeat="entry in entries"
+    />
   </div>
-</ul>
+</div>

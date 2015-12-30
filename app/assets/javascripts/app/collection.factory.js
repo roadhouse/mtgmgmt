@@ -11,11 +11,11 @@ CollectionFactory.$inject = [
 
 function CollectionFactory($http, NotificationService) {
   return {
-    addOne: addOne,
-    removeOne: removeOne
+    add: addOne,
+    remove: removeOne
   };
 
-  function addOne(cardId, list) {
+  function addOne(copies, list) {
     var params = { copies: 1, card_id: cardId, list: list };
 
     postInventories(params)

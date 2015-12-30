@@ -10,14 +10,14 @@ InventoryController.$inject = [
 ];
 
 function InventoryController($scope, CollectionFactory) {
-  $scope.addToCollection = addToCollection;
-  $scope.removeToCollection = removeToCollection;
+  $scope.add = add;
+  $scope.remove = remove;
 
-  function addToCollection() {
-    CollectionFactory.addOne($scope.card_id, $scope.list)
+  function add(cardId) {
+    CollectionFactory.addOne(cardId, 'want');
   };
 
-  function removeToCollection() {
-    CollectionFactory.removeOne($scope.card_id, $scope.list)
-  }
+  function remove(cardId) {
+    CollectionFactory.removeOne(cardId, 'want');
+  };
 };
