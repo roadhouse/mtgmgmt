@@ -14,10 +14,10 @@ function InventoryController($scope, CollectionFactory) {
   $scope.remove = remove;
 
   function add(cardId) {
-    CollectionFactory.add(cardId, 'want');
+    CollectionFactory.add(cardId, 'game');
   };
 
   function remove(cardId) {
-    CollectionFactory.remove(cardId, 'want');
+    CollectionFactory.remove(cardId, 'game');
   };
 };
