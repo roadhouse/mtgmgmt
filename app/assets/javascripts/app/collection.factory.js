@@ -15,7 +15,7 @@ function CollectionFactory($http, NotificationService) {
     remove: removeOne
   };
 
-  function addOne(copies, list) {
+  function addOne(cardId, list) {
     var params = { copies: 1, card_id: cardId, list: list };
 
     postInventories(params)
