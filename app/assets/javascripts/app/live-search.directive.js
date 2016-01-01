@@ -33,7 +33,8 @@ function LiveSearchDirective(LiveSearchFactory) {
   function query(x, str) {
     var repo = {
       cards: LiveSearchFactory.get(str),
-      inventories: LiveSearchFactory.inventories(str)
+      inventories: LiveSearchFactory.inventories(str),
+      have: LiveSearchFactory.have(str)
     }
 
     repo[x.sourceData]

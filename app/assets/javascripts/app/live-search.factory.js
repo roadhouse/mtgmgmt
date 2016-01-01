@@ -14,6 +14,10 @@ function LiveSearchFactory($http) {
 
     inventories: function(params) {
       return $http.get('/inventories/want.json?query=' + params);
+    },
+
+    have: function(params) {
+      return $http.get('/inventories/have.json?query=' + params);
     }
   };
 };

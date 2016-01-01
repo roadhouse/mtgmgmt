@@ -1,33 +1,13 @@
-<div id="container" ng-app='demos_cfg' ng-controller='LiveSearchController' class="section">
-  <nav>
-    <div class="nav-wrapper">
-      <%= form_for(:query, method: :get) do |f| %>
-        <div class="input-field">
-          <%= f.search_field :name, ng_change: "change(text)", ng_model: "search" %>
-          <label for="search"><i class="mdi-action-search"></i></label>
-        </div>
-      <% end %>
-    </div>
-  </nav>
+<nav>
+  <live-search source="cards" />
+</nav>
 
-  <div class="row section">
-    <div id="test1" class="col s12 section">
-      <div class="card animate-repeat" ng-repeat="entry in entries">
-        <div class="card-content blue-grey lighten-5">
-          <span ng-bind-html="entry.set"></span>
-          <span>
-            {{entry.portuguese_name}}
-          </span>
-          <span ng-bind-html="entry.mana_cost"></span>
-          <span class="secondary-content">
-            {{entry.price}}
-          </span>
-        </div>
-        <div class="card-action" ng-bind-html="entry.original_text"></div>
-        <div class="card-action">
-          <%= render "form_inventory" %>
-        </div>
-      </div>
-    </div>
+<div class="row section">
+  <div id="test1" class="col section">
+    <h5 class="center-align">Resultados</h5>
+    <ng-include
+      src="'/templates/results-cards.html'"
+      ng-repeat="entry in entries"
+    />
   </div>
 </div>
