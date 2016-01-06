@@ -9,9 +9,11 @@
         </span>
       </div>
       <div class="collapsible-body">
-        <div class="row">
-          <%= render "inventories/collection_form", card_id: card.id %>
-        </div>
+        <% if user_signed_in? %>
+          <div class="row">
+            <%= render "inventories/collection_form", card_id: card.id %>
+          </div>
+        <% end %>
         <div class="row center-align">
           <%= image_tag card.image, alt: card.name, class: "responsive-img" %>
         </div>

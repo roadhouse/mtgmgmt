@@ -1,7 +1,7 @@
 <div class="card top-decks-box">
   <div class="card-content blue-grey lighten-5">
     <span>
-      <%= link_to deck.archeptype_deck.deck do %> 
+      <%= link_to deck.archeptype_deck.deck do %>
         <%= deck.archeptype_deck.name %>
       <% end %>
     </span>
@@ -11,9 +11,11 @@
   </div>
   <div class="card-action">
     <%= number_to_currency deck.total_price %>
-    <span class="secondary-content">
-      <i class="mdi-image-photo-library"></i>
-      <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
-    </span>
+    <% if user_signed_in? %>
+      <span class="secondary-content">
+        <i class="mdi-image-photo-library"></i>
+        <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
+      </span>
+    <% end %>
   </div>
 </div>

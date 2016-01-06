@@ -18,3 +18,6 @@ bin_stubs/*
 vendor/gems/*
 spec/helpers/*
 .env
+
+# Ignore application configuration
+/config/application.yml

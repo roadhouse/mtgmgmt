@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
+         :omniauth_providers => [:facebook]
   has_many :collections
   has_many :inventories
   has_many :cards, through: :inventories
@@ -18,5 +21,14 @@ class User < ActiveRecord::Base
 
     cards_from_deck_owned = deck_list.select { |p| pool.include?(p) }
     (cards_from_deck_owned.size.to_f / deck_list.size.to_f ) * 100
+  end
+
+  def self.from_omniauth(auth)
+    where(email: auth.info.email).first_or_initialize.tap do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.password = Devise.friendly_token
+      user.save!
+    end
   end
 end

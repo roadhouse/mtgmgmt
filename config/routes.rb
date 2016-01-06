@@ -1,4 +1,5 @@
 Magic::Application.routes.draw do
+  devise_for :users, controllers: {omniauth_callbacks: "social_login" }
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   root :to => "decks#index"
 
