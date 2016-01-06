@@ -5,9 +5,9 @@ class InventoryParam < BaseParam
 
   def params
     copies = @options[:copies]
-    list = @options[:list].downcase
+    list = @options[:list]
 
-    where = list_is(list) if list
+    where = list_is(list.downcase) if list
     where = where ? where.and(copies_less_than(copies)) : copies_less_than(copies) if copies
 
     where
