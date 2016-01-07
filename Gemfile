@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby "2.2.1"
+
 gem "angularjs-rails"
 gem "delayed_job_active_record"
 gem "devise"
