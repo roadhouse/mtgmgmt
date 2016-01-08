@@ -1,6 +1,8 @@
 sudo: false
 addons:
   postgresql: "9.4"
+  code_climate:
+    repo_token: "88b69b9a6e42dafde9ff5362429f1966f0f929ca7651547080f25a7eab743d00"
 language: ruby
 script:
   - bundle exec rake db:create
