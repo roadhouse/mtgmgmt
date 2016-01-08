@@ -54,7 +54,7 @@ group :development, :test do
 end
 
 group :test do
-  gem "codeclimate-parallel-test-reporter"
+  gem "codeclimate-test-reporter"
   gem "database_cleaner"
   gem "fuubar"
   gem "rspec-its"

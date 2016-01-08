@@ -54,8 +54,6 @@ GEM
     bcrypt (3.1.10)
     builder (3.2.2)
     byebug (8.2.0)
-    codeclimate-parallel-test-reporter (0.0.2)
-      codeclimate-test-reporter
     codeclimate-test-reporter (0.4.8)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
@@ -404,7 +402,7 @@ PLATFORMS
 DEPENDENCIES
   angularjs-rails
   awesome_print
-  codeclimate-parallel-test-reporter
+  codeclimate-test-reporter
   database_cleaner
   delayed_job_active_record
   devise
