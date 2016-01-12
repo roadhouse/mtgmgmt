@@ -21,7 +21,7 @@ class CardCrawler
       image: "http://magiccards.info/scans/pt/#{data["set"].downcase}/#{data["number"]}.jpg",
       layout: data["layout"],
       mana_cost: data['manaCost'],
-      name: data['name'], 
+      name: data['name'],
       original_text: data['originalText'],
       original_type: data["originalType"],
       portuguese_name: data["foreignNames"].to_a.find {|i| i["language"] == "Portuguese (Brazil)"}.to_h.fetch("name"){data["name"]},
@@ -46,5 +46,18 @@ class CardCrawler
       # legalities: data["legalities"],
       # rulings: data["rulings"]
     )
+  end
+end
+
+require "nokogiri"
+class CardCrawlerPreview
+  def initialize(url)
+    @document = Nokogiri::HTML open(url)
+  end
+
+  def card_list_urls
+    @document.search("a")
+      .find_all {|i| i.attribute('href').text.match('cards')}
+      .map {|i| i.attribute('href').text}
   end
 end

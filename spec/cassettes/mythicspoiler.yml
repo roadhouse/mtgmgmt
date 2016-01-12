@@ -1,0 +1,737 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://mythicspoiler.com/ogw/index.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jan 2016 04:29:25 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d13fa3d90c6201959a2772bb28c6718ac1452572965; expires=Wed, 11-Jan-17
+        04:29:25 GMT; path=/; domain=.mythicspoiler.com; HttpOnly
+      Last-Modified:
+      - Sat, 09 Jan 2016 00:55:38 GMT
+      Etag:
+      - W/"a80030-e2b2-528dc2992954d"
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Tue, 12 Jan 2016 04:29:25 GMT
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 26361ec93bef0fdc-GRU
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n\n\n<!--TITLE and META DESCRIPTION-->\n<title>OATH
+        OF THE GATEWATCH | VISUAL MTG SPOILER | MythicSpoiler.com</title>\n<meta name=\"description\"
+        content=\"The Visual Magic the Gathering Spoiler | Browse OATH OF THE GATEWATCH
+        Owg MTG cards by Cycles, Colors, Card Types and more..\">\n<!--KEEP AS IS--><meta
+        property=\"og:image\" content=\"http://mythicspoiler.com/owg/owg.jpg\"/>\n\n<script>\n
+        \   $(document).ready(function() {\n        $('.fb-comments').attr(\"data-href\",
+        document.URL);\n    });\n</script>\n\n<!--LINE 437 COLLAPSE TO CONTENT-->\n<!--LINE
+        437 COLLAPSE TO CONTENT-->\n<!--LINE 437 COLLAPSE TO CONTENT-->\n<!--LINE
+        437 COLLAPSE TO CONTENT-->\n\n\n<!--BACKGROUND--><!--BACKGROUND--><!--BACKGROUND--><!--BACKGROUND--><!--BACKGROUND-->\n<link
+        rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/images/mythicon16.png\"
+        />\n<link rel=\"icon\" type=\"image/png\" sizes=\"24x24\" href=\"/images/mythicon24.png\"
+        />\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/images/mythicon32.png\"
+        />\n<link rel=\"apple-touch-icon-precomposed\" media=\"screen and (resolution:
+        163dpi)\" href=\"/images/mythicon57.png\" />\n<link rel=\"apple-touch-icon-precomposed\"
+        media=\"screen and (resolution: 132dpi)\" href=\"/images/mythicon72.png\"
+        />\n<link rel=\"apple-touch-icon-precomposed\" media=\"screen and (resolution:
+        326dpi)\" href=\"/images/mythicon114.png\" />\n<meta name=\"viewport\"content=\"width=1000\"/>\n\n<meta
+        property=\"fb:app_id\" content=\"472970686058427\"/>\n<style type=\"text/css\">\nbody\n{\n\tbackground-image:
+        url('../bfz/zendikarbg4.jpg');\n\tbackground-repeat: repeat;\n\tbackground-attachment:
+        fixed;\n\tbackground-position: center top;\n\tcolor: #89490E;\n}\n</style>\n<!--END
+        BACKGROUND--><!--END BACKGROUND--><!--END BACKGROUND--><!--END BACKGROUND--><!--END
+        BACKGROUND-->\n\n\n<!--Curse Head Code-->\n<script>\nvar script = document.createElement('script');\nvar
+        tstamp = new Date();\nscript.id = 'factorem';\nscript.src = 'http://cdm.cursecdn.com/js/mythicspoiler/cdmfactorem_min.js?misc='
+        + tstamp.getTime();\nscript.async = false;\nscript.type='text/javascript';\ndocument.head.appendChild(script);\n</script>\n\n\n<!--CODE
+        NONSENSE--><!--CODE NONSENSE--><!--CODE NONSENSE--><!--CODE NONSENSE--><!--CODE
+        NONSENSE--><!--CODE NONSENSE-->\n<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js\"></script>\n\n<style
+        type=\"text/css\">\n@font-face {\n\tfont-family: 'mythicfont';\n\tsrc: url('http://mythicspoiler.com/css/mythicbold.ttf');
+        \n\tsrc: \n\t\tlocal('Walkway ultraBold'),\n\t\tlocal('Walkway_ultraBold'),\n\t\turl('http://mythicspoiler.com/css/mythicbold.ttf')
+        \n\t\tformat('truetype');\n}\n\n\n#search {\n\n}\n\n#search input[type=\"text\"]
+        {\n\tbackground: url(../images/searchglass.png) no-repeat 5px 2px #333;\n\tborder:
+        0 none;\n\tfont: bold 12px Arial,Helvetica,Sans-serif;\n\tcolor: #FF9933;\n\twidth:
+        170px;\n\theight: 16px;\n\tpadding: 1px 10px 1px 23px;\n\t-webkit-transition:
+        all 1.7s ease 0s;\n\t-moz-transition: all 1.7s ease 0s;\n\t-o-transition:
+        all 1.7s ease 0s;\n\ttransition: all 1.7s ease 0s;\n    }\n#search input[type=\"text\"]:focus
+        {\nbackground: url(../images/searchglass.png) no-repeat 5px 2px #555555;\n
+        outline: 0 none;\n\n    }\n \n.screen-only\n{\n\t display: block;\n}\n.mobile-only\n{\n\t
+        display: none;\n}\n\n@media screen and (max-width: 1000px)  \n{\n\t .screen-only\n\t
+        {\n\t \t display: none;\n\t\t\n\t }\n\n\t .mobile-only\n\t {\n\t \t display:
+        block;\n\t }\n}\n #banner-table {\n\n    width: 100%;\n    height: 200px;\n
+        \   padding: 0;\n    margin: 0;\n    border-collapse: collapse;\n    table-layout:
+        fixed;\n}\n\n#left-image {\n\ttop:0; left:50%;\n    margin-left:-700px;\n
+        \   width:200px;\n    height:200px;\n\n    position:absolute;\n    background-image:
+        url();\n    background-position: right;\n    background-repeat: repeat-x;\n}\n\n#center-image
+        {\n\n    width:1000px;\n\n    \n}\n#center-image div {\n    top:0; left:50%;\n
+        \   margin-left:-500px;\n    width:1000px;\n    height:200px;\n\n    position:absolute;\n
+        \   \n}\n::-webkit-input-placeholder {\n    color:    #545454;\n}\n:-moz-placeholder
+        {\n    color:    #545454;\n}\n::-moz-placeholder {\n    color:    #545454;\n}\n:-ms-input-placeholder
+        {\n    color:    #545454;\n}\n\n</style>\n</head>\n<script type=\"text/javascript\">\n
+        \ var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-34649935-1']);\n
+        \ _gaq.push(['_trackPageview']);\n  (function() {\n    var ga = document.createElement('script');
+        ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol
+        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var
+        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\n  })();\n</script>\n<!--END CODE NONSENSE--><!--END CODE NONSENSE--><!--END
+        CODE NONSENSE--><!--END CODE NONSENSE-->\n\n\n<!--GENERIC BUTTON LOAD--><!--GENERIC
+        BUTTON LOAD--><!--GENERIC BUTTON LOAD--><!--GENERIC BUTTON LOAD-->\n<SCRIPT
+        LANGUAGE=\"JavaScript\">\n<!-- Begin\nloadImage13 = new Image();\nloadImage13.src
+        = \"http://mythicspoiler.com/images/newlogotopon.png\";\nstaticImage13 = new
+        Image();\nstaticImage13.src = \"http://mythicspoiler.com/images/newlogotop.png\";\n\nloadImage14
+        = new Image();\nloadImage14.src = \"http://mythicspoiler.com/images/newlogonewon.png\";\nstaticImage14
+        = new Image();\nstaticImage14.src = \"http://mythicspoiler.com/images/newlogonewoff.png\";\n\nloadImage15
+        = new Image();\nloadImage15.src = \"http://mythicspoiler.com/images/newlogocycleson.png\";\nstaticImage15
+        = new Image();\nstaticImage15.src = \"http://mythicspoiler.com/images/newlogocyclesoff.png\";\n\nloadImage17
+        = new Image();\nloadImage17.src = \"http://mythicspoiler.com/images/newlogoexpon.png\";\nstaticImage17
+        = new Image();\nstaticImage17.src = \"http://mythicspoiler.com/images/newlogoexpoff.png\";\n<!--END
+        MAIN NAV-->\n\n\n\n\nloadImage1 = new Image();\nloadImage1.src = \"http://mythicspoiler.com/images/buttons/menubutton1ogwbright.jpg\";\nstaticImage1
+        = new Image();\nstaticImage1.src = \"http://mythicspoiler.com/images/buttons/menubutton1ogw.jpg\";\n\nloadImage2
+        = new Image();\nloadImage2.src = \"http://mythicspoiler.com/images/buttons/ureflectionbright.jpg\";\nstaticImage2
+        = new Image();\nstaticImage2.src = \"http://mythicspoiler.com/images/buttons/ureflection.jpg\";\n\nloadImage3
+        = new Image();\nloadImage3.src = \"http://mythicspoiler.com/images/buttons/breflectionbright.jpg\";\nstaticImage3
+        = new Image();\nstaticImage3.src = \"http://mythicspoiler.com/images/buttons/breflection.jpg\";\n\nloadImage4
+        = new Image();\nloadImage4.src = \"http://mythicspoiler.com/images/buttons/rreflectionbright.jpg\";\nstaticImage4
+        = new Image();\nstaticImage4.src = \"http://mythicspoiler.com/images/buttons/rreflection.jpg\";\n\nloadImage5
+        = new Image();\nloadImage5.src = \"http://mythicspoiler.com/images/buttons/greflectionbright.jpg\";\nstaticImage5
+        = new Image();\nstaticImage5.src = \"http://mythicspoiler.com/images/buttons/greflection.jpg\";\n\nloadImage10
+        = new Image();\nloadImage10.src = \"http://mythicspoiler.com/images/buttons/artifactsreflectionbright.jpg\";\nstaticImage10
+        = new Image();\nstaticImage10.src = \"http://mythicspoiler.com/images/buttons/artifactsreflection.jpg\";\n\nloadImage11
+        = new Image();\nloadImage11.src = \"http://mythicspoiler.com/images/buttons/landreflectionbright.jpg\";\nstaticImage11
+        = new Image();\nstaticImage11.src = \"http://mythicspoiler.com/images/buttons/landreflection.jpg\";\n\n\nloadImage21
+        = new Image();\nloadImage21.src = \"http://mythicspoiler.com/images/buttons/wbuttonbright.jpg\";\nstaticImage21
+        = new Image();\nstaticImage21.src = \"http://mythicspoiler.com/images/buttons/wbutton.jpg\";\n\nloadImage22
+        = new Image();\nloadImage22.src = \"http://mythicspoiler.com/images/buttons/ubuttonbright.jpg\";\nstaticImage22
+        = new Image();\nstaticImage22.src = \"http://mythicspoiler.com/images/buttons/ubutton.jpg\";\n\nloadImage23
+        = new Image();\nloadImage23.src = \"http://mythicspoiler.com/images/buttons/bbuttonbright.jpg\";\nstaticImage23
+        = new Image();\nstaticImage23.src = \"http://mythicspoiler.com/images/buttons/bbutton.jpg\";\n\nloadImage24
+        = new Image();\nloadImage24.src = \"http://mythicspoiler.com/images/buttons/rbuttonbright.jpg\";\nstaticImage24
+        = new Image();\nstaticImage24.src = \"http://mythicspoiler.com/images/buttons/rbutton.jpg\";\n\nloadImage25
+        = new Image();\nloadImage25.src = \"http://mythicspoiler.com/images/buttons/gbuttonbright.jpg\";\nstaticImage25
+        = new Image();\nstaticImage25.src = \"http://mythicspoiler.com/images/buttons/gbutton.jpg\";\n\nloadImage30
+        = new Image();\nloadImage30.src = \"http://mythicspoiler.com/images/buttons/artifactsbuttonbright.jpg\";\nstaticImage30
+        = new Image();\nstaticImage30.src = \"http://mythicspoiler.com/images/buttons/artifactsbutton.jpg\";\n\nloadImage31
+        = new Image();\nloadImage31.src = \"http://mythicspoiler.com/images/buttons/landbuttonbright.jpg\";\nstaticImage31
+        = new Image();\nstaticImage31.src = \"http://mythicspoiler.com/images/buttons/landbutton.jpg\";\n\nloadImage6
+        = new Image();\nloadImage6.src = \"http://mythicspoiler.com/images/buttons/creaturesreflectionbright.jpg\";\nstaticImage6
+        = new Image();\nstaticImage6.src = \"http://mythicspoiler.com/images/buttons/creaturesreflection.jpg\";\n\nloadImage7
+        = new Image();\nloadImage7.src = \"http://mythicspoiler.com/images/buttons/instantsreflectionbright.jpg\";\nstaticImage7
+        = new Image();\nstaticImage7.src = \"http://mythicspoiler.com/images/buttons/instantsreflection.jpg\";\n\nloadImage8
+        = new Image();\nloadImage8.src = \"http://mythicspoiler.com/images/buttons/sorceriesreflectionbright.jpg\";\nstaticImage8
+        = new Image();\nstaticImage8.src = \"http://mythicspoiler.com/images/buttons/sorceriesreflection.jpg\";\n\nloadImage9
+        = new Image();\nloadImage9.src = \"http://mythicspoiler.com/images/buttons/enchantmentsreflectionbright.jpg\";\nstaticImage9
+        = new Image();\nstaticImage9.src = \"http://mythicspoiler.com/images/buttons/enchantmentsreflection.jpg\";\n\nloadImage12
+        = new Image();\nloadImage12.src = \"http://mythicspoiler.com/images/buttons/planeswalkersreflectionbright.jpg\";\nstaticImage12
+        = new Image();\nstaticImage12.src = \"http://mythicspoiler.com/images/buttons/planeswalkersreflection.jpg\";\n\nloadImage26
+        = new Image();\nloadImage26.src = \"http://mythicspoiler.com/images/buttons/creaturesbuttonbright.jpg\";\nstaticImage26
+        = new Image();\nstaticImage26.src = \"http://mythicspoiler.com/images/buttons/creaturesbutton.jpg\";\n\nloadImage27
+        = new Image();\nloadImage27.src = \"http://mythicspoiler.com/images/buttons/instantsbuttonbright.jpg\";\nstaticImage27
+        = new Image();\nstaticImage27.src = \"http://mythicspoiler.com/images/buttons/instantsbutton.jpg\";\n\nloadImage28
+        = new Image();\nloadImage28.src = \"http://mythicspoiler.com/images/buttons/sorceriesbuttonbright.jpg\";\nstaticImage28
+        = new Image();\nstaticImage28.src = \"http://mythicspoiler.com/images/buttons/sorceriesbutton.jpg\";\n\nloadImage29
+        = new Image();\nloadImage29.src = \"http://mythicspoiler.com/images/buttons/enchantmentsbuttonbright.jpg\";\nstaticImage29
+        = new Image();\nstaticImage29.src = \"http://mythicspoiler.com/images/buttons/enchantmentsbutton.jpg\";\n\nloadImage32
+        = new Image();\nloadImage32.src = \"http://mythicspoiler.com/images/buttons/planeswalkersbuttonbright.jpg\";\nstaticImage32
+        = new Image();\nstaticImage32.src = \"http://mythicspoiler.com/images/buttons/planeswalkersbutton.jpg\";\n\nloadImage200
+        = new Image();\nloadImage200.src = \"http://mythicspoiler.com/images/buttons/eldrazireflectionbright.jpg\";\nstaticImage200
+        = new Image();\nstaticImage200.src = \"http://mythicspoiler.com/images/buttons/eldrazireflection.jpg\";\n\nloadImage201
+        = new Image();\nloadImage201.src = \"http://mythicspoiler.com/images/buttons/eldrazibuttonbright.jpg\";\nstaticImage201
+        = new Image();\nstaticImage201.src = \"http://mythicspoiler.com/images/buttons/eldrazibutton.jpg\";\n//
+        End -->\n</script>\n<!--END BUTTON IMAGE LOAD--><!--END BUTTON IMAGE LOAD--><!--END
+        BUTTON IMAGE LOAD--><!--END BUTTON IMAGE LOAD-->\n\n\n\n<!--START OF ACTUAL
+        PAGE--><!--START OF ACTUAL PAGE--><!--START OF ACTUAL PAGE--><!--START OF
+        ACTUAL PAGE-->\n<body topmargin=\"0\"  link=\"#CC6633\" vlink=\"#CC6633\"
+        alink=\"#FF9900\" bgcolor=\"0\">\n\n\n\n<table width=\"1000\" height=\"22\"
+        bgcolor=\"#000000\" align=\"center\"><b><tr>\n<td width=\"770\"><nobr>\n<link
+        href=\"../css/css_flyouthorizontalmenu.css\" type=\"text/css\" rel=\"Stylesheet\">\n
+        \   <div id=\"menuwrapper\"><font color=\"#AD5000\"><font size=3>\n        <ul>\n
+        \           <li><a href=\"http://mythicspoiler.com\">Home</a> &nbsp &nbsp|
+        &nbsp</li>\n            <li><a href=\"index.html\"><img  src=\"../images/ogw.png\">
+        \ </a>    \n            <ul>\t\n              <li><a valign=\"top\" href=\"../bfz\"><img
+        src=\"../images/bfz.png\" />BATTLE FOR ZENDIKAR</a></li>\n              <li><a
+        valign=\"top\" href=\"../ori\"><img src=\"../images/ori.png\" />MAGIC ORIGINS</a></li>\n
+        \                  <li><a valign=\"top\" href=\"../mm2\"><img src=\"../images/mm2.png\"
+        />MODERN MASTERS 2015</a></li>\n                     <li><a valign=\"top\"
+        href=\"../dtk\"><img src=\"../images/dtk.png\" />DRAGONS OF TARKIR</a></li>\n<li><a
+        valign=\"top\" href=\"../frf\"><img src=\"../images/frf.png\" />FATE REFORGED</a></li>\n
+        \                  <li><a valign=\"top\" href=\"../ktk\"><img src=\"../images/ktk.png\"
+        />KHANS OF TARKIR </a></li>\n                    <li><a valign=\"top\" href=\"../m15\"><img
+        src=\"../images/m15.png\" />MAGIC 2015 </a></li>\n        \n                 <li><a
+        href=\"../sets.html\"><img src=\"../images/dotdotdot.png\" />MORE SETS</a></li>\n
+        \                   \n                </ul>\n            </li>\n            <li><a
+        href=\"index.html\"> OATH OF THE GATEWATCH   184/184</a>&nbsp&nbsp|&nbsp&nbsp
+        \          \n            </li>\n             <li><font size=-1>Sort by:</a>
+        &nbsp        \n            </li>\n            <div id=\"menuwrappersmaller\">\n
+        \           <ul>\n            <li><a href=\"index.html\"><font size=-1>TEASER
+        </a><font size=3>&nbsp&nbsp|&nbsp&nbsp\n              <ul><font size=-1>\n
+        \             \n              </ul>\n            </li>\n             <li><a
+        href=\"#feature\"><font color=\"#FF3300\" link=\"#FF3300\" vlink=\"#FF3300\"
+        size=3> </a>           \n            </li>\n            <li><a href=\"#feature2\"><font
+        color=\"#FF3300\" link=\"#FF3300\" vlink=\"#FF3300\" size=3> </a>           \n
+        \           </li>\n        </ul>\n    </div>\n    </nobr>\n\n</td><td valign=\"center\">\n\n<form
+        \ id=\"search\" method=\"get\" id=\"searchbox_005189263914311744150:r83fvj6lw3q\"
+        action=\"http://mythicspoiler.com/search.html\">\n<input value=\"005189263914311744150:r83fvj6lw3q\"
+        name=\"cx\" type=\"hidden\"/> \n<input value=\"FORID:11\" name=\"cof\" type=\"hidden\"/>
+        \n<input  id=\"q\" name=\"q\" size=\"70\" type=\"text\" placeholder=\"Card
+        Search...\" /> \n</form>\n          </td><td><a href=\"https://facebook.com/MythicSpoiler\"><img
+        src=\"../images/facebook.jpg\" /></a></td><td><a href=\"https://twitter.com/MythicSpoiler\"><img
+        src=\"../images/twitterbird.jpg\" /></a></td></tr></table>\n<!--END GTC NAVIGATION--><!--END
+        GTC NAVIGATION--><!--END GTC NAVIGATION--><!--END GTC NAVIGATION--><!--END
+        GTC NAVIGATION-->\n\n\n<!--MAIN NAVIGATION--><!--MAIN NAVIGATION--><!--MAIN
+        NAVIGATION--><!--MAIN NAVIGATION--><!--MAIN NAVIGATION-->\n<center>\n<table
+        width=\"1000\" cellpadding=\"0\" cellspacing=\"0\" align=\"center\" valign=\"top\">\n<tr>\n<td
+        width=\"175\"></td><td colspan=\"3\" width=\"650\">\n<a href=\"http://mythicspoiler.com\"
+        onMouseOver=\"image13.src=loadImage13.src;\" onMouseOut=\"image13.src=staticImage13.src;\">\n<img
+        name=\"image13\" border=0 src=\"../images/newlogotop.png\"></a></td></tr>\n<tr><td></td><td
+        width=\"651\"><a href=\"../newspoilers.html\" onMouseOver=\"image14.src=loadImage14.src;\"
+        onMouseOut=\"image14.src=staticImage14.src;\">\n<img align=\"left\" hspace=\"0\"
+        name=\"image14\" border=0 src=\"../images/newlogonewoff.png\"></a>\n<a href=\"cycles.html\"
+        onMouseOver=\"image15.src=loadImage15.src;\" onMouseOut=\"image15.src=staticImage15.src;\">\n<img
+        align=\"left\" hspace=\"0\" name=\"image15\" border=0 src=\"../images/newlogocyclesoff.png\"></a>\n<a
+        href=\"../sets.html\" onMouseOver=\"image17.src=loadImage17.src;\" onMouseOut=\"image17.src=staticImage17.src;\">\n<img
+        align=\"left\" hspace=\"0\" name=\"image17\" border=0 src=\"../images/newlogoexpoff.png\"></a>\n</td><td
+        width=173></td></tr></table>\n<!--END MAIN NAVIGATION--><!--END MAIN NAVIGATION--><!--END
+        MAIN NAVIGATION--><!--END MAIN NAVIGATION-->\n\n\n<table><tr><td>\n<center><div
+        id=\"728x90 atf\">\n<div style=\"position: relative;\" id='cdm-zone-01'></div></div>\n</center></td></tr></table>\n\n\n<!--DGM
+        GUILD BUTTONS--><!--DGM GUILD BUTTONS--><!--DGM GUILD BUTTONS--><!--DGM GUILD
+        BUTTONS--><!--DGM GUILD BUTTONS-->\n<table width=\"1005\"  valign=\"top\"
+        border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n<tr><td colspan=\"18\"
+        valign=\"bottom\"><img align=\"left\" hspace=\"0\" width=\"950\" src=\"../images/buttons/menutitleogw.png\"
+        /></td></tr>\n<tr><td><a href=\"index.html\"><img align=\"left\" height=\"130\"
+        hspace=\"0\"src=\"../images/buttons/menubuttonogw.png\" /></a>\n<a href=\"w.html\"
+        onMouseOver=\"image1.src=loadImage1.src;\" onMouseOut=\"image1.src=staticImage1.src;\">\n<img
+        align=\"left\" hspace=\"0\" height=\"130\" name=\"image1\" border=0 src=\"../images/buttons/menubutton1ogw.jpg\"></a>\n\n<a
+        href=\"u.html\" onMouseOver=\"image2.src=loadImage2.src;\" onMouseOut=\"image2.src=staticImage2.src;\">\n<img
+        align=\"left\" hspace=\"0\" width=\"67\" height=\"130\" name=\"image2\" border=0
+        src=\"../images/buttons/ureflection.jpg\" /></a>\n<a href=\"b.html\" onMouseOver=\"image3.src=loadImage3.src;\"
+        onMouseOut=\"image3.src=staticImage3.src;\">\n<img align=\"left\" hspace=\"0\"
+        width=\"67\" height=\"130\" name=\"image3\" border=0 src=\"../images/buttons/breflection.jpg\"
+        /></a>\n<a href=\"r.html\" onMouseOver=\"image4.src=loadImage4.src;\" onMouseOut=\"image4.src=staticImage4.src;\">\n<img
+        align=\"left\" hspace=\"0\" width=\"67\" height=\"130\" name=\"image4\" border=0
+        src=\"../images/buttons/rreflection.jpg\" /></a>\n<a href=\"g.html\" onMouseOver=\"image5.src=loadImage5.src;\"
+        onMouseOut=\"image5.src=staticImage5.src;\">\n<img align=\"left\" hspace=\"0\"
+        width=\"67\" height=\"130\" name=\"image5\" border=0 src=\"../images/buttons/greflection.jpg\"
+        /></a>\n\n<a href=\"creatures.html\" onMouseOver=\"image6.src=loadImage6.src;\"
+        onMouseOut=\"image6.src=staticImage6.src;\">\n<img name=\"image6\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../images/buttons/creaturesreflection.jpg\"
+        border=0></a>\n<a href=\"instants.html\" onMouseOver=\"image7.src=loadImage7.src;\"
+        onMouseOut=\"image7.src=staticImage7.src;\">\n<img name=\"image7\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../images/buttons/instantsreflection.jpg\"
+        border=0></a>\n<a href=\"sorceries.html\" onMouseOver=\"image8.src=loadImage8.src;\"
+        onMouseOut=\"image8.src=staticImage8.src;\">\n<img name=\"image8\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../images/buttons/sorceriesreflection.jpg\"
+        border=0></a>\n<a href=\"enchantments.html\" onMouseOver=\"image9.src=loadImage9.src;\"
+        onMouseOut=\"image9.src=staticImage9.src;\">\n<img name=\"image9\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\"src=\"../images/buttons/enchantmentsreflection.jpg\"
+        border=0></a>\n<a href=\"artifacts.html\" onMouseOver=\"image10.src=loadImage10.src;\"
+        onMouseOut=\"image10.src=staticImage10.src;\">\n<img name=\"image10\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../images/buttons/artifactsreflection.jpg\"
+        border=0></a>\n<a href=\"land.html\" onMouseOver=\"image11.src=loadImage11.src;\"
+        onMouseOut=\"image11.src=staticImage11.src;\">\n<img align=\"left\" hspace=\"0\"
+        width=\"67\" height=\"130\" name=\"image11\" border=0 src=\"../images/buttons/landreflection.jpg\"
+        /></a>\n<a href=\"planeswalkers.html\" onMouseOver=\"image12.src=loadImage12.src;\"
+        onMouseOut=\"image12.src=staticImage12.src;\">\n<img name=\"image12\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\"src=\"../images/buttons/planeswalkersreflection.jpg\"
+        border=0></a>\n<a href=\"eldrazi.html\" onMouseOver=\"image200.src=loadImage200.src;\"
+        onMouseOut=\"image200.src=staticImage200.src;\">\n<img name=\"image200\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../images/buttons/eldrazireflection.jpg\"
+        border=0></a>\n\n\n</td>\n</tr></table>\n<!--END DGM BUTTONS--><!--END DGM
+        BUTTONS--><!--END DGM BUTTONS--><!--END DGM BUTTONS--><!--END DGM BUTTONS--><!--END
+        DGM BUTTONS-->\n\n\n\n\n <div id=\"fb-root\"></div>\n<script>(function(d,
+        s, id) {\n  var js, fjs = d.getElementsByTagName(s)[0];\n  if (d.getElementById(id))
+        return;\n  js = d.createElement(s); js.id = id;\n  js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=472970686058427\";\n
+        \ fjs.parentNode.insertBefore(js, fjs);\n}(document, 'script', 'facebook-jssdk'));</script>\n\n<!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT-->\n<!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT-->\n<!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT-->\n<!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT-->\n<table
+        width=\"1000\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n<tr><td><!--ThespaceAboveCurrentContent-->\n</td></table>\n\n<table
+        width=\"1000\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n<tr><!--CYCLES
+        -->\n<td valign=\"top\" colspan=\"5\">\n\n<!--CYCLES --><!--CYCLES --><!--CYCLES
+        --><!--CYCLES --><!--CYCLES -->\n\n\n\n<center>\n\n<a href=\"cards/generaltazri.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/generaltazri.jpg\"></a>\n<a
+        href=\"cards/sphinxofthefinalword.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/sphinxofthefinalword.jpg\"></a>\n<a href=\"cards/kalitastraitorofghet.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/kalitastraitorofghet.jpg\"></a>\n<a
+        href=\"cards/chandraflamecaller.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/chandraflamecaller.jpg\"></a>\n<a href=\"cards/nissavoiceofzendikar.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/nissavoiceofzendikar.jpg\"></a>\n\n<a
+        href=\"cards/linvalathepreserver.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/linvalathepreserver.jpg\"></a>\n<a href=\"cards/crushoftentacles.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/crushoftentacles.jpg\"></a>\n<a
+        href=\"cards/remorselesspunishment.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/remorselesspunishment.jpg\"></a>\n<a href=\"cards/tyrantofvalakut.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/tyrantofvalakut.jpg\"></a>\n<a
+        href=\"cards/sylvanadvocate.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/sylvanadvocate.jpg\"></a>\n\n<a href=\"cards/oathofgideon.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/oathofgideon.jpg\"></a>\n<a
+        href=\"cards/oathofjace.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/oathofjace.jpg\"></a>\n<a href=\"cards/dranaschosen.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/dranaschosen.jpg\"></a>\n<a
+        href=\"cards/oathofchandra.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/oathofchandra.jpg\"></a>\n<a href=\"cards/oathofnissa.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/oathofnissa2.jpg\"></a>\n\n\n\n\n\n\n\n\n<!--end
+        cycles-->\n\n<!--non cycle newest spoilers-->\n\n\n\n\n<!--non-spicy cycles-->\n\n\n<!--ELDRAZI-->\n\n\n\n\n\n</td></tr>\n<tr><!--
+        WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE -->\n<td valign=\"top\">\n<!--RARE-->\n<a
+        href=\"cards/eldrazidisplacer.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/eldrazidisplacer.jpg\"></a>\n<a href=\"cards/callthegatewatch.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/callthegatewatch.jpg\"></a>\n<a
+        href=\"cards/stonehavenoutfitter.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/stonehavenoutfitter.jpg\"></a>\n<a href=\"cards/mundasvanguard.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/mundasvanguard.jpg\"></a>\n\n\n\n\n<!--uncommon-->\n<a
+        href=\"cards/ionasblessing.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/ionasblessing.jpg\"></a>\n<a href=\"cards/makeastand.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/makeastand.jpg\"></a>\n<a
+        href=\"cards/steppeglider.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/steppeglider.jpg\"></a>\n<a href=\"cards/stoneforgeacolyte.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/stoneforgeacolyte.jpg\"></a>\n<a
+        href=\"cards/wallofresurgence.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/wallofresurgence.jpg\"></a>\n<a href=\"cards/reliefcaptain.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/reliefcaptain.jpg\"></a>\n<a
+        href=\"cards/immolatingglare.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/immolatingglare.jpg\"></a>\n\n<a href=\"cards/alliedreinforcements.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/alliedreinforcements.jpg\"></a>\n\n\n<!--common-->\n<a
+        href=\"cards/dazzlingreflection.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/dazzlingreflection.jpg\"></a>\n<a href=\"cards/affaprotector.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/affaprotector.jpg\"></a>\n<a
+        href=\"cards/expeditionraptor.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/expeditionraptor.jpg\"></a>\n<a href=\"cards/isolationzone.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/isolationzone.jpg\"></a>\n<a
+        href=\"cards/korscythemaster.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/korscythemaster.jpg\"></a>\n<a href=\"cards/korskyclimber.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/korskyclimber.jpg\"></a>\n<a
+        href=\"cards/makindiaeronaut.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/makindiaeronaut.jpg\"></a>\n<a href=\"cards/mightyleap.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/mightyleap.jpg\"></a>\n<a
+        href=\"cards/onduwarcleric.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/onduwarcleric.jpg\"></a>\n<a href=\"cards/spawnbindermage.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/spawnbindermage.jpg\"></a>\n<a
+        href=\"cards/searinglight.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/searinglight.jpg\"></a>\n<a href=\"cards/shouldertoshoulder.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/shouldertoshoulder.jpg\"></a>\n\n\n\n</td>
+        <!-- BLUE BLUE BLUE BLUE BLUE BLUE BLUE BLUE BLUE BLUE BLUE -->\n<td valign=\"top\">\n<!--RARE
+        -->\n<a href=\"cards/hedronalignment.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/hedronalignment.jpg\"></a>\n<a href=\"cards/overwhelmingdenial.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/overwhelmingdenial.jpg\"></a>\n\n\n\n<!--Uncommon-->\n<a
+        href=\"cards/roilingwaters.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/roilingwaters.jpg\"></a>\n<a href=\"cards/jwarisleavenger.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/jwarisleavenger.jpg\"></a>\n<a
+        href=\"cards/giftoftusks.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/giftoftusks.jpg\"></a>\n<a href=\"cards/comparativeanalysis.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/comparativeanalysis.jpg\"></a>\n\n\n\n<!--Common-->\n<a
+        href=\"cards/containmentmembrane.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/containmentmembrane.jpg\"></a>\n<a href=\"cards/ancientcrab.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/ancientcrab.jpg\"></a>\n<a
+        href=\"cards/cyclonesire.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/cyclonesire.jpg\"></a>\n<a href=\"cards/gripoftheroil.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/gripoftheroil.jpg\"></a>\n<a
+        href=\"cards/negate.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/negate.jpg\"></a>\n<a href=\"cards/sweepaway.html\"><img width=\"200\"
+        align=\"left\" hspace=\"0\" src=\"cards/sweepaway.jpg\"></a>\n<a href=\"cards/umaraentangler.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/umaraentangler.jpg\"></a>\n<a
+        href=\"cards/unityofpurpose.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/unityofpurpose.jpg\"></a>\n\n\n\n\n<a href=\"cards/deepfathomskulker.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/deepfathomskulker.jpg\"></a>\n<a
+        href=\"cards/dimensionalinfiltrator.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/dimensionalinfiltrator.jpg\"></a>\n<a href=\"cards/voidshatter.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/voidshatter.jpg\"></a>\n<a
+        href=\"cards/prophetofdistortion.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/prophetofdistortion.jpg\"></a>\n<a href=\"cards/cultivatordrone.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/cultivatordrone.jpg\"></a>\n<a
+        href=\"cards/blindingdrone.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/blindingdrone.jpg\"></a>\n<a href=\"cards/abstruseinterference.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/abstruseinterference.jpg\"></a>\n<a
+        href=\"cards/gravitynegator.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/gravitynegator.jpg\"></a>\n<a href=\"cards/slipthroughspace.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/slipthroughspace.jpg\"></a>\n<a
+        href=\"cards/thoughtharvester.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/thoughtharvester.jpg\"></a>\n\n\n\n\n</td> <!-- BLACK BLACK BLACK
+        BLACK BLACK BLACK BLACK BLACK BLACK BLACK  -->\n<td valign=\"top\">\n<!--RARE-->\n\n\n<!--Uncommon-->\n<a
+        href=\"cards/nullcaller.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/nullcaller.jpg\"></a>\n<a href=\"cards/malakirsoothsayer.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/malakirsoothsayer.jpg\"></a>\n\n\n\n<!--Common-->\n<a
+        href=\"cards/corpsechurn.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/corpsechurn.jpg\"></a>\n<a href=\"cards/graspofdarkness.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/graspofdarkness.jpg\"></a>\n<a
+        href=\"cards/zulaportchainmage.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/zulaportchainmage.jpg\"></a>\n<a href=\"cards/vampireenvoy.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/vampireenvoy.jpg\"></a>\n<a
+        href=\"cards/tarsnare.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/tarsnare.jpg\"></a>\n<a href=\"cards/untamedhunger.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/untamedhunger.jpg\"></a>\n\n\n\n\n\n\n<a
+        href=\"cards/inverteroftruth.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/inverteroftruth.jpg\"></a>\n<a href=\"cards/reaverdrone.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/reaverdrone.jpg\"></a>\n<a
+        href=\"cards/bearerofsilence.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/bearerofsilence.jpg\"></a>\n<a href=\"cards/flayingtendrils.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/flayingtendrils.jpg\"></a>\n<a
+        href=\"cards/sifterofskulls.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/sifterofskulls.jpg\"></a>\n<a href=\"cards/dreaddefiler.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/dreaddefiler.jpg\"></a>\n<a
+        href=\"cards/havocsower.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/havocsower.jpg\"></a>\n<a href=\"cards/essencedepleter.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/essencedepleter.jpg\"></a>\n<a
+        href=\"cards/visionsofbrutality.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/visionsofbrutality.jpg\"></a>\n<a href=\"cards/kozileksshrieker.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/kozileksshrieker.jpg\"></a>\n<a
+        href=\"cards/kozilekstranslator.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/kozilekstranslator.jpg\"></a>\n<a href=\"cards/oblivionstrike.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/oblivionstrike.jpg\"></a>\n<a
+        href=\"cards/skyscourer.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/skyscourer.jpg\"></a>\n<a href=\"cards/slaughterdrone.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/slaughterdrone.jpg\"></a>\n<a
+        href=\"cards/unnaturalendurance.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/unnaturalendurance.jpg\"></a>\n<a href=\"cards/witnesstheend.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/witnesstheend.jpg\"></a>\n\n
+        \            \n                                                                                    \n</td><!--
+        RED RED RED RED RED RED RED RED RED RED RED RED RED RED RED RED  -->\n<td
+        valign=\"top\">\n\n\n\n<!--RARE-->\n\n<a href=\"cards/fallofthetitans.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/fallofthetitans.jpg\"></a>\n<a
+        href=\"cards/goblindarkdwellers.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/goblindarkdwellers.jpg\"></a>\n\n\n<!--Uncommon-->\n<a href=\"cards/embodimentoffury.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/embodimentoffury.jpg\"></a>\n<a
+        href=\"cards/pyromancersassault.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/pyromancersassault.jpg\"></a>\n<a href=\"cards/recklessbushwhacker.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/recklessbushwhacker.jpg\"></a>\n\n<a
+        href=\"cards/tearsofvalakut.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/tearsofvalakut.jpg\"></a>\n<a href=\"cards/kazuulstollcollector.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/kazuulstollcollector.jpg\"></a>\n<a
+        href=\"cards/pressintoservice.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/pressintoservice.jpg\"></a>\n<a href=\"cards/devourinflames.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/devourinflames.jpg\"></a>\n\n\n<!--Common-->\n\n<a
+        href=\"cards/akoumflameseeker.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/akoumflameseeker.jpg\"></a>\n<a href=\"cards/brutestrength.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/brutestrength.jpg\"></a>\n\n<a
+        href=\"cards/cinderhellion.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/cinderhellion.jpg\"></a>\n\n<a href=\"cards/sparkmagesgambit.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/sparkmagesgambit.jpg\"></a>\n<a
+        href=\"cards/zadascommando.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/zadascommando.jpg\"></a>\n\n\n<a href=\"cards/expedite.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/expedite.jpg\"></a>\n\n<a
+        href=\"cards/goblinfreerunner.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/goblinfreerunner.jpg\"></a>\n<a href=\"cards/bouldersalvo.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/bouldersalvo.jpg\"></a>\n\n\n\n\n<a
+        href=\"cards/kozileksreturn.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/kozileksreturn.jpg\"></a>\n<a href=\"cards/eldraziobligator.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/eldraziobligator.jpg\"></a>\n<a
+        href=\"cards/immobilizereldrazi.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/immobilizereldrazi.jpg\"></a>\n<a href=\"cards/eldraziaggressor.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/eldraziaggressor.jpg\"></a>\n<a
+        href=\"cards/consumingsinkhole.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/consumingsinkhole.jpg\"></a>\n<a href=\"cards/realityhemorrhage.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/realityhemorrhage.jpg\"></a>\n<a
+        href=\"cards/mawofkozilek.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/mawofkozilek.jpg\"></a>\n\n\n\n</td><!-- GREEN GREEN GREEN GREEN
+        GREEN GREEN GREEN GREEN GREEN GREEN   -->\n<td valign=\"top\">\n<!--RARE-->\n<a
+        href=\"cards/zendikarresurgent.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/zendikarresurgent.jpg\"></a>\n<a href=\"cards/gladehartcavalry.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/gladehartcavalry.jpg\"></a>\n\n\n\n\n<!--Uncommon-->\n<a
+        href=\"cards/bondsofmortality.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/bondsofmortality.jpg\"></a>\n<a href=\"cards/embodimentofinsight.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/embodimentofinsight.jpg\"></a>\n<a
+        href=\"cards/seedguardian.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/seedguardian.jpg\"></a>\n<a href=\"cards/nissasjudgment.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/nissasjudgment.jpg\"></a>\n<a
+        href=\"cards/harvestertroll.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/harvestertroll.jpg\"></a>\n\n\n<!--Common-->\n<a href=\"cards/balothpup.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/balothpup.jpg\"></a>\n\n<a
+        href=\"cards/canopygorger.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/canopygorger.jpg\"></a>\n<a href=\"cards/elementaluprising.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/elementaluprising.jpg\"></a>\n<a
+        href=\"cards/leadbyexample.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/leadbyexample.jpg\"></a>\n\n<a href=\"cards/loamlarva.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/loamlarva.jpg\"></a>\n<a
+        href=\"cards/naturalstate.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/naturalstate.jpg\"></a>\n<a href=\"cards/netcasterspider.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/netcasterspider.jpg\"></a>\n<a
+        href=\"cards/pulseofmurasa.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/pulseofmurasa.jpg\"></a>\n\n\n<a href=\"cards/saddlebacklagac.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/saddlebacklagac.jpg\"></a>\n<a
+        href=\"cards/tajurupathwarden.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/tajurupathwarden.jpg\"></a>\n<a href=\"cards/vinesoftherecluse.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/vinesoftherecluse.jpg\"></a>\n\n<a
+        href=\"cards/worldbreaker.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/worldbreaker.jpg\"></a>\n<a href=\"cards/vileredeemer.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/vileredeemer.jpg\"></a>\n<a
+        href=\"cards/birthinghulk.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/birthinghulk.jpg\"></a>\n<a href=\"cards/ruinintheirwake.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/ruinintheirwake.jpg\"></a>\n<a
+        href=\"cards/stalkingdrone.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/stalkingdrone1.jpg\"></a>\n<a href=\"cards/scionsummoner.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/scionsummoner.jpg\"></a>\n\n\n\n</td></tr>\n\n\n<tr><td
+        colspan=\"5\"  valign=\"top\">\n<br /><br /><br /><br /><br /><br /></td></tr><tr><td
+        colspan=\"5\"><br /><br /><br /><br /><br /><br />\n\n<!--ELDRAZI-->\n<a href=\"cards/kozilekthegreatdistortion.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/kozilekthegreatdistortion.jpg\"></a>\n\n<a
+        href=\"cards/deceiverofform.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/deceiverofform.jpg\"></a>\n\n<a href=\"cards/endbringer.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/endbringer.jpg\"></a>\n<a
+        href=\"cards/walkerofthewastes.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/walkerofthewastes.jpg\"></a>\n<a href=\"cards/thoughtknotseer.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/thoughtknotseer.jpg\"></a>\n<a
+        href=\"cards/matterreshaper.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/matterreshaper.jpg\"></a>\n<a href=\"cards/realitysmasher.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/realitysmasher.jpg\"></a>\n<a
+        href=\"cards/eldrazimimic.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/eldrazimimic.jpg\"></a>\n<a href=\"cards/warpingwail.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/warpingwail.jpg\"></a>\n<a
+        href=\"cards/spatialcontortion.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/spatialcontortion.jpg\"></a>\n<a href=\"cards/wardenofgeometries.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/wardenofgeometries.jpg\"></a>\n<a
+        href=\"cards/kozilekspathfinder.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/kozilekspathfinder.jpg\"></a>\n\n\n\n\n\n<!--GOLD-->\n\n<a href=\"cards/aylieternalpilgrim.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/aylieternalpilgrim.jpg\"></a>\n<a
+        href=\"cards/jorienruindiver.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/jorienruindiver.jpg\"></a>\n<a href=\"cards/minaanddennwildborn.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/minaanddennwildborn.jpg\"></a>\n\n<!--uncommon
+        cycle-->\n<a href=\"cards/reflectormage.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/reflectormage.jpg\"></a>\n<a href=\"cards/mindmelter.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/mindmelter.jpg\"></a>\n<a
+        href=\"cards/flayerdrone.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/flayerdrone.jpg\"></a>\n<a href=\"cards/relentlesshunter.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/relentlesshunter.jpg\"></a>\n<a
+        href=\"cards/joragaauxiliary.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/joragaauxiliary.jpg\"></a>\n\n\n<a href=\"cards/cliffhavenvampire.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/cliffhavenvampire.jpg\"></a>\n<a
+        href=\"cards/stormchasermage.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/stormchasermage.jpg\"></a>\n<a href=\"cards/weaponstrainer.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/weaponstrainer.jpg\"></a>\n<a
+        href=\"cards/voidgrafter.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/voidgrafter.jpg\"></a>\n<a href=\"cards/balothnull.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/balothnull.jpg\"></a>\n<!--end
+        cycle-->\n\n<!--artifacts-->\n\n<a href=\"cards/stoneforgemasterwork.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/stoneforgemasterwork.jpg\"></a>\n<a
+        href=\"cards/hedroncrawler.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/hedroncrawler.jpg\"></a>\n<a href=\"cards/seerslantern.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/seerslantern.jpg\"></a>\n<a
+        href=\"cards/bonesaw.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/bonesaw.jpg\"></a>\n\n<a href=\"cards/captainsclaws.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/captainsclaws.jpg\"></a>\n<a
+        href=\"cards/chitinouscloak.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/chitinouscloak.jpg\"></a>\n<a href=\"cards/striderharness.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/striderharness.jpg\"></a>\n\n\n<br
+        /><br /><br /><br /><br /><br /></td></tr><tr><td colspan=\"5\"><br /><br
+        /><br /><br /><br /><br />\n<!--Land-->\n\n<a href=\"cards/corruptedcrossroads.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/corruptedcrossroads.jpg\"></a>\n\n\n<a
+        href=\"cards/holdoutsettlement.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/holdoutsettlement.jpg\"></a>\n<a href=\"cards/unknownshores.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/unknownshores.jpg\"></a>\n<a
+        href=\"cards/seagatewreckage.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/seagatewreckage.jpg\"></a>\n<a href=\"cards/ruinsoforanrief.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/ruinsoforanrief.jpg\"></a>\n\n<a
+        href=\"cards/mirrorpool.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/mirrorpool.jpg\"></a>\n<a href=\"cards/crumblingvestige.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/crumblingvestige.jpg\"></a>\n<a
+        href=\"cards/wanderingfumarole.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/wanderingfumarole.jpg\"></a>\n<a href=\"cards/needlespires.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/needlespires.jpg\"></a>\n<a
+        href=\"cards/hissingquagmire.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/hissingquagmire.jpg\"></a>\n\n<a href=\"cards/submergedboneyard.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/submergedboneyard.jpg\"></a>\n<a
+        href=\"cards/timbergorge.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/timbergorge.jpg\"></a>\n<a href=\"cards/tranquilexpanse.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/tranquilexpanse1.jpg\"></a>\n<a
+        href=\"cards/cinderbarrens.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/cinderbarrens.jpg\"></a>\n<a href=\"cards/meanderingriver.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/meanderingriver.jpg\"></a>\n\n\n\n<a
+        href=\"cards/wastes.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/wastes.jpg\"></a>\n<a href=\"cards/wastes2.html\"><img width=\"200\"
+        align=\"left\" hspace=\"0\" src=\"cards/wastes2.jpg\"></a>\n\n\n\n\n\n\n\n\n\n\n\n\n<!--ARTIFACTS-->\n\n\n\n\n\n</td></tr><tr><td
+        colspan=\"5\">\n\n<!--BASIC LAND (replace placeholder lines in cycle-->\n\n\n\n\n\n<br
+        /><br /><br /><br /><br /><br /></td></tr><tr><td colspan=\"5\"><br /><br
+        /><br /><br /><br /><br />\n<table width=\"1000\" height=\"1\" bgcolor=\"#FF6600\"
+        border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n<tr><td><!--ThespaceAboveCurrentContent-->\n</td></tr></table>\n</td></tr><tr><td
+        colspan=\"5\">\n<br /><Br /><br /><center><font size=\"+1\">\nEXPEDITIONS<br
+        /><br />\n<a href=\"cards/ancienttomb.html\"><img width=\"200\" align=\"left\"
+        hspace=\"0\" src=\"cards/ancienttomb.jpg\"></a>\n<a href=\"cards/forbiddenorchard.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/forbiddenorchard.jpg\"></a>\n<a
+        href=\"cards/dustbowl.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/dustbowl.jpg\"></a>\n<a href=\"cards/wasteland.html\"><img width=\"200\"
+        align=\"left\" hspace=\"0\" src=\"cards/wasteland.jpg\"></a>\n<a href=\"cards/tectonicedge.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/tectonicedge.jpg\"></a>\n<a
+        href=\"cards/stripmine.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/stripmine.jpg\"></a>\n<a href=\"cards/horizoncanopy.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/horizoncanopy.jpg\"></a>\n<a
+        href=\"cards/manaconfluence.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/manaconfluence.jpg\"></a>\n<a href=\"cards/eyeofugin.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/eyeofugin.jpg\"></a>\n<a
+        href=\"cards/korhaven.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/korhaven.jpg\"></a>\n\n\n\n\n\n<a href=\"cards/mysticgate.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/mysticgate.jpg\"></a>\n<a
+        href=\"cards/sunkenruins.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/sunkenruins.jpg\"></a>\n<a href=\"cards/gravencairns.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/gravencairns.jpg\"></a>\n<a
+        href=\"cards/firelitthicket.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/firelitthicket.jpg\"></a>\n<a href=\"cards/woodedbastion.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/woodedbastion.jpg\"></a>\n\n<a
+        href=\"cards/ruggedprairie.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/ruggedprairie.jpg\"></a>\n<a href=\"cards/fetidheath.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/fetidheath.jpg\"></a>\n<a
+        href=\"cards/cascadebluffs.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/cascadebluffs.jpg\"></a>\n<a href=\"cards/twilightmire.html\"><img
+        width=\"200\" align=\"left\" hspace=\"0\" src=\"cards/twilightmire.jpg\"></a>\n<a
+        href=\"cards/floodedgrove.html\"><img width=\"200\" align=\"left\" hspace=\"0\"
+        src=\"cards/floodedgrove.jpg\"></a>\n\n\n\n\n\n</Td></tr><tr><td colspan=\"5\"><br
+        /><br />\n<center>\n<!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT-->\n<!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT-->\n<!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT-->\n<!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT-->\n<!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT-->\n<!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT-->\n\n\n\n<!--BOTTOM TYPE BUTTONS--><!--BOTTOM TYPE
+        BUTTONS--><!--BOTTOM TYPE BUTTONS--><!--BOTTOM TYPE BUTTONS--><!--BOTTOM TYPE
+        BUTTONS-->\n\n<table width=\"1000\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n<tr>\n<td
+        valign=\"top\"><a href=\"w.html\" onMouseOver=\"image21.src=loadImage21.src;\"
+        onMouseOut=\"image21.src=staticImage21.src;\">\n<img name=\"image21\" width=\"76\"
+        src=\"../images/buttons/wbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"u.html\" onMouseOver=\"image22.src=loadImage22.src;\" onMouseOut=\"image22.src=staticImage22.src;\">\n<img
+        name=\"image22\" width=\"76\" src=\"../images/buttons/ubutton.jpg\" border=0></a></td>\n<td
+        valign=\"top\"><a href=\"b.html\" onMouseOver=\"image23.src=loadImage23.src;\"
+        onMouseOut=\"image23.src=staticImage23.src;\">\n<img name=\"image23\" width=\"76\"
+        src=\"../images/buttons/bbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"r.html\" onMouseOver=\"image24.src=loadImage24.src;\" onMouseOut=\"image24.src=staticImage24.src;\">\n<img
+        name=\"image24\" width=\"76\" src=\"../images/buttons/rbutton.jpg\" border=0></a></td>\n<td
+        valign=\"top\"><a href=\"g.html\" onMouseOver=\"image25.src=loadImage25.src;\"
+        onMouseOut=\"image25.src=staticImage25.src;\">\n<img name=\"image25\" width=\"76\"
+        src=\"../images/buttons/gbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"creatures.html\" onMouseOver=\"image26.src=loadImage26.src;\" onMouseOut=\"image26.src=staticImage26.src;\">\n<img
+        name=\"image26\" width=\"76\" src=\"../images/buttons/creaturesbutton.jpg\"
+        border=0></a></td>\n<td valign=\"top\"><a href=\"instants.html\" onMouseOver=\"image27.src=loadImage27.src;\"
+        onMouseOut=\"image27.src=staticImage27.src;\">\n<img name=\"image27\" width=\"76\"
+        src=\"../images/buttons/instantsbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"sorceries.html\" onMouseOver=\"image28.src=loadImage28.src;\" onMouseOut=\"image28.src=staticImage28.src;\">\n<img
+        name=\"image28\" width=\"76\" src=\"../images/buttons/sorceriesbutton.jpg\"
+        border=0></a></td>\n<td valign=\"top\"><a href=\"enchantments.html\" onMouseOver=\"image29.src=loadImage29.src;\"
+        onMouseOut=\"image29.src=staticImage29.src;\">\n<img name=\"image29\" width=\"76\"
+        src=\"../images/buttons/enchantmentsbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"artifacts.html\" onMouseOver=\"image30.src=loadImage30.src;\" onMouseOut=\"image30.src=staticImage30.src;\">\n<img
+        name=\"image30\" width=\"76\" src=\"../images/buttons/artifactsbutton.jpg\"
+        border=0></a></td>\n<td valign=\"top\"><a href=\"land.html\" onMouseOver=\"image31.src=loadImage31.src;\"
+        onMouseOut=\"image31.src=staticImage31.src;\">\n<img name=\"image31\" width=\"76\"
+        src=\"../images/buttons/landbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"planeswalkers.html\" onMouseOver=\"image32.src=loadImage32.src;\" onMouseOut=\"image32.src=staticImage32.src;\">\n<img
+        name=\"image32\" width=\"76\" src=\"../images/buttons/planeswalkersbutton.jpg\"
+        border=0></a></td>\n\n<td valign=\"top\"><a href=\"eldrazi.html\" onMouseOver=\"image201.src=loadImage201.src;\"
+        onMouseOut=\"image201.src=staticImage201.src;\">\n<img name=\"image201\" width=\"76\"
+        src=\"../images/buttons/eldrazibutton.jpg\" border=0></a></td>\n</tr></table>\n<!--END
+        TYPE BUTTONS-->\n\n\n\n<br />\n<br />\n\n\n<table><tr><td align=\"center\">\n<center><div
+        id=\"728x90 btf\">\n<div style=\"position: relative;\" id='cdm-zone-04'></div>\n</div>\n</center></td></tr></table>\n\n<br
+        />\n<br />\n\n\n<div>\n<!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER-->\n<center>\n<table
+        valign=\"top\" cellpadding=\"1\" cellspacing=\"6\" style=\"background-image:url(http://www.mythicspoiler.com/images/transtable.png);width:800px;height:100px;border:0px
+        solid black;\">\n<tr valign=\"top\">\n\n<td>\n<table width=\"325\" valign=\"top\"
+        align=\"left\">\n<tr align=\"left\" valign=\"top\"><td valign=\"top\" align=\"left\"
+        colspan=\"5\"><font color=\"#888888\" size=\"+2\">MYTHICSPOILER.COM</font><br
+        /><font color=\"#9B764C\">THE CYCLICAL MTG SPOILER <Br /><br /><font size=\"-1\"
+        color=\"#666666\">MythicSpoiler is a dedicated visual spoiler, designed to
+        let you <b>EXPLORE, DISCOVER</b> and <b>EXPERIENCE</b> new <i>Magic the Gathering</i>
+        sets in a simple, sortable gallery. <br /><br />\n</font></font></td></tr><tr><td
+        align=\"left\">\n<font color=\"#333333\" size=\"+1\"><a href=\"/cdn-cgi/l/email-protection#0a67737e626369797a6563666f784a6d676b636624696567\"
+        style=\"text-decoration: none;color:#444444\">CONTACT US &nbsp;&nbsp;&nbsp;<a
+        href=\"http://www.mythicspoiler.com/privacypolicy.html\" style=\"text-decoration:
+        none;color:#444444;\">PRIVACY POLICY</a>\n\n</td>\n</tr>\n<tr>\n<td align=\"left\">\n<table><tr><Td><a
+        href=\"https://twitter.com/MythicSpoiler\" class=\"twitter-follow-button\"
+        data-show-count=\"false\">Follow @MythicSpoiler</a>&nbsp;&nbsp;&nbsp;\n<script>!function(d,s,id){var
+        js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=\"//platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>\n</Td><td>\n<div
+        class=\"fb-like-box\" data-href=\"https://www.facebook.com/MythicSpoiler\"
+        data-width=\"182\" data-height=\"70\" data-show-faces=\"false\" data-colorscheme=\"dark\"
+        data-stream=\"false\" data-header=\"true\"></div>\n</td></tr></table>\n</td>\n</tr>\n</table>\n</td>\n<td
+        bgcolor=\"#852900\" width=\"3\">\n\n</td>\n<td valign=\"top\"><br />\n<table
+        \ valign=\"top\" cellspacing=\"0\" style=\"background-image:url(http://www.mythicspoiler.com/images/transtablea.png);width:315px;height100px;border:2px
+        solid black;\">\n<tr valign=\"top\"><td valign=\"top\" colspan=\"5\"><font
+        color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/ktk/index.html\"
+        style=\"text-decoration: none;color:#888888;\">KHANS OF TARKIR</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/ktk/index.html\"
+        style=\"text-decoration: none\">INDEX</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/m15/index.html\"
+        style=\"text-decoration: none;color:#888888;\">MAGIC 2015</a></font><br />\n<font
+        color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/m15/index.html\"
+        style=\"text-decoration: none\">INDEX</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/cpy/index.html\"
+        style=\"text-decoration: none;color:#888888;\">CONSPIRACY SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/cpy/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/cpy/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/cpy/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/nyx/index.html\"
+        style=\"text-decoration: none;color:#888888;\">JOURNEY INTO NYX SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/nyx/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/nyx/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/nyx/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/bng/index.html\"
+        style=\"text-decoration: none;color:#888888;\">BORN OF THE GODS SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/bng/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/bng/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/bng/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/ths/index.html\"
+        style=\"text-decoration: none;color:#888888;\">THEROS SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/ths/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/ths/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/ths/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/m14/index.html\"
+        style=\"text-decoration: none;color:#888888;\">MAGIC 2014 SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/m14/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/m14/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/m14/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"-1\"><a href=\"http://www.mythicspoiler.com/sets.html\"
+        style=\"text-decoration: none;color:#888888;\">MORE EXPANSIONS</a></font><br
+        />\n</td></tr>\n\n</table></td>\n\n\n\n<td><div id=\"300x250 btf\">\n<div
+        style=\"position: relative;\" id='cdm-zone-03'></div>\n</div>\n</td>\n</tr></table>\n\n<br><font
+        size=\"-4\">\n<font color=\"#666666\">Magic: The Gathering is &trade; & &copy;
+        2015 Wizards of the Coast &nbsp; | &nbsp;   MythicSpoiler.com is unaffiliated
+        with Wizards of the Coast\n\n<Br />\n<br /><center>\n\n<br />\n<Br /><br /><br
+        /><br />\n<!--END FOOTER--><!--END FOOTER--><!--END FOOTER--><!--END FOOTER--><!--END
+        FOOTER--><!--END FOOTER--><!--END FOOTER-->\n</div>\n\n\n \n\n\n\n    \n<div
+        id='cdm-zone-end'></div>\n<!-- Begin comScore -->\n<script>\nvar _comscore
+        = _comscore || [];\n\n_comscore.push({ c1: \"2\", c2: \"6035118\" });\n\n(function()
+        {\n\n   var s = document.createElement(\"script\"), el = document.getElementsByTagName(\"script\")[0];
+        s.async = true;\n\n   s.src = (document.location.protocol == \"https:\" ?
+        \"https://sb\" : \"http://b\") + \".scorecardresearch.com/beacon.js\";\n\n
+        \  el.parentNode.insertBefore(s, el);\n\n})();\n</script>\n<noscript>\n   <img
+        src=\"http://b.scorecardresearch.com/p?c1=2&amp;c2=6035118&amp;cv=2.0&amp;cj=1\"
+        />\n</noscript>\n<!-- End comScore -->\n<!-- Nielsen Online SiteCensus -->\n<script
+        type=\"text/javascript\">\n(function () {\n\n   var d = new Image(1, 1);\n\n
+        \  d.onerror = d.onload = function () {\n\n       d.onerror = d.onload = null;\n\n
+        \  };\n\n   d.src = [\"//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&cg=0&cc=1&si=\",
+        escape(window.location.href), \"&rp=\", escape(document.referrer), \"&ts=compact&rnd=\",
+        (new Date()).getTime()].join('');\n\n})();\n</script>\n<noscript>\n   &lt;div&gt;&lt;img
+        src=\"//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&amp;amp;cg=0&amp;amp;cc=1&amp;amp;ts=noscript\"
+        width=\"1\" height=\"1\" alt=\"\" /&gt;&lt;/div&gt;\n</noscript>\n<!-- End
+        Nielsen Online SiteCensus -->\n\n<script src=\"http://mythicspoiler.com/scripts/mythicthesaurus.js\"></script>\n\n\n<map
+        name=\"Map\" id=\"Map\">\n  <area shape=\"rect\" coords=\"88,26,292,209\"
+        href=\"nissaoath.jpg\" />\n  <area shape=\"rect\" coords=\"291,27,488,211\"
+        href=\"jaceoath.jpg\" />\n  <area shape=\"rect\" coords=\"487,27,688,209\"
+        href=\"gideonoath.jpg\" />\n  <area shape=\"rect\" coords=\"687,30,888,202\"
+        href=\"chandraoath.jpg\" />\n</map>\n<script type=\"text/javascript\">\n/*
+        <![CDATA[ */\n(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName(\"a\"),t=document.createElement(\"textarea\");for(i=0;l.length-i;i++){try{a=l[i].getAttribute(\"href\");if(a&&a.indexOf(\"/cdn-cgi/l/email-protection\")
+        > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf(\"/cdn-cgi/l/email-protection\");if
+        (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,\"&lt;\").replace(/>/g,\"&gt;\");l[i].setAttribute(\"href\",\"mailto:\"+t.value);}}catch(e){}}}catch(e){}})();\n/*
+        ]]> */\n</script>\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Tue, 12 Jan 2016 04:29:26 GMT
+recorded_with: VCR 3.0.0
