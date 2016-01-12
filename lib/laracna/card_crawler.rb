@@ -1,11 +1,11 @@
-require 'open-uri'
+require "open-uri"
 
 class CardCrawler
   attr_reader :cards_attributes
 
   def initialize(url)
     document = JSON.parse open(url).read
-    @cards_attributes = document['cards']
+    @cards_attributes = document["cards"]
   end
 
   def ar_objects
@@ -14,21 +14,24 @@ class CardCrawler
 
   def build_card(data, factory = Card)
     factory.new(
-      artist: data['artist'],
+      artist: data["artist"],
       border: data["border"],
-      ctype: data['type'],
+      ctype: data["type"],
       flavor: data["flavor"],
-      image: "http://magiccards.info/scans/pt/#{data["set"].downcase}/#{data["number"]}.jpg",
+      image: "http://magiccards.info/scans/pt/#{data['set'].downcase}/#{data['number']}.jpg",
       layout: data["layout"],
-      mana_cost: data['manaCost'],
-      name: data['name'],
-      original_text: data['originalText'],
+      mana_cost: data["manaCost"],
+      name: data["name"],
+      original_text: data["originalText"],
       original_type: data["originalType"],
-      portuguese_name: data["foreignNames"].to_a.find {|i| i["language"] == "Portuguese (Brazil)"}.to_h.fetch("name"){data["name"]},
-      rarity: data['rarity'],
-      set: data['set'],
+      portuguese_name: data["foreignNames"].to_a
+        .find {|i| i["language"] == "Portuguese (Brazil)"}
+        .to_h
+        .fetch("name") { data["name"] },
+      rarity: data["rarity"],
+      set: data["set"],
       supertypes: data["supertypes"],
-      toughness: data['toughness'],
+      toughness: data["toughness"],
 
       cmc: data["cmc"].to_i,
       loyalty: data["loyalty"].to_i,
@@ -57,13 +60,16 @@ class CardCrawlerPreview
 
   def card_list_urls
     @document.search("a")
-      .find_all {|i| i.attribute('href').text.match('cards')}
-      .map {|i| i.attribute('href').text}
+      .find_all { |i| i.attribute("href").text.match("cards") }
+      .map { |i| i.attribute("href").text }
+  end
+
+  def ar_attributes
+    %i{name mana_cost ctype original_text artist power}
   end
 
   def card_attributes(card_url)
     document = Nokogiri::HTML open card_url
-    ar_attributes = %i{name mana_cost ctype original_text artist power}
 
     html_data = document
       .search("center table")[4]
