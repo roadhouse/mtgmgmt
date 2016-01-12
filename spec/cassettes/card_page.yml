@@ -1,0 +1,471 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://mythicspoiler.com/ogw/cards/generaltazri.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 12 Jan 2016 05:57:37 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d8faeecac9568bedf49ad99d4507cd6a71452578257; expires=Wed, 11-Jan-17
+        05:57:37 GMT; path=/; domain=.mythicspoiler.com; HttpOnly
+      Last-Modified:
+      - Fri, 08 Jan 2016 20:14:23 GMT
+      Etag:
+      - W/"a80fa6-9309-528d83bb8eee1"
+      Cache-Control:
+      - max-age=0
+      Expires:
+      - Tue, 12 Jan 2016 05:57:37 GMT
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 26369ffe531b0ee5-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n\n\n<!--TITLE and META DESCRIPTION-->\n<title>General
+        Tazri | OATH OF THE GATEWATCH MTG Visual Spoiler </title>\n<meta name=\"description\"
+        content=\"MYTHICSPOILER.COM | The Visual Magic the Gathering Spoiler | Browse
+        OATH OF THE GATEWATCH MTG cards by Cycles, Colors, Card Types and more..\">\n<!--KEEP
+        AS IS--><meta property=\"og:image\" content=\"http://mythicspoiler.com/ogw/cards/generaltazri.jpg\"/>\n\n\n\n<!--LINE
+        437 COLLAPSE TO CONTENT-->\n<!--LINE 437 COLLAPSE TO CONTENT-->\n<!--LINE
+        437 COLLAPSE TO CONTENT-->\n<!--LINE 437 COLLAPSE TO CONTENT-->\n\n\n<!--BACKGROUND--><!--BACKGROUND--><!--BACKGROUND--><!--BACKGROUND--><!--BACKGROUND-->\n<link
+        rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/images/mythicon16.png\"
+        />\n<link rel=\"icon\" type=\"image/png\" sizes=\"24x24\" href=\"/images/mythicon24.png\"
+        />\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/images/mythicon32.png\"
+        />\n<link rel=\"apple-touch-icon-precomposed\" media=\"screen and (resolution:
+        163dpi)\" href=\"/images/mythicon57.png\" />\n<link rel=\"apple-touch-icon-precomposed\"
+        media=\"screen and (resolution: 132dpi)\" href=\"/images/mythicon72.png\"
+        />\n<link rel=\"apple-touch-icon-precomposed\" media=\"screen and (resolution:
+        326dpi)\" href=\"/images/mythicon114.png\" />\n<meta name=\"viewport\"content=\"width=1000\"/>\n\n<meta
+        property=\"fb:app_id\" content=\"472970686058427\"/>\n<style type=\"text/css\">\nbody\n{\n\tbackground-image:
+        url('../zendikarbg4.jpg');\n\tbackground-repeat: repeat;\n\tbackground-attachment:
+        fixed;\n\tbackground-position: center top;\n\tcolor: #89490E;\n}\n</style>\n<!--END
+        BACKGROUND--><!--END BACKGROUND--><!--END BACKGROUND--><!--END BACKGROUND--><!--END
+        BACKGROUND-->\n\n\n<!--Curse Head Code-->\n<script>\nvar script = document.createElement('script');\nvar
+        tstamp = new Date();\nscript.id = 'factorem';\nscript.src = 'http://cdm.cursecdn.com/js/mythicspoiler/cdmfactorem_min.js?misc='
+        + tstamp.getTime();\nscript.async = false;\nscript.type='text/javascript';\ndocument.head.appendChild(script);\n</script>\n\n\n<!--CODE
+        NONSENSE--><!--CODE NONSENSE--><!--CODE NONSENSE--><!--CODE NONSENSE--><!--CODE
+        NONSENSE--><!--CODE NONSENSE-->\n<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js\"></script>\n<script>\n
+        \   $(document).ready(function() {\n        $('.fb-comments').attr(\"data-href\",
+        document.URL);\n    });\n</script>\n<style type=\"text/css\">\n@font-face
+        {\n\tfont-family: 'mythicfont';\n\tsrc: url('http://mythicspoiler.com/css/mythicbold.ttf');
+        \n\tsrc: \n\t\tlocal('Walkway ultraBold'),\n\t\tlocal('Walkway_ultraBold'),\n\t\turl('http://mythicspoiler.com/css/mythicbold.ttf')
+        \n\t\tformat('truetype');\n}\n\n\n#search {\n\n}\n\n#search input[type=\"text\"]
+        {\n\tbackground: url(../../images/searchglass.png) no-repeat 5px 2px #333;\n\tborder:
+        0 none;\n\tfont: bold 12px Arial,Helvetica,Sans-serif;\n\tcolor: #FF9933;\n\twidth:
+        170px;\n\theight: 16px;\n\tpadding: 1px 10px 1px 23px;\n\t-webkit-transition:
+        all 1.7s ease 0s;\n\t-moz-transition: all 1.7s ease 0s;\n\t-o-transition:
+        all 1.7s ease 0s;\n\ttransition: all 1.7s ease 0s;\n    }\n#search input[type=\"text\"]:focus
+        {\nbackground: url(../../images/searchglass.png) no-repeat 5px 2px #555555;\n
+        outline: 0 none;\n\n    }\n \n.screen-only\n{\n\t display: block;\n}\n.mobile-only\n{\n\t
+        display: none;\n}\n\n@media screen and (max-width: 1000px)  \n{\n\t .screen-only\n\t
+        {\n\t \t display: none;\n\t\t\n\t }\n\n\t .mobile-only\n\t {\n\t \t display:
+        block;\n\t }\n}\n #banner-table {\n\n    width: 100%;\n    height: 200px;\n
+        \   padding: 0;\n    margin: 0;\n    border-collapse: collapse;\n    table-layout:
+        fixed;\n}\n\n#left-image {\n\ttop:0; left:50%;\n    margin-left:-700px;\n
+        \   width:200px;\n    height:200px;\n\n    position:absolute;\n    background-image:
+        url();\n    background-position: right;\n    background-repeat: repeat-x;\n}\n\n#center-image
+        {\n\n    width:1000px;\n\n    \n}\n#center-image div {\n    top:0; left:50%;\n
+        \   margin-left:-500px;\n    width:1000px;\n    height:200px;\n\n    position:absolute;\n
+        \   \n}\n::-webkit-input-placeholder {\n    color:    #545454;\n}\n:-moz-placeholder
+        {\n    color:    #545454;\n}\n::-moz-placeholder {\n    color:    #545454;\n}\n:-ms-input-placeholder
+        {\n    color:    #545454;\n}\n\n</style>\n</head>\n<script type=\"text/javascript\">\n
+        \ var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-34649935-1']);\n
+        \ _gaq.push(['_trackPageview']);\n  (function() {\n    var ga = document.createElement('script');
+        ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol
+        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var
+        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\n  })();\n</script>\n<!--END CODE NONSENSE--><!--END CODE NONSENSE--><!--END
+        CODE NONSENSE--><!--END CODE NONSENSE-->\n\n\n<!--GENERIC BUTTON LOAD--><!--GENERIC
+        BUTTON LOAD--><!--GENERIC BUTTON LOAD--><!--GENERIC BUTTON LOAD-->\n<SCRIPT
+        LANGUAGE=\"JavaScript\">\n<!-- Begin\nloadImage13 = new Image();\nloadImage13.src
+        = \"http://mythicspoiler.com/images/newlogotopon.png\";\nstaticImage13 = new
+        Image();\nstaticImage13.src = \"http://mythicspoiler.com/images/newlogotop.png\";\n\nloadImage14
+        = new Image();\nloadImage14.src = \"http://mythicspoiler.com/images/newlogonewon.png\";\nstaticImage14
+        = new Image();\nstaticImage14.src = \"http://mythicspoiler.com/images/newlogonewoff.png\";\n\nloadImage15
+        = new Image();\nloadImage15.src = \"http://mythicspoiler.com/images/newlogocycleson.png\";\nstaticImage15
+        = new Image();\nstaticImage15.src = \"http://mythicspoiler.com/images/newlogocyclesoff.png\";\n\nloadImage17
+        = new Image();\nloadImage17.src = \"http://mythicspoiler.com/images/newlogoexpon.png\";\nstaticImage17
+        = new Image();\nstaticImage17.src = \"http://mythicspoiler.com/images/newlogoexpoff.png\";\n<!--END
+        MAIN NAV-->\n\n\n\n\nloadImage1 = new Image();\nloadImage1.src = \"http://mythicspoiler.com/images/buttons/menubutton1ogwbright.jpg\";\nstaticImage1
+        = new Image();\nstaticImage1.src = \"http://mythicspoiler.com/images/buttons/menubutton1ogw.jpg\";\n\nloadImage2
+        = new Image();\nloadImage2.src = \"http://mythicspoiler.com/images/buttons/ureflectionbright.jpg\";\nstaticImage2
+        = new Image();\nstaticImage2.src = \"http://mythicspoiler.com/images/buttons/ureflection.jpg\";\n\nloadImage3
+        = new Image();\nloadImage3.src = \"http://mythicspoiler.com/images/buttons/breflectionbright.jpg\";\nstaticImage3
+        = new Image();\nstaticImage3.src = \"http://mythicspoiler.com/images/buttons/breflection.jpg\";\n\nloadImage4
+        = new Image();\nloadImage4.src = \"http://mythicspoiler.com/images/buttons/rreflectionbright.jpg\";\nstaticImage4
+        = new Image();\nstaticImage4.src = \"http://mythicspoiler.com/images/buttons/rreflection.jpg\";\n\nloadImage5
+        = new Image();\nloadImage5.src = \"http://mythicspoiler.com/images/buttons/greflectionbright.jpg\";\nstaticImage5
+        = new Image();\nstaticImage5.src = \"http://mythicspoiler.com/images/buttons/greflection.jpg\";\n\nloadImage10
+        = new Image();\nloadImage10.src = \"http://mythicspoiler.com/images/buttons/artifactsreflectionbright.jpg\";\nstaticImage10
+        = new Image();\nstaticImage10.src = \"http://mythicspoiler.com/images/buttons/artifactsreflection.jpg\";\n\nloadImage11
+        = new Image();\nloadImage11.src = \"http://mythicspoiler.com/images/buttons/landreflectionbright.jpg\";\nstaticImage11
+        = new Image();\nstaticImage11.src = \"http://mythicspoiler.com/images/buttons/landreflection.jpg\";\n\n\nloadImage21
+        = new Image();\nloadImage21.src = \"http://mythicspoiler.com/images/buttons/wbuttonbright.jpg\";\nstaticImage21
+        = new Image();\nstaticImage21.src = \"http://mythicspoiler.com/images/buttons/wbutton.jpg\";\n\nloadImage22
+        = new Image();\nloadImage22.src = \"http://mythicspoiler.com/images/buttons/ubuttonbright.jpg\";\nstaticImage22
+        = new Image();\nstaticImage22.src = \"http://mythicspoiler.com/images/buttons/ubutton.jpg\";\n\nloadImage23
+        = new Image();\nloadImage23.src = \"http://mythicspoiler.com/images/buttons/bbuttonbright.jpg\";\nstaticImage23
+        = new Image();\nstaticImage23.src = \"http://mythicspoiler.com/images/buttons/bbutton.jpg\";\n\nloadImage24
+        = new Image();\nloadImage24.src = \"http://mythicspoiler.com/images/buttons/rbuttonbright.jpg\";\nstaticImage24
+        = new Image();\nstaticImage24.src = \"http://mythicspoiler.com/images/buttons/rbutton.jpg\";\n\nloadImage25
+        = new Image();\nloadImage25.src = \"http://mythicspoiler.com/images/buttons/gbuttonbright.jpg\";\nstaticImage25
+        = new Image();\nstaticImage25.src = \"http://mythicspoiler.com/images/buttons/gbutton.jpg\";\n\nloadImage30
+        = new Image();\nloadImage30.src = \"http://mythicspoiler.com/images/buttons/artifactsbuttonbright.jpg\";\nstaticImage30
+        = new Image();\nstaticImage30.src = \"http://mythicspoiler.com/images/buttons/artifactsbutton.jpg\";\n\nloadImage31
+        = new Image();\nloadImage31.src = \"http://mythicspoiler.com/images/buttons/landbuttonbright.jpg\";\nstaticImage31
+        = new Image();\nstaticImage31.src = \"http://mythicspoiler.com/images/buttons/landbutton.jpg\";\n\nloadImage6
+        = new Image();\nloadImage6.src = \"http://mythicspoiler.com/images/buttons/creaturesreflectionbright.jpg\";\nstaticImage6
+        = new Image();\nstaticImage6.src = \"http://mythicspoiler.com/images/buttons/creaturesreflection.jpg\";\n\nloadImage7
+        = new Image();\nloadImage7.src = \"http://mythicspoiler.com/images/buttons/instantsreflectionbright.jpg\";\nstaticImage7
+        = new Image();\nstaticImage7.src = \"http://mythicspoiler.com/images/buttons/instantsreflection.jpg\";\n\nloadImage8
+        = new Image();\nloadImage8.src = \"http://mythicspoiler.com/images/buttons/sorceriesreflectionbright.jpg\";\nstaticImage8
+        = new Image();\nstaticImage8.src = \"http://mythicspoiler.com/images/buttons/sorceriesreflection.jpg\";\n\nloadImage9
+        = new Image();\nloadImage9.src = \"http://mythicspoiler.com/images/buttons/enchantmentsreflectionbright.jpg\";\nstaticImage9
+        = new Image();\nstaticImage9.src = \"http://mythicspoiler.com/images/buttons/enchantmentsreflection.jpg\";\n\nloadImage12
+        = new Image();\nloadImage12.src = \"http://mythicspoiler.com/images/buttons/planeswalkersreflectionbright.jpg\";\nstaticImage12
+        = new Image();\nstaticImage12.src = \"http://mythicspoiler.com/images/buttons/planeswalkersreflection.jpg\";\n\nloadImage26
+        = new Image();\nloadImage26.src = \"http://mythicspoiler.com/images/buttons/creaturesbuttonbright.jpg\";\nstaticImage26
+        = new Image();\nstaticImage26.src = \"http://mythicspoiler.com/images/buttons/creaturesbutton.jpg\";\n\nloadImage27
+        = new Image();\nloadImage27.src = \"http://mythicspoiler.com/images/buttons/instantsbuttonbright.jpg\";\nstaticImage27
+        = new Image();\nstaticImage27.src = \"http://mythicspoiler.com/images/buttons/instantsbutton.jpg\";\n\nloadImage28
+        = new Image();\nloadImage28.src = \"http://mythicspoiler.com/images/buttons/sorceriesbuttonbright.jpg\";\nstaticImage28
+        = new Image();\nstaticImage28.src = \"http://mythicspoiler.com/images/buttons/sorceriesbutton.jpg\";\n\nloadImage29
+        = new Image();\nloadImage29.src = \"http://mythicspoiler.com/images/buttons/enchantmentsbuttonbright.jpg\";\nstaticImage29
+        = new Image();\nstaticImage29.src = \"http://mythicspoiler.com/images/buttons/enchantmentsbutton.jpg\";\n\nloadImage32
+        = new Image();\nloadImage32.src = \"http://mythicspoiler.com/images/buttons/planeswalkersbuttonbright.jpg\";\nstaticImage32
+        = new Image();\nstaticImage32.src = \"http://mythicspoiler.com/images/buttons/planeswalkersbutton.jpg\";\n\nloadImage200
+        = new Image();\nloadImage200.src = \"http://mythicspoiler.com/images/buttons/eldrazireflectionbright.jpg\";\nstaticImage200
+        = new Image();\nstaticImage200.src = \"http://mythicspoiler.com/images/buttons/eldrazireflection.jpg\";\n\nloadImage201
+        = new Image();\nloadImage201.src = \"http://mythicspoiler.com/images/buttons/eldrazibuttonbright.jpg\";\nstaticImage201
+        = new Image();\nstaticImage201.src = \"http://mythicspoiler.com/images/buttons/eldrazibutton.jpg\";\n//
+        End -->\n</script>\n<!--END BUTTON IMAGE LOAD--><!--END BUTTON IMAGE LOAD--><!--END
+        BUTTON IMAGE LOAD--><!--END BUTTON IMAGE LOAD-->\n\n\n\n<!--START OF ACTUAL
+        PAGE--><!--START OF ACTUAL PAGE--><!--START OF ACTUAL PAGE--><!--START OF
+        ACTUAL PAGE-->\n<body topmargin=\"0\"  link=\"#CC6633\" vlink=\"#CC6633\"
+        alink=\"#FF9900\" bgcolor=\"0\">\n\n\n\n<table width=\"1000\" height=\"22\"
+        bgcolor=\"#000000\" align=\"center\"><b><tr>\n<td width=\"770\"><nobr>\n<link
+        href=\"../../css/css_flyouthorizontalmenu.css\" type=\"text/css\" rel=\"Stylesheet\">\n
+        \   <div id=\"menuwrapper\"><font color=\"#AD5000\"><font size=3>\n        <ul>\n
+        \           <li><a href=\"http://mythicspoiler.com\">Home</a> &nbsp &nbsp|
+        &nbsp</li>\n            <li><a href=\"../index.html\"><img src=\"../../images/ogw.png\">
+        </a>\n              <ul>\n                     <li><a valign=\"top\" href=\"../../m14\"><img
+        src=\"../../images/m14.png\" />MAGIC 2014</a></li>\n                <li><a
+        href=\"../../mdm\"><img src=\"../../images/mdm.png\" />MODERN MASTERS </a></li>\n
+        \               <li><a href=\"../../dgm\"><img src=\"../../images/dgm.png\"
+        />DRAGON'S MAZE </a></li>\n                    <li><a href=\"../../gtc/guilds.html\"><img
+        src=\"../../images/gtc.png\" />GATECRASH </a></li>\n                    <li><a
+        href=\"../../rtr\"><img src=\"../../images/rtr.png\" />RETURN TO RAVNICA</a></li>\n
+        \                   <li><a href=\"../../m14\"><img src=\"../../images/m14.png\"
+        />MAGIC 2014</a></li>\n                  \n                <li><a href=\"../../sets.html\"><img
+        src=\"../../images/dotdotdot.png\" />MORE SETS</a></li>\n                    \n
+        \               </ul>\n            </li>\n            <li><a href=\"../index.html\">
+        OATH OF THE GATEWATCH 184/184</a>&nbsp&nbsp|&nbsp&nbsp           \n            </li>\n
+        \            <li><font size=-1>Sort by:</a> &nbsp        \n            </li>\n
+        \           <div id=\"menuwrappersmaller\">\n            <ul>\n            <li><a
+        href=\"#\"><font size=-1>SINGLES </a><font size=3>&nbsp&nbsp|&nbsp&nbsp\n
+        \             <ul><font size=-1>\n              <li><a href=\"../index.html\">COLORS</a></li>\n
+        \                    <li><a href=\"../cycles.html\">CYCLES</a></li>\n               \t\t
+        <li><a href=\"../numbercrunch.html\">NUMBER</a></li>\n              </ul>\n
+        \           </li>\n             <li><a href=\"#feature\"><font color=\"#FF3300\"
+        link=\"#FF3300\" vlink=\"#FF3300\" size=3> </a>           \n            </li>\n
+        \           <li><a href=\"#feature2\"><font color=\"#FF3300\" link=\"#FF3300\"
+        vlink=\"#FF3300\" size=3> </a>           \n            </li>\n        </ul>\n
+        \   </div>\n    </nobr>\n\n</td><td valign=\"center\">\n\n<form  id=\"search\"
+        method=\"get\" id=\"searchbox_005189263914311744150:r83fvj6lw3q\" action=\"http://mythicspoiler.com/search.html\">\n<input
+        value=\"005189263914311744150:r83fvj6lw3q\" name=\"cx\" type=\"hidden\"/>
+        \n<input value=\"FORID:11\" name=\"cof\" type=\"hidden\"/> \n<input  id=\"q\"
+        name=\"q\" size=\"70\" type=\"text\" placeholder=\"Card Search...\" /> \n</form>\n
+        \         </td><td><a href=\"https://facebook.com/MythicSpoiler\"><img src=\"../../images/facebook.jpg\"
+        /></a></td><td><a href=\"https://twitter.com/MythicSpoiler\"><img src=\"../../images/twitterbird.jpg\"
+        /></a></td></tr></table>\n<!--END GTC NAVIGATION--><!--END GTC NAVIGATION--><!--END
+        GTC NAVIGATION--><!--END GTC NAVIGATION--><!--END GTC NAVIGATION-->\n\n\n<!--MAIN
+        NAVIGATION--><!--MAIN NAVIGATION--><!--MAIN NAVIGATION--><!--MAIN NAVIGATION--><!--MAIN
+        NAVIGATION-->\n<center>\n<table width=\"1000\" cellpadding=\"0\" cellspacing=\"0\"
+        align=\"center\" valign=\"top\">\n<tr>\n<td width=\"175\"></td><td colspan=\"3\"
+        width=\"650\">\n<a href=\"http://mythicspoiler.com\" onMouseOver=\"image13.src=loadImage13.src;\"
+        onMouseOut=\"image13.src=staticImage13.src;\">\n<img name=\"image13\" border=0
+        src=\"../../images/newlogotop.png\"></a></td></tr>\n<tr><td></td><td width=\"651\"><a
+        href=\"../../newspoilers.html\" onMouseOver=\"image14.src=loadImage14.src;\"
+        onMouseOut=\"image14.src=staticImage14.src;\">\n<img align=\"left\" hspace=\"0\"
+        name=\"image14\" border=0 src=\"../../images/newlogonewoff.png\"></a>\n<a
+        href=\"../cycles.html\" onMouseOver=\"image15.src=loadImage15.src;\" onMouseOut=\"image15.src=staticImage15.src;\">\n<img
+        align=\"left\" hspace=\"0\" name=\"image15\" border=0 src=\"../../images/newlogocyclesoff.png\"></a>\n<a
+        href=\"../../sets.html\" onMouseOver=\"image17.src=loadImage17.src;\" onMouseOut=\"image17.src=staticImage17.src;\">\n<img
+        align=\"left\" hspace=\"0\" name=\"image17\" border=0 src=\"../../images/newlogoexpoff.png\"></a>\n</td><td
+        width=173></td></tr></table>\n<!--END MAIN NAVIGATION--><!--END MAIN NAVIGATION--><!--END
+        MAIN NAVIGATION--><!--END MAIN NAVIGATION-->\n\n<table><tr><td>\n<center><div
+        id=\"728x90 atf\">\n<div style=\"position: relative;\" id='cdm-zone-01'></div></div>\n</center></td></tr></table>\n\n<!--DGM
+        GUILD BUTTONS--><!--DGM GUILD BUTTONS--><!--DGM GUILD BUTTONS--><!--DGM GUILD
+        BUTTONS--><!--DGM GUILD BUTTONS-->\n<table width=\"1005\"  valign=\"top\"
+        border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n<tr><td colspan=\"18\"
+        valign=\"bottom\"><img align=\"left\" hspace=\"0\" width=\"950\" src=\"../../images/buttons/menutitleogw.png\"
+        /></td></tr>\n<tr><td><a href=\"../index.html\"><img align=\"left\" height=\"130\"
+        hspace=\"0\"src=\"../../images/buttons/menubuttonogw.png\" /></a>\n<a href=\"../w.html\"
+        onMouseOver=\"image1.src=loadImage1.src;\" onMouseOut=\"image1.src=staticImage1.src;\">\n<img
+        align=\"left\" hspace=\"0\" name=\"image1\" height=\"130\" border=0 src=\"../../images/buttons/menubutton1ogw.jpg\"></a>\n\n<a
+        href=\"../u.html\" onMouseOver=\"image2.src=loadImage2.src;\" onMouseOut=\"image2.src=staticImage2.src;\">\n<img
+        align=\"left\" hspace=\"0\" width=\"67\" height=\"130\" name=\"image2\" border=0
+        src=\"../../images/buttons/ureflection.jpg\" /></a>\n<a href=\"../b.html\"
+        onMouseOver=\"image3.src=loadImage3.src;\" onMouseOut=\"image3.src=staticImage3.src;\">\n<img
+        align=\"left\" hspace=\"0\" width=\"67\" height=\"130\" name=\"image3\" border=0
+        src=\"../../images/buttons/breflection.jpg\" /></a>\n<a href=\"../r.html\"
+        onMouseOver=\"image4.src=loadImage4.src;\" onMouseOut=\"image4.src=staticImage4.src;\">\n<img
+        align=\"left\" hspace=\"0\" width=\"67\" height=\"130\" name=\"image4\" border=0
+        src=\"../../images/buttons/rreflection.jpg\" /></a>\n<a href=\"../g.html\"
+        onMouseOver=\"image5.src=loadImage5.src;\" onMouseOut=\"image5.src=staticImage5.src;\">\n<img
+        align=\"left\" hspace=\"0\" width=\"67\" height=\"130\" name=\"image5\" border=0
+        src=\"../../images/buttons/greflection.jpg\" /></a>\n\n<a href=\"../creatures.html\"
+        onMouseOver=\"image6.src=loadImage6.src;\" onMouseOut=\"image6.src=staticImage6.src;\">\n<img
+        name=\"image6\" align=\"left\" hspace=\"0\" width=\"67\" height=\"130\" src=\"../../images/buttons/creaturesreflection.jpg\"
+        border=0></a>\n<a href=\"../instants.html\" onMouseOver=\"image7.src=loadImage7.src;\"
+        onMouseOut=\"image7.src=staticImage7.src;\">\n<img name=\"image7\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../../images/buttons/instantsreflection.jpg\"
+        border=0></a>\n<a href=\"../sorceries.html\" onMouseOver=\"image8.src=loadImage8.src;\"
+        onMouseOut=\"image8.src=staticImage8.src;\">\n<img name=\"image8\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../../images/buttons/sorceriesreflection.jpg\"
+        border=0></a>\n<a href=\"../enchantments.html\" onMouseOver=\"image9.src=loadImage9.src;\"
+        onMouseOut=\"image9.src=staticImage9.src;\">\n<img name=\"image9\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\"src=\"../../images/buttons/enchantmentsreflection.jpg\"
+        border=0></a>\n<a href=\"../artifacts.html\" onMouseOver=\"image10.src=loadImage10.src;\"
+        onMouseOut=\"image10.src=staticImage10.src;\">\n<img name=\"image10\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../../images/buttons/artifactsreflection.jpg\"
+        border=0></a>\n<a href=\"../land.html\" onMouseOver=\"image11.src=loadImage11.src;\"
+        onMouseOut=\"image11.src=staticImage11.src;\">\n<img align=\"left\" hspace=\"0\"
+        width=\"67\" height=\"130\" name=\"image11\" border=0 src=\"../../images/buttons/landreflection.jpg\"
+        /></a>\n<a href=\"../planeswalkers.html\" onMouseOver=\"image12.src=loadImage12.src;\"
+        onMouseOut=\"image12.src=staticImage12.src;\">\n<img name=\"image12\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\"src=\"../../images/buttons/planeswalkersreflection.jpg\"
+        border=0></a>\n<a href=\"../eldrazi.html\" onMouseOver=\"image200.src=loadImage200.src;\"
+        onMouseOut=\"image200.src=staticImage200.src;\">\n<img name=\"image200\" align=\"left\"
+        hspace=\"0\" width=\"67\" height=\"130\" src=\"../../images/buttons/eldrazireflection.jpg\"
+        border=0></a>\n\n</td>\n</tr></table>\n<!--END DGM BUTTONS--><!--END DGM BUTTONS--><!--END
+        DGM BUTTONS--><!--END DGM BUTTONS--><!--END DGM BUTTONS--><!--END DGM BUTTONS-->\n\n\n\n
+        <div id=\"fb-root\"></div>\n<script>(function(d, s, id) {\n  var js, fjs =
+        d.getElementsByTagName(s)[0];\n  if (d.getElementById(id)) return;\n  js =
+        d.createElement(s); js.id = id;\n  js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=472970686058427\";\n
+        \ fjs.parentNode.insertBefore(js, fjs);\n}(document, 'script', 'facebook-jssdk'));</script>\n\n<!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT-->\n<!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT-->\n<!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT-->\n<!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT--><!--CONTENT-->\n\n<table
+        width=\"1000\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n<tr><td><br
+        /><!--ThespaceAboveCurrentContent-->\n</td></tr></table>\n<table width=\"1000\"
+        border=\"0\" cellpadding=\"0\" cellspacing=\"0\">\n<tr><td valign=\"top\"
+        width=\"265\" height=\"370\">\n<!--THE individual card--><!--Do Not EDIT-->\n<script>document.write('<img
+        src=\"' + location.pathname.replace(/\\.html$/, '.jpg') + '\">')</script>\n<!--
+        DELETE THIS LINE, ABOVE LINE and line 2 down TO ACTIVATE PROMO CODE BELOW\n<img
+        align=\"left\" hspace=\"0\" name=\"image99\" border=0 src=\"cardname.jpg\"
+        onMouseOver=\"image99.src=loadImage99.src;\" onMouseOut=\"image99.src=staticImage99.src;\"/>\nDELETE
+        THIS TOO-->\n</td><td width=\"270\" valign=\"top\" align=\"center\"><br><font
+        size=\"2\" face=\"Tahoma, Geneva, sans-serif\"><center>\n<table border=\"0\"
+        cellspacing=\"0\" cellpadding=\"5\" width=\"270\" height=\"328\" valign=\"top\"
+        align=\"center\" style=\"border: 0px solid white;color: white;\">\n<tr><td
+        colspan=\"2\" valign=\"top\"><font size=\"4\">\n\n<!--STEP 3:-->\n<!--CARD
+        TEXT--><!--CARD TEXT--><!--CARD TEXT--><!--CARD TEXT--><!--CARD TEXT--><!--CARD
+        TEXT--><!--CARD TEXT--><!--CARD TEXT-->\n<!--CARD TEXT--><!--CARD TEXT--><!--CARD
+        TEXT--><!--CARD TEXT--><!--CARD TEXT--><!--CARD TEXT--><!--CARD TEXT--><!--CARD
+        TEXT-->\n<!--CARD NAME-->\nGeneral Tazri\n\n</font></b></td></tr><tr><td colspan=\"2\"
+        valign=\"top\">\n\n<!--MANA COST-->\n4W\n\n</td></tr><tr><td colspan=\"2\"
+        valign=\"top\">\n\n<!--TYPE-->\nLegendary Creature - Human Ally\n\n</td></tr><tr><td
+        colspan=\"2\" valign=\"top\">\n\n<!--CARD TEXT-->\nWhen General Tazri enters
+        the battlefield, you may search your library for an Ally creature card, reveal
+        it, put it into your hand, then shuffle your library.<br />\n<br />WUBRG:
+        Ally creatures you control get +X/+X until end of turn, where X is the number
+        of colors among those creatures.\n\n\n</td></tr><tr><td colspan=\"2\" valign=\"top\"
+        ><i>\n\n<!--FLAVOR TEXT-->\n\n\n</i></td></tr><tr><td colspan=\"2\" valign=\"top\"></td></tr><tr><td
+        width=\"210\" valign=\"bottom\" ><font size=\"1\">\n\n<!--ILLUS-->\nIllus.
+        Chris Rahn\n\n<!--Set Number--><i>\n\n\n</i></font></td><td  valign=\"bottom\"
+        align=\"left\"><font size=\"2\"> \n\n<!--P/T-->\n3/4\n \n<!--END CARD TEXT--><!--END
+        CARD TEXT--><!--END CARD TEXT--><!--END CARD TEXT--><!--END CARD TEXT--><!--END
+        CARD TEXT-->\n<!--END CARD TEXT--><!--END CARD TEXT--><!--END CARD TEXT--><!--END
+        CARD TEXT--><!--END CARD TEXT--><!--END CARD TEXT-->\n\n</td></tr></table>\n<table
+        align=\"left\">\n <!--DELETE THIS LINE and one below to enable sourcing\n<tr
+        ><td>\n<font color=\"#555555\" size=\"-2\">\nUNOFFICIAL MOCKUP<br /></font>\n<font
+        color=\"#666666\">Source:</font> <a href=\"url.com\">WebsiteName</a><br><br>\n</td></tr>\nDELETE
+        THIS LINE TOO-->\n<tr>\n<td align=\"left\" valign=\"bottom\" >\n<a href=\"http://store.channelfireball.com/products/search?query=general+tazri\"><img
+        align=\"left\" width=\"280\" src=\"../../images/cfbstore.png\"  target=\"_blank\"/></a>\n</td></tr></table>\n</td><td
+        rowspan=2 gcolor=\"#FF6633\" width=\"2\"></td><td valign=\"top\" rowspan=2
+        width=\"428\"> \n<table valign=\"top\" topmargin=\"0\" width=\"430\"><tr valign=\"top\"><td
+        valign=\"top\">\n<!--Facebookbox-->\n<div class=\"fb-comments\" data-href=\"http://mythicspoiler.com\"
+        \n  data-width=\"430\" data-num-posts=\"8\" data-colorscheme=\"dark\"></div>\n</td></tr></table>\n</td></tr><tr>\n<td
+        colspan=2 align=\"left\" valign=\"top\"><center><br />\n<img align=\"left\"
+        hspace=\"0\" width=\"565\" src=\"../../images/theasaurus.png\">\n\n<!--STEP
+        4:-->\n<!--THEASAURUS--><!--THEASAURUS--><!--THEASAURUS--><!--THEASAURUS--><!--THEASAURUS--><!--THEASAURUS--><!--THEASAURUS-->\n<!--
+        add h \\/ to make href(linkactive) i \\/ to make img (imageactive)-->\t\t\t\t\t\t\t\n\t
+        \ \t<a  href=\"../../nms/cards/linsivvidefianthero.html\">   <img align=\"left\"
+        \ width=\"188\" src=\"../../nms/cards/linsivvidefianthero.jpg\"></a>\n\t  \t<a
+        \ href=\"../../som/cards/trinketmage.html\">   <mg align=\"left\"  width=\"188\"
+        src=\"../../som/cards/trinketmage.jpg\"></a>\n\t\t<a  href=\"../../c14/cards/jazalgoldmane.html\">
+        \  <img align=\"left\"  width=\"188\" src=\"../../c14/cards/jazalgoldmane.jpg\"></a>\n\n<img
+        align=\"left\" hspace=\"0\" width=\"565\" height=\"20\" src=\"../../images/invis.png\">\n\n
+        \ <table><tr height=\"260\"><td width=\"300\">\n      <div  id=\"300x250 atf\"
+        style=\" display: inline-; float: left;\">  <div style=\"position: relative;
+        display: inline; float: left;\" id='cdm-zone-02'></div>\n  </td><td valign=\"top\"
+        width=\"250\">\n      \n      <section style=\"border: 0px; outline: 0; display:
+        inline;\" class=\"expandable\" data-directive=\"expandable\">\n  <div style=\"display:
+        inline; float: left; border: 0px; outline: 0;\" class=\"expandable__summary\"
+        data-behaviour=\"button\">\n    <img style=\"border: 0px; outline: 0; width:
+        245;\" src=\"../../images/buttons/submitathesaurus.png\" />\n       </div>\n\t
+        <div id=\"content-02\" class=\"expandable__content\" data-behaviour=\"content\">\n
+        \   <iframe frameborder=\"none\" src=\"http://www.mythicspoiler.com/form/form.php\"
+        allowTransparency=\"true\" style=\"width:240px;height:200px;border:none;\"></iframe>
+        </div>\n </div> \n</section></td></tr></table>\n\n\n\n</td></tr></table><br><br>\n<!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT-->\n<!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT-->\n<!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT-->\n<!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT-->\n<!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT-->\n<!--END CONTENT--><!--END CONTENT--><!--END
+        CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT--><!--END CONTENT-->\n\n\n\n\n\n\n\n\n\n\n<!--BOTTOM
+        TYPE BUTTONS--><!--BOTTOM TYPE BUTTONS--><!--BOTTOM TYPE BUTTONS--><!--BOTTOM
+        TYPE BUTTONS--><!--BOTTOM TYPE BUTTONS-->\n<br />\n<table width=\"1000\" border=\"0\"
+        cellpadding=\"0\" cellspacing=\"0\">\n<tr>\n<td valign=\"top\"><a href=\"../w.html\"
+        onMouseOver=\"image21.src=loadImage21.src;\" onMouseOut=\"image21.src=staticImage21.src;\">\n<img
+        name=\"image21\" width=\"76\" src=\"../../images/buttons/wbutton.jpg\" border=0></a></td>\n<td
+        valign=\"top\"><a href=\"../u.html\" onMouseOver=\"image22.src=loadImage22.src;\"
+        onMouseOut=\"image22.src=staticImage22.src;\">\n<img name=\"image22\" width=\"76\"
+        src=\"../../images/buttons/ubutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"../b.html\" onMouseOver=\"image23.src=loadImage23.src;\" onMouseOut=\"image23.src=staticImage23.src;\">\n<img
+        name=\"image23\" width=\"76\" src=\"../../images/buttons/bbutton.jpg\" border=0></a></td>\n<td
+        valign=\"top\"><a href=\"../r.html\" onMouseOver=\"image24.src=loadImage24.src;\"
+        onMouseOut=\"image24.src=staticImage24.src;\">\n<img name=\"image24\" width=\"76\"
+        src=\"../../images/buttons/rbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"../g.html\" onMouseOver=\"image25.src=loadImage25.src;\" onMouseOut=\"image25.src=staticImage25.src;\">\n<img
+        name=\"image25\" width=\"76\" src=\"../../images/buttons/gbutton.jpg\" border=0></a></td>\n<td
+        valign=\"top\"><a href=\"../creatures.html\" onMouseOver=\"image26.src=loadImage26.src;\"
+        onMouseOut=\"image26.src=staticImage26.src;\">\n<img name=\"image26\" width=\"76\"
+        src=\"../../images/buttons/creaturesbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"../instants.html\" onMouseOver=\"image27.src=loadImage27.src;\" onMouseOut=\"image27.src=staticImage27.src;\">\n<img
+        name=\"image27\" width=\"76\" src=\"../../images/buttons/instantsbutton.jpg\"
+        border=0></a></td>\n<td valign=\"top\"><a href=\"../sorceries.html\" onMouseOver=\"image28.src=loadImage28.src;\"
+        onMouseOut=\"image28.src=staticImage28.src;\">\n<img name=\"image28\" width=\"76\"
+        src=\"../../images/buttons/sorceriesbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"../enchantments.html\" onMouseOver=\"image29.src=loadImage29.src;\"
+        onMouseOut=\"image29.src=staticImage29.src;\">\n<img name=\"image29\" width=\"76\"
+        src=\"../../images/buttons/enchantmentsbutton.jpg\" border=0></a></td>\n<td
+        valign=\"top\"><a href=\"../artifacts.html\" onMouseOver=\"image30.src=loadImage30.src;\"
+        onMouseOut=\"image30.src=staticImage30.src;\">\n<img name=\"image30\" width=\"76\"
+        src=\"../../images/buttons/artifactsbutton.jpg\" border=0></a></td>\n<td valign=\"top\"><a
+        href=\"../land.html\" onMouseOver=\"image31.src=loadImage31.src;\" onMouseOut=\"image31.src=staticImage31.src;\">\n<img
+        name=\"image31\" width=\"76\" src=\"../../images/buttons/landbutton.jpg\"
+        border=0></a></td>\n<td valign=\"top\"><a href=\"../planeswalkers.html\" onMouseOver=\"image32.src=loadImage32.src;\"
+        onMouseOut=\"image32.src=staticImage32.src;\">\n<img name=\"image32\" width=\"76\"
+        src=\"../../images/buttons/planeswalkersbutton.jpg\" border=0></a></td>\n\n<td
+        valign=\"top\"><a href=\"../eldrazi.html\" onMouseOver=\"image201.src=loadImage201.src;\"
+        onMouseOut=\"image201.src=staticImage201.src;\">\n<img name=\"image201\" width=\"76\"
+        src=\"../../images/buttons/eldrazibutton.jpg\" border=0></a></td>\n</tr></table>\n<!--END
+        TYPE BUTTONS-->\n\n\n\n<br />\n<br />\n\n\n<table><tr><td align=\"center\">\n<center><div
+        id=\"728x90 btf\">\n<div style=\"position: relative;\" id='cdm-zone-04'></div>\n</div>\n</center></td></tr></table>\n\n<br
+        />\n<br />\n\n\n<div>\n<!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER--><!--FOOTER-->\n<center>\n<table
+        valign=\"top\" cellpadding=\"1\" cellspacing=\"6\" style=\"background-image:url(http://www.mythicspoiler.com/images/transtable.png);width:800px;height:100px;border:0px
+        solid black;\">\n<tr valign=\"top\">\n\n<td>\n<table width=\"325\" valign=\"top\"
+        align=\"left\">\n<tr align=\"left\" valign=\"top\"><td valign=\"top\" align=\"left\"
+        colspan=\"5\"><font color=\"#888888\" size=\"+2\">MYTHICSPOILER.COM</font><br
+        /><font color=\"#9B764C\">THE CYCLICAL MTG SPOILER <Br /><br /><font size=\"-1\"
+        color=\"#666666\">MythicSpoiler is a dedicated visual spoiler, designed to
+        let you <b>EXPLORE, DISCOVER</b> and <b>EXPERIENCE</b> new <i>Magic the Gathering</i>
+        sets in a simple, sortable gallery. <br /><br />\n</font></font></td></tr><tr><td
+        align=\"left\">\n<font color=\"#333333\" size=\"+1\"><a href=\"/cdn-cgi/l/email-protection#cfa2b6bba7a6acbcbfa0a6a3aabd8fa8a2aea6a3e1aca0a2\"
+        style=\"text-decoration: none;color:#444444\">CONTACT US &nbsp;&nbsp;&nbsp;<a
+        href=\"http://www.mythicspoiler.com/privacypolicy.html\" style=\"text-decoration:
+        none;color:#444444;\">PRIVACY POLICY</a>\n\n</td>\n</tr>\n<tr>\n<td align=\"left\">\n<table><tr><Td><a
+        href=\"https://twitter.com/MythicSpoiler\" class=\"twitter-follow-button\"
+        data-show-count=\"false\">Follow @MythicSpoiler</a>&nbsp;&nbsp;&nbsp;\n<script>!function(d,s,id){var
+        js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=\"//platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>\n</Td><td>\n<div
+        class=\"fb-like-box\" data-href=\"https://www.facebook.com/MythicSpoiler\"
+        data-width=\"182\" data-height=\"70\" data-show-faces=\"false\" data-colorscheme=\"dark\"
+        data-stream=\"false\" data-header=\"true\"></div>\n</td></tr></table>\n</td>\n</tr>\n</table>\n</td>\n<td
+        bgcolor=\"#852900\" width=\"3\">\n\n</td>\n<td valign=\"top\"><br />\n<table
+        \ valign=\"top\" cellspacing=\"0\" style=\"background-image:url(http://www.mythicspoiler.com/images/transtablea.png);width:315px;height100px;border:2px
+        solid black;\">\n<tr valign=\"top\"><td valign=\"top\" colspan=\"5\"><font
+        color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/ktk/index.html\"
+        style=\"text-decoration: none;color:#888888;\">KHANS OF TARKIR</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/ktk/index.html\"
+        style=\"text-decoration: none\">INDEX</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/m15/index.html\"
+        style=\"text-decoration: none;color:#888888;\">MAGIC 2015</a></font><br />\n<font
+        color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/m15/index.html\"
+        style=\"text-decoration: none\">INDEX</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/cpy/index.html\"
+        style=\"text-decoration: none;color:#888888;\">CONSPIRACY SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/cpy/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/cpy/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/cpy/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/nyx/index.html\"
+        style=\"text-decoration: none;color:#888888;\">JOURNEY INTO NYX SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/nyx/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/nyx/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/nyx/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/bng/index.html\"
+        style=\"text-decoration: none;color:#888888;\">BORN OF THE GODS SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/bng/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/bng/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/bng/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/ths/index.html\"
+        style=\"text-decoration: none;color:#888888;\">THEROS SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/ths/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/ths/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/ths/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"+0\"><a href=\"http://www.mythicspoiler.com/m14/index.html\"
+        style=\"text-decoration: none;color:#888888;\">MAGIC 2014 SPOILER</a></font><br
+        />\n<font color=\"#555555\" size=\"-2\">&nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/m14/index.html\"
+        style=\"text-decoration: none\">INDEX</a> &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/m14/cycles.html\"
+        style=\"text-decoration: none\">CYCLES</a>   &nbsp;&nbsp; <a href=\"http://www.mythicspoiler.com/m14/numbercrunch.html\"
+        style=\"text-decoration: none\">NUMBERCRUNCH</a></font>\n</td></tr>\n<tr valign=\"top\"><td
+        valign=\"top\" colspan=\"5\"><font color=\"#888888\" size=\"-1\"><a href=\"http://www.mythicspoiler.com/sets.html\"
+        style=\"text-decoration: none;color:#888888;\">MORE EXPANSIONS</a></font><br
+        />\n</td></tr>\n\n</table></td>\n\n\n\n<td><div id=\"300x250 btf\">\n<div
+        style=\"position: relative;\" id='cdm-zone-03'></div>\n</div>\n</td>\n</tr></table>\n\n<br><font
+        size=\"-4\">\n<font color=\"#666666\">Magic: The Gathering is &trade; & &copy;
+        2015 Wizards of the Coast &nbsp; | &nbsp;   MythicSpoiler.com is unaffiliated
+        with Wizards of the Coast\n\n<Br />\n<br /><center>\n\n<br />\n<Br /><br /><br
+        /><br />\n<!--END FOOTER--><!--END FOOTER--><!--END FOOTER--><!--END FOOTER--><!--END
+        FOOTER--><!--END FOOTER--><!--END FOOTER-->\n</div>\n\n\n \n\n\n\n    \n<div
+        id='cdm-zone-end'></div>\n<!-- Begin comScore -->\n<script>\nvar _comscore
+        = _comscore || [];\n\n_comscore.push({ c1: \"2\", c2: \"6035118\" });\n\n(function()
+        {\n\n   var s = document.createElement(\"script\"), el = document.getElementsByTagName(\"script\")[0];
+        s.async = true;\n\n   s.src = (document.location.protocol == \"https:\" ?
+        \"https://sb\" : \"http://b\") + \".scorecardresearch.com/beacon.js\";\n\n
+        \  el.parentNode.insertBefore(s, el);\n\n})();\n</script>\n<noscript>\n   <img
+        src=\"http://b.scorecardresearch.com/p?c1=2&amp;c2=6035118&amp;cv=2.0&amp;cj=1\"
+        />\n</noscript>\n<!-- End comScore -->\n<!-- Nielsen Online SiteCensus -->\n<script
+        type=\"text/javascript\">\n(function () {\n\n   var d = new Image(1, 1);\n\n
+        \  d.onerror = d.onload = function () {\n\n       d.onerror = d.onload = null;\n\n
+        \  };\n\n   d.src = [\"//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&cg=0&cc=1&si=\",
+        escape(window.location.href), \"&rp=\", escape(document.referrer), \"&ts=compact&rnd=\",
+        (new Date()).getTime()].join('');\n\n})();\n</script>\n<noscript>\n   &lt;div&gt;&lt;img
+        src=\"//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&amp;amp;cg=0&amp;amp;cc=1&amp;amp;ts=noscript\"
+        width=\"1\" height=\"1\" alt=\"\" /&gt;&lt;/div&gt;\n</noscript>\n<!-- End
+        Nielsen Online SiteCensus -->\n\n<script src=\"http://mythicspoiler.com/scripts/mythicthesaurus.js\"></script>\n\n<script
+        type=\"text/javascript\">\n/* <![CDATA[ */\n(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName(\"a\"),t=document.createElement(\"textarea\");for(i=0;l.length-i;i++){try{a=l[i].getAttribute(\"href\");if(a&&a.indexOf(\"/cdn-cgi/l/email-protection\")
+        > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf(\"/cdn-cgi/l/email-protection\");if
+        (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,\"&lt;\").replace(/>/g,\"&gt;\");l[i].setAttribute(\"href\",\"mailto:\"+t.value);}}catch(e){}}}catch(e){}})();\n/*
+        ]]> */\n</script>\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Tue, 12 Jan 2016 05:57:37 GMT
+recorded_with: VCR 3.0.0
