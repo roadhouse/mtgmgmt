@@ -24,13 +24,13 @@ module Laracna
       end
 
       def main
-        main = @document.search(".md .cardItem")
+        main = @document.search("div .cards table")[0...-1]
 
         extract_card_list main
       end
 
       def sideboard
-        sb = @document.search(".sb .cardItem")
+        sb = @document.search("div .cards table")[-1]
 
         extract_card_list sb
       end
@@ -57,7 +57,13 @@ module Laracna
       end
 
       def extract_card_list(nodes)
-        nodes.map(&:text).map { |i| fix_typos i }
+        nodes
+          .search(".cardItem")
+          .map(&:text)
+          .map(&:strip)
+          .map { |i| i.gsub(/\r|\t/,'') }
+          .map { |i| i.split(/\n\n/)[0...-1].join(" ") }
+          .map { |i| fix_typos i }
           .map { |raw_part_entry| part_entry_data(raw_part_entry) }
       end
 
@@ -71,7 +77,8 @@ module Laracna
         string
           .strip
           .gsub(/\t/," ")
-          .gsub(/''/,"'") 
+          .gsub(/''/,"'")
+          .gsub("  ","")
           .gsub("Unravel the Aether", "Unravel the Æther")
       end
     end
