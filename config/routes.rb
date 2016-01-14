@@ -5,6 +5,9 @@ Magic::Application.routes.draw do
 
   resources :cards
   resources :collections, only: [:create, :update]
+  resources :users do
+    resources :lists
+  end
 
   resources :decks do
     get :print, :cockatrice,  on: :member

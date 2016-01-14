@@ -11,6 +11,7 @@ describe InventoriesController, type: :controller do
     before do
       post :create, inventory: { card_id: card.id, copies: 4, list: inventory.list }
     end
+
     context "response" do
       subject { response }
 
