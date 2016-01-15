@@ -1,6 +1,6 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://rails-assets.org/
+  remote: http://rails-assets.org/
   specs:
     abstract_type (0.0.7)
     actionmailer (4.2.5)
@@ -75,7 +75,7 @@ GEM
       delayed_job (>= 3.0, < 5)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    devise (3.5.3)
+    devise (3.5.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -293,7 +293,7 @@ GEM
       ffi (>= 0.5.0)
     rdoc (4.2.1)
       json (~> 1.4)
-    reek (3.8.2)
+    reek (3.8.3)
       codeclimate-engine-rb (~> 0.1.0)
       parser (~> 2.2, >= 2.2.2.5)
       private_attr (~> 1.1)
