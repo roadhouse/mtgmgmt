@@ -16,18 +16,18 @@ class DeckPresenter < BasePresenter
   def archeptype_deck
     DeckPresenter.new @deck.archeptype_deck
   end
-  
+
   def percent_owned(user, part)
-    user.percent_from(card_pool(part).map {|i| i[:card]}).truncate
+    user ? user.percent_from(card_pool(part).map {|i| i[:card]}).truncate : 0
   end
 
   def group_by_card_type(part)
     card_types = /Unknown|Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/
     data = card_pool(part).group_by { |card| (card[:card].ctype or "Unknown").match(card_types).to_s }.sort
-    
+
     Hash[data]
   end
-  
+
   def colors_list
     @deck.cards.map(&:colors).flatten.compact.uniq.map(&:downcase).sort.map do |color|
       classes = ["mtg"] + css_colors.fetch(color.to_sym)
@@ -91,7 +91,7 @@ class DeckPresenter < BasePresenter
   private
 
   def pool(part)
-    { main: @deck.main, sideboard: @deck.sideboard }.fetch(part) 
+    { main: @deck.main, sideboard: @deck.sideboard }.fetch(part)
   end
 
   def card_pool(part)

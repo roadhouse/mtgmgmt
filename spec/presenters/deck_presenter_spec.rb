@@ -1,11 +1,13 @@
 require 'spec_helper'
 
 describe DeckPresenter do
-  let(:deck) { create(:deck) }
+  let(:deck) { create :deck }
 
-  context ".group_by_card_type" do
-    # subject { described_class.new(deck).group_by_card_type(:main) }
-    
-    # it { is_expected.to be_a Hash }
+  context ".percent_owned" do
+    context 'when user not logged' do
+      subject { described_class.new(deck).percent_owned nil, :main }
+
+      it { is_expected.to be_equal 0 }
+    end
   end
 end
