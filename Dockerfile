@@ -46,4 +46,4 @@ VOLUME ["/data"]
 
 EXPOSE 5432
 
-wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+RUN wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
