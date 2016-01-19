@@ -1,13 +1,7 @@
 class MtgApi
-  def initialize(set, page)
+  def initialize(set=nil)
     @set = set
-    @page = page
-    @url = "http://api.mtgapi.com/v2/cards?page=#{@page}&set=#{@set.downcase}"
-  end
-
-  def self.all!(set)
-    page_max = 15
-    (1..page_max).map { |page| p "PAGE: #{page}"; MtgApi.new(set, page).persist! }
+    @url = "./lib/laracna/OGW.pt.json"
   end
 
   def persist!

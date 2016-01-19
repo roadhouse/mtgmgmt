@@ -4,8 +4,12 @@ class CardCrawler
   attr_reader :cards_attributes
 
   def initialize(url)
-    document = JSON.parse open(url).read
+    document = JSON.parse source(url)
     @cards_attributes = document["cards"]
+  end
+
+  def source(path)
+    File.read(path)
   end
 
   def ar_objects
@@ -18,7 +22,7 @@ class CardCrawler
       border: data["border"],
       ctype: data["type"],
       flavor: data["flavor"],
-      image: "http://magiccards.info/scans/pt/#{data['set'].downcase}/#{data['number']}.jpg",
+      image: "http://magiccards.info/scans/pt/ogw/#{data['number']}.jpg",
       layout: data["layout"],
       mana_cost: data["manaCost"],
       name: data["name"],
@@ -29,7 +33,7 @@ class CardCrawler
         .to_h
         .fetch("name") { data["name"] },
       rarity: data["rarity"],
-      set: data["set"],
+      set: "OWG",
       supertypes: data["supertypes"],
       toughness: data["toughness"],
 
@@ -39,11 +43,12 @@ class CardCrawler
       number: data["number"].to_i,
       power: data["power"].to_i,
 
-      colors: data["colors"],
+      colors: Mana.new(data["manaCost"]).colors.uniq,
       ctypes: data["types"],
       names: data["names"],
       printings: data["printings"],
       subtypes: data["subtypes"],
+      is_standard: true
 
       # foreign_names: data["foreignNames"],
       # legalities: data["legalities"],
