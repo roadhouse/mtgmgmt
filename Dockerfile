@@ -52,3 +52,4 @@ RUN wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 # RUN cd mtgmgmt && bundle install && rake bootstrap:run
 RUN pwd
 RUN ls -la /root
+RUN find / -name "config.ru"
