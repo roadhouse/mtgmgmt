@@ -48,5 +48,5 @@ EXPOSE 5432
 
 RUN wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
-RUN git clone git@github.com:roadhouse/mtgmgmt.git
-RUN cd mtgmgmt && bundle install && rake bootstrap:run
+# RUN git clone git@github.com:roadhouse/mtgmgmt.git
+# RUN cd mtgmgmt && bundle install && rake bootstrap:run
