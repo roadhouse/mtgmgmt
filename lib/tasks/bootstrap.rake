@@ -9,7 +9,7 @@ namespace :bootstrap do
 
   desc "load card data from specific set from mtgapi.com"
   task :load_set, [:set] => [:environment] do |t, args|
-    MtgApi.all!(args[:set])
+    MtgApi.new
   end
 
   desc "load card data from mtgapi.com"

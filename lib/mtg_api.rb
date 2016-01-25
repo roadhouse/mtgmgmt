@@ -1,6 +1,5 @@
 class MtgApi
-  def initialize(set=nil)
-    @set = set
+  def initialize
     @url = "./lib/laracna/OGW.pt.json"
   end
 

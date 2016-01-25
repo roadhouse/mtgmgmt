@@ -49,10 +49,6 @@ class CardCrawler
       printings: data["printings"],
       subtypes: data["subtypes"],
       is_standard: true
-
-      # foreign_names: data["foreignNames"],
-      # legalities: data["legalities"],
-      # rulings: data["rulings"]
     )
   end
 end
