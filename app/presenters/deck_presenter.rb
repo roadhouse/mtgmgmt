@@ -42,7 +42,8 @@ class DeckPresenter < BasePresenter
       blue: %w{mana-u},
       black: %w{mana-b},
       green: %w{mana-g},
-      white: %w{mana-w}
+      white: %w{mana-w},
+      colorless: %w{mana}
     }
   end
 
