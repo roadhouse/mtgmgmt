@@ -1,6 +1,6 @@
 class MtgApi
   def initialize
-    @url = "./lib/laracna/OGW.pt.json"
+    @url = "./lib/laracna/OGW.json"
   end
 
   def persist!
