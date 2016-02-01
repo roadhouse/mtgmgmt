@@ -21,7 +21,7 @@ class DeckStats
   end
 
   def non_lands
-    @deck.find_all {|i| !i.ctype.match(TYPES[:land])}
+    @deck.find_all {|i| !i.ctype.to_s.match(TYPES[:land])}
   end
 
   def grouped_by(type)
@@ -44,7 +44,7 @@ class DeckStats
   def total_by_color
     by_color.inject({}) {|m,v| m[v.first]=v.last.size;m}
   end
-  
+
   def total_by_manacost
     by_manacost.inject({}) {|m,v| m[v.first]=v.last.size;m}
   end
@@ -52,17 +52,17 @@ class DeckStats
   def total_by_type
     group_by_card_type.inject({}) {|m,v| m[v.first]=v.last.size;m}
   end
-  
+
   def group_by_card_type
-    data = non_lands.group_by do |card| 
+    data = non_lands.group_by do |card|
       card.ctype.match(/Land|Instant|Sorcery|Enchantment|Planeswalker|Creature|Artifact/).to_s
     end.sort
-    
+
     Hash[data]
   end
 
   private
-  
+
   def any_color
     Regexp.new("(#{COLORS.values.join("|")})")
   end
