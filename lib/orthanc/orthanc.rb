@@ -6,10 +6,12 @@ require_dependency "inventory_param"
 require_dependency "param_builder"
 
 class Orthanc
+  SEASON = "BFZ-DTK-FRF-KTK-ORI-OWG-THS"
+
   def initialize(options = nil)
     default_options = {
       limit: 10,
-      season: "BFZ-DTK-FRF-KTK-ORI-OWG-THS",
+      season: SEASON,
       part: "main"
     }
 
