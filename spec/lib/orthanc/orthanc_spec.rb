@@ -1,9 +1,9 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe Orthanc do
-  before(:all) { create_list(:deck, 2, season: Orthanc::SEASON) }
+  before(:all) { create_list :deck, 2, season: Orthanc::SEASON }
 
-  let(:orthanc) { described_class.new() }
+  let(:orthanc) { described_class.new }
 
   describe ".new" do
     subject { orthanc }
@@ -26,13 +26,13 @@ describe Orthanc do
   end
 
   context ".from_user" do
-    let(:user) { create(:user) }
-    let(:card1) { create(:card) }
-    let(:card2) { create(:card, name: "Dispel", set:"BFZ") }
-    let!(:inventory1) { create(:inventory, user: user, card: card1, copies: 4) }
-    let!(:inventory2) { create(:inventory, user: user, card: card2) }
+    let(:user) { create :user }
+    let(:card1) { create :card }
+    let(:card2) { create :card, name: "Dispel", set: "BFZ" }
+    let!(:inventory1) { create :inventory, user: user, card: card1, copies: 4 }
+    let!(:inventory2) { create :inventory, user: user, card: card2  }
 
-    subject { described_class.new(card_filters).from_user(user) }
+    subject { described_class.new(card_filters).from_user user }
 
     context "with an empty filter string" do
       let(:card_filters) { "" }
@@ -44,7 +44,7 @@ describe Orthanc do
       let(:card_filters) { "Dis" }
       let(:inventory_filters) { nil }
 
-      its(:size) { is_expected.to be_eql 1}
+      its(:size) { is_expected.to be_eql 1 }
       its(:"first.card") { is_expected.to be_eql card2 }
     end
   end
