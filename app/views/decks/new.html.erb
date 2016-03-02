@@ -1,10 +1,10 @@
 <div id="container" class="section" ng-controller="DeckBuilderController">
-  <nav>
-    <live-search source="cards"/>
-  </nav>
-
   <div class="row section">
     <div id="test1" class="col s12 l6 section">
+      <nav>
+        <live-search source="cards"/>
+      </nav>
+
       <h5 class="center-align">Resultados</h5>
       <ng-include src="'/templates/results-decks.html'" ng-repeat="entry in entries"/>
     </div>
