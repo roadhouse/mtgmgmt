@@ -18,4 +18,8 @@ Magic::Application.routes.draw do
     get :have, on: :collection
     get :want, on: :collection
   end
+
+  resource :searches do
+    get :top_cards
+  end
 end

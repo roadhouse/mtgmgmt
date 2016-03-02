@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe CardsController, type: :controller do
   context "GET /index" do
