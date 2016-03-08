@@ -13,12 +13,12 @@ function LiveSearchDirective(LiveSearchFactory) {
     templateUrl: '/templates/live-search.html',
     link: function(scope, element, attrs) {
       scope.search = "";
-      scope.source = attrs.source;
-
-      scope.change = change;
       scope.priceStatus = priceStatus;
+      scope.change = function() {
+        if (scope.search.length > 5) { updateResults(attrs.source, scope); }
+      };
 
-      if (attrs.default) { query(scope); };
+      if (attrs.default) { updateResults(attrs.source, scope); }
     }
   };
 
@@ -32,12 +32,13 @@ function LiveSearchDirective(LiveSearchFactory) {
     return status[str];
   };
 
-  function change() {
-    if (scope.search.length > 5) { query(scope); }
+  function updateResults(source, scope) {
+    query(source, scope.search)
+      .then(function(results) { scope.entries = results; });
   };
 
-  function query(scope) {
-    LiveSearchFactory[scope.source](scope.search)
-      .then(function(result) { scope.entries = result.data; })
+  function query(source, search) {
+    return LiveSearchFactory[source](search)
+      .then(function(result) { return result.data; })
   };
 };
