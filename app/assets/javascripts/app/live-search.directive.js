@@ -12,6 +12,7 @@ function LiveSearchDirective(LiveSearchFactory) {
     replace: 'true',
     templateUrl: '/templates/live-search.html',
     link: function(scope, element, attrs) {
+      scope.template = attrs.template;
       scope.search = "";
       scope.priceStatus = priceStatus;
       scope.change = function() {
