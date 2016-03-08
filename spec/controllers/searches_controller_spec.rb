@@ -20,7 +20,8 @@ describe SearchesController do
       let(:query) { "arbitrary query" }
 
       it "pass params to Orthanc" do
-        expect(Orthanc).to receive(:new).with(query).and_return double.as_null_object
+        expect(Orthanc).to receive(:new).with(query)
+          .and_return double.as_null_object
 
         get :top_cards, format: :json, query: query
       end
