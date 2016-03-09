@@ -10,7 +10,8 @@ function LiveSearchFactory($http) {
   return {
     cards: get,
     inventories: inventories,
-    have: have
+    have: have,
+    topCards: topCards
   };
 
   function get(params) {
@@ -23,6 +24,10 @@ function LiveSearchFactory($http) {
 
   function have(params) {
     return $http.get('/inventories/have.json?query=' + params);
+  };
+
+  function topCards(params) {
+    return $http.get('/searches/top_cards.json?query=' + params);
   };
 };
 
