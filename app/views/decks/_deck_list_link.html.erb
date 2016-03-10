@@ -1,21 +1,22 @@
-<div class="card top-decks-box">
-  <div class="card-content blue-grey lighten-5">
-    <span>
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+    <div class="collapsible-header">
       <%= link_to deck.archeptype_deck.deck do %>
         <%= deck.archeptype_deck.name %>
       <% end %>
-    </span>
-    <span class="secondary-content">
-      <%= deck.archeptype_deck.colors_list.join(" ").html_safe %>
-    </span>
-  </div>
-  <div class="card-action">
-    <%= number_to_currency deck.total_price %>
-    <% if user_signed_in? %>
-      <span class="secondary-content">
-        <i class="mdi-image-photo-library"></i>
-        <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
-      </span>
-    <% end %>
-  </div>
-</div>
+    </div>
+    <div class="collapsible-body">
+      <% if user_signed_in? %>
+        <span class="secondary-content">
+          <i class="mdi-image-photo-library"></i>
+          <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
+        </span>
+      <% end %>
+      <ul class="collection">
+        <li class="collection-header">
+          <%= number_to_currency deck.total_price %>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>
