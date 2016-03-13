@@ -25,7 +25,7 @@ class DecksController < ApplicationController
   def update
     @deck = Deck.find(params[:id])
 
-    respond_with(@deck.update_attributes(params[:deck]))
+    respond_with @deck if @deck.update_attributes(deck_params)
   end
 
   def destroy
@@ -44,7 +44,7 @@ class DecksController < ApplicationController
 
   def print
     @deck = Deck.find(params[:id])
-    
+
     @cards = {main: @deck.main, sideboard: @deck.sideboard}.fetch(params[:part].to_sym)
 
     render layout: "print"
@@ -57,8 +57,8 @@ class DecksController < ApplicationController
   end
 
   private
-  
+
   def deck_params
-    params.require(:deck).permit(:name, :description, :card_list)
+    params.require(:deck).permit(:name, :description, :list)
   end
 end

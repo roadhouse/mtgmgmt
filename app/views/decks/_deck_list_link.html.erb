@@ -4,6 +4,7 @@
       <%= link_to deck.archeptype_deck.deck do %>
         <%= deck.archeptype_deck.name %>
       <% end %>
+      <span class="secondary-content"><%= number_to_currency deck.total_price %><span>
     </div>
     <div class="collapsible-body">
       <% if user_signed_in? %>
@@ -13,9 +14,12 @@
         </span>
       <% end %>
       <ul class="collection">
-        <li class="collection-header">
-          <%= number_to_currency deck.total_price %>
-        </li>
+        <% deck.archeptype_deck.deck.list["main"].each_pair do |card,copies| %>
+          <li class="collection-item">
+            <%= copies %>
+            <span class="secondary-content"><%= card %><span>
+          </li>
+        <% end %>
       </ul>
     </div>
   </li>
