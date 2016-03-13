@@ -1,13 +1,3 @@
-<nav>
-  <live-search source="cards" />
-</nav>
-
-<div class="row section">
-  <div id="test1" class="col section">
-    <h5 class="center-align">Resultados</h5>
-    <ng-include
-      src="'/templates/results-cards.html'"
-      ng-repeat="entry in entries"
-    />
-  </div>
+<div class="col section">
+  <live-search source="cards" template='/templates/results-topcards.html'/>
 </div>
