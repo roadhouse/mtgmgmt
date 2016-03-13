@@ -13,14 +13,7 @@
           <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
         </span>
       <% end %>
-      <ul class="collection">
-        <% deck.archeptype_deck.deck.list["main"].each_pair do |card,copies| %>
-          <li class="collection-item">
-            <%= copies %>
-            <span class="secondary-content"><%= card %><span>
-          </li>
-        <% end %>
-      </ul>
+      <%= render 'card_entry', cards: deck.group_by_card_type(:main) %>
     </div>
   </li>
 </ul>

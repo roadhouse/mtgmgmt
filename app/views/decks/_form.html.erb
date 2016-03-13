@@ -1,9 +1,17 @@
-<%= simple_form_for(@deck) do |f| %>
-  <%= f.error_notification %>
+<div class="section container">
+  <%= simple_form_for @deck do |f| %>
+    <%= f.error_notification %>
 
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :list, as: :text %>
+    <div class="input-field">
+      <%= f.input :name %>
+    </div>
+    <div class="input-field">
+      <%= f.input :description, as: :string %>
+    </div>
+    <div class="input-field">
+      <%= f.input :list, as: :text, input_html: {class: "materialize-textarea"} %>
+    </div>
 
-  <%= f.button :submit %>
-<% end %>
+    <%= f.button :submit, class: "waves-effect waves-light btn"%>
+  <% end %>
+</div>

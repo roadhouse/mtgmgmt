@@ -1,6 +1,7 @@
 <% cards.each_pair do |card_type, cards| %>
-  <h5><%= card_type %></h5>
-  <ul class="collapsible" data-collapsible="accordion" ng-controller="InventoryController">
+  <div class="collection">
+  <h5 class="collection-header"><%= card_type %></h5>
+  <ul class="collapsible collection-item" data-collapsible="accordion" ng-controller="InventoryController">
     <% cards.each do |card| %>
       <li>
       <div class="collapsible-header">
@@ -24,4 +25,5 @@
       </li>
     <% end %>
   </ul>
+  </div>
 <% end %>
