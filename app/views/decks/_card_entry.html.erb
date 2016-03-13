@@ -1,29 +1,29 @@
 <% cards.each_pair do |card_type, cards| %>
   <div class="collection">
-  <h5 class="collection-header"><%= card_type %></h5>
-  <ul class="collapsible collection-item" data-collapsible="accordion" ng-controller="InventoryController">
-    <% cards.each do |card| %>
-      <li>
-      <div class="collapsible-header">
-        <span><%= card[:copies] %></span>
-        <div class="secondary-content">
-          <%= card[:card].name %>
-          <span class="mtg  <%= [Card::ICON_NAME[card[:card].set.to_s.to_sym],card[:card].rarity.to_s.downcase].join(" ") %>"></span>
+    <h5 class="collection-header center-align"><%= card_type %></h5>
+    <ul class="collapsible collection-item" data-collapsible="accordion" ng-controller="InventoryController">
+      <% cards.each do |card| %>
+        <li>
+        <div class="collapsible-header">
+          <span><%= card[:copies] %></span>
+          <div class="secondary-content">
+            <%= card[:card].name %>
+            <span class="mtg  <%= [Card::ICON_NAME[card[:card].set.to_s.to_sym],card[:card].rarity.to_s.downcase].join(" ") %>"></span>
+          </div>
         </div>
-      </div>
-      <div class="collapsible-body">
-        <div class="row">
-          <%= render "inventories/collection_form", card_id: card[:card].id %>
+        <div class="collapsible-body">
+          <div class="row">
+            <%= render "inventories/collection_form", card_id: card[:card].id %>
+          </div>
+          <span class="secondary-content">
+            <%= number_to_currency card[:card].on_demand_price %>
+          </span>
+          <div class="row">
+            <%= image_tag card[:card].image, alt: card[:card].name, class: "responsive-img" %>
+          </div>
         </div>
-        <span class="secondary-content">
-          <%= number_to_currency card[:card].on_demand_price %>
-        </span>
-        <div class="row">
-          <%= image_tag card[:card].image, alt: card[:card].name, class: "responsive-img" %>
-        </div>
-      </div>
-      </li>
-    <% end %>
-  </ul>
+        </li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
