@@ -44,6 +44,7 @@ group :development do
 end
 
 group :development, :test do
+  gem "capybara"
   gem "factory_girl_rails"
   gem "jasmine-rails"
   gem "mocha", require: false

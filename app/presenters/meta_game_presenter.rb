@@ -4,13 +4,7 @@ class MetaGamePresenter
   end
 
   def top_decks
-    DeckPresenter.map Orthanc.new("").top_decks.map {|d| d.archeptype_deck}
-  end
-
-  private
-
-  def top_decks_maped
-    Orthanc.new({}).top_decks.map {|i| OpenStruct.new(quantity: i.quantity, deck: i)}
+    DeckPresenter.map Orthanc.new("").top_decks.map { |d| d.archeptype_deck }
   end
 end
 
