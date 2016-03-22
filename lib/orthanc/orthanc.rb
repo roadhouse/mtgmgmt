@@ -10,7 +10,7 @@ class Orthanc
 
   def initialize(options = nil)
     default_options = {
-      limit: 10,
+      limit: 12,
       season: SEASON,
       part: "main"
     }
