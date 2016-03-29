@@ -26,13 +26,13 @@ module Laracna
       def main
         main = @document.search("div .cards table")[0...-1]
 
-        extract_card_list main
+        Hash[extract_card_list main]
       end
 
       def sideboard
-        sb = @document.search("div .cards table")[-1]
+        sideboard = @document.search("div .cards table")[-1]
 
-        extract_card_list sb
+        Hash[extract_card_list sideboard]
       end
 
       def deck
@@ -61,16 +61,10 @@ module Laracna
           .search(".cardItem")
           .map(&:text)
           .map(&:strip)
-          .map { |i| i.gsub(/\r|\t/,'') }
-          .map { |i| i.split(/\n\n/)[0...-1].join(" ") }
-          .map { |i| fix_typos i }
-          .map { |raw_part_entry| part_entry_data(raw_part_entry) }
-      end
-
-      def part_entry_data(raw_part_entry)
-        match_data = /(\d+)(.*)/.match(raw_part_entry)
-
-        {copies: match_data[1].strip, card: match_data[2].strip }
+          .map { |s| s.gsub(/\r|\t/,'') }
+          .map { |s| s.split(/\n\n/)[0...-1].join(" ") }
+          .map { |s| fix_typos s }
+          .map { |s| s.match(/(\d+)(.*)/).captures.reverse.map(&:strip) }
       end
 
       def fix_typos(string)
