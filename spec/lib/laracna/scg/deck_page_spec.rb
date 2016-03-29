@@ -9,53 +9,53 @@ describe Laracna::Scg::DeckPage, :vcr do
     let(:deck_id) { 91127 }
 
     let(:attributes_list) do
-      [:card_list, :description, :name, :url, :source]
+      [:list, :description, :name, :url, :source]
     end
 
     let(:main) do
-      [
-        {:copies=>"4", :card=>"Den Protector"},
-        {:copies=>"4", :card=>"Siege Rhino"},
-        {:copies=>"4", :card=>"Courser of Kruphix"},
-        {:copies=>"1", :card=>"Dragonlord Dromoka"},
-        {:copies=>"1", :card=>"Tasigur, the Golden Fang"},
-        {:copies=>"2", :card=>"Elspeth, Sun's Champion"},
-        {:copies=>"1", :card=>"Ugin, the Spirit Dragon"},
-        {:copies=>"2", :card=>"Forest"},
-        {:copies=>"2", :card=>"Plains"},
-        {:copies=>"2", :card=>"Caves of Koilos"},
-        {:copies=>"4", :card=>"Llanowar Wastes"},
-        {:copies=>"4", :card=>"Sandsteppe Citadel"},
-        {:copies=>"4", :card=>"Temple of Malady"},
-        {:copies=>"3", :card=>"Temple of Silence"},
-        {:copies=>"4", :card=>"Windswept Heath"},
-        {:copies=>"1", :card=>"Urborg, Tomb of Yawgmoth"},
-        {:copies=>"4", :card=>"Abzan Charm"},
-        {:copies=>"1", :card=>"Bile Blight"},
-        {:copies=>"2", :card=>"Dromoka's Command"},
-        {:copies=>"3", :card=>"Hero's Downfall"},
-        {:copies=>"1", :card=>"Murderous Cut"},
-        {:copies=>"1", :card=>"Silence the Believers"},
-        {:copies=>"1", :card=>"Ultimate Price"},
-        {:copies=>"1", :card=>"Languish"},
-        {:copies=>"4", :card=>"Thoughtseize"}
-      ]
+      {
+        "Den Protector" => "4",
+        "Siege Rhino" => "4",
+        "Courser of Kruphix" => "4",
+        "Dragonlord Dromoka" => "1",
+        "Tasigur, the Golden Fang" => "1",
+        "Elspeth, Sun's Champion" => "2",
+        "Ugin, the Spirit Dragon" => "1",
+        "Forest" => "2",
+        "Plains" => "2",
+        "Caves of Koilos" => "2",
+        "Llanowar Wastes" => "4",
+        "Sandsteppe Citadel" => "4",
+        "Temple of Malady" => "4",
+        "Temple of Silence" => "3",
+        "Windswept Heath" => "4",
+        "Urborg, Tomb of Yawgmoth" => "1",
+        "Abzan Charm" => "4",
+        "Bile Blight" => "1",
+        "Dromoka's Command" => "2",
+        "Hero's Downfall" => "3",
+        "Murderous Cut" => "1",
+        "Silence the Believers" => "1",
+        "Ultimate Price" => "1",
+        "Languish" => "1",
+        "Thoughtseize" => "4"
+      }
     end
 
     let(:sideboard) do
-      [
-        {:copies=>"3", :card=>"Fleecemane Lion"},
-        {:copies=>"1", :card=>"Gaea's Revenge"},
-        {:copies=>"1", :card=>"Evolutionary Leap"},
-        {:copies=>"1", :card=>"Ultimate Price"},
-        {:copies=>"1", :card=>"Unravel the Æther"},
-        {:copies=>"1", :card=>"Utter End"},
-        {:copies=>"1", :card=>"Dragonlord Dromoka"},
-        {:copies=>"1", :card=>"Whip of Erebos"},
-        {:copies=>"2", :card=>"Duress"},
-        {:copies=>"1", :card=>"Languish"},
-        {:copies=>"2", :card=>"Tragic Arrogance"}
-      ]
+      {
+        "Fleecemane Lion" => "3",
+        "Gaea's Revenge" => "1",
+        "Evolutionary Leap" => "1",
+        "Ultimate Price" => "1",
+        "Unravel the Æther" => "1",
+        "Utter End" => "1",
+        "Dragonlord Dromoka" => "1",
+        "Whip of Erebos" => "1",
+        "Duress" => "2",
+        "Languish" => "1",
+        "Tragic Arrogance" => "2"
+      }
     end
 
     let(:config) { CrawlerConfig.new(:scg) }
@@ -77,7 +77,7 @@ describe Laracna::Scg::DeckPage, :vcr do
     subject { described_class.new(deck_id, config) }
 
     its(:valid?) { is_expected.to be_falsy }
-    
+
     context ".attributes" do
       subject { described_class.new(deck_id, config).attributes }
 
@@ -93,7 +93,7 @@ describe Laracna::Scg::DeckPage, :vcr do
 
   context ".config" do
     subject { described_class.new(double, double).config }
-    
+
     it { is_expected.to be_a CrawlerConfig }
   end
 end

@@ -34,17 +34,13 @@ module Laracna
         main = engine.search(".cards_col1 ul li").map(&:text)
         main << engine.search(".cards_col2 ul[rel='#{@id}']").first.search("li").map(&:text)
 
-        extract_card_list main.flatten
+        Hash[extract_card_list main.flatten]
       end
 
       def sideboard
         sb = engine.search(".cards_col2 ul[rel='#{@id}']").last.search("li").map(&:text)
 
-        extract_card_list sb
-      end
-
-      def deck
-        { main: main, sideboard: sideboard }
+        Hash[extract_card_list sb]
       end
 
       def attributes
@@ -61,27 +57,25 @@ module Laracna
         {
           description: description,
           name: name,
-          card_list: deck,
+          list: { main: main, sideboard: sideboard },
           url: url,
           source: "starcitygames"
         }
       end
 
       def extract_card_list(nodes)
-        nodes.map { |raw_part_entry| part_entry_data(raw_part_entry) }
+        nodes.map { |string| part_entry_data string }
       end
 
-      def part_entry_data(raw_part_entry)
-        match_data = /(\d+)(.*)/.match(raw_part_entry)
-
-        {copies: match_data[1].strip, card: fix_typos(match_data[2]) }
+      def part_entry_data(string)
+        string.match(/(\d+)(.*)/).captures.reverse.map { |s| fix_typos s }
       end
 
       def fix_typos(string)
         string
           .strip
           .gsub(/\t/," ")
-          .gsub(/''/,"'") 
+          .gsub(/''/,"'")
           .gsub("AEther", "Æther")
           .gsub("Aether", "Æther")
           .gsub("Hero Of Iroas", "Hero of Iroas")
