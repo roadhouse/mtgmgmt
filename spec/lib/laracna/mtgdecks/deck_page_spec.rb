@@ -8,7 +8,7 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
   let(:deck_id) { 63963 }
 
   let(:attributes_list) do
-    [:card_list, :description, :name, :url, :source]
+    [:list, :description, :name, :url, :source]
   end
 
   let(:main) do

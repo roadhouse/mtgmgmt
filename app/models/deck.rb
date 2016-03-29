@@ -35,13 +35,12 @@ class Deck < ActiveRecord::Base
   end
 
   def only_cards_list(part = :main)
-    list[part.to_s].keys
-      .sort
-      .join("::")
+    list[part.to_s].keys.sort.join("::")
   end
 
-  def generate_season_tag
-    cards.pluck(:set)
+  def season_tag
+    cards
+      .pluck(:set)
       .compact
       .uniq
       .delete_if { |i| i == "fake"}
@@ -50,10 +49,7 @@ class Deck < ActiveRecord::Base
   end
 
   def update_meta_data
-   update(
-     season: generate_season_tag,
-     list: list.merge(main_cards:only_cards_list)
-   )
+    update season: season_tag, list: list.merge(main_cards: only_cards_list)
   end
 
   private

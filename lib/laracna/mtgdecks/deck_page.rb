@@ -35,15 +35,11 @@ module Laracna
         Hash[extract_card_list sideboard]
       end
 
-      def deck
-        { main: main, sideboard: sideboard }
-      end
-
       def attributes
         {
           description: description,
           name: name,
-          card_list: deck,
+          list: { main: main, sideboard: sideboard },
           url: @url,
           source: "mtgdecks"
         }
