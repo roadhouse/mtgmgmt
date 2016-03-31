@@ -32,12 +32,6 @@ namespace :bootstrap do
     Crawler.run!(:scg)
   end
 
-  desc "load decs from deck_lists"
-  task deck_lists: :environment do
-    require './lib/laracna/crawler.rb'
-    Crawler.run!(:deck_lists)
-  end
-
   desc "load decks from wizards (MTGO)"
   task mtgo: :environment do
     (8.months.ago.to_date..DateTime.now.to_date).to_a.reverse.each do |date|
