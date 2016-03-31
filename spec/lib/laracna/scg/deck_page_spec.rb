@@ -1,12 +1,11 @@
 require "./spec/support/vcr"
 require "rspec/its"
 
-require "./lib/laracna/scg/deck_page"
-require "./lib/laracna/crawler_config"
+require "./lib/laracna/laracna"
 
 describe Laracna::Scg::DeckPage, :vcr do
   context "with a valid deck page" do
-    let(:deck_id) { 91_127 }
+    let(:deck_id) { "http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=91127" }
 
     let(:attributes_list) do
       %i(list description name url source)
@@ -72,7 +71,7 @@ describe Laracna::Scg::DeckPage, :vcr do
   end
 
   context "with a invalid deck page" do
-    let(:deck_id) { 86_785 }
+    let(:deck_id) { "http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=86785" }
 
     subject { described_class.new(deck_id) }
 
@@ -83,17 +82,5 @@ describe Laracna::Scg::DeckPage, :vcr do
 
       it { expect { subject }.to raise_error(Laracna::InvalidPageError) }
     end
-  end
-
-  context ".engine" do
-    subject { described_class.new(double(to_s: "deck_id")).engine }
-
-    it { is_expected.to be_a Nokogiri::HTML::Document }
-  end
-
-  context ".config" do
-    subject { described_class.new(double).config }
-
-    it { is_expected.to be_a CrawlerConfig }
   end
 end

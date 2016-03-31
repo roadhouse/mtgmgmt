@@ -5,16 +5,12 @@ require "./lib/laracna/crawler"
 module Laracna
   module Scg
     class DeckPage
-      def initialize(id)
-        @id = id
+      def initialize(url)
+        @url = url
       end
 
       def engine
-        @document ||= Nokogiri::HTML open(url)
-      end
-
-      def url
-        config.complete_deck_url + @id.to_s
+        @document ||= Nokogiri::HTML open @url
       end
 
       def config
@@ -31,19 +27,19 @@ module Laracna
 
       def main
         main = engine.search(".cards_col1 ul li").map(&:text)
-        main << engine.search(".cards_col2 ul[rel='#{@id}']").first.search("li").map(&:text)
+        main << engine.search(".cards_col2 ul").first.search("li").map(&:text)
 
         Hash[extract_card_list main.flatten]
       end
 
       def sideboard
-        sb = engine.search(".cards_col2 ul[rel='#{@id}']").last.search("li").map(&:text)
+        sb = engine.search(".cards_col2 ul").last.search("li").map(&:text)
 
         Hash[extract_card_list sb]
       end
 
       def attributes
-        valid? ? deck_attributes : fail(InvalidPageError, url)
+        valid? ? deck_attributes : fail(InvalidPageError, @url)
       end
 
       def valid?
@@ -57,7 +53,7 @@ module Laracna
           description: description,
           name: name,
           list: {main: main, sideboard: sideboard},
-          url: url,
+          url: @url,
           source: "starcitygames"
         }
       end
