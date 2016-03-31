@@ -4,8 +4,6 @@ require "rspec/its"
 require "./lib/laracna/laracna"
 
 describe Laracna::Mtgdecks::DeckPage, :vcr do
-  let(:deck_id) { 63_963 }
-
   let(:main) do
     {
       "Rakdos Cackler" => "4",
@@ -39,10 +37,12 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
     }
   end
 
-  subject { Laracna::Mtgdecks::DeckPage.new(deck_id) }
+  let(:url) { "http://www.mtgdecks.net/decks/view/63963" }
+
+  subject { described_class.new url }
 
   its(:description) { is_expected.to eql "R/W Devotion.Lerchenmüller, Max.Top4Heldenschmiede Kempten[13 Players] 11-Jan-2014" }
-  its(:name) { is_expected.to be_eql "R/W Devotion" }
-  its(:main) { is_expected.to eq main }
-  its(:sideboard) { is_expected.to eq sideboard }
+  its(:name) { is_expected.to eql "R/W Devotion" }
+  its(:main) { is_expected.to eql main }
+  its(:sideboard) { is_expected.to eql sideboard }
 end

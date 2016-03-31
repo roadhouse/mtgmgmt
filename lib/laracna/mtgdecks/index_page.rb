@@ -14,17 +14,10 @@ module Laracna
         CrawlerConfig.new :mtgdecks
       end
 
-      def deck_nodes
+      def urls
         @document
           .search("tr td a")
-          .map { |node| node.attribute("href").text }
-      end
-
-      def decks_ids
-        deck_nodes
-          .map { |url| url.gsub(config.deck_url, "") }
-          .map(&:to_i)
-          .delete_if { |i| i == 0 } # delete some weirds ids
+          .map { |node| URI.join(config.host, node.attribute("href").text) }
       end
     end
   end

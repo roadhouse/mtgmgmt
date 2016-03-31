@@ -6,18 +6,14 @@ module Laracna
     class DeckPage
       attr_reader :url, :document
 
-      def initialize(id)
-        @id = id
+      def initialize(url)
+        @url = url
 
         remove_unused_elements
       end
 
       def engine
-        @document ||= Nokogiri::HTML open url
-      end
-
-      def url
-        config.complete_deck_url + @id.to_s
+        @document ||= Nokogiri::HTML open @url
       end
 
       def config
@@ -45,7 +41,7 @@ module Laracna
       end
 
       def attributes
-        valid? ? deck_attributes : fail(InvalidPageError, url)
+        valid? ? deck_attributes : fail(InvalidPageError, @url)
       end
 
       def valid?
@@ -59,7 +55,7 @@ module Laracna
           description: description,
           name: name,
           list: {main: main, sideboard: sideboard},
-          url: url,
+          url: @url,
           source: "mtgdecks"
         }
       end
