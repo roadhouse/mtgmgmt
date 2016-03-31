@@ -1,16 +1,19 @@
 require "./spec/support/vcr"
-require 'rspec/its'
+require "rspec/its"
 
 require "./lib/laracna/scg/deck_page"
 require "./lib/laracna/crawler_config"
 
 describe Laracna::Scg::DeckPage, :vcr do
   context "with a valid deck page" do
-    let(:deck_id) { 91127 }
+    let(:deck_id) { 91_127 }
 
     let(:attributes_list) do
-      [:list, :description, :name, :url, :source]
+      %i(list description name url source)
     end
+
+    let(:description) { is_expected.to eql "1st Place at StarCityGames.com Invitational Qualifier on 9/5/2015" }
+    let(:name) { is_expected.to be_eql "Abzan Control" }
 
     let(:main) do
       {
@@ -58,9 +61,7 @@ describe Laracna::Scg::DeckPage, :vcr do
       }
     end
 
-    let(:config) { CrawlerConfig.new(:scg) }
-
-    subject { Laracna::Scg::DeckPage.new(deck_id, config) }
+    subject { Laracna::Scg::DeckPage.new(deck_id) }
 
     its(:description) { is_expected.to eql "1st Place at StarCityGames.com Invitational Qualifier on 9/5/2015" }
     its(:name) { is_expected.to be_eql "Abzan Control" }
@@ -71,28 +72,27 @@ describe Laracna::Scg::DeckPage, :vcr do
   end
 
   context "with a invalid deck page" do
-    let(:deck_id) { 86785 }
-    let(:config) { CrawlerConfig.new(:scg) }
+    let(:deck_id) { 86_785 }
 
-    subject { described_class.new(deck_id, config) }
+    subject { described_class.new(deck_id) }
 
     its(:valid?) { is_expected.to be_falsy }
 
     context ".attributes" do
-      subject { described_class.new(deck_id, config).attributes }
+      subject { described_class.new(deck_id).attributes }
 
-      it { expect  { subject }.to raise_error(Laracna::Scg::DeckPage::InvalidPageError) }
+      it { expect { subject }.to raise_error(Laracna::InvalidPageError) }
     end
   end
 
   context ".engine" do
-    subject { described_class.new(double(to_s: "deck_id"), double).engine }
+    subject { described_class.new(double(to_s: "deck_id")).engine }
 
     it { is_expected.to be_a Nokogiri::HTML::Document }
   end
 
   context ".config" do
-    subject { described_class.new(double, double).config }
+    subject { described_class.new(double).config }
 
     it { is_expected.to be_a CrawlerConfig }
   end

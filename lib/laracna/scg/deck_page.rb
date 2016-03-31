@@ -1,12 +1,11 @@
-require 'nokogiri'
-require 'open-uri'
+require "nokogiri"
+require "open-uri"
+require "./lib/laracna/crawler"
 
 module Laracna
   module Scg
     class DeckPage
-      class InvalidPageError < StandardError; end
-
-      def initialize(id, old_config)
+      def initialize(id)
         @id = id
       end
 
@@ -44,7 +43,7 @@ module Laracna
       end
 
       def attributes
-        valid? ? deck_attributes : raise(InvalidPageError)
+        valid? ? deck_attributes : fail(InvalidPageError, url)
       end
 
       def valid?
@@ -57,7 +56,7 @@ module Laracna
         {
           description: description,
           name: name,
-          list: { main: main, sideboard: sideboard },
+          list: {main: main, sideboard: sideboard},
           url: url,
           source: "starcitygames"
         }
@@ -74,8 +73,8 @@ module Laracna
       def fix_typos(string)
         string
           .strip
-          .gsub(/\t/," ")
-          .gsub(/''/,"'")
+          .gsub(/\t/, " ")
+          .gsub(/''/, "'")
           .gsub("AEther", "Æther")
           .gsub("Aether", "Æther")
           .gsub("Hero Of Iroas", "Hero of Iroas")

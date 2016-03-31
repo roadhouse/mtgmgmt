@@ -1,20 +1,18 @@
-require 'nokogiri'
-require 'open-uri'
+require "nokogiri"
+require "open-uri"
 
 module Laracna
-  module Mtgdecks
+  module Mtgo
     class IndexPage
       def initialize(page)
-        list_decks_url = PageUrl.list_decks_url(page.to_s)
-
-        @document = Nokogiri::HTML(open(list_decks_url))
+        @document = Nokogiri::HTML open page
       end
 
       def decks_ids
         @document.search("tr strong a")
-        .map {|node| node.attribute("href").text}
-        .map {|url| url.gsub(PageUrl::DECK_URL, "")}
-        .map(&:to_i)
+          .map { |node| node.attribute("href").text }
+          .map { |url| url.gsub(PageUrl::DECK_URL, "") }
+          .map(&:to_i)
       end
     end
   end

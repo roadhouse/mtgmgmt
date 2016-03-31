@@ -1,14 +1,17 @@
-require 'nokogiri'
-require 'open-uri'
+require "nokogiri"
+require "open-uri"
 
 module Laracna
   module Mtgdecks
     class IndexPage
-      def initialize(page, config)
-        @config = config
-        list_decks_url = @config.list_decks_url(page.to_s)
+      def initialize(page)
+        list_decks_url = config.list_decks_url page.to_s
 
-        @document = Nokogiri::HTML open(list_decks_url)
+        @document = Nokogiri::HTML open list_decks_url
+      end
+
+      def config
+        CrawlerConfig.new :mtgdecks
       end
 
       def deck_nodes
@@ -19,9 +22,9 @@ module Laracna
 
       def decks_ids
         deck_nodes
-          .map {|url| url.gsub(@config.deck_url, "")}
+          .map { |url| url.gsub(config.deck_url, "") }
           .map(&:to_i)
-          .delete_if {|i| i == 0} #for some delete weirds ids
+          .delete_if { |i| i == 0 } # delete some weirds ids
       end
     end
   end

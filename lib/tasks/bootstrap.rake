@@ -22,7 +22,7 @@ namespace :bootstrap do
 
   desc "load decs from mtgdecks"
   task mtgdecks: :environment do
-    require './lib/laracna/crawler.rb'
+    require './lib/laracna/laracna'
     Crawler.run!(:mtgdecks)
   end
 

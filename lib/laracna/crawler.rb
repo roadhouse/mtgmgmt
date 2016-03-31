@@ -1,6 +1,6 @@
 class Crawler
   def self.run!(site, page_range = 1..400, options = {})
-    page_range.each do |page| 
+    page_range.each do |page|
       p "Page: #{page}"
 
       Crawler.new(page, site, options).run!
@@ -9,13 +9,12 @@ class Crawler
 
   def initialize(page, site, options = {})
     @site = site
-    @config = CrawlerConfig.new(site.to_s)
-    @index_page = index_page.new(page, @config)
+    @index_page = index_page.new page
     @exceptions = options.fetch(:except) { [] }
   end
 
   def items
-    @index_page.decks_ids.map { |id| deck_page.new(id, @config) unless @exceptions.include? id }.compact
+    @index_page.decks_ids.map { |id| deck_page.new(id) unless @exceptions.include? id }.compact
   end
 
   def run!
@@ -24,7 +23,7 @@ class Crawler
 
       begin
         DeckBuilder.new(page.attributes).build
-      rescue Laracna::Scg::DeckPage::InvalidPageError
+      rescue Laracna::InvalidPageError
         p "escaping #{page.url}"
         next
       end
