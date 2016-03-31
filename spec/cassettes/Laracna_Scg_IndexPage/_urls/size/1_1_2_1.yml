@@ -1,0 +1,1068 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sales.starcitygames.com//deckdatabase/deckshow.php?end_date=01/01/2020&limit=100&order_1=date%20desc&order_2=date%20desc&start_date=01/01/2015&start_num=0&t%5BC1%5D=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 31 Mar 2016 22:43:21 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - PHPSESSID=0ifjcj3c6b3nh59l8hi5sncme1; path=/
+      - __cfduid=d89c83892cd11e6e4abd4f74b50fa38581459464201; expires=Fri, 31-Mar-17
+        22:43:21 GMT; path=/; domain=.starcitygames.com; HttpOnly
+      - session_track=0ifjcj3c6b3nh59l8hi5sncme1; expires=Thu, 07-Apr-2016 22:43:21
+        GMT; path=/; domain=.starcitygames.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 28c751da43770fee-GRU
+    body:
+      encoding: ASCII-8BIT
+      string: "<!doctype html>\n<html xmlns:fb=\"http://ogp.me/ns/fb#\">\n<head>\n<title>Magic
+        Deck Search Result!</title>\n<meta name=\"robots\" content=\"index, follow\">\n<!--[if
+        lt IE 9]>\r\n<script src=\"//html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\r\n<![endif]-->\n<!--[if
+        lt IE 8]>\r\n<script src=\"//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js\"></script>\r\n<![endif]-->\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n<meta name=\"description\"
+        content=\"Magic decks found via a database search at StarCityGames.com!\">\n<meta
+        name=\"keywords\" content=\"Magic the gathering, Magic singles, Magic boxes,
+        Magic decks, Magic cards, Magic strategy, mtg, magic decks, magic the gathering
+        decks, mtg deck, mtg decks\">\n<meta name=\"verify-v1\" content=\"YK4pepakFtM+pkoCT9CqjcIiYrueJ0upTrFc6d9I03w=\"/>\n<meta
+        name=\"y_key\" content=\"095558bcde3b1768\">\n<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic'
+        rel='stylesheet' type='text/css'>\n<link rel=\"stylesheet\" href=\"//www.starcitygames.com/assets/reset.css\">\n<link
+        rel=\"apple-touch-icon\" href=\"//static.starcitygames.com/www/images/banners/media/scgmobile/ipad_feed.png\">\n<link
+        rel=\"alternate\" type=\"application/rss+xml\" title=\"StarCityGames RSS\"
+        href=\"http://www.starcitygames.com/rss/rssfeed.xml\">\n<link rel=\"search\"
+        href=\"http://www.starcitygames.com/opensearch.xml\" type=\"application/opensearchdescription+xml\"
+        title=\"Magic Card Search\"/>\n<link rel=\"stylesheet\" type=\"text/css\"
+        href=\"//sales.starcitygames.com/javascript/jquery.add_to_cart.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"//sales.starcitygames.com/library/scripts/fancybox/jquery.fancybox.css?v=2.1.2\"
+        media=\"screen\"/>\n<link rel=\"stylesheet\" href=\"//sales.starcitygames.com/library/scripts/jquery-ui-1.8.4/themes/base/jquery.ui.theme.css\">\n<link
+        rel=\"stylesheet\" href=\"//sales.starcitygames.com/library/scripts/jquery-ui-1.8.4/themes/base/jquery.ui.core.css\">\n<link
+        rel=\"stylesheet\" href=\"//sales.starcitygames.com/library/scripts/jquery-ui-1.8.4/themes/base/jquery.ui.button.css\">\n<link
+        rel=\"stylesheet\" href=\"//sales.starcitygames.com/library/scripts/jquery-ui-1.8.4/themes/base/jquery.ui.dialog.css\">\n<link
+        rel=\"stylesheet\" href=\"//sales.starcitygames.com/library/scripts/jquery-ui-1.8.4/themes/base/jquery.ui.autocomplete.css\">\n<link
+        rel=\"stylesheet\" href=\"//sales.starcitygames.com/library/scripts/jquery-ui-1.8.4/themes/base/jquery.ui.datepicker.css\">\n<link
+        rel=\"stylesheet\" href=\"//www.starcitygames.com/assets/style_css.php?date=2015_07_28&ir=http://static.starcitygames.com/www//images\">\n<link
+        rel=\"stylesheet\" href=\"//www.starcitygames.com/assets/jquery.jscrollpane.css\">\n<link
+        rel=\"stylesheet\" href=\"//www.starcitygames.com/assets/skin.css\">\n<link
+        rel=\"stylesheet\" href=\"//www.starcitygames.com/assets/selectboxes.css\">\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"//www.starcitygames.com/js/jquery.qtip-2.2.1.min.css\"/>\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"//www.starcitygames.com/js/google_translate.css\"/>\n<script
+        src=\"//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>\n<script
+        src=\"//ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.tabify.js\"></script>\n<script src=\"//www.starcitygames.com/js/jquery.marquee.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.tools.min.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.autocomplete_all_products.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.mousewheel.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.jscrollpane.min.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.jcarousel.min.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.chosen.js\"></script>\n<script src=\"//www.starcitygames.com/js/jquery.validate.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.qtip-2.2.1.min.js\"></script>\n<script
+        src=\"//www.starcitygames.com/js/jquery.easing.js\"></script>\n<script src=\"//www.starcitygames.com/js/jquery.flexslider-min.js\"></script>\n<script
+        src=\"//sales.starcitygames.com/javascript/site_definitions.php\"></script>\n<script
+        src=\"//sales.starcitygames.com/javascript/jquery.add_to_cart.js\"></script>\n<script
+        src=\"//sales.starcitygames.com/javascript/jquery.wishlist.js\"></script>\n<script
+        src=\"//sales.starcitygames.com/library/scripts/jquery.cycle.all.js\"></script>\n<script
+        type='text/javascript' src='//sales.starcitygames.com/library/scripts/custom.js'></script>\n<script
+        type=\"text/javascript\" src=\"//www.starcitygames.com/javascript/jquery.smoothDivScroll-1.1-min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//sales.starcitygames.com/library/scripts/fancybox/jquery.fancybox.js?v=2.1.3\"></script>\n<script
+        type=\"text/javascript\" src=\"//www.starcitygames.com/js/google_analytics.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//www.starcitygames.com/js/google_tags.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//www.starcitygames.com/js/google_translate.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit\"></script>\n<script
+        src=\"//www.starcitygames.com/js/site.js?ver=2015.07.27\"></script>\n \n<style>.deckdbbody,.deckdbbody2{padding:0
+        8px;}</style>\n</HEAD>\n<BODY><script type=\"text/javascript\">\n//<![CDATA[\ntry{(function(a){var
+        b=\"http://\",c=\"sales.starcitygames.com\",d=\"/cdn-cgi/cl/\",e=\"img.gif\",f=new
+        a;f.src=[b,c,d,e].join(\"\")})(Image)}catch(e){}\n//]]>\n</script>\n \n<div
+        id=\"fb-root\"></div>\n<script>\r\n      window.fbAsyncInit = function() {\r\n
+        \       FB.init({\r\n          appId      : \"166463640084673\", // App ID\r\n
+        \         channelUrl : \"http://www.starcitygames.com/channel.php\", // Channel
+        File\r\n          status     : true, // check login status\r\n          cookie
+        \    : true, // enable cookies to allow the server to access the session\r\n
+        \         xfbml      : true  // parse XFBML\r\n        });\r\n      };\r\n\r\n
+        \     (function(d, s, id){\r\n         var js, fjs = d.getElementsByTagName(s)[0];\r\n
+        \        if (d.getElementById(id)) {return;}\r\n         js = d.createElement(s);
+        js.id = id;\r\n         js.src = \"//connect.facebook.net/en_US/all.js\";\r\n
+        \        fjs.parentNode.insertBefore(js, fjs);\r\n       }(document, 'script',
+        'facebook-jssdk'));\r\n    </script>\n<div class=\"fixedtop_holder\"></div>\n<header
+        id=\"header\">\n \n<div id='div-gpt-ad-1368036768350-0' style='width:728px;
+        height:90px; margin-left:auto; margin-right:auto;'>\n<script type='text/javascript'>\r\n
+        \           googletag.cmd.push(function() { googletag.display('div-gpt-ad-1368036768350-0');
+        });\r\n            </script>\n</div>\n<div style=\"clear:both;\"></div>\n<div
+        id=\"inner_wrapper\">\n<div class=\"header_wrapper\">\n<div id=\"logo\" class=\"left\"><a
+        href=\"http://www.starcitygames.com/index.php\"><img src=\"http://static.starcitygames.com/www//images/header/headerlogo.png\"
+        data-hover=\"http://static.starcitygames.com/www//images/header/headerlogo-over.png\"></a></div>\n<div
+        id=\"main_nav\" class=\"left\">\n<nav>\n<ul>\n<li class=\"spacer\"><a href=\"http://www.starcitygames.com/cardsets/\">STORE</a></li>\n<li
+        class=\"spacer\"><a href=\"http://www.starcitygames.com/content/schedule\">EVENTS</a></li>\n<li
+        class=\"spacer\"><a href=\"http://www.starcitygames.com/tags/Premium~Select/\">ARTICLES</a></li>\n<li
+        class=\"spacer\"><a href=\"http://www.starcitygames.com/tags/News/\">NEWS</a></li>\n<li
+        class=\"spacer\"><a href=\"http://www.starcitygames.com/content/decklists/\">DECKS</a></li>\n<li
+        class=\"spacer\"><a href=\"http://www.starcitygames.com/buylist/\">BUYLIST</a></li>\n<li
+        class=\"spacer\"><a href=\"https://sales.starcitygames.com/contactus/\">HELP</a></li>\n<li
+        class=\"spacer\"><a href=\"http://www.starcitygames.com/content/gamecenter/\">GAME
+        CENTER</a></li>\n<li class=\"spacer\"><a href=\"http://www.starcitygames.com/content/newslettersignup/\">NEWSLETTER</a></li>\n</ul>\n</nav>\n</div>\n<div
+        id=\"main_menu_search\" class=\"left\">\n<div id=\"main_search\">\n<form action=\"//sales.starcitygames.com/search.php\"
+        method=\"get\" name=\"search_form\">\n<input name=\"substring\" type=\"text\"
+        placeholder=\"SEARCH THE WORLD'S LARGEST MAGIC:THE GATHERING STORE!\" id=\"product_searchbox\">\n<input
+        id=\"go\" name=\"go\" type=\"image\" value=\"GO\" src=\"//www.starcitygames.com/images/go.jpg\">\n<input
+        name=\"t_all\" type=\"hidden\" value=\"All\">\n<input name=\"start_date\"
+        type=\"hidden\" value=\"2010-01-29\">\n<input name=\"end_date\" type=\"hidden\"
+        value=\"2012-04-22\">\n<input name=\"order_1\" type=\"hidden\" value=\"finish\">\n<input
+        name=\"limit\" type=\"hidden\" value=\"25\">\n<input name=\"action\" type=\"hidden\"
+        value=\"Show+Decks\">\n<input name=\"card_qty[1]\" type=\"hidden\" value=\"1\">\n<div
+        id=\"advsearch\" class=\"right\">\n<a href=\"http://sales.starcitygames.com/spoiler/spoiler.php\">Advanced
+        Search</a><br>\n<a href=\"http://sales.starcitygames.com/addadeckform.php\"
+        class=\"normal\">Deck Builder</a>\n</div>\n</form>\n</div>\n</div>\n<div id=\"login\"
+        class=\"left\">\n<ul>\n<li class=\"account1 account_function\">Hello. Sign
+        In.<br>\n<span class=\"bold\">YOUR ACCOUNT <img src=\"//www.starcitygames.com/images/arrow_account.png\"
+        width=\"9\" height=\"6\"></span>\n<div class=\"account_function_page\">\n<div
+        id=\"login_form\">\n<form action=\"https://sales.starcitygames.com/login.php\"
+        method=\"post\" name=\"authentication_form\">\n<label for=\"log0n\">Email
+        Address:</label><input name=\"log0n\" id=\"log0n\" type=\"text\" class=\"text\">\n<label
+        for=\"password\">Password:</label><input name=\"password\" id=\"password\"
+        type=\"password\" class=\"text\">\n<p class=\"small_text\"><a href=\"https://sales.starcitygames.com/password_reset.php\">forgot
+        your password?</a></p>\n<input name=\"submit\" type=\"submit\" value=\"Sign
+        in\" class=\"button\">\n<input id=\"mode\" class=\" webdeveloper-unhidden\"
+        type=\"hidden\" value=\"login\" name=\"mode\">\n</form>\nNew customer? <a
+        href=\"http://sales.starcitygames.com/myaccount/signup\">Start here!</a>\n</div>\n</div>\n</li>\n<li
+        class=\"account2 account_function\">\n<span id='cart_count'></span><br>\n<span
+        class=\"bold\">CART <img src=\"//www.starcitygames.com/images/arrow_account.png\"
+        width=\"9\" height=\"6\"></span>\n<div class=\"account_function_page\">\n<form
+        id=\"do_checkout\" name=\"do_checkout\" method=\"post\" action=\"https://sales.starcitygames.com/checkout/shipping.php\">\n<input
+        type=\"hidden\" name=\"co\" value=\"all\">\n</form>\n<p class=\"view_cart\"><a
+        href=\"http://sales.starcitygames.com/checkout/cart.php\">View Cart (<span
+        id='cart_count2'></span> items)</a></p>\n<p class=\"checkout_cart\"><a href=\"#\"
+        onClick=\"do_checkout_all();\">Checkout</a></p>\n</div>\n</li>\n<li class=\"account3
+        account_function\">\n<span class=\"bold\">WISH<br>LIST <img src=\"//www.starcitygames.com/images/arrow_account.png\"
+        width=\"9\" height=\"6\"></span>\n<div class=\"account_function_page\">\n<table
+        width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" id=\"wishlist_table\">\n<tr
+        class=\"product_row\">\n<td>&nbsp;</td>\n<td>&nbsp;</td>\n</tr>\n</table>\n</div>\n</li>\n</ul>\n</div>\n</div>\n</div>\n<div
+        id=\"menu_wrap\">\n<div class=\"header_wrapper\">\n<nav id=\"product_menu\">\n<ul
+        id=\"nav\" class=\"dropdown\">\n<li id=\"nav_featured\" class=\"main_menu\">\n<a
+        href=\"http://www.starcitygames.com/content/landing_page\"><img src=\"http://static.starcitygames.com/www/images/setLogo.png\"/></a>\n</li>\n<li
+        id=\"nav_singles\" class=\"main_menu\"><a href=\"#\">Magic Singles</a>\n<ul
+        class=\"show_shadow\">\n<li><a href=\"http://www.starcitygames.com/cardsets/english_singles\">English</a></li>\n<li><a
+        href=\"http://www.starcitygames.com/cardsets/english_foils\">Foil English</a></li>\n<li><a
+        href=\"http://www.starcitygames.com/cardsets/non_english_singles\">Non-English</a></li>\n<li><a
+        href=\"http://www.starcitygames.com/cardsets/non_english_foils\">Foil Non-English</a></li>\n<li><a
+        href=\"http://sales.starcitygames.com/category.php?t=a&cat=5058\">BGS/Graded
+        Cards</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=141\">Complete
+        Sets</a></li>\n<li><a href=\"http://www.starcitygames.com/cardsets/rarities/\">Misprints
+        and Rarities</a></li>\n<li class=\"lastmenu\"><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=144\">Wholesale
+        Lots</a></li>\n</ul>\n</li>\n<li id=\"nav_sealed\" class=\"main_menu\"><a
+        href=\"#\">Magic Sealed Product</a>\n<ul class=\"show_shadow msp_equal\">\n<li
+        class=\"msp_title_line\">Expansion Sets</li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5121\">Booster
+        Packs</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5125\">Booster
+        Boxes</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5123\">Starter
+        &amp; Tourn. Packs</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5127\">Starter
+        &amp; Tourn. Displays</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5124\">Theme
+        Decks</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5206\">Event
+        Decks</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5122\">Intro
+        Packs</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5126\">Fat
+        Packs</a></li>\n<li class=\"lastmenu\"><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5128\">Two-Player
+        Games</a></li>\n</ul>\n<ul class=\"show_shadow msp_equal\" style=\"margin-left:225px;\">\n<li
+        class=\"msp_title_line\">Standalone Sets</li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5230\">Archenemy
+        </a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5231\">Commander
+        </a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5232\">Duel
+        Decks</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5233\">From
+        the Vault</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5234\">Planechase
+        </a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5235\">Premium
+        Deck Series</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5129\">Misc.
+        Box Sets</a></li>\n<li class=\"lastmenu msp_bottom\"><a href=\"http://sales.starcitygames.com/spoiler/display.php?&s%5B5114%5D=5114&s%5B5317%5D=5317&s%5B5318%5D=5318&s%5B5319%5D=5319&s%5B5320%5D=5320&s%5B5321%5D=5321&s%5B5322%5D=5322&s%5B5323%5D=5323&s%5B5324%5D=5324&s%5B5325%5D=5325&s%5B5326%5D=5326&display=3&numpage=25\">Non-English
+        Sealed </a></li>\n</ul>\n</li>\n<li id=\"nav_supplies\" class=\"main_menu\"><a
+        href=\"#\">Gaming Supplies</a>\n<ul class=\"show_shadow\">\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5088\">Binders</a></li>\n<li><a
+        href=\"http://sales.starcitygames.com/category.php?t=a&cat=5204\">Books &amp;
+        Fat Pack Guides</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5091\">Boxes
+        &amp; Bags</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=5092\">Clothing</a></li>\n<li><a
+        href=\"http://sales.starcitygames.com/category.php?t=a&cat=5299\">Collectibles</a></li>\n<li><a
+        href=\"http://sales.starcitygames.com/category.php?t=a&cat=5089\">Deck Boxes</a></li>\n<li><a
+        href=\"http://sales.starcitygames.com/category.php?t=a&cat=5205\">Dice</a></li>\n<li><a
+        href=\"http://sales.starcitygames.com/category.php?t=a&cat=5251\">Life Counters</a></li>\n<li><a
+        href=\"http://sales.starcitygames.com/category.php?t=a&cat=5093\">Miscellaneous</a></li>\n<li><a
+        href=\"http://sales.starcitygames.com/category.php?t=a&cat=5090\">Playmats</a></li>\n<li
+        class=\"lastmenu\"><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=153\">Sleeves</a></li>\n</ul>\n</li>\n<li
+        id=\"nav_special\" class=\"main_menu\"><a href=\"#\">Specialty Items</a>\n<ul
+        class=\"show_shadow\">\n<li><a href=\"http://www.starcitygames.com/content/cardboardcrack/\">Cardboard
+        Crack</a></li>\n<li><a href=\"http://www.starcitygames.com/content/creaturecollection/\">Creature
+        Collection</a></li>\n<li><a href=\"http://sales.starcitygames.com/search.php?substring=Funko+POP&go.x=0&go.y=0&go=GO&t_all=All&start_date=2010-01-29&end_date=2012-04-22&order_1=finish&limit=25&action=Show%2BDecks&card_qty%5B1%5D=1\">Funko
+        Pop! Vinyl Figures</a></li>\n<li><a href=\"http://sales.starcitygames.com/category.php?t=a&cat=1\">Gift
+        Cards</a></li>\n<li><a href=\"http://www.starcitygames.com/content/lithographs/\">Lithographs</a></li>\n<li
+        class=\"lastmenu\"><a href=\"http://www.starcitygames.com/content/nextlevel/\">Next
+        Level Library</a></li>\n</ul>\n</li>\n<li id=\"nav_digital\" class=\"main_menu\"><a
+        href=\"#\">Digital Products</a>\n<ul class=\"show_shadow\">\n<li><a href=\"http://www.starcitygames.com/content/completecommander/\">Complete
+        Commander</a></li>\n<li><a href=\"http://www.starcitygames.com/content/nextlevel/\">Next
+        Level Library</a></li>\n<li><a href=\"http://sales.starcitygames.com/omg/\">OMG:
+        Official Miser's Guide</a></li>\n<li class=\"lastmenu\"><a href=\"http://sales.starcitygames.com/carddisplay.php?product=267847\">Tha
+        Gatherin'</a></li>\n</ul>\n</li>\n<li id=\"nav_webuy\" class=\"main_menu\"><a
+        href=\"http://www.starcitygames.com/buylist/\">We Buy <img src=\"http://static.starcitygames.com/www/images/magiclogo.png\"
+        width=\"82\" height=\"23\"></a></li>\n</ul>\n</nav>\n</div>\n</div>\n</header>\n<section
+        id=\"body_content\">\n<div id=\"sidebar_background\">\n<section id=\"content\"
+        class=\"left\">\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\"
+        valign=\"top\" align=\"center\">\n<tr><td colspan=\"9\" align=\"center\"><span
+        class=\"titletext\">10244 Magic decks were found matching your criteria.</span></td></tr>\n<tr><td
+        colspan=\"9\" height=\"10\"></td></tr>\n<tr><td colspan=\"9\" align=\"center\"
+        style=\"font-size:14px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=100&limit=100\"> -
+        Next&gt;&gt; </a></td></tr>\n<tr><td colspan=\"9\" height=\"10\"></td></tr>\n<tr>\n<td
+        class=\"deckdbheader\">Deck</td>\n<td class=\"deckdbheader\">Finish</td>\n<td
+        class=\"deckdbheader\">Player</td>\n<td class=\"deckdbheader\">Event</td>\n<td
+        class=\"deckdbheader\">Format</td>\n<td class=\"deckdbheader\">Date</td>\n<td
+        class=\"deckdbheader\">Location</td>\n</tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100304\"><strong>Four-Color
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100304\">8th</span>\n</td>\n<td class=\"deckdbbody\">Ryan
+        Bowles</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-20&end_date=2016-03-20\">2016-03-20</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Abingdon\">Abingdon</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100303\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100303\">7th</span>\n</td>\n<td class=\"deckdbbody2\">Alex
+        Sawyer</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-20&end_date=2016-03-20\">2016-03-20</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Abingdon\">Abingdon</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100302\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100302\">6th</span>\n</td>\n<td class=\"deckdbbody\">William
+        Yagatich</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-20&end_date=2016-03-20\">2016-03-20</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Abingdon\">Abingdon</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100301\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100301\">5th</span>\n</td>\n<td class=\"deckdbbody2\">Ivy
+        Roberson</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-20&end_date=2016-03-20\">2016-03-20</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Abingdon\">Abingdon</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100300\"><strong>G/W
+        Hardened Scales</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100300\">4th</span>\n</td>\n<td class=\"deckdbbody\">Daniel
+        Oravec</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-20&end_date=2016-03-20\">2016-03-20</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Abingdon\">Abingdon</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100299\"><strong>Jeskai
+        Ascendancy Prowess</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100299\">3rd</span>\n</td>\n<td class=\"deckdbbody2\">Beren
+        Mally</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-20&end_date=2016-03-20\">2016-03-20</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Abingdon\">Abingdon</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100298\"><strong>Four-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100298\">2nd</span>\n</td>\n<td class=\"deckdbbody\">Tyler
+        Byrne</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-20&end_date=2016-03-20\">2016-03-20</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Abingdon\">Abingdon</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100297\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100297\">1st</span>\n</td>\n<td class=\"deckdbbody2\">Adam
+        Filer</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-20&end_date=2016-03-20\">2016-03-20</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Abingdon\">Abingdon</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100221\"><strong>R/U
+        Prowess</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100221\">8th</span>\n</td>\n<td class=\"deckdbbody\">Mark
+        Preedy</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Hatboro\">Hatboro</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100220\"><strong>U/G
+        Tempo</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100220\">7th</span>\n</td>\n<td class=\"deckdbbody2\">Cory
+        Dissenger</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Hatboro\">Hatboro</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100219\"><strong>Bant
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100219\">6th</span>\n</td>\n<td class=\"deckdbbody\">Phil
+        Pratt</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Hatboro\">Hatboro</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100218\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100218\">5th</span>\n</td>\n<td class=\"deckdbbody2\">Anthony
+        Mascio</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Hatboro\">Hatboro</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100217\"><strong>Esper
+        Dragons</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100217\">4th</span>\n</td>\n<td class=\"deckdbbody\">Andrew
+        Davis</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Hatboro\">Hatboro</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100216\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100216\">3rd</span>\n</td>\n<td class=\"deckdbbody2\">Dan
+        Tracy</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Hatboro\">Hatboro</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99918\"><strong>Mono-Red
+        Eldrazi</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99918\">13th</span>\n</td>\n<td class=\"deckdbbody\">Kent
+        Ketter</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99919\"><strong>Four-Color
+        Company</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99919\">19th</span>\n</td>\n<td class=\"deckdbbody2\">Cedric
+        Phillips</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99920\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99920\">1st</span>\n</td>\n<td class=\"deckdbbody\">Andrew
+        Funkhouser</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99921\"><strong>Grixis
+        Control</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99921\">7th</span>\n</td>\n<td class=\"deckdbbody2\">Raymond
+        Perez</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99923\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99923\">27th</span>\n</td>\n<td class=\"deckdbbody\">Josh
+        Cho</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td class=\"deckdbbody\">Standard</td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99926\"><strong>U/R
+        Prowess</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99926\">23rd</span>\n</td>\n<td class=\"deckdbbody2\">Cory
+        Osoria</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99929\"><strong>Abzan
+        Aggro</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99929\">8th</span>\n</td>\n<td class=\"deckdbbody\">Anthony
+        Eason</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99931\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99931\">5th</span>\n</td>\n<td class=\"deckdbbody2\">Noah
+        Strasler</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99933\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99933\">3rd</span>\n</td>\n<td class=\"deckdbbody\">Owen
+        Turtenwald</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99935\"><strong>4-Color
+        Company</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99935\">16th</span>\n</td>\n<td class=\"deckdbbody2\">Jeff
+        Hoogland</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99936\"><strong>G/W
+        Hardened Scales</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99936\">32nd</span>\n</td>\n<td class=\"deckdbbody\">Bryan
+        Carey</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99937\"><strong>Esper
+        Dragons</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99937\">2nd</span>\n</td>\n<td class=\"deckdbbody2\">Robert
+        Wright</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99938\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99938\">14th</span>\n</td>\n<td class=\"deckdbbody\">Bradley
+        Carpenter</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99939\"><strong>Jeskai
+        Black</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99939\">6th</span>\n</td>\n<td class=\"deckdbbody2\">Todd
+        Anderson</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99940\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99940\">18th</span>\n</td>\n<td class=\"deckdbbody\">Michael
+        Majors</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99942\"><strong>Bant
+        Company</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99942\">29th</span>\n</td>\n<td class=\"deckdbbody2\">Connor
+        Bowman</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99944\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99944\">4th</span>\n</td>\n<td class=\"deckdbbody\">Trevor
+        Petrilli</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99945\"><strong>Abzan
+        Blue</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99945\">24th</span>\n</td>\n<td class=\"deckdbbody2\">Alec
+        Levy</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99946\"><strong>Bant
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99946\">11th</span>\n</td>\n<td class=\"deckdbbody\">Kyle
+        Abell</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99948\"><strong>4-Color
+        Company</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99948\">9th</span>\n</td>\n<td class=\"deckdbbody2\">Christopher
+        Day</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99949\"><strong>4-Color
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99949\">31st</span>\n</td>\n<td class=\"deckdbbody\">Dwight
+        Desotelle</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99950\"><strong>Grixis
+        Dragons</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99950\">25th</span>\n</td>\n<td class=\"deckdbbody2\">Joseph
+        Eckert</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99952\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99952\">15th</span>\n</td>\n<td class=\"deckdbbody\">Tom
+        Ross</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99953\"><strong>Grixis
+        Dragons</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99953\">22nd</span>\n</td>\n<td class=\"deckdbbody2\">Justin
+        Crandall</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99954\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99954\">10th</span>\n</td>\n<td class=\"deckdbbody\">Scot
+        Schauf</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99955\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99955\">28th</span>\n</td>\n<td class=\"deckdbbody2\">Jacob
+        Baugh</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99956\"><strong>4-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99956\">30th</span>\n</td>\n<td class=\"deckdbbody\">Mike
+        Growse</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99957\"><strong>Abzan
+        Blue</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99957\">21st</span>\n</td>\n<td class=\"deckdbbody2\">Koelten
+        Grissom</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99958\"><strong>Jeskai
+        Black</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99958\">20th</span>\n</td>\n<td class=\"deckdbbody\">Ray
+        Huang</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99959\"><strong>Jeskai
+        Dragons</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99959\">17th</span>\n</td>\n<td class=\"deckdbbody2\">Michael
+        Hamilton</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99960\"><strong>Grixis
+        Control</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99960\">12th</span>\n</td>\n<td class=\"deckdbbody\">Douglas
+        Bauer</td><td class=\"deckdbbody\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99961\"><strong>Abzan
+        Aggro</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99961\">26th</span>\n</td>\n<td class=\"deckdbbody2\">Larry
+        Waymon</td><td class=\"deckdbbody2\">StarCityGames.com Standard Open</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Indianapolis\">Indianapolis</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100056\"><strong>Grixis
+        Control</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100056\">1st</span>\n</td>\n<td class=\"deckdbbody\">Petr
+        Sochurek</td><td class=\"deckdbbody\">Grand Prix</td><td class=\"deckdbbody\">Standard</td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Paris\">Paris</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100057\"><strong>Jeskai
+        Black</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100057\">2nd</span>\n</td>\n<td class=\"deckdbbody2\">Ben
+        Stark</td><td class=\"deckdbbody2\">Grand Prix</td><td class=\"deckdbbody2\">Standard</td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Paris\">Paris</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100058\"><strong>Bant
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100058\">3rd</span>\n</td>\n<td class=\"deckdbbody\">Ryoichi
+        Tamada</td><td class=\"deckdbbody\">Grand Prix</td><td class=\"deckdbbody\">Standard</td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Paris\">Paris</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100059\"><strong>Abzan
+        Aggro</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100059\">4th</span>\n</td>\n<td class=\"deckdbbody2\">Martin
+        Juza</td><td class=\"deckdbbody2\">Grand Prix</td><td class=\"deckdbbody2\">Standard</td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Paris\">Paris</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100060\"><strong>Esper
+        Dragons</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100060\">5th</span>\n</td>\n<td class=\"deckdbbody\">Arne
+        Huschenbeth</td><td class=\"deckdbbody\">Grand Prix</td><td class=\"deckdbbody\">Standard</td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Paris\">Paris</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100061\"><strong>Four-Color
+        Rally</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100061\">6th</span>\n</td>\n<td class=\"deckdbbody2\">Giuseppe
+        Reale</td><td class=\"deckdbbody2\">Grand Prix</td><td class=\"deckdbbody2\">Standard</td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Paris\">Paris</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100062\"><strong>Abzan
+        Blue</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100062\">7th</span>\n</td>\n<td class=\"deckdbbody\">Fabian
+        Friedrich</td><td class=\"deckdbbody\">Grand Prix</td><td class=\"deckdbbody\">Standard</td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Paris\">Paris</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100063\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100063\">8th</span>\n</td>\n<td class=\"deckdbbody2\">Paolo
+        Magnani</td><td class=\"deckdbbody2\">Grand Prix</td><td class=\"deckdbbody2\">Standard</td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Paris\">Paris</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100084\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100084\">1st</span>\n</td>\n<td class=\"deckdbbody\">Daniel
+        Bardier</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Bossier+City\">Bossier
+        City</a>&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100085\"><strong>Esper
+        Dragons</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100085\">2nd</span>\n</td>\n<td class=\"deckdbbody2\">Johnathon
+        Moore</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Bossier+City\">Bossier
+        City</a>&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100086\"><strong>Four-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100086\">3rd</span>\n</td>\n<td class=\"deckdbbody\">Brandon
+        Smith</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Bossier+City\">Bossier
+        City</a>&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100087\"><strong>Bant
+        Company</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100087\">4th</span>\n</td>\n<td class=\"deckdbbody2\">Tyler
+        Mitchell</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Bossier+City\">Bossier
+        City</a>&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100088\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100088\">5th</span>\n</td>\n<td class=\"deckdbbody\">Daniel
+        French</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Bossier+City\">Bossier
+        City</a>&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100089\"><strong>Four-Color
+        Rally</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100089\">6th</span>\n</td>\n<td class=\"deckdbbody2\">Shelton
+        Powell</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Bossier+City\">Bossier
+        City</a>&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100090\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100090\">7th</span>\n</td>\n<td class=\"deckdbbody\">Dylan
+        Smith</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Bossier+City\">Bossier
+        City</a>&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100091\"><strong>Jeskai
+        Black</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100091\">8th</span>\n</td>\n<td class=\"deckdbbody2\">Charles
+        Lancaster</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Bossier+City\">Bossier
+        City</a>&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100156\"><strong>Four-Color
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100156\">1st</span>\n</td>\n<td class=\"deckdbbody\">Daniel
+        Vigil</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Littleton\">Littleton</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100157\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100157\">2nd</span>\n</td>\n<td class=\"deckdbbody2\">Kevin
+        Kingsley</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Littleton\">Littleton</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100158\"><strong>Bant
+        Tokens</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100158\">3rd</span>\n</td>\n<td class=\"deckdbbody\">Casey
+        Miller</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Littleton\">Littleton</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100159\"><strong>Atarka
+        Red</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100159\">4th</span>\n</td>\n<td class=\"deckdbbody2\">Austin
+        McCoy</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Littleton\">Littleton</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100160\"><strong>Atarka
+        Red</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100160\">5th</span>\n</td>\n<td class=\"deckdbbody\">Nathan
+        Graber</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Littleton\">Littleton</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100161\"><strong>Four-Color
+        Rally</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100161\">6th</span>\n</td>\n<td class=\"deckdbbody2\">Austin
+        Yost</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Littleton\">Littleton</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100162\"><strong>Bant
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100162\">7th</span>\n</td>\n<td class=\"deckdbbody\">Adam
+        Guinn</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Littleton\">Littleton</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100163\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100163\">8th</span>\n</td>\n<td class=\"deckdbbody2\">Kyle
+        Wilson</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Littleton\">Littleton</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100206\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100206\">1st</span>\n</td>\n<td class=\"deckdbbody\">Daniel
+        Mayer</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Brooklyn\">Brooklyn</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100207\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100207\">2nd</span>\n</td>\n<td class=\"deckdbbody2\">Richard
+        Lam</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Brooklyn\">Brooklyn</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100208\"><strong>Grixis
+        Control</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100208\">3rd</span>\n</td>\n<td class=\"deckdbbody\">Ricky
+        Wu</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Brooklyn\">Brooklyn</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100209\"><strong>Jeskai
+        Black</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100209\">4th</span>\n</td>\n<td class=\"deckdbbody2\">Michael
+        Novins</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Brooklyn\">Brooklyn</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100210\"><strong>B/W
+        Warriors</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100210\">5th</span>\n</td>\n<td class=\"deckdbbody\">Volodymyr
+        Shnyakin</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Brooklyn\">Brooklyn</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100211\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100211\">6th</span>\n</td>\n<td class=\"deckdbbody2\">Mark
+        Vorobyov</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Brooklyn\">Brooklyn</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100212\"><strong>Jeskai
+        Black</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100212\">7th</span>\n</td>\n<td class=\"deckdbbody\">Dan
+        Benipayo</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Brooklyn\">Brooklyn</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100213\"><strong>Four-Color
+        Rally</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100213\">8th</span>\n</td>\n<td class=\"deckdbbody2\">Dylan
+        Gottesman</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Brooklyn\">Brooklyn</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100214\"><strong>Bant
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100214\">1st</span>\n</td>\n<td class=\"deckdbbody\">Tony
+        Chiarlanza</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Hatboro\">Hatboro</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100215\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100215\">2nd</span>\n</td>\n<td class=\"deckdbbody2\">Russell
+        Giblin</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-19&end_date=2016-03-19\">2016-03-19</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Hatboro\">Hatboro</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100140\"><strong>Four-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100140\">1st</span>\n</td>\n<td class=\"deckdbbody\">Roger
+        Carroll</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-17&end_date=2016-03-17\">2016-03-17</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=East+Windsor\">East
+        Windsor</a>&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100141\"><strong>Atarka
+        Red</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100141\">2nd</span>\n</td>\n<td class=\"deckdbbody2\">Tim
+        Vannan</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-17&end_date=2016-03-17\">2016-03-17</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=East+Windsor\">East
+        Windsor</a>&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100142\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100142\">3rd</span>\n</td>\n<td class=\"deckdbbody\">Farid
+        Hasani</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-17&end_date=2016-03-17\">2016-03-17</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=East+Windsor\">East
+        Windsor</a>&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100143\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100143\">4th</span>\n</td>\n<td class=\"deckdbbody2\">Anthony
+        Mascio</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-17&end_date=2016-03-17\">2016-03-17</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=East+Windsor\">East
+        Windsor</a>&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100144\"><strong>Bant
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100144\">5th</span>\n</td>\n<td class=\"deckdbbody\">Giuseppe
+        Pucci</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-17&end_date=2016-03-17\">2016-03-17</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=East+Windsor\">East
+        Windsor</a>&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100145\"><strong>Jeskai
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100145\">6th</span>\n</td>\n<td class=\"deckdbbody2\">William
+        Vasquez</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-17&end_date=2016-03-17\">2016-03-17</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=East+Windsor\">East
+        Windsor</a>&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100146\"><strong>G/R
+        Ramp</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100146\">7th</span>\n</td>\n<td class=\"deckdbbody\">Russell
+        Giblin</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-17&end_date=2016-03-17\">2016-03-17</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=East+Windsor\">East
+        Windsor</a>&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100147\"><strong>Jeskai
+        Black</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100147\">8th</span>\n</td>\n<td class=\"deckdbbody2\">Julius
+        Livecchi</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-17&end_date=2016-03-17\">2016-03-17</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=East+Windsor\">East
+        Windsor</a>&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99999\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99999\">1st</span>\n</td>\n<td class=\"deckdbbody\">Hien
+        Nguyen</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-13&end_date=2016-03-13\">2016-03-13</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Columbus\">Columbus</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100049\"><strong>G/W
+        Hardened Scales</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100049\">2nd</span>\n</td>\n<td class=\"deckdbbody2\">Tyler
+        Angelbeck</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-13&end_date=2016-03-13\">2016-03-13</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Columbus\">Columbus</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100050\"><strong>Esper
+        Dragons</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100050\">3rd</span>\n</td>\n<td class=\"deckdbbody\">William
+        Wingler</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-13&end_date=2016-03-13\">2016-03-13</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Columbus\">Columbus</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100051\"><strong>Naya
+        Ramp</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100051\">4th</span>\n</td>\n<td class=\"deckdbbody2\">Tab
+        Postlethwait</td><td class=\"deckdbbody2\">StarCityGames.com Invitational
+        Qualifier</td><td class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-13&end_date=2016-03-13\">2016-03-13</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Columbus\">Columbus</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100052\"><strong>Four-Color
+        Company</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100052\">5th</span>\n</td>\n<td class=\"deckdbbody\">Kirk
+        Rhoades</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-13&end_date=2016-03-13\">2016-03-13</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Columbus\">Columbus</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100053\"><strong>Jeskai
+        Black</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100053\">6th</span>\n</td>\n<td class=\"deckdbbody2\">Michael
+        Givens</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-13&end_date=2016-03-13\">2016-03-13</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Columbus\">Columbus</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100054\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_100054\">7th</span>\n</td>\n<td class=\"deckdbbody\">Conner
+        Guarino</td><td class=\"deckdbbody\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-13&end_date=2016-03-13\">2016-03-13</a></td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Columbus\">Columbus</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody2\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=100055\"><strong>Four-Color
+        Company</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_100055\">8th</span>\n</td>\n<td class=\"deckdbbody2\">Morgan
+        McCarl</td><td class=\"deckdbbody2\">StarCityGames.com Invitational Qualifier</td><td
+        class=\"deckdbbody2\">Standard</td><td class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-13&end_date=2016-03-13\">2016-03-13</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Columbus\">Columbus</a>&nbsp;</td></tr><tr><td
+        class=\"deckdbbody\" style=\"padding-left:5px;\"><a href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99782\"><strong>Mardu</strong></a></td><td
+        class=\"deckdbbody\">\n<span class=\"finish_display\" id=\"finish_display_99782\">2nd</span>\n</td>\n<td
+        class=\"deckdbbody\">professordaniel </td><td class=\"deckdbbody\">Online
+        Event</td><td class=\"deckdbbody\">Standard</td><td class=\"deckdbbody\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-12&end_date=2016-03-12\">2016-03-12</a></td><td
+        class=\"deckdbbody\">&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99783\"><strong>Blue
+        Eldrazi</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99783\">4th</span>\n</td>\n<td class=\"deckdbbody2\">L1XO
+        </td><td class=\"deckdbbody2\">Online Event</td><td class=\"deckdbbody2\">Standard</td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-12&end_date=2016-03-12\">2016-03-12</a></td><td
+        class=\"deckdbbody2\">&nbsp;</td></tr><tr><td class=\"deckdbbody\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99784\"><strong>Five-Color
+        Rally</strong></a></td><td class=\"deckdbbody\">\n<span class=\"finish_display\"
+        id=\"finish_display_99784\">23rd</span>\n</td>\n<td class=\"deckdbbody\">Azureu09
+        </td><td class=\"deckdbbody\">Online Event</td><td class=\"deckdbbody\">Standard</td><td
+        class=\"deckdbbody\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-12&end_date=2016-03-12\">2016-03-12</a></td><td
+        class=\"deckdbbody\">&nbsp;</td></tr><tr><td class=\"deckdbbody2\" style=\"padding-left:5px;\"><a
+        href=\"http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=99901\"><strong>Mardu
+        Green</strong></a></td><td class=\"deckdbbody2\">\n<span class=\"finish_display\"
+        id=\"finish_display_99901\">1st</span>\n</td>\n<td class=\"deckdbbody2\">Brandon
+        Peck</td><td class=\"deckdbbody2\">StarCityGames.com Super IQ</td><td class=\"deckdbbody2\">Standard</td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?start_date=2016-03-12&end_date=2016-03-12\">2016-03-12</a></td><td
+        class=\"deckdbbody2\"><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?city=Colorado+Springs\">Colorado
+        Springs</a>&nbsp;</td></tr><tr><td colspan=\"9\" align=\"center\" class=\"deckdbbody2\"
+        style=\"font-size:14px;\"><b><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=0&limit=limit\"> [1]
+        </a></b><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=100&limit=100\"> [2]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=200&limit=100\"> [3]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=300&limit=100\"> [4]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=400&limit=100\"> [5]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=500&limit=100\"> [6]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=600&limit=100\"> [7]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=700&limit=100\"> [8]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=800&limit=100\"> [9]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=900&limit=100\"> [10]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1000&limit=100\"> [11]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1100&limit=100\"> [12]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1200&limit=100\"> [13]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1300&limit=100\"> [14]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1400&limit=100\"> [15]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1500&limit=100\"> [16]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1600&limit=100\"> [17]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1700&limit=100\"> [18]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1800&limit=100\"> [19]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=1900&limit=100\"> [20]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2000&limit=100\"> [21]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2100&limit=100\"> [22]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2200&limit=100\"> [23]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2300&limit=100\"> [24]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2400&limit=100\"> [25]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2500&limit=100\"> [26]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2600&limit=100\"> [27]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2700&limit=100\"> [28]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2800&limit=100\"> [29]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=2900&limit=100\"> [30]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3000&limit=100\"> [31]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3100&limit=100\"> [32]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3200&limit=100\"> [33]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3300&limit=100\"> [34]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3400&limit=100\"> [35]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3500&limit=100\"> [36]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3600&limit=100\"> [37]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3700&limit=100\"> [38]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3800&limit=100\"> [39]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=3900&limit=100\"> [40]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4000&limit=100\"> [41]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4100&limit=100\"> [42]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4200&limit=100\"> [43]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4300&limit=100\"> [44]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4400&limit=100\"> [45]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4500&limit=100\"> [46]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4600&limit=100\"> [47]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4700&limit=100\"> [48]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4800&limit=100\"> [49]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=4900&limit=100\"> [50]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5000&limit=100\"> [51]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5100&limit=100\"> [52]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5200&limit=100\"> [53]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5300&limit=100\"> [54]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5400&limit=100\"> [55]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5500&limit=100\"> [56]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5600&limit=100\"> [57]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5700&limit=100\"> [58]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5800&limit=100\"> [59]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=5900&limit=100\"> [60]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6000&limit=100\"> [61]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6100&limit=100\"> [62]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6200&limit=100\"> [63]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6300&limit=100\"> [64]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6400&limit=100\"> [65]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6500&limit=100\"> [66]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6600&limit=100\"> [67]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6700&limit=100\"> [68]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6800&limit=100\"> [69]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=6900&limit=100\"> [70]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7000&limit=100\"> [71]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7100&limit=100\"> [72]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7200&limit=100\"> [73]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7300&limit=100\"> [74]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7400&limit=100\"> [75]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7500&limit=100\"> [76]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7600&limit=100\"> [77]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7700&limit=100\"> [78]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7800&limit=100\"> [79]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=7900&limit=100\"> [80]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8000&limit=100\"> [81]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8100&limit=100\"> [82]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8200&limit=100\"> [83]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8300&limit=100\"> [84]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8400&limit=100\"> [85]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8500&limit=100\"> [86]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8600&limit=100\"> [87]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8700&limit=100\"> [88]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8800&limit=100\"> [89]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=8900&limit=100\"> [90]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9000&limit=100\"> [91]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9100&limit=100\"> [92]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9200&limit=100\"> [93]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9300&limit=100\"> [94]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9400&limit=100\"> [95]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9500&limit=100\"> [96]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9600&limit=100\"> [97]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9700&limit=100\"> [98]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9800&limit=100\"> [99]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=9900&limit=100\"> [100]
+        </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=10000&limit=100\">
+        [101] </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=10100&limit=100\">
+        [102] </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=10200&limit=100\">
+        [103] </a><a href=\"http://sales.starcitygames.com//deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&order_1=date
+        desc&order_2=date desc&limit=100&start_num=0&start_num=100&limit=100\"> -
+        Next&gt;&gt; </a></td></tr></table></td></tr>"
+    http_version: 
+  recorded_at: Thu, 31 Mar 2016 22:43:22 GMT
+recorded_with: VCR 3.0.1
