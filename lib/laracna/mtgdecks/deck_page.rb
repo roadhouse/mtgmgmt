@@ -45,7 +45,7 @@ module Laracna
       end
 
       def valid?
-        main.keys.any?(&:empty?) || sideboard.keys.any?(&:empty?)
+        main.keys.none?(&:empty?) && sideboard.keys.none?(&:empty?)
       end
 
       private

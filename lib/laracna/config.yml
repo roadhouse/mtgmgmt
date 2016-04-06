@@ -9,3 +9,8 @@ mtgdecks:
   deck_list_url: "/decks/viewByFormat/40/"
   pagination_param: "page:"
   deck_url: "/decks/view/"
+
+mtgo:
+  host: "http://magic.wizards.com"
+  deck_url: "/en/articles/archive/mtgo-standings/standard-daily-"
+  date_format: "%Y-%m-%d"
