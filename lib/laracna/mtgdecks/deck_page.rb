@@ -8,8 +8,6 @@ module Laracna
 
       def initialize(url)
         @url = url
-
-        remove_unused_elements
       end
 
       def engine
@@ -29,15 +27,11 @@ module Laracna
       end
 
       def main
-        main = engine.search("div .cards table")[0...-1]
-
-        Hash[extract_card_list main]
+        card_list engine.search("div .cards table")[0...-1]
       end
 
       def sideboard
-        sideboard = engine.search("div .cards table")[-1]
-
-        Hash[extract_card_list sideboard]
+        card_list engine.search("div .cards table")[-1]
       end
 
       def attributes
@@ -48,6 +42,10 @@ module Laracna
         main.keys.none?(&:empty?) && sideboard.keys.none?(&:empty?)
       end
 
+      def source
+        "mtgdecks"
+      end
+
       private
 
       def deck_attributes
@@ -56,33 +54,15 @@ module Laracna
           name: name,
           list: {main: main, sideboard: sideboard},
           url: @url,
-          source: "mtgdecks"
+          source: source
         }
       end
 
-      def remove_unused_elements
-        engine.search("h3").remove
-        engine.search(".name").remove
-      end
-
-      def extract_card_list(nodes)
+      def card_list(nodes)
         copies = nodes.search(".cardItem .number").map(&:text)
         cards = nodes.search(".cardItem td a").map(&:text)
 
-        cards.zip copies
-      end
-
-      def break_entry(string)
-        string.match(/(\d+)(.*)/).captures.reverse.map(&:strip)
-      end
-
-      def fix_typos(string)
-        string
-          .strip
-          .gsub(/\t/, " ")
-          .gsub(/''/, "'")
-          .gsub("  ", "")
-          .gsub("Unravel the Aether", "Unravel the Æther")
+        Hash[cards.zip copies]
       end
     end
   end
