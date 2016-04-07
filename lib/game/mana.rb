@@ -1,12 +1,13 @@
 class Mana
   def initialize(cost)
-   @mana_cost = cost 
+    @mana_cost = cost.to_s
   end
 
   def manas
-    [].tap do |array|
-      @mana_cost.to_s.gsub("{","").gsub("}","").each_char {|i| array << ManaCost.new(i)}
-    end
+    @mana_cost
+      .gsub(/{|}/,"")
+      .chars
+      .map { |i| ManaCost.new(i) }
   end
 
   def colors
@@ -16,7 +17,7 @@ class Mana
   def black
     manas.all {|mana| mana.black?}
   end
-  
+
   def red
     manas.all {|mana| mana.red?}
   end
