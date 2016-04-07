@@ -5,7 +5,7 @@ class Mana
 
   def manas
     @mana_cost
-      .gsub(/{|}/,"")
+      .gsub(/{|}/, "")
       .chars
       .map { |i| ManaCost.new(i) }
   end
@@ -15,27 +15,27 @@ class Mana
   end
 
   def black
-    manas.all {|mana| mana.black?}
+    manas.all(&:black?)
   end
 
   def red
-    manas.all {|mana| mana.red?}
+    manas.all(&:red?)
   end
 
   def blue
-    manas.all {|mana| mana.blue?}
+    manas.all(&:blue?)
   end
 
   def green
-    manas.all {|mana| mana.green?}
+    manas.all(&:green?)
   end
 
   def white
-    manas.all {|mana| mana.white?}
+    manas.all(&:white?)
   end
 
   def colorless
-    manas.all {|mana| mana.colorless?}
+    manas.all(&:colorless?)
   end
 
   def converted_manacost
@@ -43,10 +43,10 @@ class Mana
   end
 
   def colored?
-    manas.map(&:colored?).any? {|mana| mana.colored? == true}
+    manas.map(&:colored?).any? { |mana| mana.colored? == true }
   end
 
   def colorless?
-    manas.map(&:colorless?).all? {|mana| mana.colorless? == true}
+    manas.map(&:colorless?).all? { |mana| mana.colorless? == true }
   end
 end
