@@ -66,14 +66,10 @@ module Laracna
       end
 
       def extract_card_list(nodes)
-        nodes
-          .search(".cardItem")
-          .map(&:text)
-          .map(&:strip)
-          .map { |s| s.gsub(/\r|\t/, "") }
-          .map { |s| s.split(/\n\n/)[0...-1].join(" ") }
-          .map { |s| fix_typos s }
-          .map { |s| break_entry(s) }
+        copies = nodes.search(".cardItem .number").map(&:text)
+        cards = nodes.search(".cardItem td a").map(&:text)
+
+        cards.zip copies
       end
 
       def break_entry(string)
