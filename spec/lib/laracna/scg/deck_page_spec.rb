@@ -5,7 +5,7 @@ require "./lib/laracna/laracna"
 
 describe Laracna::Scg::DeckPage, :vcr do
   context "with a valid deck page" do
-    let(:deck_id) { "http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=91127" }
+    let(:url) { "http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=91127" }
 
     let(:attributes_list) do
       %i(list description name url source)
@@ -60,27 +60,27 @@ describe Laracna::Scg::DeckPage, :vcr do
       }
     end
 
-    subject { Laracna::Scg::DeckPage.new(deck_id) }
+    subject { Laracna::Scg::DeckPage.new url }
 
     its(:description) { is_expected.to eql "1st Place at StarCityGames.com Invitational Qualifier on 9/5/2015" }
     its(:name) { is_expected.to be_eql "Abzan Control" }
-    its(:main) { is_expected.to eql main }
-    its(:sideboard) { is_expected.to eql sideboard }
+    its(:main) { is_expected.to be_eql main }
+    its(:sideboard) { is_expected.to be_eql sideboard }
 
     its(:"attributes.keys.sort") { should be_eql attributes_list.sort }
   end
 
   context "with a invalid deck page" do
-    let(:deck_id) { "http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=86785" }
+    let(:url) { "http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=86785" }
 
-    subject { described_class.new(deck_id) }
+    subject { described_class.new url }
 
     its(:valid?) { is_expected.to be_falsy }
 
     context ".attributes" do
-      subject { described_class.new(deck_id).attributes }
+      subject { described_class.new(url).attributes }
 
-      it { expect { subject }.to raise_error(Laracna::InvalidPageError) }
+      it { expect { subject }.to raise_error Laracna::InvalidPageError }
     end
   end
 end

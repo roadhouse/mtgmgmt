@@ -26,16 +26,13 @@ module Laracna
       end
 
       def main
-        main = engine.search(".cards_col1 ul li").map(&:text)
-        main << engine.search(".cards_col2 ul").first.search("li").map(&:text)
+        selector = ".deck_card_wrapper > div:not(.deck_sideboard) > ul > li"
 
-        Hash[extract_card_list main.flatten]
+        card_list engine.search(selector).map(&:text)
       end
 
       def sideboard
-        sb = engine.search(".cards_col2 ul").last.search("li").map(&:text)
-
-        Hash[extract_card_list sb]
+        card_list engine.search(".deck_sideboard > ul > li").map(&:text)
       end
 
       def attributes
@@ -46,6 +43,10 @@ module Laracna
         !engine.search(".cards_col1 ul li").empty?
       end
 
+      def source
+        "starcitygames"
+      end
+
       private
 
       def deck_attributes
@@ -54,26 +55,24 @@ module Laracna
           name: name,
           list: {main: main, sideboard: sideboard},
           url: @url,
-          source: "starcitygames"
+          source: source
         }
       end
 
-      def extract_card_list(nodes)
-        nodes.map { |string| part_entry_data string }
-      end
+      def card_list(nodes)
+        deck_list = nodes
+                    .map { |string| fix_typos string }
+                    .map { |string| string.match(/(\d+) (.*)/).captures.reverse }
 
-      def part_entry_data(string)
-        string.match(/(\d+)(.*)/).captures.reverse.map { |s| fix_typos s }
+        Hash[deck_list]
       end
 
       def fix_typos(string)
         string
           .strip
-          .gsub(/\t/, " ")
           .gsub(/''/, "'")
           .gsub("AEther", "Æther")
           .gsub("Aether", "Æther")
-          .gsub("Hero Of Iroas", "Hero of Iroas")
       end
     end
   end
