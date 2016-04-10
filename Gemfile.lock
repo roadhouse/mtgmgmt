@@ -187,6 +187,14 @@ GEM
     minitest (5.8.4)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
+    mtg_sdk (2.0.0)
+      faraday
+      faraday_middleware
+      json
+      multi_json
+      multi_xml
+      roar
+      virtus
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -293,11 +301,15 @@ GEM
       codeclimate-engine-rb (~> 0.3.1)
       parser (~> 2.3, >= 2.3.0.6)
       rainbow (~> 2.0)
+    representable (2.3.0)
+      uber (~> 0.0.7)
     responders (2.1.2)
       railties (>= 4.2.0, < 5.1)
     rest-client (1.6.8)
       mime-types (~> 1.16)
       rdoc (>= 2.4.2)
+    roar (1.0.4)
+      representable (>= 2.0.1, < 2.4.0)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -367,6 +379,7 @@ GEM
       ethon (>= 0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uber (0.0.15)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
     vcr (3.0.1)
@@ -408,6 +421,7 @@ DEPENDENCIES
   kaminari
   materialize-sass
   mocha
+  mtg_sdk
   nokogiri
   omniauth-facebook
   pg
