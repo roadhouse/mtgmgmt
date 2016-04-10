@@ -2,7 +2,7 @@ class Deck < ActiveRecord::Base
   # serialize :list, LoadCards
   paginates_per 10
 
-  scope :per_name, ->(name) { where(self.arel_table[:name].matches("%#{name}%")) }
+  scope :per_name, ->(name) { where(arel_table[:name].matches("%#{name}%")) }
 
   validates_uniqueness_of :url
 
@@ -15,7 +15,7 @@ class Deck < ActiveRecord::Base
   end
 
   def cards
-    Card.where(name: (self.list["main"].keys + self.list["sideboard"].keys).uniq)
+    Card.where(name: (list["main"].keys + list["sideboard"].keys).uniq)
   end
 
   def main
@@ -27,10 +27,10 @@ class Deck < ActiveRecord::Base
   end
 
   def add_card_entries(entries)
-    self.tap do |deck|
+    tap do |deck|
       list = entries.map { |entry| [Card.find(entry.first).name, entry.last] }
 
-      deck.list = { main: Hash[list] }
+      deck.list = {main: Hash[list]}
     end
   end
 
@@ -43,7 +43,7 @@ class Deck < ActiveRecord::Base
       .pluck(:set)
       .compact
       .uniq
-      .delete_if { |i| i == "fake"}
+      .delete_if { |i| i == "fake" }
       .sort
       .join("-")
   end
@@ -57,13 +57,8 @@ class Deck < ActiveRecord::Base
   def for_game(part)
     list[part.to_s].to_h.flat_map do |entry|
       name, copies = entry
-      entry[0] = name.gsub("AEther", "Æther")
-                     .gsub("Aether", "Æther")
-                     .gsub("Hero Of Iroas", "Hero of Iroas")
-      card = Card.find_by_name(entry.first)
 
-      Array.new(copies.to_i) { |_| card }
+      Array.new(copies.to_i) { Card.find_by_name name.gsub(/AEther|Aether/, "Æther") }
     end
   end
 end
-
