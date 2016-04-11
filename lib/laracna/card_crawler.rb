@@ -3,13 +3,12 @@ require "open-uri"
 class CardCrawler
   attr_reader :cards_attributes
 
-  def initialize(url)
-    document = JSON.parse source(url)
-    @cards_attributes = document["cards"]
+  def initialize(set)
+    @set = set
   end
 
-  def source(path)
-    File.read(path)
+  def engine
+    MTG::Card.where set: @set
   end
 
   def ar_objects
@@ -17,69 +16,24 @@ class CardCrawler
   end
 
   def build_card(data, factory = Card)
-    factory.new(
-      artist: data["artist"],
-      border: data["border"],
-      ctype: data["type"],
-      flavor: data["flavor"],
-      image: "http://magiccards.info/scans/pt/ogw/#{data['number']}.jpg",
-      layout: data["layout"],
-      mana_cost: data["manaCost"],
-      name: data["name"],
-      original_text: data["originalText"],
-      original_type: data["originalType"],
-      portuguese_name: data["foreignNames"].to_a
-        .find {|i| i["language"] == "Portuguese (Brazil)"}
-        .to_h
-        .fetch("name") { data["name"] },
-      rarity: data["rarity"],
-      set: "OWG",
-      supertypes: data["supertypes"],
-      toughness: data["toughness"],
+    factory.new(data.to_hash).tap do |card|
+      fullfill_object card, data
 
-      cmc: data["cmc"].to_i,
-      loyalty: data["loyalty"].to_i,
-      multiverse_id: data["multiverseid"],
-      number: data["number"].to_i,
-      power: data["power"].to_i,
-
-      colors: Mana.new(data["manaCost"]).colors.uniq,
-      ctypes: data["types"],
-      names: data["names"],
-      printings: data["printings"],
-      subtypes: data["subtypes"],
-      is_standard: true
-    )
-  end
-end
-
-require "nokogiri"
-class CardCrawlerPreview
-  def initialize(url)
-    @document = Nokogiri::HTML open url
+      card.toughness = data.toughness.to_i
+      card.cmc = data.cmc.to_i
+      card.loyalty = data.loyalty.to_i
+      card.number = data.number.to_i
+      card.power = data.power.to_i
+    end
   end
 
-  def card_list_urls
-    @document.search("a")
-      .find_all { |i| i.attribute("href").text.match("cards") }
-      .map { |i| i.attribute("href").text }
-  end
-
-  def ar_attributes
-    %i{name mana_cost ctype original_text artist power}
-  end
-
-  def card_attributes(card_url)
-    document = Nokogiri::HTML open card_url
-
-    html_data = document
-      .search("center table")[4]
-      .search("tr td")
-      .map(&:text)
-      .map(&:strip)
-      .delete_if(&:empty?)
-      .delete_if { |i| i.match(/html/) }[1..-1]
-
-    Hash[ar_attributes.zip html_data]
+  def fullfill_object(card, data)
+    card.image = "http://magiccards.info/scans/pt/#{@set}/#{data.number}.jpg"
+    card.portuguese_name = data
+                           .foreign_names
+                           .to_a
+                           .find { |i| i.language == "Portuguese (Brazil)" }.send(:name)
+    card.ctypes = data.types
+    card.is_standard = true
   end
 end
