@@ -8,7 +8,6 @@
           <span><%= card[:copies] %></span>
           <div class="secondary-content">
             <%= card[:card].name %>
-            <span class="mtg  <%= [Card::ICON_NAME[card[:card].set.to_s.to_sym],card[:card].rarity.to_s.downcase].join(" ") %>"></span>
           </div>
         </div>
         <div class="collapsible-body">
