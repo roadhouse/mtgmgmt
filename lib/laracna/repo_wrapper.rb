@@ -25,7 +25,7 @@ class RepoWrapper
       data[:original_text] = data.delete("originalText")
       data[:image] = data.delete("imageUrl")
       data[:original_type] = data.delete("originalType")
-      data[:ctypes] = data.delete("types")
+      data[:ctype] = data.delete("type")
     end
   end
 
