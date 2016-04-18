@@ -11,7 +11,7 @@ class Deck < ActiveRecord::Base
   end
 
   def archeptype_deck
-    Deck.where(table[:name].matches(name)).last
+    Deck.where(table[:name].matches(name)).where(season: Orthanc::SEASON).last
   end
 
   def cards
