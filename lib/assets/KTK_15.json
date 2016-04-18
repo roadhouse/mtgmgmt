@@ -1,1 +1,0 @@
-{"query"=>[{"command"=>"where", "key"=>"set", "conditional"=>"=", "value"=>"KTK"}], "cards"=>nil, "total"=>269, "perPage"=>20, "links"=>{"first"=>"http://api.mtgapi.com/v2/cards?set=KTK", "previous"=>"http://api.mtgapi.com/v2/cards?page=13&set=KTK", "current"=>"http://api.mtgapi.com/v2/cards?page=14&set=KTK", "next"=>nil, "last"=>"http://api.mtgapi.com/v2/cards?page=14&set=KTK"}}
