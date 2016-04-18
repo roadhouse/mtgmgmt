@@ -3,15 +3,16 @@
 class CardParam < BaseParam
   model Card
   fields :original_text, :ctypes, :colors, :name, :portuguese_name, :rarity,
-    :cmc, :set, :is_standard, :subtypes
+         :cmc, :set, :is_standard, :subtypes
 
   def params
     color = @options[:color]
     type = @options[:type]
-    name = @options[:name].to_s #default query not nil required
+    name = @options[:name].to_s # default query not nil required
     oracle = @options[:oracle]
     rarity = @options[:rarity]
     cmc = @options[:cmc]
+    card_set = @options[:set]
 
     # query only cards valid in standard and ignoring fake cards
     where = is_standard.eq(true).and(set.not_eq(:fake))
@@ -23,8 +24,13 @@ class CardParam < BaseParam
     where = where.and(oracle_contains(oracle)) if oracle
     where = where.and(rarity_is(rarity)) if rarity
     where = where.and(cmc_is(cmc)) if cmc
+    where = where.and(set_is(card_set)) if set
 
     where
+  end
+
+  def set_is(value)
+    set.eq(value.upcase)
   end
 
   def cmc_is(value)
@@ -60,4 +66,3 @@ class CardParam < BaseParam
     name.count
   end
 end
-
