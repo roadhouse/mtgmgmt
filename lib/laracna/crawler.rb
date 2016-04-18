@@ -24,6 +24,9 @@ class Crawler
       rescue Laracna::InvalidPageError => e
         p "Invalid Deck List: #{e.message}"
         next
+      rescue Laracna::DuplicateDeckError => e
+        p "Duplicate Deck List: #{e.message}"
+        next
       end
     end
   end

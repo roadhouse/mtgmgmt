@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - "lib/orthanc/orthanc.rb"
+
 Metrics/LineLength:
   Enabled: false
 
