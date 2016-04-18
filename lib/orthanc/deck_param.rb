@@ -18,6 +18,10 @@ class DeckParam < BaseParam
     table.select(name_quantity)
   end
 
+  def presence_on_field
+    "(cast(card_quantity.quantity as float) / cast((#{total_decks.to_sql}) as float)) * 100 AS presence"
+  end
+
   def cards_on_deck
     table.select("jsonb_object_keys(list->'#{@options.fetch(:part).downcase}') AS name")
       .where(season_is(@options.fetch(:season)))
@@ -26,15 +30,15 @@ class DeckParam < BaseParam
   def card_quantity
     table = Arel::Table.new(:cards_on_deck)
     table
-      .project(table[:name], table[:name].count.as('quantity'))
+      .project(table[:name], table[:name].count.as("quantity"))
       .group(table[:name])
   end
 
   def card_totals
-    { cards_on_deck: cards_on_deck, card_quantity: card_quantity }
+    {cards_on_deck: cards_on_deck, card_quantity: card_quantity}
   end
 
-  def params 
+  def params
     season_is @options.fetch(:season)
   end
 end

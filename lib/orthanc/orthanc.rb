@@ -30,12 +30,9 @@ class Orthanc
   # top cards played in standard
   # DEFAULT: looking in main deck and ignore land cards
   def top_cards
-    presence_on_field = "(cast(card_quantity.quantity as float) /
-      cast((#{@deck.total_decks.to_sql}) as float)) * 100 AS presence"
-
     @card.table
       .with(@deck.card_totals)
-      .select(@card.all_fields, presence_on_field)
+      .select(@card.all_fields, @deck.presence_on_field)
       .joins("INNER JOIN card_quantity ON card_quantity.name = cards.name")
       .where(@card.params).where(@card.not_lands)
       .order("card_quantity.quantity DESC")
