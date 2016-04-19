@@ -1,10 +1,10 @@
 Magic::Application.routes.draw do
-  devise_for :users, controllers: {omniauth_callbacks: "social_login" }
-  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
-  root :to => "decks#index"
+  devise_for :users, controllers: {omniauth_callbacks: "social_login"}
+  mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
+
+  root to: "decks#index"
 
   resources :cards
-  resources :collections, only: [:create, :update]
   resources :users do
     resources :lists
   end
