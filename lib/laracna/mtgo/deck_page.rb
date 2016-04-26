@@ -17,7 +17,9 @@ module Laracna
       end
 
       def decks
-        decks_nodes.map { |node| build_deck node }
+        decks_nodes
+          .map { |node| build_deck node }
+          .uniq { |deck| deck[:url] }
       end
 
       def deck(node)
