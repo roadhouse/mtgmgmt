@@ -1,18 +1,17 @@
 <ul class="collapsible" data-collapsible="accordion">
   <li>
     <div class="collapsible-header">
-      <%= link_to deck.archeptype_deck.deck do %>
-        <%= deck.archeptype_deck.name %>
+      <%= link_to deck.archeptype_deck.name, deck.archeptype_deck.deck %>
+
+      <% if user_signed_in? %>
+        (<%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%)
       <% end %>
-      <span class="secondary-content"><%= number_to_currency deck.total_price %><span>
+
+      <span class="secondary-content">
+        <%= number_to_currency deck.total_price %>
+      <span>
     </div>
     <div class="collapsible-body">
-      <% if user_signed_in? %>
-        <span class="secondary-content">
-          <i class="mdi-image-photo-library"></i>
-          <%= deck.percent_owned(current_user, :main) %>% / <%= deck.percent_owned(current_user, :sideboard) %>%
-        </span>
-      <% end %>
       <%= render 'card_entry', cards: deck.group_by_card_type(:main) %>
     </div>
   </li>
