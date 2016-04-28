@@ -1,26 +1,38 @@
+module Utils
+  refine Array do
+    def delete_first(item)
+      delete_at(index(item) || length)
+    end
+  end
+end
+
 class User < ActiveRecord::Base
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable,
-         :omniauth_providers => [:facebook]
+  using Utils
+
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable,
+         :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
+
   has_many :collections
   has_many :inventories
   has_many :cards, through: :inventories
 
   def percent_from(cards)
-    cards_ids = cards.compact.map(&:id)
-    card_user_ids = self.inventories.where(card_id: cards_ids).pluck(:id)
+    deck_list = cards.compact.map(&:id)
 
-    (card_user_ids.size.to_f/cards_ids.size.to_f ) * 100
+    card_ids_owned_from(deck_list).each { |card| deck_list.delete_first card }
+
+    calculate_percent_owned deck_list.size, cards.compact.map(&:id).size
   end
 
-  def percent_from2(cards)
-    deck_list = cards.map(&:name)
-    pool = collections.where(name: "game").last
-      .list.each_with_object({}) { |e, o| o[e.first] = e.last["total"] }
-      .flat_map {|e| Array.new(e.last) { |_| e.first  } }
+  def card_ids_owned_from(card_list)
+    # TODO, move this query to a Inventory scope method maybe?
+    inventories
+      .where(card_id: card_list.uniq, list: :game)
+      .flat_map { |i| Array.new(i.copies) { i.card_id } }
+  end
 
-    cards_from_deck_owned = deck_list.select { |p| pool.include?(p) }
-    (cards_from_deck_owned.size.to_f / deck_list.size.to_f ) * 100
+  def calculate_percent_owned(remaining_cards, total_cards)
+    100.0 - ((remaining_cards.to_f / total_cards.to_f) * 100.0)
   end
 
   def self.from_omniauth(auth)
