@@ -32,7 +32,7 @@ gem "materialize-sass"
 
 source "http://rails-assets.org" do
   gem "rails-assets-angular-chartjs"
-  gem "rails-assets-chartjs", "1.0.2"
+  # gem "rails-assets-chartjs", "1.0.2"
   gem "rails-assets-angular-material-icons"
   gem "rails-assets-svg-morpheus"
 end

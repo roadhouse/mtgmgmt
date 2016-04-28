@@ -1,7 +1,7 @@
 //= require angular
 //= require angular-animate
 //= require angular-sanitize
-//= require chartjs
+//= require vendor/Chart.min
 //= require jquery
 //= require angular-chartjs
 //= require angular-material-icons
