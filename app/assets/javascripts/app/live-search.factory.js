@@ -4,9 +4,9 @@ angular
   .module('demos_cfg')
   .factory('LiveSearchFactory', LiveSearchFactory);
 
-LiveSearchFactory.$inject = ['$http'];
+LiveSearchFactory.$inject = ['$http', '$location'];
 
-function LiveSearchFactory($http) {
+function LiveSearchFactory($http, $location) {
   return {
     cards: get,
     inventories: inventories,
@@ -19,7 +19,7 @@ function LiveSearchFactory($http) {
   };
 
   function inventories(params) {
-    return $http.get('/inventories/want.json?query=' + params);
+    return $http.get($location.path()+'.json?query=' + params);
   };
 
   function have(params) {
