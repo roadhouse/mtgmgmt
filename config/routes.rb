@@ -6,7 +6,7 @@ Magic::Application.routes.draw do
 
   resources :cards
   resources :users do
-    resources :lists, only: [:show], constraints: {id: /[a-z][A-z]+/}
+    resources :lists, only: [:show], constraints: {id: /[a-z][A-z]+/}, param: :name
   end
 
   resources :decks do

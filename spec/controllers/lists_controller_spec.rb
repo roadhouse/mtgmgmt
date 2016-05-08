@@ -2,14 +2,11 @@ require 'spec_helper'
 
 describe ListsController do
   let(:inventory) { create(:inventory) }
-  let(:logged_user) { inventory.user }
-  let(:card) { inventory.card }
+  let(:user) { inventory.user }
 
-  before { allow(controller).to receive(:current_user) { logged_user } }
-
-  context "POST on /create" do
+  context "GET on /index" do
     before do
-      post :index, user_id: logged_user.id
+      get :show, user_id: user.id, name: inventory.list
     end
 
     context "response" do
