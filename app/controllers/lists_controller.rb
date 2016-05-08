@@ -1,4 +1,4 @@
 class ListsController < ApplicationController
-  def index
+  def show
   end
 end
