@@ -8,6 +8,10 @@ class Card < ActiveRecord::Base
   has_many :users, through: :inventories
   has_many :prices
 
+  def self.ids_to_name(ids)
+    find(ids.uniq).pluck(:name)
+  end
+
   def portuguese_name
     super || name
   end

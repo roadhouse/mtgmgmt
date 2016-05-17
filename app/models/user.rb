@@ -27,8 +27,16 @@ class User < ActiveRecord::Base
   def card_ids_owned_from(card_list)
     # TODO, move this query to a Inventory scope method maybe?
     inventories
-      .where(card_id: card_list.uniq, list: :game)
-      .flat_map { |i| Array.new(i.copies) { i.card_id } }
+      .from_card_list(card_list.uniq)
+      .from_list(:game)
+      .flat_map(&:to_deck_array)
+  end
+
+  def cards_owned_from(card_list)
+    cards = Card.ids_to_name(card_list.uniq)
+    copies = cards.map { |card| card_list.count card }
+
+    Hash[cards.zip copies]
   end
 
   def calculate_percent_owned(remaining_cards, total_cards)

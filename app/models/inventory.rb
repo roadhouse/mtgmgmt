@@ -2,17 +2,10 @@ class Inventory < ActiveRecord::Base
   # attr_accessible :title, :body
   belongs_to :card
   belongs_to :user
+  scope :from_list, ->(name) { where(list: name) }
+  scope :from_card_list, ->(card_list) { where(card_id: card_list) }
 
-  def collection_to_hash(collection)
-    Inventory.where(list: collection).each_with_object({}) do |v,m| 
-      if v.card
-        m[v.card.name] = {
-          total: v.copies, 
-          v.card.printings.last => {
-            normal: v.copies
-          }
-        }
-      end
-    end
+  def to_deck_array
+    Array.new(copies) { card_id }
   end
 end
