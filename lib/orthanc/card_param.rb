@@ -25,6 +25,7 @@ class CardParam < BaseParam
     where = where.and(rarity_is(rarity)) if rarity
     where = where.and(cmc_is(cmc)) if cmc
     where = where.and(set_is(card_set)) if card_set
+    where = where.and(oracle_contains(oracle)) if oracle
 
     where
   end
