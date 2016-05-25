@@ -50,8 +50,9 @@ class Orthanc
   end
 
   def from_user(user)
-    card_filters = @card.table.where(@card.params).order(price: :desc)
-
-    user.inventories.where(@inventory.params).joins(:card).merge(card_filters)
+    user.inventories
+      .where(@inventory.params)
+      .joins(:card)
+      .merge(cards.order(price: :desc))
   end
 end
