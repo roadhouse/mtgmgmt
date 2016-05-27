@@ -18,8 +18,8 @@ function LiveSearchFactory($http, $location) {
     return $http.get('/cards.json?query=' + params);
   };
 
-  function inventories(params) {
-    return $http.get($location.path()+'.json?query=' + params);
+  function inventories(endpoint, params) {
+    return $http.get(endpoint + '?query=' + params);
   };
 
   function have(params) {
