@@ -4,30 +4,27 @@ angular
   .module('demos_cfg')
   .factory('LiveSearchFactory', LiveSearchFactory);
 
-LiveSearchFactory.$inject = ['$http', '$location'];
+LiveSearchFactory.$inject = [
+  '$http'
+];
 
-function LiveSearchFactory($http, $location) {
+function LiveSearchFactory($http) {
   return {
-    cards: get,
-    inventories: inventories,
-    have: have,
-    topCards: topCards
+    get: get
   };
 
-  function get(params) {
-    return $http.get('/cards.json?query=' + params);
+  function endPoint(name) {
+    var endpoints = {
+      cards : '/cards.json',
+      topCards: '/searches/top_cards.json'
+    };
+
+    if (endpoints[name]) { return endpoints[name]; }
+    else { return name; }
   };
 
-  function inventories(endpoint, params) {
-    return $http.get(endpoint + '?query=' + params);
-  };
-
-  function have(params) {
-    return $http.get('/inventories/have.json?query=' + params);
-  };
-
-  function topCards(params) {
-    return $http.get('/searches/top_cards.json?query=' + params);
+  function get(endpoint, params) {
+    return $http.get(endPoint(endpoint) + '?query=' + params);
   };
 };
 

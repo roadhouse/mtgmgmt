@@ -16,10 +16,10 @@ function LiveSearchDirective(LiveSearchFactory) {
       scope.search = "";
       scope.priceStatus = priceStatus;
       scope.change = function() {
-        if (scope.search.length > 5) { updateResults(attrs.source, scope, attrs.endpoint); }
+        if (scope.search.length > 5) { updateResults(attrs.source, scope); }
       };
 
-      if (attrs.default) { updateResults(attrs.source, scope, attrs.endpoint); }
+      if (attrs.default) { updateResults(attrs.source, scope); }
     }
   };
 
@@ -34,19 +34,8 @@ function LiveSearchDirective(LiveSearchFactory) {
   };
 
   function updateResults(source, scope, endpoint) {
-    if (endpoint) {
-      return LiveSearchFactory.inventories(endpoint, scope.search)
-        .then(function(result) { return result.data; })
-        .then(function(results) { scope.entries = results; });
-    }
-    else {
-      query(source, scope.search)
-        .then(function(results) { scope.entries = results; });
-    }
-  };
-
-  function query(source, search) {
-    return LiveSearchFactory[source](search)
+    return LiveSearchFactory.get(source, scope.search)
       .then(function(result) { return result.data; })
+      .then(function(results) { scope.entries = results; });
   };
 };
