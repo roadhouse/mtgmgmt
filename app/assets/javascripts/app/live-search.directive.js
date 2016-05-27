@@ -3,7 +3,7 @@ angular
   .directive('liveSearch', LiveSearchDirective);
 
 LiveSearchDirective.$inject = [
-  'LiveSearchFactory',
+  'LiveSearchFactory'
 ];
 
 function LiveSearchDirective(LiveSearchFactory) {
@@ -15,11 +15,15 @@ function LiveSearchDirective(LiveSearchFactory) {
       scope.template = attrs.template;
       scope.search = "";
       scope.priceStatus = priceStatus;
-      scope.change = function() {
-        if (scope.search.length > 5) { updateResults(attrs.source, scope); }
-      };
+      scope.change = change;
 
       if (attrs.default) { updateResults(attrs.source, scope); }
+    }
+  };
+
+  function change(scope) {
+    if (scope.search.length > 5) {
+      updateResults(attrs.source, scope);
     }
   };
 
