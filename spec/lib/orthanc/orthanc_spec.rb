@@ -40,6 +40,12 @@ describe Orthanc do
       its(:size) { is_expected.to be_eql 2 }
     end
 
+    context "with a limit param" do
+      let(:card_filters) { "limit: 1" }
+
+      its(:size) { is_expected.to be_eql 1 }
+    end
+
     context "search specific card on user collection" do
       let(:card_filters) { "Dis" }
       let(:inventory_filters) { nil }

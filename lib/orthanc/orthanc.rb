@@ -49,10 +49,12 @@ class Orthanc
       .limit(@options.fetch(:limit))
   end
 
+  # list cards from users
   def from_user(user)
     user.inventories
       .where(@inventory.params)
       .joins(:card)
       .merge(cards.order(price: :desc))
+      .limit(@options.fetch(:limit))
   end
 end
