@@ -31,19 +31,38 @@ class Orthanc
   # DEFAULT: looking in main deck and ignore land cards
   def top_cards
     @card.table
-      .with(@deck.card_totals)
-      .select(@card.all_fields, @deck.presence_on_field)
-      .joins("INNER JOIN card_quantity ON card_quantity.name = cards.name")
+      .with({metagame: metagame})
+      .joins("INNER JOIN metagame ON metagame.card = cards.name")
       .where(@card.params).where(@card.not_lands)
-      .order("card_quantity.quantity DESC")
+      .order("metagame.quantity DESC")
       .limit(@options.fetch(:limit))
   end
 
-  #  top cards played in standard, in the last season
+  def metagame
+    # SELECT count(card) as quantity, card
+    # FROM decks
+    # CROSS JOIN LATERAL jsonb_object_keys(list->'main') as card
+    # WHERE decks.season = 'BFZ-DTK-ORI-OWG-SOI'
+    # GROUP BY card
+
+    @deck.table
+      .select('count(card) as quantity, card')
+      .joins("CROSS JOIN LATERAL jsonb_object_keys(list->'#{@options.fetch(:part)}') as card")
+      .where(@deck.params)
+      .group('card')
+  end
+
+  # top cards played in standard, in the last season
+  # find deck by card
+  # SELECT *
+  # FROM decks
+  # CROSS JOIN LATERAL jsonb_object_keys(list->'main') as card
+  # where card like 'Ojutai%'
+  # GROUP BY id, card
   def top_decks
     @deck.table
-      .select("name, COUNT(decks.list->'main_cards') AS quantity")
-      .group(@deck.name)
+      .select(@deck.all_fields, "COUNT(decks.list->'main_cards') AS quantity")
+      .group(:id)
       .order("COUNT(decks.list->'main_cards') DESC")
       .where(@deck.params)
       .limit(@options.fetch(:limit))
