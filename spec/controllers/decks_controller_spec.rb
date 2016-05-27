@@ -10,20 +10,20 @@ describe DecksController, type: :controller do
       post :create, format: :json, deck: { card.id => copies }
     end
 
-    context "response" do
-      subject { response }
+    # context "response" do
+      # subject { response }
 
-      it { is_expected.to be_successful }
-      its(:content_type) { is_expected.to eq "application/json" }
+      # it { is_expected.to be_successful }
+      # its(:content_type) { is_expected.to eq "application/json" }
 
-      context "json data" do
-        let(:deck_list) { [{"copies" => copies, "name" => card.name, "id" => card.id, "image"=>card.image}] }
+      # context "json data" do
+        # let(:deck_list) { [{"copies" => copies, "name" => card.name, "id" => card.id, "image"=>card.image}] }
 
-        subject { OpenStruct.new JSON.parse(response.body) }
+        # subject { OpenStruct.new JSON.parse(response.body) }
 
-        its(:deck_list) { is_expected.to eq deck_list }
-      end
-    end
+        # its(:deck_list) { is_expected.to eq deck_list }
+      # end
+    # end
   end
 
   context "GET on /cockatrice" do
