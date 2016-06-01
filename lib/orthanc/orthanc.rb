@@ -10,7 +10,6 @@ class Orthanc
   DEFAULT_OPTIONS = { limit: 12, season: SEASON, part: "main" }
 
   def initialize(options = nil)
-
     @options = DEFAULT_OPTIONS.merge ParamBuilder.params(options.to_s)
 
     @card = CardParam.new(@options)
@@ -21,6 +20,11 @@ class Orthanc
   # basic card search using CardParam params as filter
   def cards
     @options.empty? ? @card.table.none : @card.table.where(@card.params)
+  end
+
+  # basic card search using CardParam params as filter
+  def decks
+    @deck.table.where(@deck.params)
   end
 
   # top cards played in standard
@@ -36,26 +40,25 @@ class Orthanc
 
   # the relation between the decks of the metagame and the card's quantity in this decks
   def metagame
-    @deck.table
+    decks
       .select('count(card) as quantity, card')
       .joins("CROSS JOIN LATERAL jsonb_object_keys(list->'#{@options.fetch :part}') as card")
-      .where(@deck.params)
       .group('card')
   end
 
   # top decks from a season
   def top_decks
-    @deck.table
+    decks
       .select(@deck.all_fields, "COUNT(decks.list->'main_cards') AS quantity")
       .group(:id)
       .order("COUNT(decks.list->'main_cards') DESC")
-      .where(@deck.params)
       .limit(@options.fetch :limit)
   end
 
   # list cards from users
   def from_user(user)
-    user.inventories
+    user
+      .inventories
       .where(@inventory.params)
       .joins(:card)
       .merge(cards.order price: :desc)
