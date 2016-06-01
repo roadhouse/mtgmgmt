@@ -6,7 +6,7 @@ scg:
 
 mtgdecks:
   host: "http://www.mtgdecks.net"
-  deck_list_url: "/decks/viewByFormat/40/"
+  deck_list_url: "/decks/viewByFormat/42/"
   pagination_param: "page:"
   deck_url: "/decks/view/"
 
