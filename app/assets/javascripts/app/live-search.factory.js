@@ -19,8 +19,7 @@ function LiveSearchFactory($http) {
       topCards: '/searches/top_cards.json'
     };
 
-    if (endpoints[name]) { return endpoints[name]; }
-    else { return name; }
+    return (endpoints[name] ? endpoints[name] : name);
   };
 
   function get(endpoint, params) {
