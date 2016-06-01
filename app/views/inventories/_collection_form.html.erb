@@ -12,13 +12,13 @@
   </div>
 
   <span class="input-field">
-    <a class="waves-effect waves-green btn" ng-click="addToCollection()">
+    <a class="waves-effect waves-green btn" ng-click="add(<%= card_id %>)">
       <i class="material-icons">add</i>
     </a>
   </span>
 
   <span class="input-field">
-    <a class="waves-effect waves-red btn" ng-click="removeToCollection()">
+    <a class="waves-effect waves-red btn" ng-click="remove(<%= card_id %>)">
       <i class="material-icons">remove</i>
     </a>
   </span>
