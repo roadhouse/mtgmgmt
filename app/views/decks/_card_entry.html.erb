@@ -1,26 +1,29 @@
 <% cards.each_pair do |card_type, cards| %>
   <div class="collection">
     <h5 class="collection-header center-align"><%= card_type %></h5>
+
     <ul class="collapsible collection-item" data-collapsible="accordion" ng-controller="InventoryController">
       <% cards.each do |card| %>
         <li>
-        <div class="collapsible-header">
-          <span><%= card[:copies] %></span>
-          <div class="secondary-content">
-            <%= card[:card].name %>
+          <div class="collapsible-header">
+            <span><%= card[:copies] %></span>
+            <div class="secondary-content">
+              <%= card[:card].name %>
+            </div>
           </div>
-        </div>
-        <div class="collapsible-body">
-          <div class="row">
-            <%= render "inventories/collection_form", card_id: card[:card].id %>
+
+          <div class="collapsible-body">
+            <% if current_user %>
+              <div class="row">
+                <%= render "inventories/collection_form", card_id: card[:card].id %>
+              </div>
+            <% end %>
+            <div class="row card" style="padding:0.5em; margin-top:0; margin-bottom:0;">
+              <div class="card-image">
+                <%= image_tag card[:card].image, alt: card[:card].name, class: "responsive-img z-depth-2" %>
+              </div>
+            </div>
           </div>
-          <span class="secondary-content">
-            <%= number_to_currency card[:card].on_demand_price %>
-          </span>
-          <div class="row">
-            <%= image_tag card[:card].image, alt: card[:card].name, class: "responsive-img" %>
-          </div>
-        </div>
         </li>
       <% end %>
     </ul>
