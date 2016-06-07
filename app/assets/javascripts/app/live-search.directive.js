@@ -15,7 +15,11 @@ function LiveSearchDirective(LiveSearchFactory) {
       scope.template = attrs.template;
       scope.search = "";
       scope.priceStatus = priceStatus;
-      scope.change = change;
+      scope.change = function() {
+        if (scope.search.length > 5) {
+          updateResults(attrs.source, scope);
+        }
+      };
 
       if (attrs.default) { updateResults(attrs.source, scope); }
     }
