@@ -57,6 +57,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    cliver (0.3.2)
     codeclimate-engine-rb (0.3.1)
       virtus (~> 1.0)
     codeclimate-test-reporter (0.5.0)
@@ -230,6 +231,11 @@ GEM
     pg (0.18.4)
     pg_array_parser (0.0.9)
     phantomjs (2.1.1.0)
+    poltergeist (1.9.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      multi_json (~> 1.0)
+      websocket-driver (>= 0.2.0)
     postgres_ext (3.0.0)
       activerecord (>= 4.0.0)
       arel (>= 4.0.1)
@@ -394,6 +400,9 @@ GEM
       crack (>= 0.3.2)
       hashdiff
     websocket (1.2.3)
+    websocket-driver (0.6.4)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -424,6 +433,7 @@ DEPENDENCIES
   nokogiri
   omniauth-facebook
   pg
+  poltergeist
   postgres_ext
   pry
   pry-byebug
@@ -449,5 +459,8 @@ DEPENDENCIES
   virtus
   webmock
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.11.2
+   1.12.3

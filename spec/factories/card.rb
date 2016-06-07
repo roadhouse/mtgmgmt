@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :card do
     name "Zulaport Cutthroat"
-    image "http//magiccards.info/scans/pt/bfz/126.jpg"
+    image ""
     set "BFZ"
     mana_cost "{1}{B}"
     ctype "Creature — Human Rogue Ally"

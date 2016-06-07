@@ -49,6 +49,7 @@ group :development, :test do
   gem "factory_girl_rails"
   gem "jasmine-rails"
   gem "mocha", require: false
+  gem "poltergeist"
   gem "pry"
   gem "pry-rails"
   gem "pry-byebug"
