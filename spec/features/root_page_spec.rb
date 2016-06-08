@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "root page", type: :feature do
-  before(:all) { create(:deck).list["main"].keys.map { |k| create :card, name: k } }
+  before { create(:deck).list["main"].keys.map { |k| create :card, name: k } }
 
   context "without javascript" do
     it "works" do
