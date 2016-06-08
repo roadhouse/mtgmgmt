@@ -4,6 +4,11 @@ addons:
   code_climate:
     repo_token: "88b69b9a6e42dafde9ff5362429f1966f0f929ca7651547080f25a7eab743d00"
 language: ruby
+before_script:
+  - mkdir travis-phantomjs
+  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+  - tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
+  - export PATH=$PWD/travis-phantomjs:$PATH
 script:
   - bundle exec rake db:create
   - bundle exec rake db:migrate --trace
