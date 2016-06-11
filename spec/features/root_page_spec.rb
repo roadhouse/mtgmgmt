@@ -8,6 +8,15 @@ describe "root page", type: :feature do
       visit "/"
       expect(page).to have_content "welovemtg"
     end
+
+    context 'with logged user' do
+      before { login_as create(:user), scope: :user }
+
+      it 'should log in' do
+        visit "/"
+        expect(page).to have_content "Sign out"
+      end
+    end
   end
 
   context "with javascript", js: true do
@@ -23,6 +32,15 @@ describe "root page", type: :feature do
       it "list the card with entered name" do
         is_expected.to have_css "div.card", count: 1
       end
+    end
+  end
+
+  context 'with logged user', js: true do
+    before { login_as create(:user), scope: :user }
+
+    it 'should log in' do
+      visit "/"
+      expect(page).to have_content "Sign out"
     end
   end
 end
