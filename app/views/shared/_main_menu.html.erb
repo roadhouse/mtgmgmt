@@ -1,0 +1,12 @@
+<%= navigation_item "Deck Builder", new_deck_path %>
+<%= navigation_item "Card Search", cards_path %>
+<%= navigation_item "Deck Search", search_decks_path %>
+<%= navigation_item "Want List", want_inventories_path %>
+<li class="valign-wrapper">
+  <% if user_signed_in? %>
+    <%= link_to("Sign out", destroy_user_session_path) %>
+    <img src="<%= current_user.avatar %>" alt="" class="responsive-img circle">
+  <% else %>
+    <%= link_to("Sign in", user_facebook_omniauth_authorize_path) %>
+  <% end %>
+</li>
