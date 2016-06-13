@@ -3,8 +3,7 @@ require 'spec_helper'
 describe InventoriesController, type: :controller do
   let(:inventory) { create(:inventory) }
   let(:card) { inventory.card }
-  let(:user) { create :user }
-  before { login_as user, scope: :user }
+  before { sign_in inventory.user }
 
   context "POST on /create" do
     before do
@@ -24,7 +23,7 @@ describe InventoriesController, type: :controller do
       it { is_expected.to be_a Inventory }
 
       its(:"class.count") { is_expected.to eq 1 }
-      its(:user_id) { is_expected.to eq user.id }
+      its(:user_id) { is_expected.to eq inventory.user.id }
       its(:card_id) { is_expected.to eq card.id }
       its(:copies) { is_expected.to eq 5 }
       its(:list) { is_expected.to eq inventory.list }

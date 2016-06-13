@@ -3,15 +3,7 @@ require 'spec_helper'
 describe DecksController, type: :controller do
   render_views
 
-  before { login_as create(:user), scope: :user }
-
-  context "POST on /create" do
-    let!(:card) { create(:card) }
-    let(:copies) { 4 }
-    before do
-      post :create, format: :json, deck: { card.id => copies }
-    end
-  end
+  before { sign_in create(:user) }
 
   context "GET on /cockatrice" do
     let(:deck) { create(:deck) }
