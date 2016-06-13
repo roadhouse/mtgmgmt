@@ -1,7 +1,9 @@
 require "spec_helper"
 
 describe "root page", type: :feature do
-  before { create(:deck).list["main"].keys.map { |k| create :card, name: k } }
+  let(:deck) { create :deck }
+  before { deck.list["main"].keys.map { |k| create :card, name: k } }
+  before { deck.list["sideboard"].keys.map { |k| create(:card, name: k) unless Card.exists?(name: k) } }
 
   context "without javascript" do
     it "works" do
@@ -15,6 +17,7 @@ describe "root page", type: :feature do
       it 'should log in' do
         visit "/"
         expect(page).to have_content "Sign out"
+        expect(page).not_to have_content "Sign in"
       end
     end
   end
@@ -41,6 +44,13 @@ describe "root page", type: :feature do
     it 'should log in' do
       visit "/"
       expect(page).to have_content "Sign out"
+      expect(page).not_to have_content "Sign in"
+    end
+
+    it 'add cart to user list' do
+      visit '/'
+      find('div .collapsible-header').click
+      find('div .secondary-content', text: 'Plains').click
     end
   end
 end

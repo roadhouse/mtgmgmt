@@ -1,5 +1,6 @@
 class DecksController < ApplicationController
   respond_to :json, only: [:create]
+  skip_before_filter :authenticate_user!, only: [:index]
 
   def index
     @presenter = MetaGamePresenter.new

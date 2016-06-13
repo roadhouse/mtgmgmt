@@ -96,8 +96,7 @@ class DeckPresenter < BasePresenter
   end
 
   def card_pool(part)
-    pool(part)
-      .group_by { |card| card }
-      .map { |e| { copies: e.last.size, card: e.first } }
+    @deck.list[part.to_s]
+      .map { |entry| {copies: entry.last, card: Card.find_by_name(entry.first)} }
   end
 end
