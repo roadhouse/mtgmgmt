@@ -6,6 +6,17 @@ class Deck < ActiveRecord::Base
 
   validates_uniqueness_of :url
 
+  #FIXME
+  def add_to_list(user)
+    deck = list["main"].flat_map { |card, copies|  Array.new(copies) { Card.find_by(name: card).id } }
+    collection = user.inventories.from_list(:game).flat_map(&:to_deck_array)
+
+    collection.each { |card| deck.delete_first card }
+    cards = Card.find(deck).uniq
+    jean = deck.map {|card_id| cards.find {|card| card.id == card_id }.name }
+    jean.each_with_object({}) {|card, d| d[card] = jean.count(card) }
+  end
+
   def table
     Deck.arel_table
   end
