@@ -1,11 +1,3 @@
-module Utils
-  refine Array do
-    def delete_first(item)
-      delete_at(index(item) || length)
-    end
-  end
-end
-
 class User < ActiveRecord::Base
   using Utils
 

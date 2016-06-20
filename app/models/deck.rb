@@ -1,4 +1,5 @@
 class Deck < ActiveRecord::Base
+  using Utils
   # serialize :list, LoadCards
   paginates_per 10
 
@@ -8,10 +9,11 @@ class Deck < ActiveRecord::Base
 
   #FIXME
   def add_to_list(user)
-    deck = list["main"].flat_map { |card, copies|  Array.new(copies) { Card.find_by(name: card).id } }
+    deck = list["main"].expand_list_to_array
     collection = user.inventories.from_list(:game).flat_map(&:to_deck_array)
 
-    collection.each { |card| deck.delete_first card }
+    collection.missing_itens(deck)
+
     cards = Card.find(deck).uniq
     jean = deck.map {|card_id| cards.find {|card| card.id == card_id }.name }
     jean.each_with_object({}) {|card, d| d[card] = jean.count(card) }
