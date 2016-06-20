@@ -13,24 +13,29 @@ namespace :deck do
 
   desc "load decks from wizards (MTGO)"
   task mtgo: :environment do
-    (4.months.ago.to_date..DateTime.now.to_date).to_a.reverse.each do |date|
-      formated_date = date.strftime("%Y-%m-%d")
-      # http://magic.wizards.com/en/articles/archive/mtgo-standings/standard-ptq-2016-06-06
-      url = "http://magic.wizards.com/en/articles/archive/mtgo-standings/competitive-standard-constructed-league-#{formated_date}"
+    urls = %w(
+        http://magic.wizards.com/en/articles/archive/mtgo-standings/standard-ptq-
+        http://magic.wizards.com/en/articles/archive/mtgo-standings/competitive-standard-constructed-league-
+    )
+    urls.each do |url|
+      (4.months.ago.to_date..DateTime.now.to_date).to_a.reverse.each do |date|
+        formated_date = date.strftime("%Y-%m-%d")
+        final_url = url + formated_date
 
-      begin
-        deck_page = Laracna::Mtgo::DeckPage.new(url)
+        begin
+          deck_page = Laracna::Mtgo::DeckPage.new(final_url)
 
-        p "save decks from #{url}"
+          p "save decks from #{final_url}"
 
-        deck_page.decks.each do |deck|
-          d = Deck.new(deck)
-          d.save!
-          d.update_meta_data
+          deck_page.decks.each do |deck|
+            d = Deck.new(deck)
+            d.save!
+            d.update_meta_data
+          end
+        rescue OpenURI::HTTPError
+          p "escaping #{final_url}"
+          next
         end
-      rescue OpenURI::HTTPError
-        p "escaping #{url}"
-        next
       end
     end
   end
