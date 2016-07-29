@@ -10,6 +10,6 @@ namespace :bootstrap do
   desc "load card data using mtg-sdk"
   task load_cards: :environment do
     require './lib/laracna/card_crawler'
-    p CardCrawler.new("soi").persist!
+    p CardCrawler.new("emn").persist!
   end
 end
