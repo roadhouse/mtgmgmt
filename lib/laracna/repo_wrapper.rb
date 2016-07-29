@@ -1,12 +1,6 @@
 class RepoWrapper
-  attr_reader :cards
-
   def initialize(set)
     @set = set
-  end
-
-  def repo
-    @cards ||= MTG::Card.where(set: @set).all
   end
 
   def attributes
@@ -20,18 +14,27 @@ class RepoWrapper
 
   def normalize_data(raw_data)
     raw_data.tap do |data|
-      data[:mana_cost] = data.delete("manaCost")
-      data[:multiverse_id] = data.delete("multiverseid")
-      data[:original_text] = data.delete("originalText")
-      data[:image] = data.delete("imageUrl")
-      data[:original_type] = data.delete("originalType")
-      data[:ctype] = data.delete("type")
+      equivalent_names.each_pair { |ar_field, api_field| data[ar_field] = data.delete(api_field) }
     end
   end
 
-  def delete_fields(raw_data)
-    x = %w(foreignNames types rulings legalities variations type text id)
+  def equivalent_names
+    {
+      mana_cost: "manaCost",
+      multiverse_id: "multiverseid",
+      original_text: "originalText",
+      image: "imageUrl",
+      original_type: "originalType",
+      ctype: "type",
+      set: "setName"
+    }
+  end
 
-    raw_data.tap { |data| x.map { |attr| data.delete attr } }
+  def attrs_to_delete
+    %w(foreignNames types rulings legalities variations type text id)
+  end
+
+  def delete_fields(card_attributes)
+    card_attributes.tap { |card| attrs_to_delete.map { |attr| card.delete attr } }
   end
 end
