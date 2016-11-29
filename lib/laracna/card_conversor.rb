@@ -1,5 +1,5 @@
 class CardConversor
-  ATTRS_TO_DELETE = %w(foreignNames types rulings legalities variations type text id)
+  ATTRS_TO_DELETE = %w(foreignNames types rulings legalities variations type text id starter)
   EQUIVALENT_NAMES = {
     ctype: "type",
     image: "imageUrl",
@@ -7,7 +7,6 @@ class CardConversor
     multiverse_id: "multiverseid",
     original_text: "originalText",
     original_type: "originalType",
-    set: "setName"
   }
 
   def initialize(api_data)
