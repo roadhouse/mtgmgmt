@@ -1,5 +1,5 @@
 class CardConversor
-  ATTRS_TO_DELETE = %w(foreignNames types rulings legalities variations type text id starter)
+  ATTRS_TO_DELETE = %w(foreignNames types rulings legalities variations type text id starter setName)
   EQUIVALENT_NAMES = {
     ctype: "type",
     image: "imageUrl",
