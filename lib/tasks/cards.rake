@@ -5,6 +5,8 @@ namespace :cards do
   task :load, [:set] => :environment do |_, args|
     raise ArgumentError, "Code set required (like 'soi' or 'kld')" unless args[:set].present?
 
-    p CardCrawler.new(args[:set]).persist!
+    report = CardCrawler.new(args[:set]).persist!
+
+    p "Importação do set #{@set} terminada: #{report}"
   end
 end

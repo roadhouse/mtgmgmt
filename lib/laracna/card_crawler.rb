@@ -10,15 +10,15 @@ class CardCrawler
   end
 
   def persist!(model = Card)
-    engine.attributes.map do |attrs|
-      card = model.new attrs
+    new = reprint = 0
 
-      if card.valid?
-        card.save!(attrs)
-        "Card #{card.name} saved"
-      else
-        "Card #{card.name} not saved"
-      end
+    engine.attributes.map do |attrs|
+      model.
+        find_or_initialize_by(name: attrs["name"]).
+        tap { |card| card.new_record? ? new += 1 : reprint += 1 }.
+        update_attributes(attrs)
     end
+
+    { novas: new, reprints: reprint }
   end
 end
