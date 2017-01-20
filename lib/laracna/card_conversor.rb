@@ -19,7 +19,7 @@ class CardConversor
 
   def convert
     normalize_data
-    delete_fields
+    delete_fields.merge(is_standard: true)
   end
 
   def normalize_data
