@@ -1,20 +1,15 @@
-require File.expand_path('../boot', __FILE__)
+require_relative 'boot'
 
 require 'rails/all'
 
-if defined?(Bundler)
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
-end
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
 
 module Magic
   class Application < Rails::Application
-    config.active_support.escape_html_entities_in_json = true
-    config.autoload_paths += Dir["#{config.root}/lib/**/"]
-    config.encoding = "utf-8"
-    config.filter_parameters += [:password]
-    config.generators.request_specs = false
-    config.generators.routing_specs = false
-    config.generators.view_specs = false
-    config.watchable_dirs['lib'] = [:rb]
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
   end
 end

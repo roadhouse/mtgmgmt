@@ -1,9 +1,9 @@
 //= require angular
 //= require angular-animate
 //= require angular-sanitize
-//= require vendor/Chart.min
-//= require jquery
+//= require chartjs
 //= require angular-chartjs
+//= require jquery
 //= require angular-material-icons
 //= require materialize
 //= require svg-morpheus
