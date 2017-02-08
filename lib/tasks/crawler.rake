@@ -1,5 +1,3 @@
-require './lib/laracna/card_crawler'
-
 namespace :crawler do
   desc "download spoiler info"
   task spoilers: :environment do

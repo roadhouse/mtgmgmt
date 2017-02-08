@@ -1,6 +1,5 @@
 require "nokogiri"
 require "open-uri"
-require "./lib/laracna/crawler"
 
 module Laracna
   module Scg

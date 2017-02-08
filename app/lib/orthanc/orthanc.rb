@@ -1,10 +1,3 @@
-require "postgres_ext"
-
-require_dependency "card_param"
-require_dependency "deck_param"
-require_dependency "inventory_param"
-require_dependency "param_builder"
-
 class Orthanc
   SEASON = "BFZ-EMN-KLD-OWG-SOI"
   DEFAULT_OPTIONS = { limit: 12, season: SEASON, part: "main" }

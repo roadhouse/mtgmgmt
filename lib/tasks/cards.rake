@@ -1,5 +1,3 @@
-require './lib/laracna/card_crawler'
-
 namespace :cards do
   desc "load card data using mtg-sdk"
   task :load, [:set] => :environment do |_, args|
