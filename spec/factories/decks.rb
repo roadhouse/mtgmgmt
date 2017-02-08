@@ -44,7 +44,7 @@ FactoryGirl.define do
     name "Jeskai Heroic"
     description "8th Place at StarCityGames.com Invitational Qualifier on 5/25/2015"
     url
-    season Orthanc::SEASON
+    season 'season-tag'
     source "starcitygames"
     list deck_list
   end
