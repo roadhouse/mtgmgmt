@@ -1,13 +1,11 @@
 namespace :deck do
   desc "load decks from mtgdecks"
   task mtgdecks: :environment do
-    require './lib/laracna/laracna'
     Crawler.run!(:mtgdecks)
   end
 
   desc "load decks from scg"
   task scg: :environment do
-    require './lib/laracna/crawler.rb'
     Crawler.run!(:scg)
   end
 
@@ -32,9 +30,9 @@ namespace :deck do
             d.save!
             d.update_meta_data
           end
-        rescue OpenURI::HTTPError
-          p "escaping #{final_url}"
-          next
+        # rescue
+          # p "escaping #{final_url}"
+          # next
         end
       end
     end

@@ -28,7 +28,8 @@ class Deck < ActiveRecord::Base
   end
 
   def cards
-    Card.where(name: (list["main"].keys + list["sideboard"].keys).uniq)
+    cards = Card.arel_table[:name].eq_any((list["main"].keys + list["sideboard"].keys).uniq)
+    Card.where(cards)
   end
 
   def main

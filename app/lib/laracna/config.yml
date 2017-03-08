@@ -1,0 +1,16 @@
+scg:
+  host: "http://sales.starcitygames.com/"
+  deck_list_url: "/deckdatabase/deckshow.php?&t%5BC1%5D=1&start_date=01/01/2015&end_date=01/01/2020&limit=100&order_1=date+desc&order_2=date+desc"
+  pagination_param: "&start_num="
+  deck_url: "/deckdatabase/displaydeck.php?DeckID="
+
+mtgdecks:
+  host: "http://www.mtgdecks.net"
+  deck_list_url: "/decks/viewByFormat/44/"
+  pagination_param: "page:"
+  deck_url: "/decks/view/"
+
+mtgo:
+  host: "http://magic.wizards.com"
+  deck_url: "/en/articles/archive/mtgo-standings/standard-daily-"
+  date_format: "%Y-%m-%d"
