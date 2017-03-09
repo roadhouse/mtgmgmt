@@ -1,5 +1,3 @@
-require "./lib/laracna/laracna"
-
 class CardCrawler
   def initialize(set)
     @set = set
