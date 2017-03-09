@@ -5,7 +5,7 @@ scg:
   deck_url: "/deckdatabase/displaydeck.php?DeckID="
 
 mtgdecks:
-  host: "http://www.mtgdecks.net"
+  host: "https://www.mtgdecks.net"
   deck_list_url: "/decks/viewByFormat/49/"
   pagination_param: "page:"
   deck_url: "/decks/view/"
