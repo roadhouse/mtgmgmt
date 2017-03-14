@@ -61,6 +61,7 @@ group :test do
   gem "codeclimate-test-reporter"
   gem "database_cleaner"
   gem "fuubar"
+  gem "rails-controller-testing"
   gem "rspec-its"
   gem "vcr"
   gem "webmock"

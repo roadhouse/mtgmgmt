@@ -1,7 +1,3 @@
-require "rspec/its"
-require "./lib/game/mana"
-require "./lib/game/mana_cost"
-
 describe Mana do
   let(:mana) { described_class.new "{2}{W}{W}" }
 

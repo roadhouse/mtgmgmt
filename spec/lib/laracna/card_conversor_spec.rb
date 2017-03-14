@@ -1,8 +1,3 @@
-require "./lib/laracna/laracna"
-require "mtg_sdk"
-require "./spec/support/vcr"
-require "rspec/its"
-
 describe CardConversor do
   let(:card_data) { VCR.use_cassette("kaladesh-set") { MTG::Card.where(set: 'KLD').all } }
   let(:card_conversor) { described_class.new card_data.first }

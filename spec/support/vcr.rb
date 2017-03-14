@@ -1,5 +1,3 @@
-require "vcr"
-
 RSpec.configure do
   VCR.configure do |c|
     c.default_cassette_options = {record: :once}

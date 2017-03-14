@@ -1,6 +1,8 @@
 FactoryGirl.define do
+  sequence(:name) { |n| "Zulaport Cutthroat#{n}"}
+
   factory :card do
-    name "Zulaport Cutthroat"
+    name
     image ""
     set "BFZ"
     mana_cost "{1}{B}"

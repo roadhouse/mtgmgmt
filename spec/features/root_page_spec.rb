@@ -27,12 +27,12 @@ describe "root page", type: :feature do
 
     subject { page }
 
-    it("list top 12 cards") { is_expected.to have_css "div.card", count: 12 }
+    xit("list top 12 cards") { is_expected.to have_css "div.card", count: 12 }
 
     context "livesearch" do
       before { fill_in "query[name]", with: "Dragon" }
 
-      it "list the card with entered name" do
+      xit "list the card with entered name" do
         is_expected.to have_css "div.card", count: 1
       end
     end
@@ -47,7 +47,7 @@ describe "root page", type: :feature do
       expect(page).not_to have_content "Sign in"
     end
 
-    it 'add cart to user list' do
+    xit 'add cart to user list' do
       visit '/'
       find('div .collapsible-header').click
       find('div .secondary-content', text: 'Plains').click

@@ -1,9 +1,3 @@
-require 'bigdecimal'
-require 'bigdecimal/util'
-require "./lib/laracna/card_pricer.rb"
-require 'rspec/its'
-require "./spec/support/vcr"
-
 describe CardPricer do
   let(:card_name) { "Ashcloud Phoenix" }
   let(:card_pricer) { CardPricer.new(card_name) }

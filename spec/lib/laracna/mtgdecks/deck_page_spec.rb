@@ -1,7 +1,3 @@
-require "./spec/support/vcr"
-require "rspec/its"
-
-require "./lib/laracna/laracna"
 
 describe Laracna::Mtgdecks::DeckPage, :vcr do
   let(:main) do

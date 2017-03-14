@@ -1,8 +1,3 @@
-require "rspec/its"
-require "./lib/deck_builder"
-require "spec_helper"
-require "./app/models/deck"
-
 describe DeckBuilder do
   before { create :deck, name: "Standard Daily #9286464 on 01/26/2016", source: "mtgo" }
 

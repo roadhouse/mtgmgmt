@@ -1,8 +1,3 @@
-require "./spec/support/vcr"
-require "rspec/its"
-
-require "./lib/laracna/laracna"
-
 describe Laracna::Scg::DeckPage, :vcr do
   context "with a valid deck page" do
     let(:url) { "http://sales.starcitygames.com//deckdatabase/displaydeck.php?DeckID=91127" }

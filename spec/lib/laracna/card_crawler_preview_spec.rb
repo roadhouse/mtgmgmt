@@ -1,7 +1,3 @@
-require "vcr"
-require "rspec/its"
-require "./lib/laracna/laracna"
-
 describe CardCrawlerPreview do
   let(:crawler) { VCR.use_cassette("mythicspoiler") { described_class.new("http://mythicspoiler.com/ogw/index.html")} }
 

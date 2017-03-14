@@ -1,9 +1,3 @@
-require "./spec/support/vcr"
-require 'rspec/its'
-
-require "./lib/laracna/mtgo/deck_page"
-require "./lib/laracna/crawler_config"
-
 describe Laracna::Mtgo::DeckPage, :vcr do
   context "with a valid deck page" do
     let(:deck_url) { "http://magic.wizards.com/en/articles/archive/mtgo-standings/standard-daily-2015-07-15" }
