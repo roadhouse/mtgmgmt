@@ -4,8 +4,8 @@ module ApplicationHelper
   end
 
   def navigation_item(name, url)
-    active_class = current_page?(url) ? {class: "active"} : {}
+    # active_class = current_page?(url) ? {class: "active"} : {}
 
-    content_tag(:li, active_class) { link_to name, url }
+    link_to name, url, class: "mdl-navigation__link"
   end
 end

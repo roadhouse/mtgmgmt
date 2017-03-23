@@ -24,30 +24,37 @@
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
     <%= stylesheet_link_tag "application", media: "all" %>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons">
     <%= javascript_include_tag "application" %>
 
     <%= csrf_meta_tags %>
   </head>
 
-  <body ng-app='demos_cfg'>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
+  <body>
+    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">welovemtg</span>
+      </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">
           <%= link_to "welovemtg", root_path, class: "brand-logo" %>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-          <ul class="right hide-on-med-and-down">
-            <%= render "shared/main_menu" %>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <%= render "shared/main_menu" %>
-          </ul>
+        </span>
+        <nav class="mdl-navigation">
+        <%= render "shared/main_menu" %>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div ng-app='demos_cfg' class="mdl-layout mdl-js-layout">
+            <%= yield %>
+
+            <%# <%= render_ga %> %>
+          </div>
         </div>
-      </nav>
+      </main>
     </div>
 
-    <%= yield %>
-
-    <%= render_ga %>
   </body>
 </html>

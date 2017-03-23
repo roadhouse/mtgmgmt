@@ -28,7 +28,7 @@ gem "virtus"
 
 gem "rails_12factor", group: :production
 
-gem "materialize-sass"
+gem "material_design_lite-rails"
 
 source "http://rails-assets.org" do
   gem "rails-assets-angular-chartjs"

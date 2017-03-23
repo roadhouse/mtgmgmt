@@ -5,7 +5,7 @@
 //= require angular-chartjs
 //= require jquery
 //= require angular-material-icons
-//= require materialize
+//= require material
 //= require svg-morpheus
 
 //= require app/app.module.js
