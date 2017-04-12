@@ -23,19 +23,21 @@ class Orthanc
   # top cards played in standard
   # DEFAULT: looking in main deck and ignore land cards
   def top_cards
-    cards
+    table = Arel::Table.new(:metagame)
+    cte = Arel::Nodes::As.new(table, metagame)
+    cards.arel
       .where(@card.not_lands)
-      .with(metagame: metagame)
-      .joins("INNER JOIN metagame ON metagame.card = cards.name")
+      .join(table).on(@card.name.eq(table[:card]))
       .order("metagame.quantity DESC")
-      .limit(@options.fetch :limit)
+      .take(@options.fetch :limit)
+      .with(cte)
   end
 
   # the relation between the decks of the metagame and the card's quantity in this decks
   def metagame
     decks
-      .select('count(card) as quantity, card')
-      .joins("CROSS JOIN LATERAL jsonb_object_keys(list->'#{@options.fetch :part}') as card")
+      .select('count(card) as quantity, card').arel
+      .join(Arel::Nodes::SqlLiteral.new("CROSS JOIN LATERAL jsonb_object_keys(list->'#{@options.fetch :part}') as card"))
       .group('card')
   end
 
