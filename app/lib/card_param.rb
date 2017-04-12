@@ -56,11 +56,14 @@ class CardParam < BaseParam
   end
 
   def card_type_is(type)
-    ctypes.contains([type]).or subtypes.contains([type])
+    query = Arel::Nodes::SqlLiteral.new("'{#{type}}'::varchar[]")
+
+    Arel::Nodes::InfixOperation.new("@>", ctypes, query).
+      or(Arel::Nodes::InfixOperation.new("@>", subtypes, query))
   end
 
   def card_color_is(color)
-    Arel::Nodes::SqlLiteral.new("colors @> '{#{color}}'::varchar[]")
+    Arel::Nodes::InfixOperation.new("@>", colors, Arel::Nodes::SqlLiteral.new("'{#{color}}'::varchar[]"))
   end
 
   def count_name
