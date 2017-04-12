@@ -242,16 +242,11 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     pg (0.20.0)
-    pg_array_parser (0.0.9)
     phantomjs (2.1.1.0)
     poltergeist (1.14.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
-    postgres_ext (3.0.0)
-      activerecord (>= 4.0.0)
-      arel (>= 4.0.1)
-      pg_array_parser (~> 0.0.9)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -452,7 +447,6 @@ DEPENDENCIES
   omniauth-facebook
   pg
   poltergeist
-  postgres_ext
   pry
   pry-byebug
   pry-rails
