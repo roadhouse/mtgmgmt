@@ -25,7 +25,8 @@ class Orthanc
   def top_cards
     table = Arel::Table.new(:metagame)
     cte = Arel::Nodes::As.new(table, metagame)
-    cards.arel
+    Card.find_by_sql cards
+      .arel
       .where(@card.not_lands)
       .join(table).on(@card.name.eq(table[:card]))
       .order("metagame.quantity DESC")
