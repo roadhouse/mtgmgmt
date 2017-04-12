@@ -60,7 +60,7 @@ class CardParam < BaseParam
   end
 
   def card_color_is(color)
-    colors.contains([color])
+    Arel::Nodes::SqlLiteral.new("colors @> '{#{color}}'::varchar[]")
   end
 
   def count_name
