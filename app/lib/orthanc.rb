@@ -1,5 +1,5 @@
 class Orthanc
-  SEASON = "AER-BFZ-EMN-KLD-OGW-SOI"
+  SEASON = "AER-AKH-HOU-KLD-XLN"
   DEFAULT_OPTIONS = { limit: 12, season: SEASON, part: "main" }
 
   def initialize(options = nil)
