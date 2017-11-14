@@ -97,7 +97,7 @@ class DeckPresenter < BasePresenter
 
   def card_pool(part)
     @deck.list[part.to_s]
-      .map { |entry| {copies: entry.last, card: Card.find_by_name(entry.first.gsub("Æther", "Aether")) || entry.first } }
+      .map { |entry| {copies: entry.last, card: Card.find_by_name(entry.first.gsub("Æther", "Aether").split("//").first.strip) || entry.first } }
       .each { |entry| raise Exception, "Invalid deck entry deck##{@deck.id}[#{part}] -> #{entry[:card]}" unless entry[:card].is_a?(Card) }
   end
 end
