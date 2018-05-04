@@ -59,7 +59,7 @@ module Laracna
       end
 
       def card_list(nodes)
-        copies = nodes.search(".cardItem .number").map(&:text)
+        copies = nodes.search(".cardItem .number").map(&:text).map(&:split).map(&:first)
         cards = nodes.search(".cardItem td a").map(&:text)
 
         Hash[cards.zip copies]

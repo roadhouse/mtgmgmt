@@ -1,4 +1,3 @@
-
 describe Laracna::Mtgdecks::DeckPage, :vcr do
   let(:main) do
     {
@@ -25,6 +24,8 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
   let(:sideboard) do
     {
       "Assemble the Legion" => "2",
+      "Chained to the Rocks" => "1",
+      "Boros Charm" => "2",
       "Ratchet Bomb" => "2",
       "Skullcrack" => "2",
       "Spark Trooper" => "2",
@@ -37,42 +38,8 @@ describe Laracna::Mtgdecks::DeckPage, :vcr do
 
   subject { described_class.new url }
 
-  its(:description) { is_expected.to eql "R/W Devotion.Lerchenmüller, Max.Top4Heldenschmiede Kempten[13 Players] 11-Jan-2014" }
+  its(:description) { is_expected.to eql "R/W Devotion.Builder: Lerchenmüller, Max.Top4Heldenschmiede Kempten[13 Players] 11-Jan-2014" }
   its(:name) { is_expected.to eql "R/W Devotion" }
   its(:main) { is_expected.to eql main }
   its(:sideboard) { is_expected.to eql sideboard }
-
-  context "non-standard pages" do
-    let(:url) { "http://www.mtgdecks.net/decks/view/611710" }
-    let(:main) do
-      {
-        "Rally the Ancestors" => "4",
-        "Ayli, Eternal Pilgrim" => "1",
-        "Canopy Vista" => "2",
-        "Catacomb Sifter" => "4",
-        "Collected Company" => "4",
-        "Elvish Visionary" => "4",
-        "Evolving Wilds" => "3",
-        "Flooded Strand" => "4",
-        "Forest" => "1",
-        "Grim Haruspex" => "1",
-        "Island" => "1",
-        "Jace, Vryn's Prodigy" => "4",
-        "Nantuko Husk" => "4",
-        "Plains" => "1",
-        "Polluted Delta" => "4",
-        "Prairie Stream" => "1",
-        "Reflector Mage" => "4",
-        "Sidisi's Faithful" => "2",
-        "Sunken Hollow" => "2",
-        "Swamp" => "1",
-        "Windswept Heath" => "4",
-        "Zulaport Cutthroat" => "4"
-      }
-    end
-
-    subject { described_class.new url }
-
-    its(:main) { is_expected.to eql main }
-  end
 end
