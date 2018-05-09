@@ -12,7 +12,7 @@ class CardCrawler
 
     engine.attributes.map do |attrs|
       model.
-        find_or_initialize_by(name: attrs["name"]).
+        find_or_initialize_by(name: attrs.fetch(:name)).
         tap { |card| card.new_record? ? new += 1 : reprint += 1 }.
         update_attributes(attrs)
     end

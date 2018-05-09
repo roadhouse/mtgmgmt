@@ -1,16 +1,17 @@
 class CardConversor
-  ATTRS_TO_DELETE = %w(foreignNames types rulings legalities variations type text id starter setName watermark)
+  ATTRS_TO_DELETE = %i(id mciNumber watermark variations)
   EQUIVALENT_NAMES = {
-    ctype: "type",
-    image: "imageUrl",
-    mana_cost: "manaCost",
-    multiverse_id: "multiverseid",
-    original_text: "originalText",
-    original_type: "originalType",
+    color_identity: :colorIdentity,
+    image: :imageName,
+    mana_cost: :manaCost,
+    multiverse_id: :multiverseid,
+    original_text: :text,
+    original_type: :type,
+    ctypes: :types,
   }
 
   def initialize(api_data)
-    @api_data = api_data.to_hash
+    @api_data = api_data
   end
 
   def self.convert(api_data)
