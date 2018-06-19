@@ -1,0 +1,30 @@
+version: '2'
+
+volumes:
+  gems:
+    driver: local
+
+services:
+  db:
+    image: kartoza/postgis:9.6-2.4
+    ports:
+      - 25432:5432
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ./bin/start.sh
+    ports:
+      - 80:3000
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+      - gems:/usr/local/bundle
+    stdin_open: true
+    tty: true
+    links:
+      - db
+    environment:
+      DATABASE_URL: postgresql://docker:docker@db:5432
+      RAILS_ENV: development
+      RACK_ENV: development
