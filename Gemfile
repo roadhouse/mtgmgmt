@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.4.1"
+ruby "2.4.4"
 
 gem "angularjs-rails"
 gem "delayed_job_active_record"
@@ -24,6 +24,7 @@ gem "sass-rails"
 gem "simple_form"
 gem "uglifier"
 gem "virtus"
+gem "tzinfo-data"
 
 gem "rails_12factor", group: :production
 
