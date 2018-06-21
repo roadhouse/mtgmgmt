@@ -28,3 +28,4 @@ services:
       DATABASE_URL: postgresql://docker:docker@db:5432
       RAILS_ENV: development
       RACK_ENV: development
+      RAILS_LOG_TO_STDOUT: 'true'
