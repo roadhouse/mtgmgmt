@@ -1,9 +1,8 @@
 source "https://rubygems.org"
 
-ruby "2.4.4"
+ruby "2.5.1"
 
 gem "angularjs-rails"
-gem "delayed_job_active_record"
 gem "devise"
 gem "figaro"
 gem "foreman"

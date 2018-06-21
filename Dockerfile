@@ -1,5 +1,5 @@
 # FROM ruby:2.4.1-slim
-FROM phusion/passenger-ruby24
+FROM phusion/passenger-ruby25
 
 # Install essential Linux packages
 RUN apt-get update -qq
