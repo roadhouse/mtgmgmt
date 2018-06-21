@@ -1,8 +1,8 @@
 namespace :bootstrap do
   desc "bootstraping app"
-  task :run do
+  task run: :environment do
     cfg = ActiveRecord::Base.configurations[Rails.env]
-    exec_restore = "pg_restore -h db -Udocker --verbose --clean --no-acl --no-owner -d #{cfg["database"]} db/dump.bkp"
+    exec_restore = "pg_restore -h #{cfg["host"]} -p #{cfg["port"]} -Udocker --verbose --clean --no-acl --no-owner -d #{cfg["database"]} db/dump.bkp"
 
     system exec_restore
   end
