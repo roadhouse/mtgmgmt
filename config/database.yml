@@ -1,17 +1,15 @@
-development:
-  adapter: postgresql
+defaults: &defaults
   encoding: unicode
-  database: magic_development
   pool: 5
+
+development:
+  <<: *defaults
+  database: magic_development
 
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *defaults
   database: magic_test
-  pool: 5
 
 production:
-  adapter: postgresql
-  encoding: unicode
+  <<: *defaults
   database: magic_production
-  pool: 5
