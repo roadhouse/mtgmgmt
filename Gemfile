@@ -5,9 +5,6 @@ ruby "2.5.1"
 gem "angularjs-rails"
 gem "devise"
 gem "figaro"
-gem "foreman"
-gem "heroku"
-gem "jasmine"
 gem "jquery-rails"
 gem "kaminari"
 gem "mtg_sdk"
@@ -46,14 +43,12 @@ end
 group :development, :test do
   gem "capybara"
   gem "factory_girl_rails"
-  gem "jasmine-rails"
   gem "mocha", require: false
   gem "poltergeist"
   gem "pry"
   gem "pry-rails"
   gem "pry-byebug"
   gem "rspec-rails"
-  gem "sinon-rails"
 end
 
 group :test do

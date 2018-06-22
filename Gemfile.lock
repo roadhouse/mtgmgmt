@@ -87,7 +87,6 @@ GEM
     erubis (2.7.0)
     ethon (0.10.1)
       ffi (>= 1.3.0)
-    excon (0.55.0)
     execjs (2.7.0)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
@@ -101,8 +100,6 @@ GEM
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
-    foreman (0.83.0)
-      thor (~> 0.19.1)
     formatador (0.2.5)
     fuubar (2.2.0)
       rspec-core (~> 3.0)
@@ -132,32 +129,9 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     hashdiff (0.3.2)
     hashie (3.5.5)
-    heroku (3.43.9999)
-      heroku-api (= 0.4.2)
-      launchy (= 2.4.3)
-      multi_json (= 1.11.2)
-      net-ssh (= 2.9.2)
-      net-ssh-gateway (= 1.2.0)
-      netrc (= 0.10.3)
-      rest-client (= 1.6.8)
-      rubyzip (= 1.1.7)
-    heroku-api (0.4.2)
-      excon (~> 0.45)
-      multi_json (~> 1.8)
     highline (1.7.8)
     i18n (0.8.1)
     ice_nine (0.11.2)
-    jasmine (2.5.2)
-      jasmine-core (>= 2.5.1, < 3.0.0)
-      phantomjs
-      rack (>= 1.2.1)
-      rake
-    jasmine-core (2.5.2)
-    jasmine-rails (0.14.1)
-      jasmine-core (>= 1.3, < 3.0)
-      phantomjs (>= 1.9)
-      railties (>= 3.2.0)
-      sprockets-rails
     jquery-rails (4.2.2)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -209,10 +183,6 @@ GEM
     nenv (0.3.0)
     net-http-persistent (2.9.4)
     net-http-pipeline (1.0.1)
-    net-ssh (2.9.2)
-    net-ssh-gateway (1.2.0)
-      net-ssh (>= 2.6.5)
-    netrc (0.10.3)
     nio4r (2.0.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -237,7 +207,6 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     pg (0.20.0)
-    phantomjs (2.1.1.0)
     poltergeist (1.14.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -306,7 +275,6 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    rdoc (5.1.0)
     reek (4.5.6)
       codeclimate-engine-rb (~> 0.4.0)
       parser (>= 2.3.1.2, < 2.5)
@@ -317,9 +285,6 @@ GEM
       uber (< 0.2.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
-    rest-client (1.6.8)
-      mime-types (~> 1.16)
-      rdoc (>= 2.4.2)
     roar (1.1.0)
       representable (~> 3.0.0)
     rspec (3.5.0)
@@ -348,7 +313,6 @@ GEM
     rspec-support (3.5.0)
     ruby-progressbar (1.8.1)
     ruby_dep (1.5.0)
-    rubyzip (1.1.7)
     safe_yaml (1.0.4)
     sass (3.4.23)
     sass-rails (5.0.6)
@@ -366,8 +330,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
-    sinon-rails (1.15.0)
-      railties (>= 3.1)
     slop (3.6.0)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
@@ -428,12 +390,8 @@ DEPENDENCIES
   devise
   factory_girl_rails
   figaro
-  foreman
   fuubar
   guard-rspec
-  heroku
-  jasmine
-  jasmine-rails
   jquery-rails
   kaminari
   materialize-sass
@@ -462,7 +420,6 @@ DEPENDENCIES
   ruby-progressbar
   sass-rails
   simple_form
-  sinon-rails
   travis
   tzinfo-data
   uglifier
