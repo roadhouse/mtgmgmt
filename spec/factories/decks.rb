@@ -37,7 +37,7 @@ def deck_list
   }
 end
 
-FactoryGirl.define do
+FactoryBot.define do
   sequence(:url) { |n| "url#{n}" }
 
   factory :deck do

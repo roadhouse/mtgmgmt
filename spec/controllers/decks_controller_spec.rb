@@ -3,8 +3,6 @@ require 'spec_helper'
 describe DecksController, type: :controller do
   render_views
 
-  before { sign_in create(:user) }
-
   context "GET on /cockatrice" do
     let(:deck) { create(:deck) }
 

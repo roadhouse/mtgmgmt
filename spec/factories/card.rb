@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   sequence(:name) { |n| "Zulaport Cutthroat#{n}"}
 
   factory :card do

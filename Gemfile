@@ -44,7 +44,7 @@ end
 
 group :development, :test do
   gem "capybara"
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "mocha", require: false
   gem "poltergeist"
   gem "pry"

@@ -10,7 +10,7 @@ describe ListsController do
     context "response" do
       subject { response }
 
-      it { is_expected.to be_success }
+      it { is_expected.to be_successful }
     end
 
     context "inventry collection" do

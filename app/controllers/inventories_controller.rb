@@ -1,4 +1,6 @@
 class InventoriesController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def create
     scope = {
       card_id: inventory_params[:card_id],

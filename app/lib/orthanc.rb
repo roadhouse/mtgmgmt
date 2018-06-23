@@ -49,7 +49,7 @@ class Orthanc
     decks
       .select(@deck.all_fields, "COUNT(decks.list->'main_cards') AS quantity")
       .group(:id)
-      .order("COUNT(decks.list->'main_cards') DESC")
+      .order(Arel.sql("COUNT(decks.list->'main_cards') DESC"))
       .limit(@options.fetch :limit)
   end
 
