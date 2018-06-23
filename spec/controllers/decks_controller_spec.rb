@@ -8,7 +8,7 @@ describe DecksController, type: :controller do
   context "GET on /cockatrice" do
     let(:deck) { create(:deck) }
 
-    before { get :cockatrice, id: deck.id }
+    before { get :cockatrice, params: {id: deck.id }}
 
     context "response" do
       subject { response }

@@ -5,7 +5,7 @@ describe ListsController do
   let(:user) { inventory.user }
 
   context "GET on /index" do
-    before { get :show, user_id: user.id, name: inventory.list }
+    before { get :show, params: { user_id: user.id, name: inventory.list } }
 
     context "response" do
       subject { response }
