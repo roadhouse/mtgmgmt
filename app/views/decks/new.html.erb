@@ -1,53 +1,60 @@
 <div id="container" class="section" ng-controller="DeckBuilderController">
-  <div class="row section">
-    <div id="test1" class="col s12 l6">
-      <live-search source="cards" template='/templates/results-decks.html'/>
-    </div>
+  <ul class="tabs z-depth-1">
+    <li class="tab col s3"><a href="#cards">Cards</a></li>
+    <li class="tab col s3"><a href="#deck">Deck</a></li>
+  </ul>
 
-    <div class="col s12 l6 section">
-      <h5 class="center-align">Deck List</h5>
-      <ul class="collection with-header">
-        <li class="collection-header">
-          <ng-md-icon icon="{{isValid.icon}}" ng-attr-style="fill: {{isValid.color}}"></ng-md-icon>
-          <span class="secondary-content">Total: {{ deck.deck_size }}</span>
-        </li>
-        <li class="collection-item valign-wrapper" ng-repeat="card in deck.deck_list" style="padding-left:0; padding-top:0; padding-bottom:0;">
-          <a ng-click="addToDeck(card.id, -1)"class="waves-effect btn-flat btn-list col s1 center-align" style="padding: 0">
-            <i class="material-icons">remove</i>
-          </a>
-          <span class="col s1 center-align">{{ card.copies}}</span>
-          <a ng-click="addToDeck(card.id, +1)"class="waves-effect btn-flat btn-list col s1 center-align" style="padding: 0">
-            <i class="material-icons">add</i>
-          </a>
-          <div class="col s9 with-action" style="padding: 0;">
-            <span class="secondary-content">{{ card.name }}</span>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <div id="cards" class="col s12">
+    <live-search source="cards" template='/templates/results-decks.html'/>
+  </div>
 
-    <div class="col s12 l3 section">
-      <h5 class="center-align">Initial Hand</h5>
-      <ul class="collection">
-        <li class="collection-item" ng-repeat="card in deck.first_hand track by $index">
-          {{ card }}
-        </li>
-      </ul>
-    </div>
+  <div id="deck" class="col s12">
+    <div class="row section">
+      <div class="col s12 l6 section">
+        <h5 class="center-align">Deck List</h5>
+        <ul class="collection with-header">
+          <li class="collection-header">
+            <ng-md-icon icon="{{isValid.icon}}" ng-attr-style="fill: {{isValid.color}}"></ng-md-icon>
+            <span class="secondary-content">Total: {{ deck.deck_size }}</span>
+          </li>
+          <li class="collection-item valign-wrapper" ng-repeat="card in deck.deck_list" style="padding-left:0; padding-top:0; padding-bottom:0;">
+            <a ng-click="addToDeck(card.id, -1)"class="waves-effect btn-flat btn-list col s1 center-align" style="padding: 0">
+              <i class="material-icons">remove</i>
+            </a>
+            <span class="col s1 center-align">{{ card.copies}}</span>
+            <a ng-click="addToDeck(card.id, +1)"class="waves-effect btn-flat btn-list col s1 center-align" style="padding: 0">
+              <i class="material-icons">add</i>
+            </a>
+            <div class="col s9 with-action" style="padding: 0;">
+              <span class="secondary-content">{{ card.name }}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-    <div class="col s12 l2 section">
-      <h5 class="center-align">Manacost</h5>
-      <canvas class="chart chart-bar" chart-data="deck.mana.data" chart-labels="deck.mana.labels"></canvas>
-    </div>
+      <div class="col s12 l3 section">
+        <h5 class="center-align">Initial Hand</h5>
+        <ul class="collection">
+          <li class="collection-item" ng-repeat="card in deck.first_hand track by $index">
+            {{ card }}
+          </li>
+        </ul>
+      </div>
 
-    <div class="col s12 l2 section">
-      <h5 class="center-align">Colors</h5>
-      <canvas class="chart chart-pie" chart-data="deck.color.data" chart-labels="deck.color.labels" chart-colours="deck.color.colors"></canvas>
-    </div>
+      <div class="col s12 l2 section">
+        <h5 class="center-align">Manacost</h5>
+        <canvas class="chart chart-bar" chart-data="deck.mana.data" chart-labels="deck.mana.labels"></canvas>
+      </div>
 
-    <div class="col s12 l2 section right">
-      <h5 class="center-align">Types</h5>
-      <canvas class="chart chart-pie" chart-data="deck.type.data" chart-labels="deck.type.labels"></canvas>
+      <div class="col s12 l2 section">
+        <h5 class="center-align">Colors</h5>
+        <canvas class="chart chart-pie" chart-data="deck.color.data" chart-labels="deck.color.labels" chart-colours="deck.color.colors"></canvas>
+      </div>
+
+      <div class="col s12 l2 section right">
+        <h5 class="center-align">Types</h5>
+        <canvas class="chart chart-pie" chart-data="deck.type.data" chart-labels="deck.type.labels"></canvas>
+      </div>
     </div>
   </div>
 </div>
