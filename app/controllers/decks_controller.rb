@@ -1,6 +1,6 @@
 class DecksController < ApplicationController
   respond_to :json, only: [:create]
-  skip_before_filter :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!#, only: [:index, :create, :new]
 
   def index
     @presenter = MetaGamePresenter.new
@@ -19,7 +19,7 @@ class DecksController < ApplicationController
   end
 
   def create
-    @deck = DeckPresenter.new Deck.new.add_card_entries(params.fetch(:deck))
+    @deck = DeckPresenter.new Deck.new.add_card_entries(params.to_unsafe_hash.fetch("deck"))
     respond_with @deck
   end
 
@@ -60,6 +60,6 @@ class DecksController < ApplicationController
   private
 
   def deck_params
-    params.require(:deck).permit(:name, :description, :list)
+    params.require(:deck).permit(:name, :description, :list, :deck)
   end
 end

@@ -1,4 +1,4 @@
-class CreateCards < ActiveRecord::Migration
+class CreateCards < ActiveRecord::Migration[4.2]
   # foreignNames: [hstore],
   # legalities: {hstore},
   # rulings: [hstore],

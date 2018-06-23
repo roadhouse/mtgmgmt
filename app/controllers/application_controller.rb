@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   respond_to :json, :html
   protect_from_forgery
-  after_filter :set_csrf_cookie_for_ng
+  after_action :set_csrf_cookie_for_ng
 
   # see http://stackoverflow.com/questions/14734243/rails-csrf-protection-angular-js-protect-from-forgery-makes-me-to-log-out-on
   def set_csrf_cookie_for_ng

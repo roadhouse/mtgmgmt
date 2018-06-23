@@ -1,4 +1,4 @@
-class AddListToDeck < ActiveRecord::Migration
+class AddListToDeck < ActiveRecord::Migration[4.2]
   enable_extension 'citext'
 
   def change

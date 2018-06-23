@@ -1,4 +1,4 @@
-class CreatePrice < ActiveRecord::Migration
+class CreatePrice < ActiveRecord::Migration[4.2]
   def change
     create_table :prices do |t|
       t.references :card, index: true

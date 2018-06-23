@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.5.1"
 
+gem "bootsnap"
 gem "angularjs-rails"
 gem "devise"
 gem "figaro"
@@ -27,6 +28,7 @@ gem "rails_12factor", group: :production
 gem "materialize-sass"
 
 source "http://rails-assets.org" do
+  gem "rails-assets-angular", "1.6.10"
   gem "rails-assets-angular-chartjs"
   gem "rails-assets-chartjs"
   gem "rails-assets-angular-material-icons"
